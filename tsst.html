@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UMP Hynaa</title>
+  <style>
+    /* ===== Monochrome design (black/white/gray) ===== */
+    :root{
+      --bg:#0a0a0a;           /* page background */
+      --surface:#111111;      /* cards/surfaces */
+      --muted:#a3a3a3;        /* secondary text */
+      --text:#f5f5f5;         /* primary text */
+      --line:#262626;         /* borders */
+      --accent:#ffffff;       /* white accent */
+      --ok:#22c55e;           /* green correct */
+      --bad:#ef4444;          /* red wrong */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial;background:var(--bg);color:var(--text)}
+
+    header{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .wrap{max-width:1200px;margin:0 auto;padding:14px 16px}
+    .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    h1{font-size:18px;margin:0;letter-spacing:.3px}
+    .pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px}
+    .timer{font-variant-numeric:tabular-nums;font-weight:700}
+
+    main{padding:18px 16px 48px}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.35)}
+    .pad{padding:16px}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:#141414;color:var(--text);font-weight:600;cursor:pointer}
+    .btn:disabled{opacity:.5;cursor:not-allowed}
+    .btn.ghost{background:transparent}
+
+    input[type=file]{display:none}
+    textarea, input[type=number], input[type=text], select{width:100%;background:#0f0f0f;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 12px}
+    .muted{color:var(--muted);font-size:13px}
+    .drop{border:1.5px dashed var(--line);border-radius:12px;padding:14px;text-align:center;color:var(--muted)}
+    .drop.drag{border-color:var(--accent);color:var(--text)}
+
+    /* ===== Two-pane quiz layout ===== */
+    .two{display:grid;grid-template-columns:1fr 380px;gap:14px}
+    @media (max-width:980px){.two{grid-template-columns:1fr}}
+
+    .qview{display:grid;gap:12px}
+    .qtitle{font-size:16px;font-weight:700}
+    .qtext{font-size:15px}
+    .opts{display:grid;gap:8px}
+    .opt{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:10px;background:#0f0f0f}
+    .opt.correct{border-color:var(--ok);background:#0f1511;box-shadow:inset 0 0 0 1px var(--ok)}
+    .opt.wrong{border-color:var(--bad);background:#150f0f;box-shadow:inset 0 0 0 1px var(--bad)}
+    /* Left panel is read-only with A/B/C/D badges */
+    #qOpts input{display:none}
+    .badge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border:1px solid var(--line);border-radius:6px;font-weight:800;background:#0c0c0c;margin-top:1px;flex:0 0 auto}
+    .opt.chosen{border-color:#d4d4d4;background:#141414}
+
+    .exp{margin-top:10px;border:1px dashed var(--line);border-radius:10px;padding:10px;background:#0e0e0e;display:none}
+    .exp.show{display:block}
+
+    /* ===== Right: scrollable answer matrix ===== */
+    aside.side{display:grid;gap:12px;position:sticky;top:72px;height:max-content}
+    .section{background:var(--surface);border:1px solid var(--line);border-radius:12px}
+    .section .pad{padding:12px}
+
+    .progress{height:8px;background:#0f0f0f;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+    .progress>span{display:block;height:100%;width:0;background:#fff}
+
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:#0f0f0f;color:var(--muted);font-size:12px;cursor:pointer}
+    .chip.active{color:var(--text);border-color:#e5e5e5;background:#141414}
+
+    .matrix{max-height:calc(100vh - 260px); overflow:auto; border-top:1px solid var(--line)}
+    .mrow{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid var(--line)}
+    .mrow:hover{background:#0f0f0f}
+    .mrow.current{background:#141414; box-shadow:inset 3px 0 0 #fff}
+    .mrow.ok{box-shadow:inset 3px 0 0 var(--ok)}
+    .mrow.bad{box-shadow:inset 3px 0 0 var(--bad)}
+    .mnum{display:flex;align-items:center;justify-content:center;width:38px;height:32px;border:1px solid var(--line);border-radius:8px;font-weight:800;cursor:pointer}
+    .mnum.current{outline:2px solid #e5e5e5}
+    .mopts{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .mopt{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:#0f0f0f;cursor:pointer}
+    .mrow.current .mopt{background:#151515;border-color:#e5e5e5}
+    .mopt input{accent-color:#fff}
+    .mopt.correct{border-color:var(--ok);box-shadow:inset 0 0 0 1px var(--ok)}
+    .mopt.wrong{border-color:var(--bad);box-shadow:inset 0 0 0 1px var(--bad)}
+    .legend{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px}
+
+    .bar-quiz{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .hide{display:none!important}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <div style="flex:1 1 auto">
+        <h1>Phòng máy 3A/3B</h1>
+        <div class="muted"></div>
+      </div>
+      <div class="pill" id="headerInfo">Chưa tải đề</div>
+      <div class="pill">⏱ <span class="timer" id="headerTimer">00:00</span></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Loader / Import -->
+    <section class="card pad" id="loader">
+      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div>
+          <h2 style="margin-top:0">1) Import đề (JSON)</h2>
+          <div class="uploader">
+            <label class="btn" for="fileInput">📄 Chọn file JSON</label>
+            <input id="fileInput" type="file" accept="application/json" />
+            <div class="drop" id="drop">Kéo & thả file JSON vào đây</div>
+            <div class="muted" style="margin-top:6px">Hoặc dán nội dung JSON:</div>
+            <textarea id="paste" placeholder='{"meta": {"title":"Dược lý – Đề 01"}, "questions": [...]}'></textarea>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+              <button class="btn" id="btnParse">📥 Nạp từ vùng dán</button>
+              <button class="btn ghost" id="btnTemplate">📦 Tải template JSON</button>
+              <button class="btn ghost" id="btnSample">✨ Nạp đề mẫu</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 style="margin-top:0">2) Thiết lập</h2>
+          <label>Thời gian (phút) — để trống để dùng từ file đề
+            <input type="number" id="minutes" min="1" step="1" placeholder="VD: 15" />
+          </label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+            <label>Trộn thứ tự câu hỏi
+              <select id="shuffleQ">
+                <option value="file">Theo file</option>
+                <option value="yes">Luôn trộn</option>
+                <option value="no">Không trộn</option>
+              </select>
+            </label>
+            <label>Trộn thứ tự đáp án
+              <select id="shuffleO">
+                <option value="file">Theo file</option>
+                <option value="yes">Luôn trộn</option>
+                <option value="no">Không trộn</option>
+              </select>
+            </label>
+          </div>
+          <div class="muted" style="margin-top:8px">Format JSON cố định ở cuối trang.</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+            <button class="btn" id="btnStart" disabled>🚀 Bắt đầu làm bài</button>
+            <button class="btn ghost" id="btnReset" disabled>↺ Làm lại / đổi đề</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two-pane quiz -->
+    <section id="quizPanel" class="two hide">
+      <!-- Left: ONLY question & answers (read-only) -->
+      <div class="qview">
+        <div class="card pad" id="qCard">
+          <div class="qtitle" id="qTitle">Câu 1</div>
+          <div class="muted" id="qMeta">—</div>
+          <div class="qtext" id="qText" style="margin-top:8px"></div>
+          <div id="qImage" style="margin:8px 0 2px"></div>
+          <div class="opts" id="qOpts" style="margin-top:8px"></div>
+          <div class="exp" id="qExp"></div>
+        </div>
+      </div>
+
+      <!-- Right: scrollable matrix "Số câu: A B C D" -->
+      <aside class="side">
+        <div class="section">
+          <div class="pad" style="display:grid;gap:8px">
+            <div class="bar-quiz" style="justify-content:space-between">
+              <div class="pill">⏱ <span class="timer" id="bigTimer">00:00</span></div>
+              <div class="pill hide" id="scorePill">Điểm: 0/0 (0%)</div>
+            </div>
+            <div id="sideMeta" class="muted">0/0 câu</div>
+            <div class="progress" aria-label="Tiến độ"><span id="bar"></span></div>
+            <div class="chips" id="filterGroup">
+              <button class="chip active" data-filter="all">Tất cả</button>
+              <button class="chip" data-filter="answered">Đã làm</button>
+              <button class="chip" data-filter="unanswered">Chưa làm</button>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="pad" style="display:flex;align-items:center;justify-content:space-between">
+            <b>Danh sách câu & chọn nhanh</b>
+            <div class="legend">
+              <span>Single: tròn</span>
+              <span>Multi: vuông</span>
+            </div>
+          </div>
+          <div class="matrix" id="qMatrix"></div>
+        </div>
+        <div class="section">
+          <div class="pad" style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn" id="btnPrev">← Trước</button>
+            <button class="btn" id="btnNext">Tiếp →</button>
+            <button class="btn" id="btnSubmit">📤 Nộp bài</button>
+            <button class="btn ghost" id="btnReview">🔍 Xem/ẩn giải thích</button>
+            <button class="btn ghost" id="btnShuffle">🔀 Xáo lại</button>
+            <button class="btn ghost" id="btnRedo">↺ Làm lại đề</button>
+            <button class="btn ghost" id="btnNew">📥 Làm đề mới</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Result list (optional) -->
+    <section id="resultPanel" class="hide">
+      <div class="card pad" id="wrongList"></div>
+    </section>
+
+    <!-- Notes -->
+    <section class="card pad" style="margin-top:14px">
+      <details>
+        <summary><b>Ghi chú & Format JSON cố định</b></summary>
+        <div class="muted" style="margin-top:10px">
+          <pre style="white-space:pre-wrap;background:#0f0f0f;padding:12px;border-radius:12px;border:1px solid var(--line)">{
+  "meta": {
+    "title": "Tên đề",
+    "time_limit_sec": 900,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "DL01",
+      "type": "single",
+      "question": "Nội dung câu hỏi",
+      "options": ["A", "B", "C", "D"],
+      "correct": [0],
+      "explanation": "Giải thích ngắn gọn.",
+      "tags": ["Dược lý"],
+      "difficulty": "easy",
+      "image": null
+    }
+  ]
+}</pre>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <script>
+  // ===== Utility =====
+  const $ = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+  const byId = id => document.getElementById(id);
+  const shuffle = arr => { const a = arr.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a; };
+  const fmtTime = s => { const m=Math.floor(s/60), ss=s%60; return `${String(m).padStart(2,'0')}:${String(ss).padStart(2,'0')}` };
+  const download = (fn, txt) => { const blob=new Blob([txt],{type:'application/json'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download=fn; a.click(); setTimeout(()=>URL.revokeObjectURL(url),3000); };
+
+  // ===== State =====
+  const state = {
+    raw:null, quiz:null, orderMap:[], answers:new Map(),
+    started:false, submitted:false, secs:0, timer:null,
+    current:0, autoShowExp:true, viewFilter:'all'
+  };
+
+  // ===== Validation & Normalize =====
+  function validateQuiz(json){
+    if(!json || typeof json!== 'object') throw new Error('File JSON không hợp lệ.');
+    if(!Array.isArray(json.questions) || json.questions.length===0) throw new Error('Thiếu danh sách "questions".');
+    json.meta = json.meta || {};
+    if(!json.meta.title) json.meta.title = 'Đề không tên';
+    const ids=new Set();
+    json.questions.forEach((q,i)=>{
+      if(!q || typeof q!=='object') throw new Error(`Câu ${i+1} không hợp lệ.`);
+      if(!q.id) throw new Error(`Câu ${i+1}: thiếu "id".`);
+      if(ids.has(q.id)) throw new Error(`Trùng id câu hỏi: ${q.id}`);
+      ids.add(q.id);
+      if(!q.type) q.type = (Array.isArray(q.correct) && q.correct.length>1)?'multi':'single';
+      if(!['single','multi'].includes(q.type)) throw new Error(`Câu ${q.id}: type phải là single|multi.`);
+      if(!q.question) throw new Error(`Câu ${q.id}: thiếu "question".`);
+      if(!Array.isArray(q.options) || q.options.length<2) throw new Error(`Câu ${q.id}: cần >=2 options.`);
+      if(!Array.isArray(q.correct) || q.correct.length===0) throw new Error(`Câu ${q.id}: thiếu mảng "correct".`);
+      q.correct.forEach(ix=>{ if(typeof ix!== 'number' || ix<0 || ix>=q.options.length) throw new Error(`Câu ${q.id}: chỉ số correct không hợp lệ.`); });
+      if(q.type==='single' && q.correct.length!==1) throw new Error(`Câu ${q.id}: dạng single phải có đúng 1 đáp án.`);
+      if(q.explanation==null) q.explanation='';
+    });
+    return json;
+  }
+  function normalizeQuiz(json){
+    const meta={
+      title: json.meta.title || 'Đề không tên',
+      time_limit_sec: Number.isInteger(json.meta.time_limit_sec)? json.meta.time_limit_sec : 600,
+      shuffle_questions: !!json.meta.shuffle_questions,
+      shuffle_options: !!json.meta.shuffle_options,
+      pass_mark: typeof json.meta.pass_mark==='number'? json.meta.pass_mark : 0,
+    };
+    const questions=json.questions.map(q=>({...q}));
+    return {meta, questions};
+  }
+
+  // ===== Import / Loader =====
+  function tryParse(text){
+    try{ const json=JSON.parse(text); validateQuiz(json); renderStart(json);} catch(e){ alert('Lỗi JSON: '+e.message); console.error(e); }
+  }
+  byId('fileInput').addEventListener('change', async e=>{ const f=e.target.files[0]; if(!f) return; tryParse(await f.text()); });
+  const drop=byId('drop');
+  ;['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault(); drop.classList.add('drag');}));
+  ;['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault(); drop.classList.remove('drag');}));
+  drop.addEventListener('drop', async e=>{ const f=e.dataTransfer.files[0]; if(!f) return; tryParse(await f.text()); });
+  byId('btnParse').addEventListener('click', ()=>{ const t=byId('paste').value.trim(); if(!t) return alert('Dán JSON trước.'); tryParse(t); });
+  byId('btnTemplate').addEventListener('click', ()=> download('pharma-quiz-template.json', JSON.stringify(getTemplateJSON(),null,2)));
+  byId('btnSample').addEventListener('click', ()=> tryParse(JSON.stringify(getTemplateJSON())));
+
+  function renderStart(json){ state.raw=json; state.quiz=normalizeQuiz(json); setHeaderInfo(`Đã tải: ${state.quiz.meta.title}`); byId('btnStart').disabled=false; byId('btnReset').disabled=false; }
+  function setHeaderInfo(t){ byId('headerInfo').textContent=t; }
+
+  byId('btnStart').addEventListener('click', ()=>{ if(!state.quiz) return; resetAll(); computeOrder(); startQuiz(); });
+  byId('btnReset').addEventListener('click', ()=> resetAll());
+
+  // ===== Quiz flow =====
+  function computeOrder(){
+    const qPolicy=byId('shuffleQ').value; const wantQ=qPolicy==='yes' || (qPolicy==='file' && state.quiz.meta.shuffle_questions);
+    const arr=state.quiz.questions.map((_,i)=>i); const qOrder= wantQ? shuffle(arr): arr;
+    state.orderMap = qOrder.map(qIdx=>{ const q=state.quiz.questions[qIdx]; const oPolicy=byId('shuffleO').value; const wantO=oPolicy==='yes'||(oPolicy==='file'&&state.quiz.meta.shuffle_options); const ord=q.options.map((_,i)=>i); return {qIdx, optOrder: wantO? shuffle(ord): ord}; });
+  }
+  function startQuiz(){
+    byId('loader').classList.add('hide');
+    byId('quizPanel').classList.remove('hide');
+    byId('resultPanel').classList.add('hide');
+    byId('scorePill').classList.add('hide');
+    state.answers.clear(); state.submitted=false; state.current=0;
+
+    renderQuestion(0); renderMatrix(); renderProgressMeta(); applyFilter();
+
+    const minInput=parseInt(byId('minutes').value,10);
+    const total=Number.isFinite(minInput)? Math.max(60,minInput*60) : (state.quiz.meta.time_limit_sec||600);
+    startTimer(total);
+    state.started=true;
+  }
+  function startTimer(total){ clearInterval(state.timer); state.secs=total; const tick=()=>{ byId('headerTimer').textContent=fmtTime(state.secs); byId('bigTimer').textContent=fmtTime(state.secs); const pct=Math.max(0,Math.min(100,(1-state.secs/total)*100)); byId('bar').style.width=pct+'%'; if(state.secs<=0){ clearInterval(state.timer); submitQuiz(true);} state.secs--; }; tick(); state.timer=setInterval(tick,1000); }
+
+  function renderProgressMeta(){
+    const total=state.orderMap.length; const answered=[...state.answers.values()].filter(s=>s.size>0).length; byId('sideMeta').textContent = `${answered}/${total} câu`;
+  }
+
+  function renderQuestion(qShownIdx){
+    const m=state.orderMap[qShownIdx]; const q=state.quiz.questions[m.qIdx]; const isMulti=q.type==='multi';
+    byId('qTitle').textContent = `Câu ${qShownIdx+1}`;
+    byId('qMeta').textContent = `${isMulti?'Chọn nhiều':'Chọn một'} • ${state.quiz.questions.length} câu`;
+    byId('qText').innerHTML = q.question;
+
+    const imgHost=byId('qImage'); imgHost.innerHTML=''; if(q.image){ const img=new Image(); img.src=q.image; img.alt='image'; img.style.maxWidth='100%'; img.style.borderRadius='10px'; imgHost.appendChild(img); }
+
+    const opts=byId('qOpts'); opts.innerHTML='';
+    const chosenSet= new Set(state.answers.get(qShownIdx)||[]);
+    m.optOrder.forEach((origOptIdx, shownOptIdx)=>{
+      const lab=document.createElement('div'); lab.className='opt';
+      if(chosenSet.has(shownOptIdx)) lab.classList.add('chosen');
+      const badge=document.createElement('span'); badge.className='badge'; badge.textContent=String.fromCharCode(65+shownOptIdx);
+      const span=document.createElement('div'); span.innerHTML = q.options[origOptIdx];
+      lab.appendChild(badge); lab.appendChild(span); opts.appendChild(lab);
+    });
+
+    const exp=byId('qExp'); exp.innerHTML = q.explanation? `💡 <b>Giải thích:</b> ${q.explanation}` : '';
+    exp.classList.remove('show');
+
+    if(state.submitted){
+      decorateAfterSubmit(qShownIdx);
+      if(state.autoShowExp && !checkQuestion(qShownIdx) && q.explanation) exp.classList.add('show');
+    }
+  }
+
+  function onSelect(qShownIdx, optShownIdx, isMulti){
+    const set = state.answers.get(qShownIdx) || new Set();
+    if(isMulti){ if(set.has(optShownIdx)) set.delete(optShownIdx); else set.add(optShownIdx); }
+    else { set.clear(); set.add(optShownIdx); }
+    state.answers.set(qShownIdx, set);
+    renderMatrixRow(qShownIdx); renderProgressMeta(); applyFilter();
+    if(qShownIdx===state.current) renderQuestion(qShownIdx); // mirror to left
+  }
+
+  function mapShownToOrig(qShownIdx, optShownIdx){ const m=state.orderMap[qShownIdx]; return m.optOrder[optShownIdx]; }
+  function checkQuestion(qShownIdx){ const m=state.orderMap[qShownIdx]; const q=state.quiz.questions[m.qIdx]; const sel=[...(state.answers.get(qShownIdx)||[])].map(i=>mapShownToOrig(qShownIdx,i)).sort((a,b)=>a-b); const correct=q.correct.slice().sort((a,b)=>a-b); if(sel.length!==correct.length) return false; for(let i=0;i<sel.length;i++) if(sel[i]!==correct[i]) return false; return true; }
+
+  function decorateAfterSubmit(qShownIdx){
+    const m=state.orderMap[qShownIdx]; const q=state.quiz.questions[m.qIdx];
+    const host=byId('qOpts'); const labels=host.querySelectorAll('.opt'); const chosen=[...(state.answers.get(qShownIdx)||[])];
+    labels.forEach((lab, shownIdx)=>{
+      const origIdx=mapShownToOrig(qShownIdx, shownIdx);
+      lab.classList.remove('correct','wrong');
+      if(q.correct.includes(origIdx)) lab.classList.add('correct');
+      if(chosen.includes(shownIdx) && !q.correct.includes(origIdx)) lab.classList.add('wrong');
+    });
+  }
+
+  // ===== Right matrix =====
+  function renderMatrix(){
+    const host=byId('qMatrix'); host.innerHTML='';
+    state.orderMap.forEach((m,i)=>{
+      const q=state.quiz.questions[m.qIdx]; const isMulti=q.type==='multi';
+      const row=document.createElement('div'); row.className='mrow'; row.dataset.q=i;
+
+      const num=document.createElement('div'); num.className='mnum'; num.textContent=String(i+1);
+      if(i===state.current){ num.classList.add('current'); row.classList.add('current'); }
+      num.addEventListener('click',()=>{ setCurrent(i); scrollRowIntoView(i); });
+      row.appendChild(num);
+
+      const mopts=document.createElement('div'); mopts.className='mopts';
+      const chosenSet = new Set(state.answers.get(i)||[]);
+      m.optOrder.forEach((origOptIdx, shownIdx)=>{
+        const label=document.createElement('label'); label.className='mopt';
+        const input=document.createElement('input'); input.type=isMulti?'checkbox':'radio'; input.name=`mx_${i}`; input.value=String(shownIdx);
+        input.checked = chosenSet.has(shownIdx);
+        input.disabled = state.submitted; // lock if submitted
+        input.addEventListener('change',()=>{ setCurrent(i); onSelect(i, shownIdx, isMulti); });
+        const letter=String.fromCharCode(65+shownIdx);
+        const span=document.createElement('span'); span.textContent=letter;
+        label.appendChild(input); label.appendChild(span); mopts.appendChild(label);
+      });
+      row.appendChild(mopts);
+
+      host.appendChild(row);
+    });
+  }
+  function renderMatrixRow(i){
+    const host=byId('qMatrix'); const row=host.querySelector(`.mrow[data-q="${i}"]`); if(!row) return;
+    // highlight current row & number
+    $$('#qMatrix .mrow').forEach(r=>{ r.classList.remove('current','ok','bad'); });
+    row.classList.add('current');
+    $$('#qMatrix .mnum').forEach(n=>n.classList.remove('current'));
+    row.querySelector('.mnum').classList.add('current');
+
+    const q=state.quiz.questions[state.orderMap[i].qIdx]; const chosenSet=new Set(state.answers.get(i)||[]);
+    row.querySelectorAll('.mopt').forEach((optLab, idx)=>{
+      const input=optLab.querySelector('input');
+      input.checked = chosenSet.has(idx);
+      if(state.submitted){
+        input.disabled = true; // lock after submit
+        const origIdx = mapShownToOrig(i, idx);
+        optLab.classList.toggle('correct', q.correct.includes(origIdx));
+        optLab.classList.toggle('wrong', input.checked && !q.correct.includes(origIdx));
+      } else {
+        input.disabled = false;
+        optLab.classList.remove('correct','wrong');
+      }
+    });
+    // set row color when submitted
+    if(state.submitted){
+      const ok = checkQuestion(i);
+      const answered = chosenSet.size>0;
+      row.classList.toggle('ok', ok);
+      row.classList.toggle('bad', !ok && answered);
+    }
+  }
+  function setCurrent(i){ state.current=i; renderMatrixRow(i); renderQuestion(i); }
+  function scrollRowIntoView(i){ const row=byId('qMatrix').querySelector(`.mrow[data-q="${i}"]`); if(row){ row.scrollIntoView({block:'nearest'}); } }
+  function applyFilter(){
+    const mode = state.viewFilter || 'all';
+    const rows = $$('#qMatrix .mrow');
+    rows.forEach(row=>{
+      const idx = +row.dataset.q; const answered = (state.answers.get(idx)||new Set()).size>0;
+      let show = true; if(mode==='answered') show = answered; else if(mode==='unanswered') show = !answered;
+      row.style.display = show ? '' : 'none';
+    });
+    const cur = byId('qMatrix').querySelector(`.mrow[data-q="${state.current}"]`);
+    if(!cur || cur.style.display==='none'){
+      const firstVis = $$('#qMatrix .mrow').find(r=>r.style.display!=='none');
+      if(firstVis) setCurrent(+firstVis.dataset.q);
+    }
+  }
+
+  function submitQuiz(auto=false){
+    if(state.submitted) return; state.submitted=true; clearInterval(state.timer);
+
+    // score
+    const total=state.orderMap.length; let correct=0; for(let i=0;i<total;i++) if(checkQuestion(i)) correct++;
+    const pct= total? Math.round(correct/total*100):0;
+
+    // show compact score pill at right; no big banner on left
+    const pill=byId('scorePill'); pill.textContent = `Điểm: ${correct}/${total} (${pct}%)`; pill.classList.remove('hide');
+
+    // lock visuals
+    for(let i=0;i<state.orderMap.length;i++) renderMatrixRow(i);
+    decorateAfterSubmit(state.current);
+
+    // wrong list detail
+    const wr = byId('wrongList'); wr.innerHTML='';
+    const container=document.createElement('div'); container.className='qview';
+    state.orderMap.forEach((m, i)=>{
+      const ok=checkQuestion(i); if(ok) return; const q=state.quiz.questions[m.qIdx];
+      const box=document.createElement('div'); box.className='card pad';
+      box.innerHTML = `<div style="margin-bottom:6px"><b>Câu ${i+1}.</b> ${q.question}</div>`;
+      const ul=document.createElement('ul'); ul.style.margin='0 0 6px 18px'; ul.style.padding='0';
+      q.options.forEach((opt, idx)=>{
+        const li=document.createElement('li');
+        const chosenOrig = [...(state.answers.get(i)||[])].map(s=>mapShownToOrig(i,s));
+        const tag = q.correct.includes(idx)? '✓' : (chosenOrig.includes(idx)? '✗' : '·');
+        li.textContent = `${tag} ${opt}`; ul.appendChild(li);
+      });
+      box.appendChild(ul);
+      if(q.explanation){ const ex=document.createElement('div'); ex.className='exp show'; ex.innerHTML=`💡 <b>Giải thích:</b> ${q.explanation}`; box.appendChild(ex); }
+      container.appendChild(box);
+    });
+    wr.appendChild(container);
+    byId('resultPanel').classList.remove('hide');
+    applyFilter();
+  }
+
+  // ===== Events =====
+  byId('btnSubmit').addEventListener('click', ()=> submitQuiz(false));
+  byId('btnPrev').addEventListener('click', ()=> setCurrent(Math.max(0, state.current-1)) );
+  byId('btnNext').addEventListener('click', ()=> setCurrent(Math.min(state.orderMap.length-1, state.current+1)) );
+  byId('btnReview').addEventListener('click', ()=>{ state.autoShowExp=!state.autoShowExp; const q=state.orderMap[state.current]; if(!q) return; const e=byId('qExp'); if(state.autoShowExp && state.submitted && !checkQuestion(state.current) && (state.quiz.questions[q.qIdx].explanation)) e.classList.add('show'); else e.classList.remove('show'); });
+  byId('btnShuffle').addEventListener('click', ()=>{ if(!state.quiz) return; computeOrder(); state.answers.clear(); state.submitted=false; byId('scorePill').classList.add('hide'); renderQuestion(0); renderMatrix(); renderProgressMeta(); applyFilter(); });
+  byId('btnRedo').addEventListener('click', ()=>{ if(!state.quiz) return; state.submitted=false; byId('scorePill').classList.add('hide'); state.answers.clear(); computeOrder(); renderQuestion(0); renderMatrix(); renderProgressMeta(); applyFilter(); const total = state.quiz.meta.time_limit_sec || 600; startTimer(total); });
+  byId('btnNew').addEventListener('click', ()=>{ clearInterval(state.timer); state.started=false; state.submitted=false; state.answers.clear(); state.orderMap=[]; state.current=0; byId('loader').classList.remove('hide'); byId('quizPanel').classList.add('hide'); byId('resultPanel').classList.add('hide'); byId('scorePill').classList.add('hide'); byId('headerTimer').textContent='00:00'; byId('bigTimer').textContent='00:00'; byId('bar').style.width='0%'; setHeaderInfo('Chưa tải đề'); });
+  byId('filterGroup').addEventListener('click', (e)=>{ const b=e.target.closest('.chip'); if(!b) return; $$('#filterGroup .chip').forEach(c=>c.classList.remove('active')); b.classList.add('active'); state.viewFilter=b.dataset.filter; applyFilter(); });
+
+  function resetAll(){ clearInterval(state.timer); state.started=false; state.submitted=false; state.answers.clear(); state.orderMap=[]; state.current=0; byId('loader').classList.remove('hide'); byId('quizPanel').classList.add('hide'); byId('resultPanel').classList.add('hide'); byId('scorePill').classList.add('hide'); byId('headerTimer').textContent='00:00'; byId('bigTimer').textContent='00:00'; byId('bar').style.width='0%'; setHeaderInfo(state.quiz?`Đã tải: ${state.quiz.meta.title}`:'Chưa tải đề'); }
+
+  // ===== Template JSON (sample for quick start) =====
+  function getTemplateJSON(){
+    return {
+      meta:{ title:'Dược lý – Đề mẫu 01', time_limit_sec:900, shuffle_questions:true, shuffle_options:true, pass_mark:0.5, version:'1.0' },
+      questions:[
+        { id:'DL01', type:'single', question:'Đo nồng độ đáy (trough) thích hợp cho thuốc có:', options:['Khoảng điều trị hẹp','Thể tích phân bố lớn','Sinh khả dụng cao','Hệ số chiết xuất gan cao','Tốc độ hòa tan thấp'], correct:[0], explanation:'Thuốc có cửa sổ điều trị hẹp thường cần TDM bằng nồng độ đáy để tối ưu liều và tránh độc tính.', tags:['Dược động học','TDM'], difficulty:'medium' },
+        { id:'DL02', type:'multi', question:'Chọn tất cả phát biểu đúng về omeprazole:', options:['Là tiền thuốc','Kích hoạt ở môi trường kiềm','Ức chế bơm H⁺/K⁺‑ATPase','Tác dụng dược lý ngắn hơn thời gian ức chế enzym'], correct:[0,2], explanation:'Omeprazole là tiền thuốc, hoạt hoá trong môi trường acid và ức chế không hồi phục bơm proton.', tags:['Hóa dược','PPI'], difficulty:'easy' },
+        { id:'DL03', type:'single', question:'Tác dụng không mong muốn khi dùng cam thảo kéo dài là:', options:['Tiêu chảy','Phù','Chảy máu','Phát ban'], correct:[1], explanation:'Glycyrrhizin gây giả cường aldosteron → giữ muối nước → phù.', tags:['Dược liệu'], difficulty:'easy' }
+      ]
+    };
+  }
+
+  // ===== Lightweight tests (console) =====
+  (function runTests(){
+    try{
+      // Test 1: validation
+      const sample={ meta:{title:'T'}, questions:[ {id:'Q1',type:'single',question:'x?',options:['A','B'],correct:[1],explanation:''}, {id:'Q2',type:'multi',question:'y?',options:['A','B','C'],correct:[0,2]} ] };
+      const v=validateQuiz(JSON.parse(JSON.stringify(sample))); if(!v.questions || v.questions.length!==2) throw new Error('validateQuiz length');
+      // Test 2: checkQuestion correctness + decorations
+      state.quiz = normalizeQuiz(v); state.orderMap = state.quiz.questions.map((_,i)=>({qIdx:i,optOrder:[0,1,2,3].slice(0,state.quiz.questions[i].options.length)}));
+      renderMatrix(); renderQuestion(0);
+      state.answers.set(0,new Set([0])); // wrong for Q1
+      state.answers.set(1,new Set([0,2])); // correct for Q2
+      submitQuiz(true);
+      const rows=$$('#qMatrix .mrow');
+      if(!rows[0].classList.contains('bad')) throw new Error('Row 1 should be bad');
+      if(!rows[1].classList.contains('ok')) throw new Error('Row 2 should be ok');
+      // Test 3: filter works
+      state.viewFilter='answered'; applyFilter(); const hiddenAny = $$('#qMatrix .mrow').some(r=>r.style.display==='none'); if(!hiddenAny) throw new Error('Filter not hiding rows');
+      console.log('%c[Tests] OK','color:#0f0');
+    }catch(err){ console.error('[Tests] Failed:', err); }
+    // reset test modifications
+    state.answers.clear(); state.orderMap=[]; state.quiz=null; state.raw=null; byId('qOpts').innerHTML=''; byId('resultPanel').classList.add('hide'); state.viewFilter='all'; $$('#filterGroup .chip').forEach(c=>c.classList.remove('active')); byId('filterGroup').querySelector('[data-filter="all"]').classList.add('active');
+  })();
+
+  // Init header
+  byId('headerInfo').textContent='Chưa tải đề';
+  </script>
+</body>
+</html>
