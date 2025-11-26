@@ -1,0 +1,15 @@
+{
+  "folder": "kho-de",
+  "items": [
+    {
+      "id": "de_duoc_lieu_58",
+      "title": "Dược liệu khô – 58 cây",
+      "file": "ndl.json"
+    },
+    {
+      "id": "de_duoc_ly_giao_cam",
+      "title": "Dược lý – Hệ giao cảm",
+      "file": "duoc_ly_giao_cam.json"
+    }
+  ]
+}
