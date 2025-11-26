@@ -10,7 +10,8 @@ const download = (fn, txt) => { const blob=new Blob([txt],{type:'application/jso
 const state = {
   raw:null, quiz:null, orderMap:[], answers:new Map(),
   started:false, submitted:false, secs:0, timer:null,
-  current:0, autoShowExp:true, viewFilter:'all'
+  current:0, autoShowExp:true, viewFilter:'all',
+  bank:null // dữ liệu kho đề
 };
 
 /* ============ Validation / Normalize ============ */
@@ -55,10 +56,28 @@ function normalizeQuiz(json){
 
 /* ============ Import / Loader ============ */
 function setHeaderInfo(t){ byId('headerInfo').textContent=t; }
-function tryParse(text){
-  try{ const json=JSON.parse(text); validateQuiz(json); renderStart(json);}
-  catch(e){ alert('Lỗi JSON: '+e.message); console.error(e); }
+
+/** Dùng cho mọi nguồn (import file, paste, kho đề) */
+function loadQuizObject(json){
+  try{
+    validateQuiz(json);
+    renderStart(json);
+  }catch(e){
+    alert('Lỗi JSON: '+e.message);
+    console.error(e);
+  }
 }
+
+function tryParse(text){
+  try{
+    const json=JSON.parse(text);
+    loadQuizObject(json);
+  }catch(e){
+    alert('Lỗi JSON: '+e.message);
+    console.error(e);
+  }
+}
+
 byId('fileInput').addEventListener('change', async e=>{
   const f=e.target.files[0]; if(!f) return; tryParse(await f.text());
 });
@@ -77,6 +96,87 @@ function renderStart(json){
 }
 byId('btnStart').addEventListener('click', ()=>{ if(!state.quiz) return; resetAll(); computeOrder(); startQuiz(); });
 byId('btnReset').addEventListener('click', ()=> resetAll());
+
+/* ============ Question bank (Kho đề) ============ */
+/*
+  question-bank.json (đặt cùng thư mục với index.html/app.js):
+
+  {
+    "folder": "kho-de",
+    "items": [
+      { "id": "de1", "title": "Dược liệu khô – 58 cây", "file": "duoc_lieu_58.json" },
+      { "id": "de2", "title": "Dược lý – Giao cảm",      "file": "duoc_ly_giao_cam.json" }
+    ]
+  }
+
+  - "folder": thư mục chứa file đề (có thể để rỗng).
+  - Mỗi item:
+      - file: tên file trong folder
+      - HOẶC path: đường dẫn đầy đủ tới file (ưu tiên path nếu có).
+*/
+const BANK_INDEX_FILE = 'question-bank.json';
+
+async function initQuestionBank(){
+  const sel = byId('bankSelect');
+  const status = byId('bankStatus');
+  const btn = byId('btnBankLoad');
+  if(!sel || !status || !btn) return; // phòng trường hợp HTML chưa cập nhật
+
+  status.textContent = 'Đang đọc kho đề...';
+
+  try{
+    const res = await fetch(BANK_INDEX_FILE, {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const data = await res.json();
+    if(!data || !Array.isArray(data.items) || !data.items.length){
+      status.textContent = 'Kho đề trống hoặc thiếu "items".';
+      return;
+    }
+    state.bank = {
+      folder: (data.folder || '').trim(),
+      items: data.items
+    };
+
+    sel.innerHTML = '<option value="">-- Chọn đề trong kho --</option>';
+    data.items.forEach((item, idx)=>{
+      const opt = document.createElement('option');
+      opt.value = String(idx);
+      opt.textContent = item.title || item.id || ('Đề ' + (idx+1));
+      sel.appendChild(opt);
+    });
+    status.textContent = `Đã tải kho đề (${data.items.length} đề).`;
+  }catch(e){
+    console.error(e);
+    status.textContent = 'Không đọc được file question-bank.json (có thể chưa tạo hoặc sai JSON).';
+  }
+
+  btn.addEventListener('click', async ()=>{
+    if(!state.bank || !state.bank.items){ alert('Kho đề chưa sẵn sàng.'); return; }
+    const idx = parseInt(sel.value,10);
+    if(isNaN(idx) || !state.bank.items[idx]){ alert('Hãy chọn một đề trong kho.'); return; }
+
+    const item = state.bank.items[idx];
+    const folder = state.bank.folder ? state.bank.folder.replace(/\/$/,'') + '/' : '';
+    const path = item.path || (folder + (item.file || ''));
+    if(!path){
+      alert('Mục kho đề thiếu "file" hoặc "path".');
+      return;
+    }
+
+    try{
+      const res = await fetch(path, {cache:'no-store'});
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const json = await res.json();
+      loadQuizObject(json);
+
+      const extraTitle = item.title ? ` – ${item.title}` : '';
+      setHeaderInfo(`Kho đề: ${state.quiz.meta.title}${extraTitle}`);
+    }catch(e){
+      alert('Không nạp được đề từ kho: '+e.message);
+      console.error(e);
+    }
+  });
+}
 
 /* ============ Quiz flow ============ */
 function computeOrder(){
@@ -363,5 +463,6 @@ function getTemplateJSON(){
   };
 }
 
-/* ============ Init header text ============ */
+/* ============ Init header text & kho đề ============ */
 setHeaderInfo('Chưa tải đề');
+initQuestionBank();
