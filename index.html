@@ -38,7 +38,23 @@
               <button class="btn ghost" id="btnSample">✨ Nạp đề mẫu</button>
             </div>
           </div>
+
+          <!-- Kho đề -->
+          <div class="mt10">
+            <h3>1b) Chọn đề từ kho đề</h3>
+            <div class="muted">
+              Kho đề được cấu hình trong file <code>question-bank.json</code> đặt cùng thư mục với app.
+            </div>
+            <div class="btn-row mt6">
+              <select id="bankSelect">
+                <option value="">-- Chọn đề trong kho --</option>
+              </select>
+              <button class="btn" id="btnBankLoad">📚 Nạp từ kho đề</button>
+            </div>
+            <div class="muted mt6" id="bankStatus"></div>
+          </div>
         </div>
+
         <div>
           <h2 class="mt0">2) Thiết lập</h2>
           <label>Thời gian (phút) — để trống để lấy từ file
@@ -114,10 +130,10 @@
             <button class="btn" id="btnPrev">← Trước</button>
             <button class="btn" id="btnNext">Tiếp →</button>
             <button class="btn" id="btnSubmit">📤 Nộp bài</button>
-            <button class="btn ghost" id="btnReview">🔍 Xem/ẩn giải thích</button>
-            <button class="btn ghost" id="btnShuffle">🔀 Xáo lại</button>
-            <button class="btn ghost" id="btnRedo">↺ Làm lại đề</button>
-            <button class="btn ghost" id="btnNew">📥 Làm đề mới</button>
+            <button class="btn" id="btnReview">🔍 Xem/ẩn giải thích</button>
+            <button class="btn" id="btnShuffle">🔀 Xáo lại</button>
+            <button class="btn" id="btnRedo">↺ Làm lại đề</button>
+            <button class="btn" id="btnNew">📥 Làm đề mới</button>
           </div>
         </div>
       </aside>
