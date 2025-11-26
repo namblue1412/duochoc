@@ -1,0 +1,940 @@
+{
+  "meta": {
+    "title": "Nhận thực dược liệu",
+    "time_limit_sec": 900,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "DL001",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Morinda officinalis Rubiaceae",
+        "Bletilla striata Orchidaceae",
+        "Angelica dahurica Apiaceae",
+        "Lilium brownii Liliaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Ba kích.",
+      "tags": ["Ba kích"],
+      "difficulty": "easy",
+      "image": "nonamtag/bakich.jpg"
+    },
+    {
+      "id": "DL002",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Bletilla striata Orchidaceae",
+        "Angelica dahurica Apiaceae",
+        "Lilium brownii Liliaceae",
+        "Ginkgo biloba Ginkgoaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Bạch cập.",
+      "tags": ["Bạch cập"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachcap.jpg"
+    },
+    {
+      "id": "DL003",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Angelica dahurica Apiaceae",
+        "Lilium brownii Liliaceae",
+        "Ginkgo biloba Ginkgoaceae",
+        "Tribulus terrestris Zygophyllaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Bạch chỉ.",
+      "tags": ["Bạch chỉ"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachchi.jpg"
+    },
+    {
+      "id": "DL004",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Lilium brownii Liliaceae",
+        "Ginkgo biloba Ginkgoaceae",
+        "Tribulus terrestris Zygophyllaceae",
+        "Glycyrrhiza uralensis Fabaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Bách hợp.",
+      "tags": ["Bách hợp"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachhop.jpg"
+    },
+    {
+      "id": "DL005",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Ginkgo biloba Ginkgoaceae",
+        "Tribulus terrestris Zygophyllaceae",
+        "Glycyrrhiza uralensis Fabaceae",
+        "Platycodon grandiflorus Campanulaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Bạch quả.",
+      "tags": ["Bạch quả"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachqua.jpg"
+    },
+    {
+      "id": "DL006",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Tribulus terrestris Zygophyllaceae",
+        "Glycyrrhiza uralensis Fabaceae",
+        "Platycodon grandiflorus Campanulaceae",
+        "Reynoutria japonica Polygonaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Bạch tật lê.",
+      "tags": ["Bạch tật lê"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachtatle.jpg"
+    },
+    {
+      "id": "DL007",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Glycyrrhiza uralensis Fabaceae",
+        "Platycodon grandiflorus Campanulaceae",
+        "Reynoutria japonica Polygonaceae",
+        "Lycium chinense Solanaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Cam thảo.",
+      "tags": ["Cam thảo"],
+      "difficulty": "easy",
+      "image": "nonamtag/camthao.jpg"
+    },
+    {
+      "id": "DL008",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Platycodon grandiflorus Campanulaceae",
+        "Reynoutria japonica Polygonaceae",
+        "Lycium chinense Solanaceae",
+        "Cibotium barometz Cibotiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Cát cánh.",
+      "tags": ["Cát cánh"],
+      "difficulty": "easy",
+      "image": "nonamtag/catcanh.jpg"
+    },
+    {
+      "id": "DL009",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Reynoutria japonica Polygonaceae",
+        "Lycium chinense Solanaceae",
+        "Cibotium barometz Cibotiaceae",
+        "Drynaria roosii Polypodiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Cốt khí củ.",
+      "tags": ["Cốt khí củ"],
+      "difficulty": "easy",
+      "image": "nonamtag/cotkhicu.jpg"
+    },
+    {
+      "id": "DL010",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Lycium chinense Solanaceae",
+        "Cibotium barometz Cibotiaceae",
+        "Drynaria roosii Polypodiaceae",
+        "Gardenia jasminoides Rubiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Câu kỷ tử.",
+      "tags": ["Câu kỷ tử"],
+      "difficulty": "easy",
+      "image": "nonamtag/caukytu.jpg"
+    },
+    {
+      "id": "DL011",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Cibotium barometz Cibotiaceae",
+        "Drynaria roosii Polypodiaceae",
+        "Gardenia jasminoides Rubiaceae",
+        "Rheum palmatum Polygonaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Cẩu tích.",
+      "tags": ["Cẩu tích"],
+      "difficulty": "easy",
+      "image": "nonamtag/cautich.jpg"
+    },
+    {
+      "id": "DL012",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Drynaria roosii Polypodiaceae",
+        "Gardenia jasminoides Rubiaceae",
+        "Rheum palmatum Polygonaceae",
+        "Salvia miltiorrhiza Lamiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Cốt toái bổ.",
+      "tags": ["Cốt toái bổ"],
+      "difficulty": "easy",
+      "image": "nonamtag/cottoaibo.jpg"
+    },
+    {
+      "id": "DL013",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Gardenia jasminoides Rubiaceae",
+        "Rheum palmatum Polygonaceae",
+        "Salvia miltiorrhiza Lamiaceae",
+        "Codonopsis javanica Campanulaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Dành dành.",
+      "tags": ["Dành dành"],
+      "difficulty": "easy",
+      "image": "nonamtag/danhdanh.jpg"
+    },
+    {
+      "id": "DL014",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Rheum palmatum Polygonaceae",
+        "Salvia miltiorrhiza Lamiaceae",
+        "Codonopsis javanica Campanulaceae",
+        "Prunus persica Rosaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Đại hoàng.",
+      "tags": ["Đại hoàng"],
+      "difficulty": "easy",
+      "image": "nonamtag/daihoang.jpg"
+    },
+    {
+      "id": "DL015",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Salvia miltiorrhiza Lamiaceae",
+        "Codonopsis javanica Campanulaceae",
+        "Prunus persica Rosaceae",
+        "Aloe vera Xanthorrhoeaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Đan sâm.",
+      "tags": ["Đan sâm"],
+      "difficulty": "easy",
+      "image": "nonamtag/dansam.jpg"
+    },
+    {
+      "id": "DL016",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Codonopsis javanica Campanulaceae",
+        "Prunus persica Rosaceae",
+        "Aloe vera Xanthorrhoeaceae",
+        "Eucommia ulmoides Eucommiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Đảng sâm.",
+      "tags": ["Đảng sâm"],
+      "difficulty": "easy",
+      "image": "nonamtag/dangsam.jpg"
+    },
+    {
+      "id": "DL017",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Prunus persica Rosaceae",
+        "Aloe vera Xanthorrhoeaceae",
+        "Eucommia ulmoides Eucommiaceae",
+        "Reynoutria multiflora Polygonaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Đào nhân.",
+      "tags": ["Đào nhân"],
+      "difficulty": "easy",
+      "image": "nonamtag/daonhan.jpg"
+    },
+    {
+      "id": "DL018",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Aloe vera Xanthorrhoeaceae",
+        "Eucommia ulmoides Eucommiaceae",
+        "Reynoutria multiflora Polygonaceae",
+        "Streptocaulon juventas Apocynaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Lô hội.",
+      "tags": ["Lô hội"],
+      "difficulty": "easy",
+      "image": "nonamtag/lohoi.jpg"
+    },
+    {
+      "id": "DL019",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Eucommia ulmoides Eucommiaceae",
+        "Reynoutria multiflora Polygonaceae",
+        "Streptocaulon juventas Apocynaceae",
+        "Styphnolobium japonicum Fabaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Đỗ trọng.",
+      "tags": ["Đỗ trọng"],
+      "difficulty": "easy",
+      "image": "nonamtag/dotrong.jpg"
+    },
+    {
+      "id": "DL020",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Reynoutria multiflora Polygonaceae",
+        "Streptocaulon juventas Apocynaceae",
+        "Styphnolobium japonicum Fabaceae",
+        "Dioscorea persimilis Dioscoreaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Hà thủ ô đỏ.",
+      "tags": ["Hà thủ ô đỏ"],
+      "difficulty": "easy",
+      "image": "nonamtag/hathuodo.jpg"
+    },
+    {
+      "id": "DL021",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Streptocaulon juventas Apocynaceae",
+        "Styphnolobium japonicum Fabaceae",
+        "Dioscorea persimilis Dioscoreaceae",
+        "Scutellaria baicalensis Lamiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Hà thủ ô trắng.",
+      "tags": ["Hà thủ ô trắng"],
+      "difficulty": "easy",
+      "image": "nonamtag/hathuotrang.jpg"
+    },
+    {
+      "id": "DL022",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Styphnolobium japonicum Fabaceae",
+        "Dioscorea persimilis Dioscoreaceae",
+        "Scutellaria baicalensis Lamiaceae",
+        "Astragalus mongholicus Fabaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Hoa hòe.",
+      "tags": ["Hoa hòe"],
+      "difficulty": "easy",
+      "image": "nonamtag/hoahoe.jpg"
+    },
+    {
+      "id": "DL023",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Dioscorea persimilis Dioscoreaceae",
+        "Scutellaria baicalensis Lamiaceae",
+        "Astragalus mongholicus Fabaceae",
+        "Carthamus tinctorius Asteraceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Hoài sơn.",
+      "tags": ["Hoài sơn"],
+      "difficulty": "easy",
+      "image": "nonamtag/hoaison.jpg"
+    },
+    {
+      "id": "DL024",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Scutellaria baicalensis Lamiaceae",
+        "Astragalus mongholicus Fabaceae",
+        "Carthamus tinctorius Asteraceae",
+        "Leucaena leucocephala Fabaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Hoàng cầm.",
+      "tags": ["Hoàng cầm"],
+      "difficulty": "easy",
+      "image": "nonamtag/hoangcam.jpg"
+    },
+    {
+      "id": "DL025",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Astragalus mongholicus Fabaceae",
+        "Carthamus tinctorius Asteraceae",
+        "Leucaena leucocephala Fabaceae",
+        "Rosa laevigata Rosaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Hoàng kỳ.",
+      "tags": ["Hoàng kỳ"],
+      "difficulty": "easy",
+      "image": "nonamtag/hoangky.jpg"
+    },
+    {
+      "id": "DL026",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Carthamus tinctorius Asteraceae",
+        "Leucaena leucocephala Fabaceae",
+        "Rosa laevigata Rosaceae",
+        "Lonicera japonica Caprifoliaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Hồng hoa.",
+      "tags": ["Hồng hoa"],
+      "difficulty": "easy",
+      "image": "nonamtag/honghoa.jpg"
+    },
+    {
+      "id": "DL027",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Leucaena leucocephala Fabaceae",
+        "Rosa laevigata Rosaceae",
+        "Lonicera japonica Caprifoliaceae",
+        "Desmodium styracifolium Fabaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Keo giậu.",
+      "tags": ["Keo giậu"],
+      "difficulty": "easy",
+      "image": "nonamtag/keogiau.jpg"
+    },
+    {
+      "id": "DL028",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Rosa laevigata Rosaceae",
+        "Lonicera japonica Caprifoliaceae",
+        "Desmodium styracifolium Fabaceae",
+        "Terminalia chebula Combretaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Kim anh.",
+      "tags": ["Kim anh"],
+      "difficulty": "easy",
+      "image": "nonamtag/kimanh.jpg"
+    },
+    {
+      "id": "DL029",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Lonicera japonica Caprifoliaceae",
+        "Desmodium styracifolium Fabaceae",
+        "Terminalia chebula Combretaceae",
+        "Euryale ferox Nymphaeaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Kim ngân.",
+      "tags": ["Kim ngân"],
+      "difficulty": "easy",
+      "image": "nonamtag/kimngan.jpg"
+    },
+    {
+      "id": "DL030",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Desmodium styracifolium Fabaceae",
+        "Terminalia chebula Combretaceae",
+        "Euryale ferox Nymphaeaceae",
+        "Ophiopogon japonicus Asparagaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Kim tiền thảo.",
+      "tags": ["Kim tiền thảo"],
+      "difficulty": "easy",
+      "image": "nonamtag/kimtienthao.jpg"
+    },
+    {
+      "id": "DL031",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Terminalia chebula Combretaceae",
+        "Euryale ferox Nymphaeaceae",
+        "Ophiopogon japonicus Asparagaceae",
+        "Hordeum vulgare Poaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Kha tử.",
+      "tags": ["Kha tử"],
+      "difficulty": "easy",
+      "image": "nonamtag/khatu.jpg"
+    },
+    {
+      "id": "DL032",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Euryale ferox Nymphaeaceae",
+        "Ophiopogon japonicus Asparagaceae",
+        "Hordeum vulgare Poaceae",
+        "Calophyllum inophyllum Clusiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Khiếm thực.",
+      "tags": ["Khiếm thực"],
+      "difficulty": "easy",
+      "image": "nonamtag/khiemthuc.jpg"
+    },
+    {
+      "id": "DL033",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Ophiopogon japonicus Asparagaceae",
+        "Hordeum vulgare Poaceae",
+        "Calophyllum inophyllum Clusiaceae",
+        "Oroxylum indicum Bignoniaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Mạch môn.",
+      "tags": ["Mạch môn"],
+      "difficulty": "easy",
+      "image": "nonamtag/machmon.jpg"
+    },
+    {
+      "id": "DL034",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Hordeum vulgare Poaceae",
+        "Calophyllum inophyllum Clusiaceae",
+        "Oroxylum indicum Bignoniaceae",
+        "Galla chinensis Anacardiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Mạch nha.",
+      "tags": ["Mạch nha"],
+      "difficulty": "easy",
+      "image": "nonamtag/machnha.jpg"
+    },
+    {
+      "id": "DL035",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Calophyllum inophyllum Clusiaceae",
+        "Oroxylum indicum Bignoniaceae",
+        "Galla chinensis Anacardiaceae",
+        "Schisandra chinensis Schisandraceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Mù u.",
+      "tags": ["Mù u"],
+      "difficulty": "easy",
+      "image": "nonamtag/muu.jpg"
+    },
+    {
+      "id": "DL036",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Oroxylum indicum Bignoniaceae",
+        "Galla chinensis Anacardiaceae",
+        "Schisandra chinensis Schisandraceae",
+        "Achyranthes bidentata Amaranthaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Núc nác.",
+      "tags": ["Núc nác"],
+      "difficulty": "easy",
+      "image": "nonamtag/nucnac.jpg"
+    },
+    {
+      "id": "DL037",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Galla chinensis Anacardiaceae",
+        "Schisandra chinensis Schisandraceae",
+        "Achyranthes bidentata Amaranthaceae",
+        "Morinda citrifolia Rubiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Ngũ bội tử.",
+      "tags": ["Ngũ bội tử"],
+      "difficulty": "easy",
+      "image": "nonamtag/nguboitu.jpg"
+    },
+    {
+      "id": "DL038",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Schisandra chinensis Schisandraceae",
+        "Achyranthes bidentata Amaranthaceae",
+        "Morinda citrifolia Rubiaceae",
+        "Senna alexandrina Fabaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Ngũ vị.",
+      "tags": ["Ngũ vị"],
+      "difficulty": "easy",
+      "image": "nonamtag/nguvi.jpg"
+    },
+    {
+      "id": "DL039",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Achyranthes bidentata Amaranthaceae",
+        "Morinda citrifolia Rubiaceae",
+        "Senna alexandrina Fabaceae",
+        "Belamcanda chinensis Iridaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Ngưu tất bắc.",
+      "tags": ["Ngưu tất bắc"],
+      "difficulty": "easy",
+      "image": "nonamtag/nguutatbac.jpg"
+    },
+    {
+      "id": "DL040",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Morinda citrifolia Rubiaceae",
+        "Senna alexandrina Fabaceae",
+        "Belamcanda chinensis Iridaceae",
+        "Bupleurum chinense Apiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Nhàu.",
+      "tags": ["Nhàu"],
+      "difficulty": "easy",
+      "image": "nonamtag/nhau.jpg"
+    },
+    {
+      "id": "DL041",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Senna alexandrina Fabaceae",
+        "Belamcanda chinensis Iridaceae",
+        "Bupleurum chinense Apiaceae",
+        "Pueraria thomsonii Fabaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Phan tả diệp.",
+      "tags": ["Phan tả diệp"],
+      "difficulty": "easy",
+      "image": "nonamtag/phantadiep.jpg"
+    },
+    {
+      "id": "DL042",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Belamcanda chinensis Iridaceae",
+        "Bupleurum chinense Apiaceae",
+        "Pueraria thomsonii Fabaceae",
+        "Abelmoschus sagittifolius Malvaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Rẻ quạt.",
+      "tags": ["Rẻ quạt"],
+      "difficulty": "easy",
+      "image": "nonamtag/requat.jpg"
+    },
+    {
+      "id": "DL043",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Bupleurum chinense Apiaceae",
+        "Pueraria thomsonii Fabaceae",
+        "Abelmoschus sagittifolius Malvaceae",
+        "Eleutherine bulbosa Iridaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Sài hồ.",
+      "tags": ["Sài hồ"],
+      "difficulty": "easy",
+      "image": "nonamtag/saiho.jpeg"
+    },
+    {
+      "id": "DL044",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Pueraria thomsonii Fabaceae",
+        "Abelmoschus sagittifolius Malvaceae",
+        "Eleutherine bulbosa Iridaceae",
+        "Docynia doumeri Rosaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Sắn dây.",
+      "tags": ["Sắn dây"],
+      "difficulty": "easy",
+      "image": "nonamtag/sanday.jpg"
+    },
+    {
+      "id": "DL045",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Abelmoschus sagittifolius Malvaceae",
+        "Eleutherine bulbosa Iridaceae",
+        "Docynia doumeri Rosaceae",
+        "Combretum indicum Combretaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Sâm bố chính.",
+      "tags": ["Sâm bố chính"],
+      "difficulty": "easy",
+      "image": "nonamtag/sambochinh.jpg"
+    },
+    {
+      "id": "DL046",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Eleutherine bulbosa Iridaceae",
+        "Docynia doumeri Rosaceae",
+        "Combretum indicum Combretaceae",
+        "Caesalpinia sappan Fabaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Sâm đại hành.",
+      "tags": ["Sâm đại hành"],
+      "difficulty": "easy",
+      "image": "nonamtag/samdaihanh.jpg"
+    },
+    {
+      "id": "DL047",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Docynia doumeri Rosaceae",
+        "Combretum indicum Combretaceae",
+        "Caesalpinia sappan Fabaceae",
+        "Senna tora Fabaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Sơn tra.",
+      "tags": ["Sơn tra"],
+      "difficulty": "easy",
+      "image": "nonamtag/sontra.jpg"
+    },
+    {
+      "id": "DL048",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Combretum indicum Combretaceae",
+        "Caesalpinia sappan Fabaceae",
+        "Senna tora Fabaceae",
+        "Asparagus cochinchinensis Asparagaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Sử quân tử.",
+      "tags": ["Sử quân tử"],
+      "difficulty": "easy",
+      "image": "nonamtag/suquantu.jpg"
+    },
+    {
+      "id": "DL049",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Caesalpinia sappan Fabaceae",
+        "Senna tora Fabaceae",
+        "Asparagus cochinchinensis Asparagaceae",
+        "Smilax glabra Smilacaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Tô mộc.",
+      "tags": ["Tô mộc"],
+      "difficulty": "easy",
+      "image": "nonamtag/tomoc.jpg"
+    },
+    {
+      "id": "DL050",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Senna tora Fabaceae",
+        "Asparagus cochinchinensis Asparagaceae",
+        "Smilax glabra Smilacaceae",
+        "Tetrapanax papyrifer Araliaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Thảo quyết minh.",
+      "tags": ["Thảo quyết minh"],
+      "difficulty": "easy",
+      "image": "nonamtag/thaoquyetminh.jpg"
+    },
+    {
+      "id": "DL051",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Asparagus cochinchinensis Asparagaceae",
+        "Smilax glabra Smilacaceae",
+        "Tetrapanax papyrifer Araliaceae",
+        "Rehmannia glutinosa Scrophulariaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Thiên môn.",
+      "tags": ["Thiên môn"],
+      "difficulty": "easy",
+      "image": "nonamtag/thienmon.jpg"
+    },
+    {
+      "id": "DL052",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Smilax glabra Smilacaceae",
+        "Tetrapanax papyrifer Araliaceae",
+        "Rehmannia glutinosa Scrophulariaceae",
+        "Alisma plantago-aquatica Alismataceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Thổ phục linh.",
+      "tags": ["Thổ phục linh"],
+      "difficulty": "easy",
+      "image": "nonamtag/thophuclinh.jpg"
+    },
+    {
+      "id": "DL053",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Tetrapanax papyrifer Araliaceae",
+        "Rehmannia glutinosa Scrophulariaceae",
+        "Alisma plantago-aquatica Alismataceae",
+        "Combretum quadrangulare Combretaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Thông thảo.",
+      "tags": ["Thông thảo"],
+      "difficulty": "easy",
+      "image": "nonamtag/thongthao.jpg"
+    },
+    {
+      "id": "DL054",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Rehmannia glutinosa Scrophulariaceae",
+        "Alisma plantago-aquatica Alismataceae",
+        "Combretum quadrangulare Combretaceae",
+        "Polygala tenuifolia Polygalaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Địa hoàng.",
+      "tags": ["Địa hoàng"],
+      "difficulty": "easy",
+      "image": "nonamtag/diahoang.jpg"
+    },
+    {
+      "id": "DL055",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Alisma plantago-aquatica Alismataceae",
+        "Combretum quadrangulare Combretaceae",
+        "Polygala tenuifolia Polygalaceae",
+        "Coix lacryma-jobi Poaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Trạch tả.",
+      "tags": ["Trạch tả"],
+      "difficulty": "easy",
+      "image": "nonamtag/trachta.jpg"
+    },
+    {
+      "id": "DL056",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Combretum quadrangulare Combretaceae",
+        "Polygala tenuifolia Polygalaceae",
+        "Coix lacryma-jobi Poaceae",
+        "Morinda officinalis Rubiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Trâm bầu.",
+      "tags": ["Trâm bầu"],
+      "difficulty": "easy",
+      "image": "nonamtag/trambau.jpg"
+    },
+    {
+      "id": "DL057",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Polygala tenuifolia Polygalaceae",
+        "Coix lacryma-jobi Poaceae",
+        "Morinda officinalis Rubiaceae",
+        "Bletilla striata Orchidaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Viễn chí.",
+      "tags": ["Viễn chí"],
+      "difficulty": "easy",
+      "image": "nonamtag/vienchi.jpg"
+    },
+    {
+      "id": "DL058",
+      "type": "single",
+      "question": "Hãy chọn tên khoa học và họ thực vật đúng của dược liệu trong hình.",
+      "options": [
+        "Coix lacryma-jobi Poaceae",
+        "Morinda officinalis Rubiaceae",
+        "Bletilla striata Orchidaceae",
+        "Angelica dahurica Apiaceae"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu trong hình là Ý dĩ.",
+      "tags": ["Ý dĩ"],
+      "difficulty": "easy",
+      "image": "nonamtag/ydi.jpg"
+    }
+  ]
+}
