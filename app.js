@@ -229,7 +229,7 @@ function renderQuestion(qShownIdx){
   byId('qText').innerHTML   = q.question;
 
   const imgHost=byId('qImage'); imgHost.innerHTML='';
-  if(q.image){ const img=new Image(); img.src=q.image; img.alt='image'; img.style.maxWidth='100%'; img.style.borderRadius='10px'; imgHost.appendChild(img); }
+  if(q.image){ const img=new Image(); img.src=q.image; img.alt='image'; img.style.maxWidth='50%'; img.style.borderRadius='10px'; imgHost.appendChild(img); }
 
   const opts=byId('qOpts'); opts.innerHTML='';
   const chosenSet=new Set(state.answers.get(qShownIdx)||[]);
