@@ -1,0 +1,940 @@
+{
+  "meta": {
+    "title": "NTDL – Thành phần hoá học (58 dược liệu)",
+    "time_limit_sec": 900,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "DL001",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin steroid (browniosid)",
+        "alkaloid",
+        "Saponin (tigogenin)",
+        "flavonoid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Bách hợp có thành phần hoá học chính: Saponin steroid (browniosid), alkaloid.",
+      "tags": ["Bách hợp", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachhop.jpg"
+    },
+    {
+      "id": "DL002",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin (tigogenin)",
+        "flavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Bạch tật lê có thành phần hoá học chính: Saponin (tigogenin), flavonoid.",
+      "tags": ["Bạch tật lê", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachtatle.jpg"
+    },
+    {
+      "id": "DL003",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin (glycyrrhizin)",
+        "flavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Cam thảo có thành phần hoá học chính: Saponin (glycyrrhizin), flavonoid.",
+      "tags": ["Cam thảo", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/camthao.jpg"
+    },
+    {
+      "id": "DL004",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin triterpen",
+        "flavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Cát cánh có thành phần hoá học chính: Saponin triterpen, flavonoid.",
+      "tags": ["Cát cánh", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/catcanh.jpg"
+    },
+    {
+      "id": "DL005",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin triterpen",
+        "glycosid tim",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Hà thủ ô trắng có thành phần hoá học chính: Saponin triterpen, glycosid tim.",
+      "tags": ["Hà thủ ô trắng", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/hathuotrang.jpg"
+    },
+    {
+      "id": "DL006",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin",
+        "isoflavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Hoàng kỳ có thành phần hoá học chính: Saponin, isoflavonoid.",
+      "tags": ["Hoàng kỳ", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/hoangky.jpg"
+    },
+    {
+      "id": "DL007",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Triterpen",
+        "flavonoid",
+        "vitamin C",
+        "Saponin steroid (browniosid)"
+      ],
+      "correct": [0, 1, 2],
+      "explanation": "Dược liệu Kim anh có thành phần hoá học chính: Triterpen, flavonoid, vitamin C.",
+      "tags": ["Kim anh", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/kimanh.jpg"
+    },
+    {
+      "id": "DL008",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin steroid (ophiopogonin)",
+        "acid phenol",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Mạch môn có thành phần hoá học chính: Saponin steroid (ophiopogonin), acid phenol.",
+      "tags": ["Mạch môn", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/machmon.jpg"
+    },
+    {
+      "id": "DL009",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin triterpen",
+        "inokosteron",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Ngưu tất bắc có thành phần hoá học chính: Saponin triterpen, inokosteron.",
+      "tags": ["Ngưu tất bắc", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/nguutatbac.jpg"
+    },
+    {
+      "id": "DL010",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin",
+        "flavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Sài hồ có thành phần hoá học chính: Saponin, flavonoid.",
+      "tags": ["Sài hồ", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/saiho.jpeg"
+    },
+    {
+      "id": "DL011",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin steroid",
+        "flavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Thiên môn có thành phần hoá học chính: Saponin steroid, flavonoid.",
+      "tags": ["Thiên môn", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/thienmon.jpg"
+    },
+    {
+      "id": "DL012",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin",
+        "flavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Thổ phục linh có thành phần hoá học chính: Saponin, flavonoid.",
+      "tags": ["Thổ phục linh", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/thophuclinh.jpg"
+    },
+    {
+      "id": "DL013",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin triterpen",
+        "polysaccharid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Thông thảo có thành phần hoá học chính: Saponin triterpen, polysaccharid.",
+      "tags": ["Thông thảo", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/thongthao.jpg"
+    },
+    {
+      "id": "DL014",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Terpenoid",
+        "polysaccharid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Trạch tả có thành phần hoá học chính: Terpenoid, polysaccharid.",
+      "tags": ["Trạch tả", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/trachta.jpg"
+    },
+    {
+      "id": "DL015",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Saponin triterpenoid",
+        "xanthon",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Viễn chí có thành phần hoá học chính: Saponin triterpenoid, xanthon.",
+      "tags": ["Viễn chí", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/vienchi.jpg"
+    },
+    {
+      "id": "DL016",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid (ginketin)",
+        "acid béo",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Bạch quả có thành phần hoá học chính: Flavonoid (ginketin), acid béo.",
+      "tags": ["Bạch quả", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachqua.jpg"
+    },
+    {
+      "id": "DL017",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid",
+        "tinh bột",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Cốt toái bổ có thành phần hoá học chính: Flavonoid, tinh bột.",
+      "tags": ["Cốt toái bổ", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/cottoaibo.jpg"
+    },
+    {
+      "id": "DL018",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid (baicalin)",
+        "polysaccharid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Hoàng cầm có thành phần hoá học chính: Flavonoid (baicalin), polysaccharid.",
+      "tags": ["Hoàng cầm", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/hoangcam.jpg"
+    },
+    {
+      "id": "DL019",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid (carthamin)",
+        "tinh dầu",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Hồng hoa có thành phần hoá học chính: Flavonoid (carthamin), tinh dầu.",
+      "tags": ["Hồng hoa", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/honghoa.jpg"
+    },
+    {
+      "id": "DL020",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid",
+        "saponin triterpen",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Kim tiền thảo có thành phần hoá học chính: Flavonoid, saponin triterpen.",
+      "tags": ["Kim tiền thảo", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/kimtienthao.jpg"
+    },
+    {
+      "id": "DL021",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid",
+        "isoflavonoid",
+        "chất béo",
+        "Saponin steroid (browniosid)"
+      ],
+      "correct": [0, 1, 2],
+      "explanation": "Dược liệu Núc nác có thành phần hoá học chính: Flavonoid, isoflavonoid, chất béo.",
+      "tags": ["Núc nác", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/nucnac.jpg"
+    },
+    {
+      "id": "DL022",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tannin",
+        "acid hữu cơ",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Sơn tra có thành phần hoá học chính: Tannin, acid hữu cơ.",
+      "tags": ["Sơn tra", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/sontra.jpg"
+    },
+    {
+      "id": "DL023",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid",
+        "neoflavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Tô mộc có thành phần hoá học chính: Flavonoid, neoflavonoid.",
+      "tags": ["Tô mộc", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/tomoc.jpg"
+    },
+    {
+      "id": "DL024",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid (rutin)",
+        "saponin",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Hoa hòe có thành phần hoá học chính: Flavonoid (rutin), saponin.",
+      "tags": ["Hoa hòe", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/hoahoe.jpg"
+    },
+    {
+      "id": "DL025",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Isoflavon",
+        "tinh bột",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Sắn dây có thành phần hoá học chính: Isoflavon, tinh bột.",
+      "tags": ["Sắn dây", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/sanday.jpg"
+    },
+    {
+      "id": "DL026",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid",
+        "acid phenol",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Kim ngân có thành phần hoá học chính: Flavonoid, acid phenol.",
+      "tags": ["Kim ngân", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/kimngan.jpg"
+    },
+    {
+      "id": "DL027",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Flavonoid",
+        "isoflavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Rẻ quạt có thành phần hoá học chính: Flavonoid, isoflavonoid.",
+      "tags": ["Rẻ quạt", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/requat.jpg"
+    },
+    {
+      "id": "DL028",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Anthraquinon",
+        "iridoid glycosid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Ba kích có thành phần hoá học chính: Anthraquinon, iridoid glycosid.",
+      "tags": ["Ba kích", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/bakich.jpg"
+    },
+    {
+      "id": "DL029",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Anthraglycosid (emodin)",
+        "stilben",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Cốt khí củ có thành phần hoá học chính: Anthraglycosid (emodin), stilben.",
+      "tags": ["Cốt khí củ", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/cotkhicu.jpg"
+    },
+    {
+      "id": "DL030",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Anthraquinon (rhein)",
+        "tannin",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Đại hoàng có thành phần hoá học chính: Anthraquinon (rhein), tannin.",
+      "tags": ["Đại hoàng", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/daihoang.jpg"
+    },
+    {
+      "id": "DL031",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Anthraglycosid (emodin)",
+        "tannin",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Hà thủ ô đỏ có thành phần hoá học chính: Anthraglycosid (emodin), tannin.",
+      "tags": ["Hà thủ ô đỏ", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/hathuodo.jpg"
+    },
+    {
+      "id": "DL032",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Anthraglycosid (aloin)",
+        "acid phenol",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Lô hội có thành phần hoá học chính: Anthraglycosid (aloin), acid phenol.",
+      "tags": ["Lô hội", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/lohoi.jpg"
+    },
+    {
+      "id": "DL033",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Anthraglycosid",
+        "napthoquinon",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Nhàu có thành phần hoá học chính: Anthraglycosid, napthoquinon.",
+      "tags": ["Nhàu", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/nhau.jpg"
+    },
+    {
+      "id": "DL034",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Anthraglycosid",
+        "flavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Phan tả diệp có thành phần hoá học chính: Anthraglycosid, flavonoid.",
+      "tags": ["Phan tả diệp", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/phantadiep.jpg"
+    },
+    {
+      "id": "DL035",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Anthranoid (emodin)",
+        "chất béo",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Thảo quyết minh có thành phần hoá học chính: Anthranoid (emodin), chất béo.",
+      "tags": ["Thảo quyết minh", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/thaoquyetminh.jpg"
+    },
+    {
+      "id": "DL036",
+      "type": "single",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Napthoquinon (eleutherin)",
+        "Saponin steroid (browniosid)",
+        "alkaloid",
+        "Saponin (tigogenin)"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu Sâm đại hành có thành phần hoá học chính: Napthoquinon (eleutherin).",
+      "tags": ["Sâm đại hành", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/samdaihanh.jpg"
+    },
+    {
+      "id": "DL037",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tannin",
+        "terpenoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Kha tử có thành phần hoá học chính: Tannin, terpenoid.",
+      "tags": ["Kha tử", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/khatu.jpg"
+    },
+    {
+      "id": "DL038",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tannin",
+        "tocopherol",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Keo giậu có thành phần hoá học chính: Tannin, tocopherol.",
+      "tags": ["Keo giậu", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/keogiau.jpg"
+    },
+    {
+      "id": "DL039",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tannin",
+        "chất béo",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Trâm bầu có thành phần hoá học chính: Tannin, chất béo.",
+      "tags": ["Trâm bầu", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/trambau.jpg"
+    },
+    {
+      "id": "DL040",
+      "type": "single",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tannin pyrogalllic",
+        "Saponin steroid (browniosid)",
+        "alkaloid",
+        "Saponin (tigogenin)"
+      ],
+      "correct": [0],
+      "explanation": "Dược liệu Ngũ bội tử có thành phần hoá học chính: Tannin pyrogalllic.",
+      "tags": ["Ngũ bội tử", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/nguboitu.jpg"
+    },
+    {
+      "id": "DL041",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Coumarin",
+        "tinh dầu",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Bạch chỉ có thành phần hoá học chính: Coumarin, tinh dầu.",
+      "tags": ["Bạch chỉ", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachchi.jpg"
+    },
+    {
+      "id": "DL042",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Coumarin",
+        "dầu béo",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Mù u có thành phần hoá học chính: Coumarin, dầu béo.",
+      "tags": ["Mù u", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/muu.jpg"
+    },
+    {
+      "id": "DL043",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Iridoid glycosid",
+        "ionon glycosid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Địa hoàng có thành phần hoá học chính: Iridoid glycosid, ionon glycosid.",
+      "tags": ["Địa hoàng", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/diahoang.jpg"
+    },
+    {
+      "id": "DL044",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Iridoid glycosid",
+        "acid phenol",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Đỗ trọng có thành phần hoá học chính: Iridoid glycosid, acid phenol.",
+      "tags": ["Đỗ trọng", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/dotrong.jpg"
+    },
+    {
+      "id": "DL045",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Iridoid glycosid",
+        "carotenoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Dành dành có thành phần hoá học chính: Iridoid glycosid, carotenoid.",
+      "tags": ["Dành dành", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/danhdanh.jpg"
+    },
+    {
+      "id": "DL046",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Đường",
+        "tinh dầu",
+        "chất béo",
+        "Saponin steroid (browniosid)"
+      ],
+      "correct": [0, 1, 2],
+      "explanation": "Dược liệu Đảng sâm có thành phần hoá học chính: Đường, tinh dầu, chất béo.",
+      "tags": ["Đảng sâm", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/dangsam.jpg"
+    },
+    {
+      "id": "DL047",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tinh bột",
+        "sterol",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Cẩu tích có thành phần hoá học chính: Tinh bột, sterol.",
+      "tags": ["Cẩu tích", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/cautich.jpg"
+    },
+    {
+      "id": "DL048",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chất nhầy",
+        "coumarin",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Sâm bổ chính có thành phần hoá học chính: Chất nhầy, coumarin.",
+      "tags": ["Sâm bổ chính", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/sambochinh.jpg"
+    },
+    {
+      "id": "DL049",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tinh bột",
+        "protein",
+        "dầu béo",
+        "Saponin steroid (browniosid)"
+      ],
+      "correct": [0, 1, 2],
+      "explanation": "Dược liệu Ý dĩ có thành phần hoá học chính: Tinh bột, protein, dầu béo.",
+      "tags": ["Ý dĩ", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/ydi.jpg"
+    },
+    {
+      "id": "DL050",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tinh bột",
+        "acid hữu cơ",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Hoài sơn có thành phần hoá học chính: Tinh bột, acid hữu cơ.",
+      "tags": ["Hoài sơn", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/hoaison.jpg"
+    },
+    {
+      "id": "DL051",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tinh bột",
+        "protein",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Mạch nha có thành phần hoá học chính: Tinh bột, protein.",
+      "tags": ["Mạch nha", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/machnha.jpg"
+    },
+    {
+      "id": "DL052",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Dầu béo",
+        "tinh dầu",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Đào nhân có thành phần hoá học chính: Dầu béo, tinh dầu.",
+      "tags": ["Đào nhân", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/daonhan.jpg"
+    },
+    {
+      "id": "DL053",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Dầu béo",
+        "flavonoid",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Sử quân tử có thành phần hoá học chính: Dầu béo, flavonoid.",
+      "tags": ["Sử quân tử", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/suquantu.jpg"
+    },
+    {
+      "id": "DL054",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Dẫn xuất bibenzyl",
+        "phenanthren",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Bạch cập có thành phần hoá học chính: Dẫn xuất bibenzyl, phenanthren.",
+      "tags": ["Bạch cập", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/bachcap.jpg"
+    },
+    {
+      "id": "DL055",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tinh dầu",
+        "carotenoid",
+        "betain",
+        "Saponin steroid (browniosid)"
+      ],
+      "correct": [0, 1, 2],
+      "explanation": "Dược liệu Câu kỷ tử có thành phần hoá học chính: Tinh dầu, carotenoid, betain.",
+      "tags": ["Câu kỷ tử", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/caukytu.jpg"
+    },
+    {
+      "id": "DL056",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Diterpenoid",
+        "polyphenol",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Đan sâm có thành phần hoá học chính: Diterpenoid, polyphenol.",
+      "tags": ["Đan sâm", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/dansam.jpg"
+    },
+    {
+      "id": "DL057",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Protein",
+        "carbohydrat",
+        "vitamin C",
+        "Saponin steroid (browniosid)"
+      ],
+      "correct": [0, 1, 2],
+      "explanation": "Dược liệu Khiếm thực có thành phần hoá học chính: Protein, carbohydrat, vitamin C.",
+      "tags": ["Khiếm thực", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/khiemthuc.jpg"
+    },
+    {
+      "id": "DL058",
+      "type": "multi",
+      "question": "Thành phần hoá học chính của dược liệu trong hình là gì?",
+      "options": [
+        "Lignan",
+        "acid hữu cơ",
+        "Saponin steroid (browniosid)",
+        "alkaloid"
+      ],
+      "correct": [0, 1],
+      "explanation": "Dược liệu Ngũ vị có thành phần hoá học chính: Lignan, acid hữu cơ.",
+      "tags": ["Ngũ vị", "Thành phần hoá học"],
+      "difficulty": "easy",
+      "image": "nonamtag/nguvi.jpg"
+    }
+  ]
+}

@@ -1,0 +1,1230 @@
+{
+  "meta": {
+    "title": "NTDL – Công dụng (58 dược liệu)",
+    "time_limit_sec": 900,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "DL001",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị tiêu chảy, ho lâu ngày",
+        "Cung cấp vitamin C, chữa ho mạn tính",
+        "Trị ho khan, ho có đờm",
+        "Thiếu máu, suy nhược cơ thể, rong kinh"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Dược liệu Bách hợp có công dụng: Trị ho khan, ho có đờm.",
+      "tags": [
+        "Bách hợp",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/bachhop.jpg"
+    },
+    {
+      "id": "DL002",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thanh nhiệt, giải độc, kháng viêm",
+        "Trị giun",
+        "Trị nhức đầu, chóng mặt",
+        "Chữa sốt, thanh nhiệt, giải cảm"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Dược liệu Bạch tật lê có công dụng: Trị nhức đầu, chóng mặt.",
+      "tags": [
+        "Bạch tật lê",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/bachtatle.jpg"
+    },
+    {
+      "id": "DL003",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa cảm, ho, mất tiếng",
+        "Trị nhức đầu, chóng mặt",
+        "Chống oxy hóa, cải thiện trí nhớ",
+        "Trị ho ra máu, viêm họng"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Cam thảo có công dụng: Chữa cảm, ho, mất tiếng.",
+      "tags": [
+        "Cam thảo",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/camthao.jpg"
+    },
+    {
+      "id": "DL004",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị phù thũng, tiểu buốt, tiểu gắt",
+        "Trị ho ra máu, viêm họng",
+        "Trị thận hư, đau lưng, phong thấp",
+        "Trị thấp khớp, đau lưng, cao huyết áp"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Dược liệu Cát cánh có công dụng: Trị ho ra máu, viêm họng.",
+      "tags": [
+        "Cát cánh",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/catcanh.jpg"
+    },
+    {
+      "id": "DL005",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thanh nhiệt, giải độc, chữa cảm sốt",
+        "Chữa ho, điều kinh",
+        "Bổ phổi, bồi dưỡng cơ thể",
+        "Trị viêm gan, hen suyễn, mồ hôi trộm"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Hà thủ ô trắng có công dụng: Thanh nhiệt, giải độc, chữa cảm sốt.",
+      "tags": [
+        "Hà thủ ô trắng",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/hathuotrang.jpg"
+    },
+    {
+      "id": "DL006",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa tiểu buốt, viêm thận mạn",
+        "Trị thấp khớp, đau lưng, cao huyết áp",
+      "Tiêu hóa, chữa ăn kém tiêu",
+        "Cơ thể suy nhược, kém ăn, kém ngủ"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Hoàng kỳ có công dụng: Chữa tiểu buốt, viêm thận mạn.",
+      "tags": [
+        "Hoàng kỳ",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/hoangky.jpg"
+    },
+    {
+      "id": "DL007",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Cung cấp vitamin C, chữa ho mạn tính",
+        "Chữa suy nhược, kém ăn, rong huyết",
+        "Trị sốt, thanh nhiệt, giải cảm",
+        "Trấn tĩnh trong bệnh đau nhức, chữa di tinh"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Kim anh có công dụng: Cung cấp vitamin C, chữa ho mạn tính.",
+      "tags": [
+        "Kim anh",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/kimanh.jpg"
+    },
+    {
+      "id": "DL008",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa ho khan, viêm họng",
+        "Trị thấp khớp, đau lưng",
+        "Trị nhức đầu, chóng mặt",
+        "Tẩy giun, trị nhức răng"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Mạch môn có công dụng: Chữa ho khan, viêm họng.",
+      "tags": [
+        "Mạch môn",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/machmon.jpg"
+    },
+    {
+      "id": "DL009",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa thấp khớp, đau lưng, cao huyết áp",
+        "Trị phù thũng, tiểu buốt, tiểu gắt",
+        "Thiếu máu, suy nhược cơ thể, rong kinh",
+        "Chống dị ứng, thấp khớp"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Ngưu tất bắc có công dụng: Chữa thấp khớp, đau lưng, cao huyết áp.",
+      "tags": [
+        "Ngưu tất bắc",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/nguutatbac.jpg"
+    },
+    {
+      "id": "DL010",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị đau thắt ngực, rong kinh",
+        "Trị sốt, đau, viêm gan mạn",
+        "Tiêu viêm, tiêu đờm, thanh nhiệt",
+        "Trị thấp khớp, đau lưng"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Dược liệu Sài hồ có công dụng: Trị sốt, đau, viêm gan mạn.",
+      "tags": [
+        "Sài hồ",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/saiho.jpg"
+    },
+    {
+      "id": "DL011",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tiêu viêm, tiêu đờm, thanh nhiệt",
+        "Trị ho ra máu, viêm họng",
+        "Thanh nhiệt, giải độc",
+        "Trị nhức đầu, chóng mặt"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Thiên môn có công dụng: Tiêu viêm, tiêu đờm, thanh nhiệt.",
+      "tags": [
+        "Thiên môn",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/thienmon.jpg"
+    },
+    {
+      "id": "DL012",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tiêu hóa, trị tiêu chảy, thấp khớp",
+        "Chữa cảm, ho, mất tiếng",
+        "Thuốc tim mạch, an thần, giảm đau",
+        "Chữa dị ứng, ho lâu ngày"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Thổ phục linh có công dụng: Tiêu hóa, trị tiêu chảy, thấp khớp.",
+      "tags": [
+        "Thổ phục linh",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/thophuclinh.jpg"
+    },
+    {
+      "id": "DL013",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thông tiểu, chữa sốt, lợi sữa",
+        "Trị phù thũng, tiểu buốt, tiểu gắt",
+        "Trị viêm gan, hen suyễn, mồ hôi trộm",
+        "Trị thận hư, đau lưng, phong thấp"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Thông thảo có công dụng: Thông tiểu, chữa sốt, lợi sữa.",
+      "tags": [
+        "Thông thảo",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/thongthao.jpg"
+    },
+    {
+      "id": "DL014",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị phù thũng, tiểu buốt, tiểu gắt",
+        "Chống oxy hóa, cải thiện trí nhớ",
+        "Tiêu viêm, tiêu đờm, thanh nhiệt",
+        "Tiêu hóa, chữa ăn kém tiêu"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Trạch tả có công dụng: Trị phù thũng, tiểu buốt, tiểu gắt.",
+      "tags": [
+        "Trạch tả",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/trachta.jpg"
+    },
+    {
+      "id": "DL015",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa ho khan, viêm họng",
+        "Chữa ho, viêm phế quản, mất ngủ",
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Chữa suy nhược, kém ăn, rong huyết"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Dược liệu Viễn chí có công dụng: Chữa ho, viêm phế quản, mất ngủ.",
+      "tags": [
+        "Viễn chí",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/vienchi.jpg"
+    },
+    {
+      "id": "DL016",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chống oxy hóa, cải thiện trí nhớ",
+        "Cung cấp vitamin C, chữa ho mạn tính",
+        "Hạ nhiệt, chữa ăn không tiêu",
+        "Trị ho khan, ho có đờm"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Bạch quả có công dụng: Chống oxy hóa, cải thiện trí nhớ.",
+      "tags": [
+        "Bạch quả",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/bachqua.jpg"
+    },
+    {
+      "id": "DL017",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa suy nhược, kém ăn, rong huyết",
+        "Chữa thấp khớp, đau lưng, cao huyết áp",
+        "Chữa thấp khớp, đau lưng",
+        "Thiếu máu, suy nhược cơ thể, rong kinh"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Dược liệu Cốt toái bổ có công dụng: Chữa đau lưng, đau xương.",
+      "tags": [
+        "Cốt toái bổ",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/cottoaibo.jpg"
+    },
+    {
+      "id": "DL018",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa sốt cao kéo dài, viêm phổi, viêm phế quản",
+        "Trị phù thũng, tiểu buốt, tiểu gắt",
+        "Trị sốt, đau, viêm gan mạn",
+        "Trị giun"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Hoàng cầm có công dụng: Chữa sốt cao kéo dài, viêm phổi, viêm phế quản.",
+      "tags": [
+        "Hoàng cầm",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/hoangcam.jpg"
+    },
+    {
+      "id": "DL019",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Hoạt huyết, thông kinh, giảm đau",
+        "Trị đau thắt ngực, rong kinh",
+        "Chữa ho, viêm phế quản, mất ngủ",
+        "Trị thận hư, đau lưng, phong thấp"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Hồng hoa có công dụng: Hoạt huyết, thông kinh, giảm đau.",
+      "tags": [
+        "Hồng hoa",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/honghoa.jpg"
+    },
+    {
+      "id": "DL020",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị sỏi niệu, sỏi mật, viêm gan vàng da",
+        "Trị nhức đầu, chóng mặt",
+        "Trị viêm gan, hen suyễn, mồ hôi trộm",
+        "Hạ nhiệt, chữa ăn không tiêu"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Kim tiền thảo có công dụng: Trị sỏi niệu, sỏi mật, viêm gan vàng da.",
+      "tags": [
+        "Kim tiền thảo",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/kimtienthao.jpg"
+    },
+    {
+      "id": "DL021",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa dị ứng, ho lâu ngày",
+        "Trị sốt, thanh nhiệt, giải cảm",
+        "Trị ho khan, ho có đờm",
+        "Thanh nhiệt, giải độc"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Núc nác có công dụng: Chữa dị ứng, ho lâu ngày.",
+      "tags": [
+        "Núc nác",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/nucnac.jpg"
+    },
+    {
+      "id": "DL022",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thuốc tim mạch, an thần, giảm đau",
+        "Cơ thể suy nhược, kém ăn, kém ngủ",
+        "Chữa cảm, ho, mất tiếng",
+        "Trị nhức đầu, chóng mặt"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Sơn tra có công dụng: Thuốc tim mạch, an thần, giảm đau.",
+      "tags": [
+        "Sơn tra",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/sontra.jpg"
+    },
+    {
+      "id": "DL023",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thuốc sản da, kinh nguyệt không đều",
+        "Chữa sốt cao kéo dài, viêm phổi, viêm phế quản",
+        "Hạ nhiệt, chữa ăn không tiêu",
+        "Trị giun"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Tô mộc có công dụng: Thuốc sản da, kinh nguyệt không đều.",
+      "tags": [
+        "Tô mộc",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/tomoc.jpg"
+    },
+    {
+      "id": "DL024",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Phòng xơ vữa động mạch, chống dị ứng, thấp khớp",
+        "Chữa tim mạch, an thần, giảm đau",
+        "Trị đau thắt ngực, rong kinh",
+        "Trị thấp khớp, đau lưng"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Hoa hòe có công dụng: Phòng xơ vữa động mạch, chống dị ứng, thấp khớp.",
+      "tags": [
+        "Hoa hòe",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/hoahoe.jpg"
+    },
+    {
+      "id": "DL025",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa sốt, thanh nhiệt, giải cảm",
+        "Bổ phổi, bồi dưỡng cơ thể",
+        "Trị phù thũng, tiểu buốt, tiểu gắt",
+        "Trị giun"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Sắn dây có công dụng: Chữa sốt, thanh nhiệt, giải cảm.",
+      "tags": [
+        "Sắn dây",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/sanday.jpg"
+    },
+    {
+      "id": "DL026",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thanh nhiệt, giải độc, kháng viêm",
+        "Trị thấp khớp, đau lưng, cao huyết áp",
+        "Tiêu viêm, tiêu đờm, thanh nhiệt",
+        "Trị nhức đầu, chóng mặt"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Kim ngân có công dụng: Thanh nhiệt, giải độc, kháng viêm.",
+      "tags": [
+        "Kim ngân",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/kimngan.jpg"
+    },
+    {
+      "id": "DL027",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa thấp khớp, đau lưng, cao huyết áp",
+        "Chữa ho ra máu, viêm họng",
+        "Chống dị ứng, thấp khớp",
+        "Chữa viêm họng, viêm amidan"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Dược liệu Rẻ quạt có công dụng: Chữa viêm họng, viêm amidan.",
+      "tags": [
+        "Rẻ quạt",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/requat.jpg"
+    },
+    {
+      "id": "DL028",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị đau thắt ngực, rong kinh",
+        "Chữa thấp khớp, đau lưng",
+        "Chữa thấp khớp, đau lưng, cao huyết áp",
+        "Chữa di tinh, liệt dương, đau lưng"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Dược liệu Ba kích có công dụng: Chữa di tinh, liệt dương, đau lưng.",
+      "tags": [
+        "Ba kích",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/bakich.jpg"
+    },
+    {
+      "id": "DL029",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Chữa tâm thần, an thần, mất ngủ",
+        "Trị phù thũng, tiểu buốt, tiểu gắt",
+        "Chữa đau nhức xương khớp, táo bón"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Dược liệu Cốt khí củ có công dụng: Chữa đau nhức xương khớp, táo bón.",
+      "tags": [
+        "Cốt khí củ",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/cotkhicu.jpg"
+    },
+    {
+      "id": "DL030",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thanh nhiệt, giải độc",
+        "Trị táo bón, viêm đại tràng",
+        "Trị tiêu chảy, ho lâu ngày",
+        "Chữa suy nhược, kém ăn, rong huyết"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Dược liệu Đại hoàng có công dụng: Trị táo bón, viêm đại tràng.",
+      "tags": [
+        "Đại hoàng",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/daihoang.jpg"
+    },
+    {
+      "id": "DL031",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Bổ máu, nhuận tràng, chữa suy nhược",
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Trị ho khan, ho có đờm",
+        "Trị thận hư, đau lưng, phong thấp"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Hà thủ ô đỏ có công dụng: Bổ máu, nhuận tràng, chữa suy nhược.",
+      "tags": [
+        "Hà thủ ô đỏ",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/hathuodo.jpg"
+    },
+    {
+      "id": "DL032",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Nhuận tràng, chữa táo bón, bỏng",
+        "Chữa ho, viêm phế quản, mất ngủ",
+        "Thanh nhiệt, giải độc, kháng viêm",
+        "Chữa lao phổi, ho ra máu"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Lô hội có công dụng: Nhuận tràng, chữa táo bón, bỏng.",
+      "tags": [
+        "Lô hội",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/lohoi.jpg"
+    },
+    {
+      "id": "DL033",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chống oxy hóa, cải thiện trí nhớ",
+        "Chữa ho, điều kinh",
+        "Nhuận tràng, giải độc",
+        "Chữa cơ thể suy yếu, giải nhiệt"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Dược liệu Nhàu có công dụng: Nhuận tràng, giải độc.",
+      "tags": [
+        "Nhàu",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/nhau.jpg"
+    },
+    {
+      "id": "DL034",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Nhuận tràng, giải độc",
+        "Hạ nhiệt, chữa ăn không tiêu",
+        "Thuốc tim mạch, an thần, giảm đau",
+        "Nhuận tràng, chữa táo bón"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Dược liệu Phan tả diệp có công dụng: Nhuận tràng, chữa táo bón.",
+      "tags": [
+        "Phan tả diệp",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/phantadiep.jpg"
+    },
+    {
+      "id": "DL035",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa sốt, thanh nhiệt, giải cảm",
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Chống oxy hóa, cải thiện trí nhớ",
+        "Nhuận tràng, thông tiện, chữa táo bón"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Dược liệu Thảo quyết minh có công dụng: Nhuận tràng, thông tiện, chữa táo bón.",
+      "tags": [
+        "Thảo quyết minh",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/thaoquyetminh.jpg"
+    },
+    {
+      "id": "DL036",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa lao phổi, ho ra máu",
+        "Chữa cảm, ho, mất tiếng",
+        "Chữa suy nhược, kém ăn, rong huyết",
+        "Chữa di tinh, liệt dương, đau lưng"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Dược liệu Sâm đại hành có công dụng: Chữa suy nhược, kém ăn, rong huyết.",
+      "tags": [
+        "Sâm đại hành",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/samdaihanh.jpg"
+    },
+    {
+      "id": "DL037",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị ho khan, ho có đờm",
+        "Thanh nhiệt, giải độc",
+        "Trị đau thắt ngực, rong kinh",
+        "Trị thấp khớp, đau lưng, cao huyết áp"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Dược liệu Kha tử có công dụng: Trị đau thắt ngực, rong kinh.",
+      "tags": [
+        "Kha tử",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/khatu.jpg"
+    },
+    {
+      "id": "DL038",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Nhuận tràng, giải độc",
+        "Hạ nhiệt, chữa ăn không tiêu",
+        "Trị giun",
+        "Trị tiêu chảy, ho lâu ngày"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Dược liệu Keo giậu có công dụng: Trị giun.",
+      "tags": [
+        "Keo giậu",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/keogiau.jpg"
+    },
+    {
+      "id": "DL039",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị sốt, thanh nhiệt, giải cảm",
+        "Tiêu hóa, chữa ăn kém tiêu",
+        "Nhuận tràng, chữa táo bón",
+        "Trị tiêu chảy, ho lâu ngày"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Dược liệu Trâm bầu có công dụng: Trị tiêu chảy, ho lâu ngày.",
+      "tags": [
+        "Trâm bầu",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/trambau.jpg"
+    },
+    {
+      "id": "DL040",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị viêm gan, hen suyễn, mồ hôi trộm",
+        "Trị tiêu chảy, ho lâu ngày",
+        "Nhuận tràng, thông tiện, chữa táo bón",
+        "Chữa di tinh, liệt dương, đau lưng"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Ngũ bội tử có công dụng: Trị viêm gan, hen suyễn, mồ hôi trộm.",
+      "tags": [
+        "Ngũ bội tử",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/nguboitu.jpg"
+    },
+    {
+      "id": "DL041",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa cảm, ho, mất tiếng",
+        "Chữa ho, điều kinh",
+        "Trị nhức đầu, chóng mặt",
+        "Trị ho ra máu, viêm họng"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Dược liệu Bạch chỉ có công dụng: Trị ho ra máu, viêm họng.",
+      "tags": [
+        "Bạch chỉ",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/bachchi.jpg"
+    },
+    {
+      "id": "DL042",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thanh nhiệt, giải độc",
+        "Chữa tâm thần, an thần, mất ngủ",
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Chữa lao phổi, ho ra máu"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Dược liệu Mù u có công dụng: Chữa lao phổi, ho ra máu.",
+      "tags": [
+        "Mù u",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/muu.jpg"
+    },
+    {
+      "id": "DL043",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thanh nhiệt, giải độc",
+        "Chữa cam tẩu mã, ho, mồ hôi trộm",
+        "Trị sốt, đau, viêm gan mạn",
+        "Chữa sốt, thanh nhiệt, giải cảm"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Dược liệu Địa hoàng có công dụng: Chữa cam tẩu mã, ho, mồ hôi trộm.",
+      "tags": [
+        "Địa hoàng",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/diahoang.jpg"
+    },
+    {
+      "id": "DL044",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị thận hư, đau lưng, phong thấp",
+        "Cung cấp vitamin C, chữa ho mạn tính",
+        "Trị thấp khớp, đau lưng, cao huyết áp",
+        "Chữa tim mạch, an thần, giảm đau"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Đỗ trọng có công dụng: Trị thận hư, đau lưng, phong thấp.",
+      "tags": [
+        "Đỗ trọng",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/dotrong.jpg"
+    },
+    {
+      "id": "DL045",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Thanh nhiệt, giải độc",
+        "Trị sốt, đau, viêm gan mạn",
+        "Chữa ho, viêm phế quản, mất ngủ",
+        "Trị đau thắt ngực, rong kinh"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Dành dành có công dụng: Thanh nhiệt, giải độc.",
+      "tags": [
+        "Dành dành",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/danhdanh.jpg"
+    },
+    {
+      "id": "DL046",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa suy nhược, kém ăn, rong huyết",
+        "Bổ phổi, bồi dưỡng cơ thể",
+        "Chống oxy hóa, cải thiện trí nhớ",
+        "Trị viêm gan, hen suyễn, mồ hôi trộm"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Đảng sâm có công dụng: Chữa suy nhược, kém ăn, rong huyết.",
+      "tags": [
+        "Đảng sâm",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/dangsam.jpg"
+    },
+    {
+      "id": "DL047",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa thấp khớp, đau lưng",
+        "Trị thấp khớp, đau lưng, cao huyết áp",
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Trị nhức đầu, chóng mặt"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Cẩu tích có công dụng: Chữa thấp khớp, đau lưng.",
+      "tags": [
+        "Cẩu tích",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/cautich.jpg"
+    },
+    {
+      "id": "DL048",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Cơ thể suy nhược, kém ăn, kém ngủ",
+        "Chữa sốt, thanh nhiệt, giải cảm",
+        "Bổ máu, nhuận tràng, chữa suy nhược",
+        "Trị đau thắt ngực, rong kinh"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Sâm bổ chính có công dụng: Cơ thể suy nhược, kém ăn, kém ngủ.",
+      "tags": [
+        "Sâm bổ chính",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/sambochinh.jpg"
+    },
+    {
+      "id": "DL049",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Bổ phổi, bồi dưỡng cơ thể",
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Chữa tim mạch, an thần, giảm đau",
+        "Trị phù thũng, tiểu buốt, tiểu gắt"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Ý dĩ có công dụng: Bổ phổi, bồi dưỡng cơ thể.",
+      "tags": [
+        "Ý dĩ",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/ydi.jpg"
+    },
+    {
+      "id": "DL050",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Hạ nhiệt, chữa ăn không tiêu",
+        "Tiêu hóa, chữa ăn kém tiêu",
+        "Nhuận tràng, chữa táo bón",
+        "Trị giun"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Hoài sơn có công dụng: Hạ nhiệt, chữa ăn không tiêu.",
+      "tags": [
+        "Hoài sơn",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/hoaison.jpg"
+    },
+    {
+      "id": "DL051",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tiêu hóa, chữa ăn kém tiêu",
+        "Trị tiêu chảy, ho lâu ngày",
+        "Chữa thấp khớp, đau lưng, cao huyết áp",
+        "Chữa di tinh, liệt dương, đau lưng"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Mạch nha có công dụng: Tiêu hóa, chữa ăn kém tiêu.",
+      "tags": [
+        "Mạch nha",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/machnha.jpg"
+    },
+    {
+      "id": "DL052",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa ho, điều kinh",
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Chữa tim mạch, an thần, giảm đau",
+        "Trị nhức đầu, chóng mặt"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Đào nhân có công dụng: Chữa ho, điều kinh.",
+      "tags": [
+        "Đào nhân",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/daonhan.jpg"
+    },
+    {
+      "id": "DL053",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Tẩy giun, trị nhức răng",
+        "Trị phù thũng, tiểu buốt, tiểu gắt",
+        "Tiêu hóa, chữa ăn kém tiêu",
+        "Trị sốt, đau, viêm gan mạn"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Sử quân tử có công dụng: Tẩy giun, trị nhức răng.",
+      "tags": [
+        "Sử quân tử",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/suquantu.jpg"
+    },
+    {
+      "id": "DL054",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa lao phổi, ho ra máu",
+        "Chữa thấp khớp, đau lưng",
+        "Trị giun",
+        "Nhuận tràng, chữa táo bón"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Bạch cập có công dụng: Chữa lao phổi, ho ra máu.",
+      "tags": [
+        "Bạch cập",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/bachcap.jpg"
+    },
+    {
+      "id": "DL055",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Chữa sốt, thanh nhiệt, giải cảm",
+        "Chữa ho ra máu, viêm họng",
+        "Trị nhức đầu, chóng mặt"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Câu kỷ tử có công dụng: Chữa cơ thể suy yếu, giải nhiệt.",
+      "tags": [
+        "Câu kỷ tử",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/caukytu.jpg"
+    },
+    {
+      "id": "DL056",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị đau thắt ngực, rong kinh",
+        "Trị nhức đầu, chóng mặt",
+        "Chữa thấp khớp, đau lưng, cao huyết áp",
+        "Chữa cảm, ho, mất tiếng"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Đan sâm có công dụng: Trị đau thắt ngực, rong kinh.",
+      "tags": [
+        "Đan sâm",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/dansam.jpg"
+    },
+    {
+      "id": "DL057",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trấn tĩnh trong bệnh đau nhức, chữa di tinh",
+        "Chữa cơ thể suy yếu, giải nhiệt",
+        "Cung cấp vitamin C, chữa ho mạn tính",
+        "Chữa tiểu buốt, viêm thận mạn"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Dược liệu Khiếm thực có công dụng: Trấn tĩnh trong bệnh đau nhức, chữa di tinh.",
+      "tags": [
+        "Khiếm thực",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/khiemthuc.jpg"
+    },
+    {
+      "id": "DL058",
+      "type": "single",
+      "question": "Công dụng chính của dược liệu trong hình là gì?",
+      "options": [
+        "Trị ho khan, ho có đờm",
+        "Thanh nhiệt, giải độc",
+        "Trị viêm gan, hen suyễn, mồ hôi trộm",
+        "Chữa thấp khớp, đau lưng, cao huyết áp"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Dược liệu Ngũ vị có công dụng: Trị viêm gan, hen suyễn, mồ hôi trộm.",
+      "tags": [
+        "Ngũ vị",
+        "Công dụng"
+      ],
+      "difficulty": "easy",
+      "image": "nonamtag/nguvi.jpg"
+    }
+  ]
+}
