@@ -7,6 +7,16 @@
       "file": "ndl.json"
     },
     {
+      "id": "de_duoc_lieu_tphh_58",
+      "title": "Thành phần hoá học",
+      "file": "tphh.json"
+    },
+    {
+      "id": "de_duoc_lieu_cd_58",
+      "title": "Công dụng",
+      "file": "cd.json"
+    },
+    {
       "id": "de_duoc_lieu_bpd_58",
       "title": "Bộ phận dùng",
       "file": "bpd.json"
