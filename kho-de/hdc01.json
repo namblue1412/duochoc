@@ -12,9 +12,14 @@
       "id": "DL001",
       "type": "single",
       "question": "Nguyên tử oxy trong phân tử H2O ở trạng thái lai hóa gì và góc liên kết H-O-H xấp xỉ bao nhiêu?",
-      "options": ["sp, 180°", "sp2, 120°", "sp3, 104.5°", "sp3, 109.5°"],
+      "options": [
+        "sp, 180°",
+        "sp2, 120°",
+        "sp3, 104.5°",
+        "sp3, 109.5°"
+      ],
       "correct": [2],
-      [cite_start]"explanation": "Trong phân tử nước, Oxy ở trạng thái lai hóa sp3 với 2 cặp electron không liên kết, lực đẩy của các cặp này làm góc liên kết giảm từ 109.5° xuống còn khoảng 104.5°[cite: 576, 995].",
+      "explanation": "Trong phân tử nước, Oxy ở trạng thái lai hóa sp3. Do lực đẩy của 2 cặp electron tự do lớn hơn lực đẩy của cặp electron liên kết, góc liên kết giảm từ 109.5° xuống khoảng 104.5°.",
       "tags": ["General Chemistry", "Bonding"],
       "difficulty": "easy",
       "image": null
@@ -22,11 +27,16 @@
     {
       "id": "DL002",
       "type": "single",
-      "question": "Cấu hình electron của Titan (Ti, Z = 22) là gì?",
-      "options": ["[Ar] 4s2 4p2", "[Ar] 3d2 4s2", "[Ar] 4s1 4p3", "[Ar] 3d4"],
+      "question": "Cấu hình electron của Titan (Ti, Z = 22) là:",
+      "options": [
+        "[Ar] 4s2 4p2",
+        "[Ar] 3d2 4s2",
+        "[Ar] 4s1 4p3",
+        "[Ar] 3d4"
+      ],
       "correct": [1],
-      "explanation": "Titan có Z=22. Cấu hình khí hiếm gần nhất là Argon [Ar] (18e). 4 electron còn lại điền vào 4s trước rồi đến 3d. [cite_start]Cấu hình là [Ar] 3d2 4s2[cite: 995].",
-      "tags": ["General Chemistry", "Atomic Structure"],
+      "explanation": "Titan có Z=22. Cấu hình khí hiếm Argon [Ar] là 18e. 4e còn lại điền vào 4s trước rồi đến 3d. Cấu hình: [Ar] 3d2 4s2.",
+      "tags": ["Atomic Structure"],
       "difficulty": "medium",
       "image": null
     },
@@ -34,10 +44,15 @@
       "id": "DL003",
       "type": "single",
       "question": "Liên kết hydro đóng vai trò quan trọng nhất trong việc quy định tính chất nào sau đây của nước?",
-      "options": ["Khối lượng mol nhỏ", "Tính dẫn điện", "Nhiệt độ sôi và nhiệt độ nóng chảy cao bất thường", "Màu sắc trong suốt"],
+      "options": [
+        "Khối lượng mol nhỏ",
+        "Tính dẫn điện kém",
+        "Nhiệt độ sôi và nhiệt độ nóng chảy cao bất thường",
+        "Màu sắc trong suốt"
+      ],
       "correct": [2],
-      [cite_start]"explanation": "Liên kết hydro giữa các phân tử nước làm cho nước có nhiệt độ sôi và nóng chảy cao hơn nhiều so với các dung môi khác có khối lượng phân tử tương đương[cite: 573, 626].",
-      "tags": ["Water Properties", "Biochem"],
+      "explanation": "Liên kết hydro liên phân tử mạnh làm cho nước có nhiệt độ sôi và nóng chảy cao hơn nhiều so với các hợp chất có khối lượng phân tử tương đương.",
+      "tags": ["Water Properties"],
       "difficulty": "easy",
       "image": null
     },
@@ -45,20 +60,30 @@
       "id": "DL004",
       "type": "single",
       "question": "Theo thuyết Brønsted-Lowry, base là những tiểu phân có khả năng:",
-      "options": ["Nhận proton (H+)", "Cho proton (H+)", "Nhận cặp electron", "Cho cặp electron"],
+      "options": [
+        "Nhận proton (H+)",
+        "Cho proton (H+)",
+        "Nhận cặp electron",
+        "Cho cặp electron"
+      ],
       "correct": [0],
-      [cite_start]"explanation": "Theo thuyết Brønsted-Lowry, acid là chất cho proton, còn base là chất nhận proton[cite: 603].",
-      "tags": ["General Chemistry", "Acids Bases"],
+      "explanation": "Acid là chất cho proton, Base là chất nhận proton (theo Brønsted-Lowry).",
+      "tags": ["Acids Bases"],
       "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL005",
       "type": "single",
-      "question": "Trong dung dịch nhược trương (hypotonic), tế bào hồng cầu sẽ có hiện tượng gì?",
-      "options": ["Teo nhỏ (Crenation)", "Bị vỡ (Lysis)", "Không thay đổi thể tích", "Co nguyên sinh"],
+      "question": "Hiện tượng nào xảy ra khi đặt tế bào hồng cầu vào dung dịch nhược trương (hypotonic)?",
+      "options": [
+        "Teo nhỏ (Crenation)",
+        "Bị vỡ (Lysis)",
+        "Không thay đổi thể tích",
+        "Co nguyên sinh"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Trong môi trường nhược trương, nồng độ chất tan bên ngoài thấp hơn bên trong tế bào, nước sẽ thẩm thấu vào trong làm tế bào phình to và có thể bị vỡ (lysis)[cite: 594, 1473].",
+      "explanation": "Dung dịch nhược trương có áp suất thẩm thấu thấp hơn nội bào, nước đi vào tế bào làm nó phồng lên và vỡ.",
       "tags": ["Solutions", "Osmosis"],
       "difficulty": "medium",
       "image": null
@@ -66,32 +91,47 @@
     {
       "id": "DL006",
       "type": "single",
-      "question": "Hệ đệm chính giúp duy trì pH của huyết tương máu người là gì?",
-      "options": ["Hệ đệm Phosphat", "Hệ đệm Acetat", "Hệ đệm Bicarbonat (H2CO3/HCO3-)", "Hệ đệm Amoni"],
+      "question": "Hệ đệm chính trong huyết tương máu giúp duy trì pH ở mức 7.4 là:",
+      "options": [
+        "Hệ đệm Phosphat",
+        "Hệ đệm Acetat",
+        "Hệ đệm Bicarbonat (H2CO3/HCO3-)",
+        "Hệ đệm Amoni"
+      ],
       "correct": [2],
-      [cite_start]"explanation": "Huyết tương được đệm một phần bởi hệ thống bicarbonate, bao gồm acid carbonic và bicarbonate[cite: 620].",
-      "tags": ["Biochem", "Buffers"],
+      "explanation": "Hệ đệm Bicarbonat là hệ đệm quan trọng nhất trong dịch ngoại bào (huyết tương).",
+      "tags": ["Buffers", "Biochem"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL007",
       "type": "single",
-      "question": "Phương trình Henderson-Hasselbalch được viết như thế nào cho một acid yếu HA?",
-      "options": ["pH = pKa - log([A-]/[HA])", "pH = pKa + log([HA]/[A-])", "pH = pKa + log([A-]/[HA])", "pH = pKa * log([A-]/[HA])"],
+      "question": "Phương trình Henderson-Hasselbalch được viết đúng là:",
+      "options": [
+        "pH = pKa - log([A-]/[HA])",
+        "pH = pKa + log([HA]/[A-])",
+        "pH = pKa + log([A-]/[HA])",
+        "pH = pKa * log([A-]/[HA])"
+      ],
       "correct": [2],
-      [cite_start]"explanation": "Phương trình Henderson-Hasselbalch: pH = pKa + log([base liên hợp]/[acid])[cite: 616].",
-      "tags": ["General Chemistry", "Acids Bases"],
+      "explanation": "pH = pKa + log([Base liên hợp]/[Acid]).",
+      "tags": ["Acids Bases"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL008",
       "type": "single",
-      "question": "Tại sao nước đá (thể rắn) lại nổi trên nước lỏng?",
-      "options": ["Do liên kết hydro ở thể rắn lỏng lẻo hơn", "Do ở thể rắn các phân tử nước tạo mạng lưới tinh thể có nhiều lỗ trống (kém đặc hơn)", "Do nước đá nặng hơn nước lỏng", "Do năng lượng nhiệt cao hơn"],
+      "question": "Tại sao nước đá nổi trên nước lỏng?",
+      "options": [
+        "Do liên kết hydro lỏng lẻo hơn",
+        "Do cấu trúc tinh thể rỗng, tỉ trọng thấp hơn nước lỏng",
+        "Do nước đá nặng hơn",
+        "Do năng lượng nhiệt cao hơn"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Ở thể rắn, các phân tử H2O tạo mạng lưới tinh thể tứ diện đều đặn với các liên kết hydro, tạo ra cấu trúc rỗng với nhiều lỗ hổng, khiến tỉ trọng của đá thấp hơn nước lỏng[cite: 1455, 1458].",
+      "explanation": "Ở thể rắn, các phân tử nước sắp xếp thành mạng lưới tinh thể tứ diện với nhiều khoảng trống, làm giảm tỉ trọng.",
       "tags": ["Water Properties"],
       "difficulty": "medium",
       "image": null
@@ -99,76 +139,111 @@
     {
       "id": "DL009",
       "type": "single",
-      "question": "Chất nào sau đây được gọi là chất lưỡngiphillic (amphipathic)?",
-      "options": ["Chỉ chứa nhóm ưa nước", "Chỉ chứa nhóm kỵ nước", "Chứa cả vùng ưa nước và vùng kỵ nước", "Không tan trong bất kỳ dung môi nào"],
+      "question": "Chất 'amphipathic' (lưỡngiphillic) là chất:",
+      "options": [
+        "Chỉ ưa nước",
+        "Chỉ kỵ nước",
+        "Có cả vùng ưa nước và kỵ nước",
+        "Không tan trong mọi dung môi"
+      ],
       "correct": [2],
-      [cite_start]"explanation": "Hợp chất amphipathic (lưỡng tính/lưỡng ái) chứa cả vùng phân cực (ưa nước) và vùng không phân cực (kỵ nước)[cite: 584, 678].",
-      "tags": ["Biochem", "Solubility"],
+      "explanation": "Amphipathic (lưỡng ái) mô tả phân tử có cả đầu phân cực (ưa nước) và đuôi không phân cực (kỵ nước), ví dụ như phospholipid.",
+      "tags": ["Biochem", "Solutions"],
       "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL010",
       "type": "single",
-      "question": "Cấu trúc micelle được hình thành khi các phân tử lưỡngiphillic phân tán trong nước có đặc điểm gì?",
-      "options": ["Đầu kỵ nước quay ra ngoài, đuôi ưa nước quay vào trong", "Đầu ưa nước quay ra ngoài, đuôi kỵ nước quay vào trong", "Sắp xếp ngẫu nhiên không có trật tự", "Tạo thành lớp màng phẳng"],
+      "question": "Cấu trúc Micelle hình thành trong nước có đặc điểm:",
+      "options": [
+        "Đầu kỵ nước quay ra ngoài",
+        "Đầu ưa nước quay ra ngoài, đuôi kỵ nước quay vào trong",
+        "Sắp xếp ngẫu nhiên",
+        "Tạo thành lớp màng phẳng"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Trong cấu trúc micelle, các đầu ưa nước quay ra ngoài tương tác với nước, còn các đuôi kỵ nước tụ lại bên trong để tránh nước[cite: 589, 701].",
-      "tags": ["Biochem", "Solutions"],
+      "explanation": "Để giảm thiểu năng lượng, các nhóm kỵ nước tụ vào trong lõi, các nhóm ưa nước quay ra ngoài tiếp xúc với dung môi nước.",
+      "tags": ["Solutions", "Biochem"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL011",
       "type": "single",
-      "question": "Đồng vị là những nguyên tử có cùng số ... nhưng khác số ...?",
-      "options": ["Proton; Neutron", "Neutron; Proton", "Electron; Proton", "Proton; Electron"],
+      "question": "Đồng vị là các nguyên tử có cùng số ... nhưng khác số ...",
+      "options": [
+        "Proton; Neutron",
+        "Neutron; Proton",
+        "Electron; Proton",
+        "Proton; Electron"
+      ],
       "correct": [0],
-      [cite_start]"explanation": "Đồng vị là các nguyên tử có cùng số hiệu nguyên tử (số proton) nhưng khác số khối (do khác số neutron)[cite: 85, 86].",
-      "tags": ["General Chemistry", "Atomic Structure"],
+      "explanation": "Đồng vị: cùng Z (proton) nhưng khác A (do khác neutron).",
+      "tags": ["Atomic Structure"],
       "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL012",
       "type": "single",
-      "question": "Orbital p có hình dạng gì?",
-      "options": ["Hình cầu", "Hình số 8 nổi (hai thùy)", "Hình hoa thị", "Hình lập phương"],
+      "question": "Hình dạng của orbital p là:",
+      "options": [
+        "Hình cầu",
+        "Hình số 8 nổi (hai thùy)",
+        "Hình hoa thị",
+        "Hình lập phương"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Orbital p có hai thùy sắp xếp dọc theo một đường thẳng (hình số 8 nổi)[cite: 150].",
-      "tags": ["General Chemistry", "Atomic Structure"],
+      "explanation": "Orbital s hình cầu, orbital p hình số 8 nổi.",
+      "tags": ["Atomic Structure"],
       "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL013",
       "type": "single",
-      "question": "Nguyên lý Pauli phát biểu rằng:",
-      "options": ["Một orbital chứa tối đa 2 electron với spin cùng chiều", "Một orbital chứa tối đa 2 electron với spin ngược chiều", "Các electron sẽ điền vào các orbital sao cho tổng spin là nhỏ nhất", "Không thể xác định đồng thời vị trí và vận tốc của electron"],
+      "question": "Nguyên lý Pauli phát biểu:",
+      "options": [
+        "Một orbital chứa tối đa 2 electron cùng chiều spin",
+        "Một orbital chứa tối đa 2 electron ngược chiều spin",
+        "Electron điền vào mức năng lượng thấp nhất trước",
+        "Không xác định được vị trí electron"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Nguyên lý loại trừ Pauli: Một orbital có thể chứa tối đa hai electron, và chỉ khi các electron có spin đối nhau[cite: 212].",
-      "tags": ["General Chemistry", "Atomic Structure"],
+      "explanation": "Nguyên lý loại trừ Pauli: Trong một nguyên tử, không thể có 2 electron có 4 số lượng tử giống hệt nhau (tối đa 2e/orbital và phải đối song).",
+      "tags": ["Atomic Structure"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL014",
       "type": "single",
-      "question": "Liên kết ion được hình thành do:",
-      "options": ["Sự dùng chung các cặp electron", "Lực hút tĩnh điện giữa các ion mang điện tích trái dấu", "Sự xen phủ của các orbital nguyên tử", "Lực Van der Waals"],
+      "question": "Bản chất của liên kết ion là:",
+      "options": [
+        "Dùng chung electron",
+        "Lực hút tĩnh điện giữa các ion trái dấu",
+        "Xen phủ orbital",
+        "Lực Van der Waals"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Liên kết ion là liên kết hóa học hình thành bởi lực hút tĩnh điện giữa các ion dương và ion âm[cite: 234].",
-      "tags": ["General Chemistry", "Bonding"],
+      "explanation": "Liên kết ion hình thành do lực hút tĩnh điện giữa cation và anion.",
+      "tags": ["Bonding"],
       "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL015",
       "type": "single",
-      "question": "Phản ứng tỏa nhiệt có đặc điểm nào sau đây về enthalpy (ΔH)?",
-      "options": ["ΔH > 0", "ΔH < 0", "ΔH = 0", "ΔH không xác định"],
+      "question": "Phản ứng tỏa nhiệt có giá trị ΔH như thế nào?",
+      "options": [
+        "ΔH > 0",
+        "ΔH < 0",
+        "ΔH = 0",
+        "Không xác định"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Phản ứng tỏa nhiệt giải phóng năng lượng, do đó enthalpy của hệ giảm, tức là ΔH < 0[cite: 1676].",
+      "explanation": "Tỏa nhiệt (Exothermic) thì enthalpy của hệ giảm, ΔH < 0.",
       "tags": ["Thermodynamics"],
       "difficulty": "easy",
       "image": null
@@ -176,10 +251,15 @@
     {
       "id": "DL016",
       "type": "single",
-      "question": "Theo nguyên lý Le Chatelier, nếu tăng áp suất của hệ cân bằng có chứa chất khí, cân bằng sẽ chuyển dịch theo chiều:",
-      "options": ["Tạo ra nhiều phân tử khí hơn", "Tạo ra ít phân tử khí hơn", "Không đổi", "Tỏa nhiệt"],
+      "question": "Theo nguyên lý Le Chatelier, tăng áp suất sẽ làm cân bằng chuyển dịch theo chiều:",
+      "options": [
+        "Tạo ra nhiều mol khí hơn",
+        "Tạo ra ít mol khí hơn",
+        "Không đổi",
+        "Tỏa nhiệt"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Tăng áp suất sẽ làm cân bằng chuyển dịch theo chiều làm giảm áp suất, tức là chiều tạo ra ít phân tử khí hơn[cite: 37].",
+      "explanation": "Tăng áp suất làm cân bằng chuyển dịch về phía làm giảm áp suất (giảm số mol khí).",
       "tags": ["Equilibrium"],
       "difficulty": "medium",
       "image": null
@@ -187,21 +267,31 @@
     {
       "id": "DL017",
       "type": "single",
-      "question": "Hợp chất nào sau đây có khả năng tan tốt nhất trong nước?",
-      "options": ["Hexane (C6H14)", "Benzene (C6H6)", "Ethanol (C2H5OH)", "Chloroform (CHCl3)"],
+      "question": "Chất nào tan tốt nhất trong nước?",
+      "options": [
+        "Hexane (C6H14)",
+        "Benzene (C6H6)",
+        "Ethanol (C2H5OH)",
+        "Chloroform (CHCl3)"
+      ],
       "correct": [2],
-      [cite_start]"explanation": "Ethanol có nhóm -OH tạo được liên kết hydro với nước nên tan vô hạn, trong khi Hexane, Benzene, Chloroform là các dung môi không phân cực hoặc kém phân cực[cite: 574].",
-      "tags": ["Solubility", "Organic Chemistry"],
+      "explanation": "Ethanol phân cực và tạo được liên kết hydro với nước.",
+      "tags": ["Solubility"],
       "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL018",
       "type": "single",
-      "question": "Biến thiên năng lượng tự do Gibbs (ΔG) âm (ΔG < 0) cho biết điều gì về phản ứng?",
-      "options": ["Phản ứng tự xảy ra (tự diễn biến)", "Phản ứng không tự xảy ra", "Phản ứng đang ở trạng thái cân bằng", "Phản ứng thu nhiệt"],
+      "question": "Điều kiện để một phản ứng tự xảy ra ở nhiệt độ, áp suất không đổi là:",
+      "options": [
+        "ΔG < 0",
+        "ΔG > 0",
+        "ΔG = 0",
+        "ΔH > 0"
+      ],
       "correct": [0],
-      [cite_start]"explanation": "Nếu ΔG < 0, phản ứng là tự xảy ra (spontaneous)[cite: 1665].",
+      "explanation": "ΔG (Năng lượng tự do Gibbs) âm thì quá trình là tự diễn biến.",
       "tags": ["Thermodynamics"],
       "difficulty": "medium",
       "image": null
@@ -209,10 +299,15 @@
     {
       "id": "DL019",
       "type": "single",
-      "question": "Đối với phản ứng bậc 1, đồ thị biểu diễn mối quan hệ giữa đại lượng nào theo thời gian (t) là một đường thẳng?",
-      "options": ["[A]", "ln[A]", "1/[A]", "[A]^2"],
+      "question": "Phản ứng bậc 1 có đồ thị tuyến tính giữa:",
+      "options": [
+        "[A] theo t",
+        "ln[A] theo t",
+        "1/[A] theo t",
+        "[A]^2 theo t"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Đối với phản ứng bậc 1, phương trình động học tích phân là ln[A] = -kt + ln[A]0, nên đồ thị ln[A] theo t là đường thẳng[cite: 1403, 1541].",
+      "explanation": "Phương trình động học bậc 1: ln[A] = -kt + ln[A]0.",
       "tags": ["Kinetics"],
       "difficulty": "medium",
       "image": null
@@ -220,10 +315,15 @@
     {
       "id": "DL020",
       "type": "single",
-      "question": "Chất xúc tác ảnh hưởng như thế nào đến phản ứng thuận nghịch?",
-      "options": ["Làm thay đổi hằng số cân bằng Keq", "Làm cân bằng chuyển dịch theo chiều thuận", "Làm tăng tốc độ phản ứng (cả thuận và nghịch) nhưng không làm thay đổi vị trí cân bằng", "Làm giảm năng lượng của sản phẩm"],
+      "question": "Vai trò của chất xúc tác trong cân bằng hóa học:",
+      "options": [
+        "Thay đổi Keq",
+        "Chuyển dịch cân bằng theo chiều thuận",
+        "Làm hệ nhanh đạt trạng thái cân bằng hơn",
+        "Tăng năng suất phản ứng"
+      ],
       "correct": [2],
-      [cite_start]"explanation": "Chất xúc tác làm giảm năng lượng hoạt hóa, tăng tốc độ phản ứng nhưng không làm thay đổi nồng độ các chất tại thời điểm cân bằng (không chuyển dịch cân bằng)[cite: 1656].",
+      "explanation": "Chất xúc tác làm tăng tốc độ phản ứng thuận và nghịch như nhau, không làm thay đổi vị trí cân bằng.",
       "tags": ["Kinetics", "Equilibrium"],
       "difficulty": "medium",
       "image": null
@@ -231,21 +331,31 @@
     {
       "id": "DL021",
       "type": "single",
-      "question": "Trong danh pháp Cahn-Ingold-Prelog (R/S), thứ tự ưu tiên của các nhóm thế được xác định dựa trên:",
-      "options": ["Khối lượng phân tử của nhóm", "Số hiệu nguyên tử (Z) của nguyên tử gắn trực tiếp vào tâm bất đối", "Độ dài liên kết", "Độ âm điện"],
+      "question": "Quy tắc Cahn-Ingold-Prelog (R/S) ưu tiên nhóm thế dựa trên:",
+      "options": [
+        "Khối lượng phân tử",
+        "Số hiệu nguyên tử (Z) của nguyên tử gắn trực tiếp",
+        "Độ dài liên kết",
+        "Độ âm điện"
+      ],
       "correct": [1],
-      "explanation": "Quy tắc Cahn-Ingold-Prelog xác định độ ưu tiên dựa trên số hiệu nguyên tử (Z) của nguyên tử liên kết trực tiếp với tâm lập thể; Z càng lớn, độ ưu tiên càng cao.",
-      "tags": ["Organic Chemistry", "Stereochemistry"],
+      "explanation": "Z càng lớn thì độ ưu tiên càng cao.",
+      "tags": ["Stereochemistry"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL022",
       "type": "single",
-      "question": "Naproxen là thuốc giảm đau kháng viêm. Đồng phân S của nó hiệu quả gấp 28 lần đồng phân R. Đây là ví dụ về tầm quan trọng của:",
-      "options": ["Đồng phân hình học (cis/trans)", "Đồng phân cấu tạo", "Đồng phân đối quang (Enantiomers)", "Đồng phân nhóm chức"],
+      "question": "Naproxen (S) mạnh gấp 28 lần Naproxen (R). Đây là ví dụ về:",
+      "options": [
+        "Đồng phân hình học",
+        "Đồng phân cấu tạo",
+        "Đồng phân đối quang (Enantiomers)",
+        "Đồng phân nhóm chức"
+      ],
       "correct": [2],
-      "explanation": "Naproxen tồn tại dưới dạng cặp đồng phân đối quang (enantiomers). [cite_start]Các đồng phân đối hình của thuốc có thể có tác dụng sinh học rất khác nhau[cite: 1446].",
+      "explanation": "R và S là ký hiệu cấu hình tuyệt đối của các đồng phân đối quang.",
       "tags": ["Stereochemistry", "Pharmacy"],
       "difficulty": "easy",
       "image": null
@@ -253,65 +363,95 @@
     {
       "id": "DL023",
       "type": "single",
-      "question": "Hợp chất Meso là hợp chất:",
-      "options": ["Không có tâm bất đối", "Có tâm bất đối nhưng phân tử có mặt phẳng đối xứng nên không quang hoạt", "Là hỗn hợp racemic 50:50", "Chỉ chứa liên kết đôi"],
+      "question": "Hợp chất Meso là:",
+      "options": [
+        "Không có tâm bất đối",
+        "Có tâm bất đối nhưng có mặt phẳng đối xứng, không quang hoạt",
+        "Hỗn hợp racemic",
+        "Chiral"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Hợp chất meso chứa các tâm bất đối (chiral centers) nhưng chồng khít lên ảnh qua gương của nó (thường do có mặt phẳng đối xứng), do đó không quang hoạt[cite: 1441].",
-      "tags": ["Organic Chemistry", "Stereochemistry"],
+      "explanation": "Hợp chất meso chứa carbon thủ tính nhưng phân tử có yếu tố đối xứng (mặt phẳng phản xạ) nên triệt tiêu tính quang hoạt.",
+      "tags": ["Stereochemistry"],
       "difficulty": "hard",
       "image": null
     },
     {
       "id": "DL024",
       "type": "single",
-      "question": "IUPAC: Tên gọi (2E, 4Z)-... chỉ ra điều gì về cấu trúc phân tử?",
-      "options": ["Vị trí nhóm thế trên vòng benzene", "Cấu hình hình học tại các liên kết đôi (E là đối, Z là cùng)", "Cấu hình tuyệt đối tại tâm bất đối", "Bậc của amine"],
+      "question": "Ký hiệu (E) trong danh pháp (E/Z) nghĩa là:",
+      "options": [
+        "Các nhóm thế ưu tiên ở cùng phía (Zusammen)",
+        "Các nhóm thế ưu tiên ở khác phía (Entgegen)",
+        "Quay phải",
+        "Quay trái"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "E (Entgegen - đối) và Z (Zusammen - cùng) dùng để chỉ cấu hình hình học của liên kết đôi[cite: 1447].",
-      "tags": ["Organic Chemistry", "Nomenclature"],
+      "explanation": "E = Entgegen (Opposite/Đối). Z = Zusammen (Together/Cùng).",
+      "tags": ["Nomenclature"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL025",
       "type": "single",
-      "question": "Một dung dịch có nồng độ [H+] = 1.0 x 10^-3 M. pH của dung dịch này là bao nhiêu?",
-      "options": ["3.0", "11.0", "1.0", "13.0"],
+      "question": "pH của dung dịch có [H+] = 10^-3 M là:",
+      "options": [
+        "3",
+        "11",
+        "1",
+        "13"
+      ],
       "correct": [0],
-      [cite_start]"explanation": "pH = -log[H+]. pH = -log(10^-3) = 3[cite: 610].",
-      "tags": ["General Chemistry", "Acids Bases"],
+      "explanation": "pH = -log(10^-3) = 3.",
+      "tags": ["Acids Bases"],
       "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL026",
       "type": "single",
-      "question": "EDTA là một ligand đa càng (polydentate), nó thường tạo phức với ion kim loại theo tỉ lệ nào?",
-      "options": ["1:1", "1:2", "1:4", "1:6"],
+      "question": "EDTA tạo phức với ion kim loại thường theo tỉ lệ:",
+      "options": [
+        "1:1",
+        "1:2",
+        "1:4",
+        "1:6"
+      ],
       "correct": [0],
-      [cite_start]"explanation": "EDTA tạo cấu trúc lồng bao quanh ion kim loại với tỉ lệ 1:1 rất bền vững[cite: 62].",
-      "tags": ["General Chemistry", "Complexes"],
+      "explanation": "EDTA là phối tử đa càng (hexadentate), thường bao bọc kim loại theo tỉ lệ 1:1.",
+      "tags": ["Complexes"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL027",
       "type": "single",
-      "question": "Trong phản ứng: Ag+ + 2NH3 ⇌ Ag(NH3)2+, hằng số cân bằng K được gọi là:",
-      "options": ["Tích số tan (Ksp)", "Hằng số bền (hằng số tạo thành Kf)", "Hằng số phân ly acid (Ka)", "Hằng số tốc độ (k)"],
+      "question": "Hằng số bền của phức chất càng lớn thì:",
+      "options": [
+        "Phức chất càng kém bền",
+        "Phức chất càng bền",
+        "Phức chất dễ bị phân hủy",
+        "Không liên quan đến độ bền"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Đây là phản ứng tạo phức, K tương ứng là hằng số bền (Ks) hay hằng số tạo thành (Kf)[cite: 64].",
-      "tags": ["General Chemistry", "Complexes"],
-      "difficulty": "medium",
+      "explanation": "Hằng số bền (Kf hay Ks) đặc trưng cho độ bền của phức. K càng lớn phức càng bền.",
+      "tags": ["Complexes"],
+      "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL028",
       "type": "single",
-      "question": "Liên kết peptide trong protein được hình thành giữa:",
-      "options": ["Nhóm -OH và nhóm -COOH", "Nhóm -NH2 của aa này và nhóm -COOH của aa kia", "Hai nhóm -SH", "Nhóm Phosphate và đường Ribose"],
+      "question": "Liên kết peptide là liên kết loại:",
+      "options": [
+        "Este",
+        "Amide",
+        "Ether",
+        "Glycosidic"
+      ],
       "correct": [1],
-      "explanation": "Liên kết peptide là liên kết amide hình thành do phản ứng ngưng tụ giữa nhóm carboxyl của amino acid này với nhóm amine của amino acid khác [kiến thức cơ bản về protein từ file Hóa Y24A].",
+      "explanation": "Liên kết peptide (-CO-NH-) là một loại liên kết amide đặc biệt giữa các alpha-amino acid.",
       "tags": ["Biochem"],
       "difficulty": "easy",
       "image": null
@@ -319,65 +459,95 @@
     {
       "id": "DL029",
       "type": "single",
-      "question": "Chất nào sau đây có khả năng tạo liên kết hydro nội phân tử?",
-      "options": ["Ethanol", "o-Nitrophenol", "p-Nitrophenol", "Methane"],
+      "question": "Chất nào có khả năng tạo liên kết hydro nội phân tử?",
+      "options": [
+        "Ethanol",
+        "o-Nitrophenol",
+        "p-Nitrophenol",
+        "Methane"
+      ],
       "correct": [1],
-      "explanation": "o-Nitrophenol có nhóm -OH và -NO2 ở vị trí ortho gần nhau, thuận lợi cho việc tạo liên kết hydro nội phân tử (giữa H của OH và O của NO2).",
-      "tags": ["Organic Chemistry", "Bonding"],
+      "explanation": "o-Nitrophenol có nhóm -OH và -NO2 gần nhau (vị trí ortho) tạo vòng 6 cạnh bền nhờ liên kết hydro nội phân tử.",
+      "tags": ["Bonding", "Organic Chemistry"],
       "difficulty": "hard",
       "image": null
     },
     {
       "id": "DL030",
       "type": "single",
-      "question": "Trong bảng tuần hoàn, bán kính nguyên tử biến đổi như thế nào?",
-      "options": ["Tăng từ trái sang phải trong một chu kỳ", "Giảm từ trên xuống dưới trong một nhóm", "Giảm từ trái sang phải trong chu kỳ và tăng từ trên xuống dưới trong nhóm", "Không theo quy luật"],
-      "correct": [2],
-      [cite_start]"explanation": "Bán kính nguyên tử giảm từ trái sang phải (do lực hút hạt nhân tăng) và tăng từ trên xuống dưới (do thêm lớp electron)[cite: 228].",
-      "tags": ["General Chemistry", "Periodic Table"],
+      "question": "Trong một chu kỳ, từ trái sang phải, bán kính nguyên tử:",
+      "options": [
+        "Tăng dần",
+        "Giảm dần",
+        "Không đổi",
+        "Biến thiên điều hòa"
+      ],
+      "correct": [1],
+      "explanation": "Do điện tích hạt nhân tăng làm tăng lực hút với electron lớp vỏ, kéo electron về gần hạt nhân hơn -> bán kính giảm.",
+      "tags": ["Periodic Table"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL031",
       "type": "single",
-      "question": "Giá trị pH của máu người bình thường dao động trong khoảng hẹp nào?",
-      "options": ["6.8 - 7.0", "7.35 - 7.45", "7.0 - 7.2", "7.8 - 8.0"],
-      "correct": [1],
-      [cite_start]"explanation": "pH sinh lý của máu được duy trì ổn định quanh mức 7.4 (thường là 7.35-7.45) nhờ hệ đệm[cite: 615, 620].",
-      "tags": ["Biochem", "Clinical"],
+      "question": "pH sinh lý của máu người là:",
+      "options": [
+        "7.0",
+        "7.2",
+        "7.4",
+        "7.8"
+      ],
+      "correct": [2],
+      "explanation": "Khoảng chuẩn là 7.35 - 7.45.",
+      "tags": ["Clinical", "Biochem"],
       "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL032",
       "type": "single",
-      "question": "Nếu ΔG = 0, hệ thống đang ở trạng thái nào?",
-      "options": ["Phản ứng dừng lại hoàn toàn", "Cân bằng hóa học", "Phản ứng xảy ra mãnh liệt", "Phản ứng vừa mới bắt đầu"],
+      "question": "Tại điểm cân bằng hóa học:",
+      "options": [
+        "Phản ứng dừng lại",
+        "Tốc độ phản ứng thuận bằng tốc độ phản ứng nghịch",
+        "Nồng độ chất tham gia bằng nồng độ sản phẩm",
+        "ΔG > 0"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Khi ΔG = 0, không có công năng lượng tự do nào được sinh ra, hệ đạt trạng thái cân bằng[cite: 1635, 1637].",
-      "tags": ["Thermodynamics", "Equilibrium"],
-      "difficulty": "medium",
+      "explanation": "Cân bằng hóa học là cân bằng động, phản ứng vẫn xảy ra nhưng tốc độ thuận = nghịch.",
+      "tags": ["Equilibrium"],
+      "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL033",
       "type": "single",
-      "question": "Trong phản ứng oxy hóa khử, chất khử là chất:",
-      "options": ["Nhận electron và số oxy hóa giảm", "Cho electron và số oxy hóa tăng", "Nhận proton", "Cho proton"],
+      "question": "Chất bị oxy hóa là chất:",
+      "options": [
+        "Nhận electron",
+        "Cho electron",
+        "Không thay đổi số oxy hóa",
+        "Nhận proton"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Chất khử (reducing agent) là chất nhường electron (bị oxy hóa) lên trạng thái oxy hóa cao hơn[cite: 51].",
-      "tags": ["General Chemistry", "Redox"],
+      "explanation": "Khử cho - O nhận. Chất bị oxy hóa (chất khử) là chất cho electron.",
+      "tags": ["Redox"],
       "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL034",
       "type": "single",
-      "question": "Phương trình Nernst dùng để làm gì?",
-      "options": ["Tính pH của dung dịch đệm", "Tính thế điện cực trong điều kiện không chuẩn", "Tính tốc độ phản ứng", "Tính áp suất thẩm thấu"],
-      "correct": [1],
-      [cite_start]"explanation": "Phương trình Nernst xác định mối quan hệ giữa thế điện cực và nồng độ các chất (điều kiện không chuẩn)[cite: 58].",
+      "question": "Phương trình Nernst mô tả mối quan hệ giữa thế điện cực và:",
+      "options": [
+        "Nhiệt độ và nồng độ",
+        "Áp suất thẩm thấu",
+        "Tốc độ phản ứng",
+        "Năng lượng hoạt hóa"
+      ],
+      "correct": [0],
+      "explanation": "E = E0 - (RT/nF)lnQ. Phụ thuộc vào nồng độ các chất trong phương trình.",
       "tags": ["Electrochemistry"],
       "difficulty": "medium",
       "image": null
@@ -385,43 +555,63 @@
     {
       "id": "DL035",
       "type": "single",
-      "question": "Định luật Henry-Le Chatelier áp dụng cho:",
-      "options": ["Chỉ phản ứng kết tủa", "Hệ cân bằng hóa học chịu tác động bên ngoài", "Phản ứng một chiều", "Phản ứng hạt nhân"],
-      "correct": [1],
-      [cite_start]"explanation": "Nguyên lý Le Chatelier phát biểu về sự chuyển dịch của hệ cân bằng khi chịu tác động (stress) như nồng độ, nhiệt độ, áp suất[cite: 35].",
-      "tags": ["Equilibrium"],
-      "difficulty": "easy",
+      "question": "Độ tan của khí trong lỏng tuân theo định luật:",
+      "options": [
+        "Henry",
+        "Raoult",
+        "Dalton",
+        "Boyle"
+      ],
+      "correct": [0],
+      "explanation": "Định luật Henry: Độ tan của khí tỉ lệ thuận với áp suất riêng phần của khí đó trên bề mặt chất lỏng.",
+      "tags": ["Solutions"],
+      "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL036",
       "type": "single",
-      "question": "Tích số tan (Ksp) của AgCl là 1.0 x 10^-10. Độ tan mol (s) của AgCl trong nước nguyên chất là:",
-      "options": ["1.0 x 10^-5 M", "1.0 x 10^-10 M", "1.0 x 10^-20 M", "5.0 x 10^-6 M"],
+      "question": "Nếu Ksp(AgCl) = 10^-10, độ tan (s) trong nước là:",
+      "options": [
+        "10^-5 M",
+        "10^-10 M",
+        "10^-20 M",
+        "5 x 10^-6 M"
+      ],
       "correct": [0],
-      "explanation": "AgCl ⇌ Ag+ + Cl-. [cite_start]Ksp = s * s = s^2. s = căn bậc hai(10^-10) = 10^-5 M[cite: 47].",
-      "tags": ["Equilibrium", "Solubility"],
+      "explanation": "s = căn bậc hai của Ksp = 10^-5.",
+      "tags": ["Equilibrium"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL037",
       "type": "single",
-      "question": "Cấu trúc bậc 1 của protein được giữ vững chủ yếu bởi:",
-      "options": ["Liên kết hydro", "Liên kết peptide (cộng hóa trị)", "Cầu nối disulfid", "Tương tác kỵ nước"],
+      "question": "Cấu trúc bậc 2 của protein (alpha helix, beta sheet) được duy trì bởi:",
+      "options": [
+        "Liên kết peptide",
+        "Liên kết hydro",
+        "Cầu disulfid",
+        "Tương tác ion"
+      ],
       "correct": [1],
-      "explanation": "Cấu trúc bậc 1 là trình tự các acid amin liên kết với nhau bằng liên kết peptide bền vững [Suy luận từ kiến thức Hóa Y24A].",
+      "explanation": "Các liên kết hydro giữa nhóm C=O và N-H của mạch chính tạo nên cấu trúc bậc 2.",
       "tags": ["Biochem"],
-      "difficulty": "easy",
+      "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL038",
       "type": "single",
-      "question": "Enantiomer (đối quang) là cặp đồng phân lập thể có tính chất nào?",
-      "options": ["Là ảnh qua gương không chồng khít lên nhau", "Là ảnh qua gương chồng khít lên nhau", "Không phải là ảnh qua gương của nhau", "Có công thức phân tử khác nhau"],
+      "question": "Hỗn hợp Racemic là:",
+      "options": [
+        "Hỗn hợp đẳng lượng (1:1) của hai đồng phân đối quang",
+        "Chất tinh khiết chỉ chứa đồng phân R",
+        "Chất tinh khiết chỉ chứa đồng phân S",
+        "Hỗn hợp đồng phân cis-trans"
+      ],
       "correct": [0],
-      [cite_start]"explanation": "Enantiomer là các phân tử đối xứng gương (chiral) không chồng khít lên nhau[cite: 1441, 1442].",
+      "explanation": "Hỗn hợp racemic không có tính quang hoạt do sự quay cực của hai đối quang triệt tiêu nhau.",
       "tags": ["Stereochemistry"],
       "difficulty": "medium",
       "image": null
@@ -429,10 +619,15 @@
     {
       "id": "DL039",
       "type": "single",
-      "question": "Trong pin điện hóa (Galvanic cell), quá trình oxy hóa xảy ra ở điện cực nào?",
-      "options": ["Cathode (cực dương)", "Anode (cực âm)", "Cầu muối", "Dung dịch điện ly"],
+      "question": "Trong pin Galvanic, Anode là cực:",
+      "options": [
+        "Dương (+), xảy ra khử",
+        "Âm (-), xảy ra oxy hóa",
+        "Dương (+), xảy ra oxy hóa",
+        "Âm (-), xảy ra khử"
+      ],
       "correct": [1],
-      "explanation": "Tại Anode xảy ra quá trình oxy hóa. [cite_start]Tại Cathode xảy ra quá trình khử[cite: 54].",
+      "explanation": "Trong pin điện hóa: Anode là cực âm (nơi electron sinh ra do oxy hóa). Cathode là cực dương.",
       "tags": ["Electrochemistry"],
       "difficulty": "medium",
       "image": null
@@ -440,122 +635,177 @@
     {
       "id": "DL040",
       "type": "single",
-      "question": "Sắp xếp theo thứ tự giảm dần độ tan trong nước: (I) Methanol (CH3OH), (II) Hexane (C6H14), (III) Methylamine (CH3NH2).",
-      "options": ["I > III > II", "II > I > III", "III ≈ I > II", "II > III > I"],
+      "question": "Chất nào sau đây kỵ nước (hydrophobic)?",
+      "options": [
+        "Glucose",
+        "Ion Na+",
+        "Dầu mỡ (Triglyceride)",
+        "Acid acetic"
+      ],
       "correct": [2],
-      "explanation": "Methanol và Methylamine đều phân cực và tạo liên kết hydro mạnh với nước nên tan rất tốt. [cite_start]Hexane không phân cực, kỵ nước[cite: 574, 1394].",
-      "tags": ["Solubility"],
-      "difficulty": "medium",
+      "explanation": "Dầu mỡ là chất béo không phân cực, không tan trong nước.",
+      "tags": ["Biochem", "Solubility"],
+      "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL041",
       "type": "single",
-      "question": "Lai hóa sp3d2 ứng với hình học phân tử nào?",
-      "options": ["Tứ diện", "Bát diện", "Lưỡng tháp tam giác", "Vuông phẳng"],
+      "question": "Dạng hình học của phân tử SF6 (lai hóa sp3d2) là:",
+      "options": [
+        "Tứ diện",
+        "Bát diện đều",
+        "Lưỡng tháp tam giác",
+        "Vuông phẳng"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Lai hóa sp3d2 tạo ra 6 orbital lai hóa hướng về 6 đỉnh của hình bát diện (octahedron)[cite: 63, 64].",
-      "tags": ["General Chemistry", "Bonding"],
-      "difficulty": "hard",
+      "explanation": "6 cặp electron liên kết đẩy nhau ra xa nhất tạo hình bát diện.",
+      "tags": ["Bonding"],
+      "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL042",
       "type": "single",
-      "question": "Khi thêm một lượng nhỏ acid mạnh hoặc base mạnh vào dung dịch đệm, pH của dung dịch sẽ:",
-      "options": ["Thay đổi rất ít", "Tăng đột ngột", "Giảm đột ngột", "Chuyển sang trung tính"],
-      "correct": [0],
-      [cite_start]"explanation": "Dung dịch đệm có khả năng chống lại sự thay đổi pH khi thêm acid hoặc base[cite: 614].",
-      "tags": ["Acids Bases", "Buffers"],
-      "difficulty": "easy",
+      "question": "Thêm acid mạnh vào dung dịch đệm, thành phần nào của đệm sẽ phản ứng?",
+      "options": [
+        "Thành phần acid yếu",
+        "Thành phần base liên hợp",
+        "Nước",
+        "Không phản ứng"
+      ],
+      "correct": [1],
+      "explanation": "Base liên hợp sẽ trung hòa H+ thêm vào để giữ ổn định pH.",
+      "tags": ["Buffers"],
+      "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL043",
       "type": "single",
-      "question": "Darvon (thuốc giảm đau) và Novrad (thuốc chống ho) là ví dụ về:",
-      "options": ["Hai loại thuốc có cấu trúc hoàn toàn khác nhau", "Đồng phân đối quang có tác dụng sinh học trái ngược hoặc khác nhau", "Cùng một chất nhưng tên thương mại khác nhau", "Đồng phân vị trí"],
+      "question": "Thalidomide là ví dụ điển hình về tầm quan trọng của:",
+      "options": [
+        "Độ tan",
+        "Đồng phân lập thể trong dược học",
+        "Phản ứng thủy phân",
+        "Màu sắc thuốc"
+      ],
       "correct": [1],
-      [cite_start]"explanation": "Dextropropoxyphene (Darvon) và Levopropoxyphene (Novrad) là cặp đối quang (enantiomer); một chất giảm đau, một chất trị ho[cite: 1442].",
+      "explanation": "Một đồng phân chữa ốm nghén, đồng phân kia gây quái thai. Đây là thảm họa y khoa lịch sử liên quan đến đồng phân đối quang.",
       "tags": ["Pharmacy", "Stereochemistry"],
-      "difficulty": "medium",
+      "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL044",
       "type": "single",
-      "question": "Năng lượng liên kết của H-F (569 kJ/mol) lớn hơn H-Cl (432 kJ/mol) chủ yếu là do:",
-      "options": ["Độ dài liên kết H-F ngắn hơn H-Cl", "Flo có độ âm điện nhỏ hơn Clo", "Clo có bán kính nguyên tử nhỏ hơn Flo", "Liên kết H-Cl là liên kết ion"],
-      "correct": [0],
-      "explanation": "Độ bền liên kết thường tỉ lệ nghịch với độ dài liên kết. [cite_start]F bán kính nhỏ hơn Cl nên H-F ngắn hơn và bền hơn H-Cl[cite: 275, 287].",
-      "tags": ["Bonding"],
+      "question": "So sánh lực acid: HCl và HF trong nước.",
+      "options": [
+        "HF mạnh hơn HCl",
+        "HCl mạnh hơn HF",
+        "Bằng nhau",
+        "Không so sánh được"
+      ],
+      "correct": [1],
+      "explanation": "Trong nước, HCl phân ly hoàn toàn (mạnh), HF phân ly yếu do liên kết H-F rất bền và tạo cặp ion chặt chẽ.",
+      "tags": ["Acids Bases"],
       "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL045",
       "type": "single",
-      "question": "Số lượng tử từ (ml) cho biết thông tin gì về orbital?",
-      "options": ["Kích thước của orbital", "Hình dạng của orbital", "Sự định hướng của orbital trong không gian", "Chiều tự quay của electron"],
-      "correct": [2],
-      "explanation": "Số lượng tử chính (n): kích thước/năng lượng; Số lượng tử phụ (l): hình dạng; [cite_start]Số lượng tử từ (ml): định hướng không gian[cite: 108, 114].",
-      "tags": ["Quantum Mechanics"],
-      "difficulty": "hard",
+      "question": "Số lượng tử phụ (l) xác định:",
+      "options": [
+        "Năng lượng và kích thước",
+        "Hình dạng orbital",
+        "Định hướng không gian",
+        "Spin electron"
+      ],
+      "correct": [1],
+      "explanation": "l=0 (s: cầu), l=1 (p: số 8)... quy định hình dạng.",
+      "tags": ["Atomic Structure"],
+      "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL046",
       "type": "single",
-      "question": "Phản ứng thủy phân ATP là phản ứng:",
-      "options": ["Thu nhiệt và ΔG > 0", "Tỏa nhiệt và ΔG < 0", "Không thay đổi năng lượng", "Luôn cân bằng"],
+      "question": "Phản ứng thủy phân ATP có ΔG < 0, nghĩa là:",
+      "options": [
+        "Phản ứng thu năng lượng",
+        "Phản ứng giải phóng năng lượng",
+        "Phản ứng cân bằng",
+        "Phản ứng không xảy ra"
+      ],
       "correct": [1],
-      "explanation": "Thủy phân ATP giải phóng năng lượng để tế bào sử dụng, do đó ΔG < 0 (exergonic) [Suy luận từ kiến thức nhiệt động học và sinh học].",
-      "tags": ["Biochem", "Thermodynamics"],
-      "difficulty": "medium",
+      "explanation": "Exergonic reaction (tỏa năng lượng tự do).",
+      "tags": ["Thermodynamics", "Biochem"],
+      "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL047",
       "type": "single",
-      "question": "Liên kết nào yếu nhất trong các loại liên kết/tương tác sau?",
-      "options": ["Liên kết cộng hóa trị", "Liên kết ion trong tinh thể", "Liên kết hydro", "Tương tác Van der Waals (London dispersion)"],
-      "correct": [3],
-      [cite_start]"explanation": "Tương tác Van der Waals thường yếu hơn liên kết hydro, và yếu hơn nhiều so với liên kết ion hay cộng hóa trị[cite: 651].",
+      "question": "Liên kết cộng hóa trị hình thành do:",
+      "options": [
+        "Góp chung electron",
+        "Cho nhận electron hoàn toàn",
+        "Hút tĩnh điện",
+        "Tương tác lưỡng cực"
+      ],
+      "correct": [0],
+      "explanation": "Định nghĩa cơ bản của liên kết cộng hóa trị.",
       "tags": ["Bonding"],
-      "difficulty": "medium",
+      "difficulty": "easy",
       "image": null
     },
     {
       "id": "DL048",
       "type": "single",
-      "question": "Để pha chế 1 lít dung dịch đệm phosphat pH 7.4, người ta thường dùng cặp chất nào?",
-      "options": ["H3PO4 và NaH2PO4", "NaH2PO4 và Na2HPO4", "Na2HPO4 và Na3PO4", "HCl và NaOH"],
-      "correct": [1],
-      "explanation": "pKa2 của acid phosphoric là 6.86, gần với pH 7.4. [cite_start]Do đó dùng cặp muối monobasic (H2PO4-) và dibasic (HPO4 2-)[cite: 615, 617].",
-      "tags": ["Buffers", "Lab"],
-      "difficulty": "hard",
+      "question": "Để pha dung dịch đệm pH 4.75, nên chọn cặp acid/base nào (biết pKa của Acetic acid = 4.75)?",
+      "options": [
+        "CH3COOH / CH3COO-",
+        "NH4+ / NH3",
+        "H2PO4- / HPO4 2-",
+        "HCO3- / CO3 2-"
+      ],
+      "correct": [0],
+      "explanation": "Hệ đệm hoạt động tốt nhất khi pH ≈ pKa. Acetic acid có pKa 4.75 là lựa chọn hoàn hảo.",
+      "tags": ["Buffers"],
+      "difficulty": "medium",
       "image": null
     },
     {
       "id": "DL049",
       "type": "single",
-      "question": "Áp suất thẩm thấu (Osmotic pressure) phụ thuộc vào yếu tố nào?",
-      "options": ["Bản chất hóa học của chất tan", "Tổng nồng độ các hạt chất tan trong dung dịch", "Khối lượng riêng của dung dịch", "Màu sắc dung dịch"],
-      "correct": [1],
-      [cite_start]"explanation": "Áp suất thẩm thấu là tính chất tập hợp (colligative property), phụ thuộc vào số lượng hạt (nồng độ mol) chứ không phụ thuộc bản chất hạt[cite: 596].",
-      "tags": ["Solutions", "Osmosis"],
-      "difficulty": "medium",
+      "question": "Công thức tính áp suất thẩm thấu (π):",
+      "options": [
+        "π = MRT",
+        "π = nRT/V",
+        "π = iMRT",
+        "Tất cả đều đúng (với các điều kiện tương ứng)"
+      ],
+      "correct": [3],
+      "explanation": "i là hệ số Van't Hoff (cho chất điện ly), M là nồng độ mol. Các công thức trên đều biểu diễn định luật Van't Hoff về áp suất thẩm thấu.",
+      "tags": ["Osmosis"],
+      "difficulty": "hard",
       "image": null
     },
     {
       "id": "DL050",
       "type": "single",
-      "question": "Hằng số Keq = 10^15 cho biết điều gì về phản ứng?",
-      "options": ["Phản ứng xảy ra gần như hoàn toàn theo chiều thuận", "Phản ứng xảy ra rất chậm", "Phản ứng xảy ra chủ yếu theo chiều nghịch", "Nồng độ chất phản ứng còn lại rất lớn"],
-      "correct": [0],
-      [cite_start]"explanation": "Keq rất lớn (>>1) nghĩa là tại cân bằng, nồng độ sản phẩm lớn hơn rất nhiều so với chất tham gia, phản ứng gần như hoàn toàn[cite: 31].",
-      "tags": ["Equilibrium"],
-      "difficulty": "easy",
+      "question": "Hằng số tốc độ k phụ thuộc vào:",
+      "options": [
+        "Nồng độ chất phản ứng",
+        "Nhiệt độ và chất xúc tác",
+        "Thời gian phản ứng",
+        "Thể tích bình chứa"
+      ],
+      "correct": [1],
+      "explanation": "Theo phương trình Arrhenius, k phụ thuộc nhiệt độ và năng lượng hoạt hóa (bị thay đổi bởi xúc tác). k không phụ thuộc nồng độ.",
+      "tags": ["Kinetics"],
+      "difficulty": "medium",
       "image": null
     }
   ]
