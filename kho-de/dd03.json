@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "title": "ĐỀ SỐ 3: ĐẠI CƯƠNG - HẤP THU - PHÂN BỐ (TRỌNG TÂM)",
+    "time_limit_sec": 1800,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "2.0"
+  },
+  "questions": [
+    {
+      "id": "D3_NEW_001",
+      "type": "single",
+      "question": "Động lực chính thúc đẩy quá trình khuếch tán thụ động của thuốc qua màng tế bào là:",
+      "options": ["Sự chênh lệch nồng độ (Gradient nồng độ)", "Năng lượng từ thủy phân ATP", "Chất mang (Transporter)", "Áp suất thủy tĩnh"],
+      "correct": [0],
+      "explanation": "Khuếch tán thụ động tuân theo định luật Fick, động lực là sự chênh lệch nồng độ thuốc ở hai bên màng.",
+      "tags": ["Đại cương", "Vận chuyển"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_002",
+      "type": "single",
+      "question": "Thuốc có bản chất là acid yếu (pKa = 4.4) sẽ hấp thu tốt nhất tại vị trí nào trong đường tiêu hóa?",
+      "options": ["Dạ dày (pH 1-3)", "Ruột non (pH 5-7)", "Ruột già (pH 8)", "Miệng (pH 7)"],
+      "correct": [0],
+      "explanation": "Acid yếu ở môi trường acid (pH < pKa) sẽ tồn tại chủ yếu ở dạng không ion hóa -> dễ thấm qua màng.",
+      "tags": ["Đại cương", "Hấp thu"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_003",
+      "type": "single",
+      "question": "Sinh khả dụng (F) của một thuốc dùng đường uống phụ thuộc vào các yếu tố nào sau đây?",
+      "options": ["Mức độ hấp thu tại ruột và chuyển hóa lần đầu qua gan", "Tốc độ lọc cầu thận", "Tỷ lệ gắn kết protein huyết tương", "Thể tích phân bố"],
+      "correct": [0],
+      "explanation": "F = f (phần hấp thu) x (1 - E (hệ số ly trích tại gan)).",
+      "tags": ["Hấp thu"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_004",
+      "type": "single",
+      "question": "Đặc điểm nào sau đây KHÔNG PHẢI là đặc điểm của vận chuyển tích cực (chủ động)?",
+      "options": ["Không cần năng lượng", "Đi ngược bậc thang nồng độ", "Có tính bão hòa", "Có tính cạnh tranh"],
+      "correct": [0],
+      "explanation": "Vận chuyển tích cực (Active transport) bắt buộc phải tiêu tốn năng lượng (ATP).",
+      "tags": ["Đại cương", "Vận chuyển"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_005",
+      "type": "single",
+      "question": "Hệ số phân bố lipid/nước (Log P) của thuốc càng lớn thì:",
+      "options": ["Thuốc càng thân dầu (ưa lipid)", "Thuốc càng thân nước", "Thuốc càng khó qua màng tế bào", "Thuốc càng dễ tan trong dịch vị"],
+      "correct": [0],
+      "explanation": "Log P biểu thị tính thân dầu. Log P cao -> thân dầu -> dễ qua màng lipid.",
+      "tags": ["Đại cương"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_006",
+      "type": "single",
+      "question": "Khoảng trị liệu (Therapeutic window) là khoảng nồng độ thuốc nằm giữa:",
+      "options": ["Nồng độ tối thiểu có hiệu quả (MEC) và Nồng độ tối thiểu gây độc (MTC)", "Nồng độ đỉnh (Cmax) và Nồng độ đáy (Cmin)", "Liều thấp nhất và Liều cao nhất", "Thời gian bắt đầu tác dụng và Thời gian kết thúc tác dụng"],
+      "correct": [0],
+      "explanation": "Định nghĩa cơ bản về khoảng trị liệu/cửa sổ trị liệu.",
+      "tags": ["Đại cương"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_007",
+      "type": "single",
+      "question": "Đường dùng thuốc nào sau đây tránh được hoàn toàn chuyển hóa lần đầu qua gan?",
+      "options": ["Tiêm tĩnh mạch (IV)", "Uống (PO)", "Đặt trực tràng (Rectal)", "Uống thuốc bao tan trong ruột"],
+      "correct": [0],
+      "explanation": "Tiêm IV đưa thuốc thẳng vào vòng tuần hoàn chung. Đặt trực tràng chỉ tránh được ~50%. Uống thì 100% qua gan.",
+      "tags": ["Hấp thu"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_008",
+      "type": "single",
+      "question": "Thể tích phân bố (Vd) biểu thị mối quan hệ giữa:",
+      "options": ["Lượng thuốc trong cơ thể và nồng độ thuốc trong huyết tương", "Liều dùng và độ thanh thải", "Tốc độ hấp thu và tốc độ thải trừ", "Lượng thuốc trong mô và lượng thuốc trong máu"],
+      "correct": [0],
+      "explanation": "Vd = Amount (lượng thuốc trong cơ thể) / Concentration (nồng độ huyết tương).",
+      "tags": ["Phân bố"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_009",
+      "type": "single",
+      "question": "Loại protein huyết tương nào chủ yếu gắn kết với các thuốc có bản chất là Base yếu?",
+      "options": ["Alpha-1 acid glycoprotein (AAG)", "Albumin", "Lipoprotein", "Globulin"],
+      "correct": [0],
+      "explanation": "Albumin gắn acid yếu. Alpha-1 acid glycoprotein gắn base yếu.",
+      "tags": ["Phân bố"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_010",
+      "type": "single",
+      "question": "Thuốc ở dạng nào sau đây mới có tác dụng dược lý và được phân bố đến các mô?",
+      "options": ["Dạng tự do (không gắn protein)", "Dạng gắn kết với Albumin", "Dạng gắn kết với hồng cầu", "Dạng kết tủa"],
+      "correct": [0],
+      "explanation": "Chỉ có dạng tự do mới qua được thành mạch để vào mô và gắn lên thụ thể.",
+      "tags": ["Phân bố"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_011",
+      "type": "single",
+      "question": "Hiện tượng tái phân bố (Redistribution) thường gặp ở các thuốc có đặc tính nào?",
+      "options": ["Tan nhiều trong lipid, tác dụng trên thần kinh trung ương (VD: Thiopental)", "Tan nhiều trong nước", "Kích thước phân tử lớn", "Không qua được hàng rào máu não"],
+      "correct": [0],
+      "explanation": "Thuốc thân dầu vào não nhanh (gây mê), sau đó phân bố lại ra mô mỡ làm mất tác dụng nhanh.",
+      "tags": ["Phân bố"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_012",
+      "type": "single",
+      "question": "Hàng rào máu não (BBB) được cấu tạo bởi:",
+      "options": ["Các tế bào nội mô mao mạch não liên kết chặt chẽ (Tight junctions) và tế bào hình sao", "Các tế bào biểu mô có lỗ lọc lớn", "Lớp chất nhầy dày", "Màng đáy mỏng và nhiều lỗ thủng"],
+      "correct": [0],
+      "explanation": "Cấu trúc 'khớp kín' (tight junction) ngăn cản các chất tan trong nước đi qua.",
+      "tags": ["Phân bố"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_013",
+      "type": "single",
+      "question": "Khi tính toán liều nạp (Loading dose), thông số dược động học nào là quan trọng nhất?",
+      "options": ["Thể tích phân bố (Vd)", "Độ thanh thải (Cl)", "Thời gian bán thải (t1/2)", "Sinh khả dụng (F)"],
+      "correct": [0],
+      "explanation": "Loading dose = Vd x Target Concentration. (Nếu uống thì chia thêm F).",
+      "tags": ["Bài tập", "Phân bố"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_014",
+      "type": "single",
+      "question": "Diện tích bề mặt hấp thu lớn nhất trong ống tiêu hóa nằm ở:",
+      "options": ["Ruột non (do có vi nhung mao)", "Dạ dày", "Đại tràng", "Thực quản"],
+      "correct": [0],
+      "explanation": "Ruột non có diện tích khoảng 200m2 nhờ hệ thống nếp gấp và vi nhung mao.",
+      "tags": ["Hấp thu"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_015",
+      "type": "single",
+      "question": "Thuốc dùng dưới dạng khí dung (Aerosol) có kích thước hạt bao nhiêu thì đến được phế nang?",
+      "options": ["2 - 5 micromet", "10 - 20 micromet", "> 50 micromet", "< 0.1 micromet"],
+      "correct": [0],
+      "explanation": "Hạt 2-5 mcm lắng đọng tốt ở phế nang. Hạt lớn hơn bị giữ ở đường hô hấp trên.",
+      "tags": ["Hấp thu"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "D3_NEW_016",
+      "type": "single",
+      "question": "AUC (Diện tích dưới đường cong nồng độ - thời gian) phản ánh:",
+      "options": ["Lượng thuốc vào được vòng tuần hoàn", "Tốc độ hấp thu thuốc", "Tốc độ thải trừ thuốc", "Thời gian thuốc lưu lại trong dạ dày"],
+      "correct": [0],
+      "explanation": "AUC đại diện cho mức độ tiếp xúc của cơ thể với thuốc.",
+      "tags": ["Đại cương"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_017",
+      "type": "single",
+      "question": "Sinh khả dụng tuyệt đối (F) có giá trị nằm trong khoảng:",
+      "options": ["0 đến 1 (0% - 100%)", "Luôn lớn hơn 1", "Luôn bằng 1", "Có thể âm"],
+      "correct": [0],
+      "explanation": "F là tỷ lệ phần trăm thuốc vào máu so với liều dùng, tối đa là 1 (100%).",
+      "tags": ["Hấp thu"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_018",
+      "type": "single",
+      "question": "Tốc độ làm rỗng dạ dày (Gastric emptying) ảnh hưởng chủ yếu đến quá trình nào?",
+      "options": ["Tốc độ hấp thu thuốc", "Chuyển hóa thuốc", "Phân bố thuốc", "Thải trừ thuốc"],
+      "correct": [0],
+      "explanation": "Dạ dày rỗng nhanh -> thuốc xuống ruột nhanh -> hấp thu nhanh hơn.",
+      "tags": ["Hấp thu"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_019",
+      "type": "single",
+      "question": "P-glycoprotein (P-gp) là một bơm tống thuốc (Efflux pump) thường thấy ở:",
+      "options": ["Ruột, gan, thận, hàng rào máu não", "Chỉ ở dạ dày", "Chỉ ở phổi", "Trong xương"],
+      "correct": [0],
+      "explanation": "P-gp có mặt ở các màng rào cản quan trọng để bảo vệ cơ thể, bơm thuốc ra ngoài.",
+      "tags": ["Vận chuyển"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_020",
+      "type": "single",
+      "question": "Nếu một thuốc có tỷ lệ gắn kết protein huyết tương là 99%, điều này có nghĩa là:",
+      "options": ["Chỉ 1% thuốc ở dạng tự do có hoạt tính", "99% thuốc sẽ bị thải trừ ngay lập tức", "Thuốc không có tác dụng dược lý", "Thuốc rất an toàn"],
+      "correct": [0],
+      "explanation": "Phần gắn kết đóng vai trò kho dự trữ, phần tự do (1%) mới gây tác dụng.",
+      "tags": ["Phân bố"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_021",
+      "type": "single",
+      "question": "Thông số tmax (thời gian đạt nồng độ đỉnh) trên đường cong nồng độ - thời gian biểu thị:",
+      "options": ["Tốc độ hấp thu thuốc", "Mức độ hấp thu thuốc", "Tốc độ thải trừ", "Tổng lượng thuốc hấp thu"],
+      "correct": [0],
+      "explanation": "tmax càng ngắn chứng tỏ thuốc hấp thu càng nhanh.",
+      "tags": ["Hấp thu"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_022",
+      "type": "single",
+      "question": "Đường tiêm bắp (IM) và tiêm dưới da (SC), đường nào thường hấp thu nhanh hơn?",
+      "options": ["Tiêm bắp (IM)", "Tiêm dưới da (SC)", "Như nhau", "Tùy thuộc vào thời tiết"],
+      "correct": [0],
+      "explanation": "Cơ bắp có hệ thống mạch máu phong phú hơn mô dưới da nên IM hấp thu nhanh hơn SC.",
+      "tags": ["Hấp thu"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_023",
+      "type": "single",
+      "question": "Thuốc phân cực (tan trong nước) có Vd thường:",
+      "options": ["Nhỏ (gần bằng thể tích dịch ngoại bào)", "Lớn (lớn hơn thể tích cơ thể)", "Bằng 0", "Không xác định"],
+      "correct": [0],
+      "explanation": "Thuốc tan trong nước khó qua màng tế bào, chủ yếu nằm trong máu và dịch gian bào -> Vd nhỏ.",
+      "tags": ["Phân bố"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_024",
+      "type": "single",
+      "question": "Công thức tính sinh khả dụng tương đối:",
+      "options": ["F = AUC(thử) / AUC(chuẩn)", "F = AUC(uống) / AUC(tiêm)", "F = Cmax(thử) / Cmax(chuẩn)", "F = t1/2(thử) / t1/2(chuẩn)"],
+      "correct": [0],
+      "explanation": "So sánh chế phẩm thử với chế phẩm chuẩn (cùng đường dùng).",
+      "tags": ["Bài tập"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_025",
+      "type": "single",
+      "question": "Điều kiện để thuốc hấp thu qua da tốt:",
+      "options": ["Thuốc phải vừa thân dầu vừa thân nước (hệ số phân bố phù hợp)", "Thuốc hoàn toàn thân nước", "Thuốc có trọng lượng phân tử cực lớn", "Da bị sừng hóa dày"],
+      "correct": [0],
+      "explanation": "Cần thân dầu để qua lớp sừng, nhưng cần chút thân nước để qua lớp trung bì.",
+      "tags": ["Hấp thu"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_026",
+      "type": "single",
+      "question": "Trong mô hình dược động học 1 ngăn, giả thiết quan trọng nhất là:",
+      "options": ["Cơ thể là một thể tích đồng nhất, thuốc phân bố tức thời", "Thuốc không bị chuyển hóa", "Thuốc không gắn protein", "Cơ thể chia thành ngăn trung tâm và ngoại biên"],
+      "correct": [0],
+      "explanation": "Mô hình 1 ngăn coi toàn bộ cơ thể như một bình chứa duy nhất.",
+      "tags": ["Đại cương"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D3_NEW_027",
+      "type": "single",
+      "question": "Hệ số ly trích (Extraction ratio - E) tại gan phụ thuộc vào:",
+      "options": ["Lưu lượng máu gan (Q) và độ thanh thải nội tại (Clint)", "Thể tích phân bố Vd", "Độ thanh thải thận", "Nồng độ thuốc trong nước tiểu"],
+      "correct": [0],
+      "explanation": "E phản ánh khả năng gan lấy thuốc ra khỏi dòng máu.",
+      "tags": ["Đại cương"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "D3_NEW_028",
+      "type": "single",
+      "question": "Thuốc có Vd = 200 lít ở người 70kg. Điều này gợi ý thuốc:",
+      "options": ["Tập trung nhiều ở các mô (như cơ, mỡ)", "Chỉ nằm trong huyết tương", "Gắn kết hoàn toàn với Albumin", "Không hấp thu được"],
+      "correct": [0],
+      "explanation": "Vd lớn hơn thể tích cơ thể thực (42L) chứng tỏ thuốc gắn mạnh vào mô.",
+      "tags": ["Phân bố"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_029",
+      "type": "single",
+      "question": "Đường dùng nào sau đây có sinh khả dụng biến thiên nhất?",
+      "options": ["Đường uống (PO)", "Tiêm tĩnh mạch (IV)", "Tiêm truyền (Infusion)", "Tiêm bắp (IM)"],
+      "correct": [0],
+      "explanation": "Đường uống chịu ảnh hưởng của thức ăn, pH, nhu động ruột, chuyển hóa gan... nên F dao động nhiều nhất.",
+      "tags": ["Hấp thu"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D3_NEW_030",
+      "type": "single",
+      "question": "Sự khuếch tán thuận lợi (Facilitated diffusion) khác khuếch tán thụ động ở điểm nào?",
+      "options": ["Cần chất mang (carrier) và có thể bão hòa", "Cần năng lượng ATP", "Đi ngược gradient nồng độ", "Không cần chất mang"],
+      "correct": [0],
+      "explanation": "Khuếch tán thuận lợi vẫn theo gradient nồng độ (không tốn năng lượng) nhưng cần protein vận chuyển (carrier).",
+      "tags": ["Vận chuyển"],
+      "difficulty": "medium"
+    }
+  ]
+}
