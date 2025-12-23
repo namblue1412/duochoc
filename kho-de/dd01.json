@@ -1,0 +1,812 @@
+{
+  "meta": {
+    "title": "ÔN TẬP GIỮA KỲ DƯỢC ĐỘNG HỌC - TỔNG HỢP",
+    "time_limit_sec": 2700,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "DDH001",
+      "type": "single",
+      "question": "Dược động học (Pharmacokinetics) là môn học nghiên cứu về:",
+      "options": [
+        "Tác động của thuốc lên cơ thể",
+        "Tác động của cơ thể đối với thuốc",
+        "Mối quan hệ giữa cấu trúc hóa học và tác dụng của thuốc",
+        "Quy trình bào chế và sản xuất thuốc"
+      ],
+      "correct": [1],
+      "explanation": "Dược động học nghiên cứu các quá trình hấp thu, phân bố, chuyển hóa, thải trừ (tác động của cơ thể lên thuốc). Dược lực học nghiên cứu tác động của thuốc lên cơ thể.",
+      "tags": ["Đại cương"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH002",
+      "type": "single",
+      "question": "Quá trình vận chuyển thuốc qua màng tế bào theo cơ chế khuếch tán thụ động tuân theo định luật nào?",
+      "options": [
+        "Định luật Newton",
+        "Định luật Fick",
+        "Phương trình Michaelis-Menten",
+        "Phương trình Henderson-Hasselbalch"
+      ],
+      "correct": [1],
+      "explanation": "Khuếch tán thụ động tuân theo định luật Fick: Tốc độ khuếch tán tỷ lệ thuận với diện tích bề mặt, hệ số thấm và chênh lệch nồng độ.",
+      "tags": ["Vận chuyển"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH003",
+      "type": "single",
+      "question": "Yếu tố nào sau đây KHÔNG ảnh hưởng đến quá trình khuếch tán thụ động của thuốc qua màng?",
+      "options": [
+        "Độ tan trong lipid của thuốc",
+        "Mức độ ion hóa của thuốc",
+        "Năng lượng ATP",
+        "pH của môi trường"
+      ],
+      "correct": [2],
+      "explanation": "Khuếch tán thụ động không tiêu tốn năng lượng (ATP), nó phụ thuộc vào độ tan trong lipid, mức độ ion hóa và gradien nồng độ.",
+      "tags": ["Vận chuyển"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH004",
+      "type": "single",
+      "question": "Theo phương trình Henderson-Hasselbalch, thuốc có bản chất là acid yếu sẽ hấp thu tốt nhất ở môi trường nào?",
+      "options": [
+        "Môi trường có pH > pKa",
+        "Môi trường acid (dạ dày)",
+        "Môi trường kiềm (ruột non)",
+        "Môi trường trung tính"
+      ],
+      "correct": [1],
+      "explanation": "Acid yếu ở môi trường acid sẽ tồn tại chủ yếu ở dạng không ion hóa (dạng dễ qua màng), do đó dễ hấp thu.",
+      "tags": ["Hấp thu"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH005",
+      "type": "single",
+      "question": "P-glycoprotein (P-gp) là một chất vận chuyển thuộc họ nào và có vai trò gì?",
+      "options": [
+        "Họ SLC, giúp hấp thu thuốc vào tế bào",
+        "Họ ABC, bơm đẩy thuốc ra khỏi tế bào (cơ chế đề kháng)",
+        "Họ SLC, bơm đẩy thuốc ra khỏi tế bào",
+        "Họ ABC, giúp hấp thu thuốc vào tế bào"
+      ],
+      "correct": [1],
+      "explanation": "P-gp thuộc họ ABC (ATP-binding cassette), có vai trò bơm đẩy thuốc ra khỏi tế bào, bảo vệ cơ thể khỏi chất lạ và gây ra hiện tượng đa kháng thuốc.",
+      "tags": ["Vận chuyển"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DDH006",
+      "type": "single",
+      "question": "Sinh khả dụng (F) của thuốc dùng đường tĩnh mạch (IV) được xem là:",
+      "options": [
+        "0%",
+        "50%",
+        "100%",
+        "Thay đổi tùy theo hoạt chất"
+      ],
+      "correct": [2],
+      "explanation": "Theo định nghĩa, thuốc tiêm tĩnh mạch vào thẳng vòng tuần hoàn nên sinh khả dụng là 100%.",
+      "tags": ["Hấp thu"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH007",
+      "type": "single",
+      "question": "Công thức tính sinh khả dụng tuyệt đối (F) là:",
+      "options": [
+        "F = AUC(po) / AUC(iv)",
+        "F = AUC(iv) / AUC(po)",
+        "F = AUC(thử) / AUC(chuẩn)",
+        "F = Cmax(po) / Cmax(iv)"
+      ],
+      "correct": [0],
+      "explanation": "Sinh khả dụng tuyệt đối so sánh đường uống (hoặc ngoài mạch) với đường tĩnh mạch: F = (AUCpo x Liều iv) / (AUCiv x Liều po). Nếu liều bằng nhau thì F = AUCpo/AUCiv.",
+      "tags": ["Hấp thu", "Bài tập"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH008",
+      "type": "single",
+      "question": "Đặc điểm nào sau đây là ưu điểm của đường đặt dưới lưỡi?",
+      "options": [
+        "Tránh được chuyển hóa lần đầu qua gan",
+        "Hấp thu chậm, tác dụng kéo dài",
+        "Thích hợp cho thuốc có mùi vị khó chịu",
+        "Phần lớn thuốc bị dịch vị phá hủy"
+      ],
+      "correct": [0],
+      "explanation": "Thuốc đặt dưới lưỡi đi thẳng vào tĩnh mạch chủ trên, không qua tĩnh mạch cửa nên tránh được chuyển hóa lần đầu ở gan.",
+      "tags": ["Hấp thu"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH009",
+      "type": "single",
+      "question": "Thuốc có bản chất là acid yếu thường gắn kết chủ yếu với loại protein huyết tương nào?",
+      "options": [
+        "Alpha-1 acid glycoprotein (AAG)",
+        "Albumin",
+        "Lipoprotein",
+        "Globulin"
+      ],
+      "correct": [1],
+      "explanation": "Albumin có ái lực cao với các thuốc có bản chất là acid yếu và thuốc kỵ nước. Alpha-1 acid glycoprotein thường gắn với thuốc kiềm yếu.",
+      "tags": ["Phân bố"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH010",
+      "type": "single",
+      "question": "Thể tích phân bố (Vd) lớn (> 100 L) chứng tỏ điều gì về sự phân bố của thuốc?",
+      "options": [
+        "Thuốc tập trung chủ yếu trong huyết tương",
+        "Thuốc gắn kết rất mạnh với protein huyết tương",
+        "Thuốc phân bố nhiều vào các mô",
+        "Thuốc không qua được hàng rào máu não"
+      ],
+      "correct": [2],
+      "explanation": "Vd lớn nghĩa là nồng độ thuốc trong huyết tương thấp so với tổng lượng thuốc trong cơ thể, chứng tỏ thuốc đã di chuyển và gắn kết nhiều tại các mô.",
+      "tags": ["Phân bố"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH011",
+      "type": "single",
+      "question": "Cơ quan nào sau đây là nơi chuyển hóa thuốc chính của cơ thể?",
+      "options": [
+        "Thận",
+        "Gan",
+        "Phổi",
+        "Ruột non"
+      ],
+      "correct": [1],
+      "explanation": "Gan là cơ quan chính chứa hệ enzym microsome (đặc biệt là CYP450) chịu trách nhiệm chuyển hóa phần lớn thuốc.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH012",
+      "type": "single",
+      "question": "Phản ứng nào sau đây thuộc pha 2 của quá trình chuyển hóa thuốc?",
+      "options": [
+        "Oxy hóa",
+        "Khử",
+        "Thủy phân",
+        "Liên hợp với acid glucuronic"
+      ],
+      "correct": [3],
+      "explanation": "Pha 1 gồm các phản ứng: Oxy hóa, Khử, Thủy phân. Pha 2 là các phản ứng liên hợp (glucuronic, sulfat, glycin, glutathion...).",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH013",
+      "type": "single",
+      "question": "Enzyme nào thuộc hệ Cytochrome P450 chiếm tỷ lệ lớn nhất ở gan và chuyển hóa nhiều thuốc nhất?",
+      "options": [
+        "CYP2D6",
+        "CYP2E1",
+        "CYP3A4/5",
+        "CYP1A2"
+      ],
+      "correct": [2],
+      "explanation": "CYP3A4/5 chiếm khoảng 30% tổng lượng CYP ở gan và chuyển hóa khoảng 50% các thuốc trên lâm sàng.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DDH014",
+      "type": "single",
+      "question": "Hiện tượng cảm ứng enzyme (Enzyme Induction) dẫn đến hậu quả gì?",
+      "options": [
+        "Tăng nồng độ thuốc trong máu, tăng độc tính",
+        "Giảm chuyển hóa thuốc, kéo dài thời gian tác dụng",
+        "Tăng tốc độ chuyển hóa, làm giảm tác dụng của thuốc dùng kèm",
+        "Không ảnh hưởng đến nồng độ thuốc"
+      ],
+      "correct": [2],
+      "explanation": "Cảm ứng enzyme làm tăng lượng enzyme chuyển hóa, dẫn đến thuốc bị chuyển hóa nhanh hơn, làm giảm nồng độ và giảm tác dụng điều trị (trừ trường hợp tiền dược).",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH015",
+      "type": "single",
+      "question": "Độ thanh lọc toàn phần (Cl) của một thuốc được tính bằng tổng độ thanh lọc của:",
+      "options": [
+        "Gan và mật",
+        "Thận và phổi",
+        "Thận, gan và các cơ quan khác",
+        "Huyết tương và mô kẽ"
+      ],
+      "correct": [2],
+      "explanation": "Cl_total = Cl_thận + Cl_gan + Cl_cơ quan khác.",
+      "tags": ["Thải trừ"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH016",
+      "type": "single",
+      "question": "Chu kỳ gan - ruột xảy ra đối với các thuốc đào thải qua đường nào?",
+      "options": [
+        "Nước tiểu",
+        "Mật",
+        "Mồ hôi",
+        "Hô hấp"
+      ],
+      "correct": [1],
+      "explanation": "Thuốc bài tiết qua mật xuống ruột, sau đó được tái hấp thu trở lại tĩnh mạch cửa về gan tạo thành chu kỳ gan - ruột.",
+      "tags": ["Thải trừ"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH017",
+      "type": "single",
+      "question": "Thời gian bán thải (t1/2) là thời gian cần thiết để:",
+      "options": [
+        "Thuốc được hấp thu hoàn toàn vào máu",
+        "Nồng độ thuốc trong huyết tương giảm đi một nửa",
+        "Thuốc đào thải hết ra khỏi cơ thể",
+        "Thuốc đạt nồng độ đỉnh"
+      ],
+      "correct": [1],
+      "explanation": "t1/2 là thời gian nồng độ thuốc trong huyết tương giảm xuống còn 1/2 so với ban đầu.",
+      "tags": ["Thông số DĐH"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH018",
+      "type": "single",
+      "question": "Cần khoảng bao nhiêu lần t1/2 để thuốc đạt trạng thái ổn định (Steady state) khi dùng liều lặp lại?",
+      "options": [
+        "1 - 2 lần",
+        "4 - 5 lần",
+        "7 - 8 lần",
+        "10 lần"
+      ],
+      "correct": [1],
+      "explanation": "Thường cần khoảng 4-5 lần t1/2 để nồng độ thuốc đạt trạng thái ổn định (Css).",
+      "tags": ["Thông số DĐH"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH019",
+      "type": "single",
+      "question": "Mô hình dược động học 1 ngăn giả định rằng:",
+      "options": [
+        "Thuốc phân bố ngay lập tức và đồng nhất trong toàn bộ cơ thể",
+        "Thuốc phân bố chậm vào mô mỡ",
+        "Cơ thể chia thành ngăn trung tâm và ngăn ngoại biên",
+        "Thuốc không bị chuyển hóa mà chỉ thải trừ"
+      ],
+      "correct": [0],
+      "explanation": "Mô hình 1 ngăn coi cơ thể là một thể tích đồng nhất, thuốc phân bố tức thời và cân bằng ngay sau khi đưa vào.",
+      "tags": ["Mô hình DĐH"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH020",
+      "type": "single",
+      "question": "Phương trình C = C0 * e^(-kt) mô tả quá trình nào?",
+      "options": [
+        "Hấp thu theo động học bậc 1",
+        "Thải trừ theo động học bậc 1 trong mô hình 1 ngăn",
+        "Thải trừ theo động học bậc 0",
+        "Phân bố thuốc từ ngăn 1 sang ngăn 2"
+      ],
+      "correct": [1],
+      "explanation": "Đây là phương trình nồng độ theo thời gian của mô hình 1 ngăn tiêm IV bolus, với k là hằng số tốc độ thải trừ bậc 1.",
+      "tags": ["Bài tập"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DDH021",
+      "type": "single",
+      "question": "Công thức tính thể tích phân bố (Vd) là:",
+      "options": [
+        "Vd = Liều dùng / Nồng độ thuốc trong huyết tương",
+        "Vd = Nồng độ thuốc / Liều dùng",
+        "Vd = Cl * t1/2",
+        "Vd = AUC / Liều dùng"
+      ],
+      "correct": [0],
+      "explanation": "Vd = Tổng lượng thuốc trong cơ thể (Liều IV) / Nồng độ thuốc trong huyết tương (Cp).",
+      "tags": ["Bài tập"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH022",
+      "type": "single",
+      "question": "Thuốc A có t1/2 = 4 giờ. Sau 12 giờ, lượng thuốc còn lại trong cơ thể là bao nhiêu phần trăm so với ban đầu?",
+      "options": [
+        "50%",
+        "25%",
+        "12.5%",
+        "6.25%"
+      ],
+      "correct": [2],
+      "explanation": "12 giờ = 3 lần t1/2. Sau 1 lần: 50%. Sau 2 lần: 25%. Sau 3 lần: 12.5%.",
+      "tags": ["Bài tập"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH023",
+      "type": "single",
+      "question": "Trong dược động học tuyến tính (bậc 1), thời gian bán thải (t1/2):",
+      "options": [
+        "Phụ thuộc vào liều dùng",
+        "Phụ thuộc vào nồng độ thuốc",
+        "Là một hằng số không đổi",
+        "Tăng khi liều dùng tăng"
+      ],
+      "correct": [2],
+      "explanation": "Trong động học bậc 1, t1/2 = 0.693/k, là hằng số độc lập với nồng độ và liều lượng.",
+      "tags": ["Thông số DĐH"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH024",
+      "type": "single",
+      "question": "Công thức tính độ thanh lọc (Cl) dựa trên AUC và liều (IV) là:",
+      "options": [
+        "Cl = Liều / AUC",
+        "Cl = AUC / Liều",
+        "Cl = Liều * AUC",
+        "Cl = Vd / AUC"
+      ],
+      "correct": [0],
+      "explanation": "Cl = Dose (IV) / AUC.",
+      "tags": ["Bài tập"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH025",
+      "type": "single",
+      "question": "Hệ số ly trích (Extraction ratio - E) của một cơ quan được tính bằng công thức:",
+      "options": [
+        "E = (Ca - Cv) / Ca",
+        "E = Ca / (Ca - Cv)",
+        "E = Q * (Ca - Cv)",
+        "E = Cl / Q"
+      ],
+      "correct": [0],
+      "explanation": "E = (Nồng độ vào Ca - Nồng độ ra Cv) / Nồng độ vào Ca.",
+      "tags": ["Thải trừ"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DDH026",
+      "type": "single",
+      "question": "Nếu một thuốc có hệ số ly trích tại gan E > 0.7, thuốc đó được coi là:",
+      "options": [
+        "Có chuyển hóa lần đầu thấp",
+        "Có chuyển hóa lần đầu cao",
+        "Không bị chuyển hóa qua gan",
+        "Thải trừ chủ yếu qua thận"
+      ],
+      "correct": [1],
+      "explanation": "E cao (gần 1) nghĩa là gan lọc sạch thuốc rất hiệu quả từ máu đi qua, do đó chuyển hóa lần đầu cao và sinh khả dụng thấp.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH027",
+      "type": "single",
+      "question": "Liều nạp (Loading dose) được sử dụng nhằm mục đích gì?",
+      "options": [
+        "Duy trì nồng độ thuốc ổn định",
+        "Đạt nồng độ trị liệu nhanh chóng ngay từ đầu",
+        "Giảm tác dụng phụ của thuốc",
+        "Kéo dài thời gian bán thải"
+      ],
+      "correct": [1],
+      "explanation": "Liều nạp giúp đưa nồng độ thuốc trong huyết tương đạt ngay đến nồng độ đích (C_target) mà không cần chờ 4-5 t1/2.",
+      "tags": ["Lâm sàng"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH028",
+      "type": "single",
+      "question": "Công thức tính liều nạp (Dl) là:",
+      "options": [
+        "Dl = Css * Cl",
+        "Dl = (Css * Vd) / F",
+        "Dl = Css * t1/2",
+        "Dl = AUC * Cl"
+      ],
+      "correct": [1],
+      "explanation": "Liều nạp = (Nồng độ đích x Vd) / Sinh khả dụng (F). Nếu tiêm IV thì F=1.",
+      "tags": ["Bài tập"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH029",
+      "type": "single",
+      "question": "Ở trạng thái ổn định (Steady State), tốc độ đưa thuốc vào cơ thể (Rate in) sẽ:",
+      "options": [
+        "Lớn hơn tốc độ thải trừ",
+        "Nhỏ hơn tốc độ thải trừ",
+        "Bằng tốc độ thải trừ",
+        "Không liên quan đến tốc độ thải trừ"
+      ],
+      "correct": [2],
+      "explanation": "Tại trạng thái ổn định (Css), lượng thuốc vào bằng lượng thuốc thải ra. Rate in = Rate out = Css * Cl.",
+      "tags": ["Thông số DĐH"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH030",
+      "type": "single",
+      "question": "Yếu tố nào sau đây làm tăng hấp thu thuốc qua da?",
+      "options": [
+        "Lớp sừng dày",
+        "Da khô",
+        "Chà xát, xoa bóp da, làm ẩm da",
+        "Thuốc thân nước hoàn toàn"
+      ],
+      "correct": [2],
+      "explanation": "Hydrat hóa lớp sừng, chà xát, tăng diện tích tiếp xúc, thuốc tan trong lipid giúp tăng hấp thu qua da.",
+      "tags": ["Hấp thu"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH031",
+      "type": "single",
+      "question": "Thuốc nào sau đây được vận chuyển chủ động qua ống thận bởi hệ thống OAT (Organic Anion Transporter)?",
+      "options": [
+        "Digoxin",
+        "Penicillin",
+        "Morphin",
+        "Glucose"
+      ],
+      "correct": [1],
+      "explanation": "Penicillin (và Probenecid) là các anion hữu cơ được bài tiết chủ động qua hệ thống OAT.",
+      "tags": ["Thải trừ"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DDH032",
+      "type": "single",
+      "question": "Khi pH nước tiểu kiềm hóa, quá trình tái hấp thu của các thuốc có bản chất là acid yếu sẽ:",
+      "options": [
+        "Tăng lên",
+        "Giảm đi (đào thải tăng)",
+        "Không đổi",
+        "Dừng lại hoàn toàn"
+      ],
+      "correct": [1],
+      "explanation": "Trong môi trường kiềm, acid yếu bị ion hóa mạnh (dạng A-). Dạng ion hóa khó tan trong lipid nên khó tái hấp thu qua màng ống thận, dẫn đến bị đào thải ra nước tiểu.",
+      "tags": ["Thải trừ"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH033",
+      "type": "single",
+      "question": "Một bệnh nhân dùng thuốc A liều 500mg, nồng độ thuốc đo được ngay sau khi phân bố là 10 mg/L. Thể tích phân bố Vd là:",
+      "options": [
+        "5 L",
+        "50 L",
+        "0.02 L",
+        "500 L"
+      ],
+      "correct": [1],
+      "explanation": "Vd = Liều / C0 = 500 / 10 = 50 L.",
+      "tags": ["Bài tập"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH034",
+      "type": "single",
+      "question": "Mô hình dược động học 2 ngăn bao gồm:",
+      "options": [
+        "Ngăn hấp thu và ngăn thải trừ",
+        "Ngăn trung tâm (máu, cơ quan tưới máu nhiều) và ngăn ngoại biên (mô kém tưới máu)",
+        "Ngăn gan và ngăn thận",
+        "Ngăn nội bào và ngoại bào"
+      ],
+      "correct": [1],
+      "explanation": "Mô hình 2 ngăn chia cơ thể thành ngăn trung tâm (Central: máu, tim, gan...) và ngăn ngoại biên (Peripheral: mỡ, cơ, da...).",
+      "tags": ["Mô hình DĐH"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH035",
+      "type": "single",
+      "question": "Pha phân bố (Alpha phase) trong mô hình 2 ngăn thể hiện điều gì?",
+      "options": [
+        "Sự thải trừ thuốc ra khỏi cơ thể",
+        "Sự khuếch tán thuốc từ ngăn trung tâm sang ngăn ngoại biên",
+        "Sự hấp thu thuốc từ ruột vào máu",
+        "Sự chuyển hóa thuốc tại gan"
+      ],
+      "correct": [1],
+      "explanation": "Pha alpha là pha phân bố nhanh, nồng độ giảm nhanh do thuốc di chuyển từ máu vào mô. Pha beta là pha thải trừ.",
+      "tags": ["Mô hình DĐH"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DDH036",
+      "type": "single",
+      "question": "Thông số nào sau đây đặc trưng cho mức độ tiếp xúc của cơ thể với thuốc (lượng thuốc vào được cơ thể)?",
+      "options": [
+        "Tmax",
+        "Cmax",
+        "AUC (Diện tích dưới đường cong)",
+        "t1/2"
+      ],
+      "correct": [2],
+      "explanation": "AUC phản ánh tổng lượng thuốc đi vào vòng tuần hoàn.",
+      "tags": ["Thông số DĐH"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH037",
+      "type": "single",
+      "question": "Nếu thuốc A dùng chung với thuốc B (chất ức chế CYP), nồng độ thuốc A sẽ:",
+      "options": [
+        "Tăng lên",
+        "Giảm xuống",
+        "Không đổi",
+        "Biến mất ngay lập tức"
+      ],
+      "correct": [0],
+      "explanation": "Chất ức chế làm giảm hoạt động enzyme chuyển hóa, do đó thuốc A ít bị chuyển hóa hơn, tích lũy và tăng nồng độ trong máu.",
+      "tags": ["Tương tác thuốc"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH038",
+      "type": "single",
+      "question": "Hiện tượng 'bão hòa' (Saturation) thường gặp ở cơ chế vận chuyển nào?",
+      "options": [
+        "Khuếch tán thụ động qua lớp lipid",
+        "Khuếch tán qua lỗ lọc",
+        "Vận chuyển chủ động qua chất mang (Carrier-mediated)",
+        "Khuếch tán qua khoảng gian bào"
+      ],
+      "correct": [2],
+      "explanation": "Vận chuyển chủ động cần chất mang (protein). Số lượng chất mang có hạn nên khi nồng độ chất quá cao sẽ xảy ra bão hòa (Michaelis-Menten kinetics).",
+      "tags": ["Vận chuyển"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH039",
+      "type": "single",
+      "question": "Hệ số phân bố dầu/nước (Log P) lý tưởng cho thuốc hấp thu tốt qua màng sinh học thường nằm trong khoảng:",
+      "options": [
+        "< 0",
+        "1 - 3",
+        "> 5",
+        "10 - 20"
+      ],
+      "correct": [1],
+      "explanation": "Log P từ 1-3 đảm bảo thuốc đủ thân dầu để qua màng nhưng cũng đủ thân nước để tan trong dịch.",
+      "tags": ["Hấp thu"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DDH040",
+      "type": "single",
+      "question": "Trong các đường dùng sau, đường nào có thời gian tiềm phục (thời gian chờ tác dụng) ngắn nhất?",
+      "options": [
+        "Uống (PO)",
+        "Tiêm tĩnh mạch (IV)",
+        "Tiêm bắp (IM)",
+        "Tiêm dưới da (SC)"
+      ],
+      "correct": [1],
+      "explanation": "Tiêm tĩnh mạch đưa thuốc trực tiếp vào máu, tác dụng tức thời, không có pha hấp thu.",
+      "tags": ["Hấp thu"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH041",
+      "type": "single",
+      "question": "Đường tiêm nào sau đây gây đau nhiều nhất do hệ thống thần kinh cảm giác phong phú?",
+      "options": [
+        "Tiêm tĩnh mạch",
+        "Tiêm bắp",
+        "Tiêm dưới da",
+        "Tiêm tủy sống"
+      ],
+      "correct": [2],
+      "explanation": "Mô dưới da có nhiều ngọn dây thần kinh cảm giác nên tiêm dưới da (SC) thường đau hơn tiêm bắp, và dễ gây hoại tử nếu thuốc kích ứng.",
+      "tags": ["Hấp thu"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH042",
+      "type": "single",
+      "question": "Thuốc dạng khí dung (Inhalation) hấp thu nhanh chủ yếu do:",
+      "options": [
+        "Diện tích bề mặt phế nang rất lớn và hệ mao mạch phong phú",
+        "Thuốc không bị chuyển hóa ở phổi",
+        "Phổi không có enzym chuyển hóa",
+        "pH ở phổi rất acid"
+      ],
+      "correct": [0],
+      "explanation": "Diện tích hấp thu lớn (~140 m2) và hệ thống mao mạch dày đặc giúp thuốc hấp thu cực nhanh qua đường hô hấp.",
+      "tags": ["Hấp thu"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH043",
+      "type": "single",
+      "question": "Loại thuốc nào sau đây dễ dàng vượt qua hàng rào máu não (BBB)?",
+      "options": [
+        "Thuốc phân cực mạnh, ion hóa",
+        "Thuốc có trọng lượng phân tử lớn, tan trong nước",
+        "Thuốc tan tốt trong lipid, không ion hóa",
+        "Thuốc gắn kết 99% với protein huyết tương"
+      ],
+      "correct": [2],
+      "explanation": "Chỉ có thuốc tan trong lipid (không ion hóa) mới dễ dàng khuếch tán qua các liên kết chặt của hàng rào máu não.",
+      "tags": ["Phân bố"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH044",
+      "type": "single",
+      "question": "Tương tác thuốc đẩy nhau ra khỏi protein huyết tương có ý nghĩa lâm sàng khi:",
+      "options": [
+        "Thuốc có chỉ số điều trị rộng",
+        "Thuốc có tỷ lệ gắn kết protein thấp (<10%)",
+        "Thuốc có tỷ lệ gắn kết protein cao (>90%) và chỉ số điều trị hẹp",
+        "Thuốc thải trừ hoàn toàn qua thận"
+      ],
+      "correct": [2],
+      "explanation": "Khi thuốc gắn kết cao (>90%), một sự thay đổi nhỏ trong tỷ lệ gắn kết (do bị đẩy) sẽ làm tăng nồng độ thuốc tự do lên gấp nhiều lần, gây độc tính nếu khoảng trị liệu hẹp.",
+      "tags": ["Phân bố"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DDH045",
+      "type": "single",
+      "question": "Nếu một thuốc có Cl = 2 L/h và Vd = 10 L, hằng số tốc độ thải trừ k là:",
+      "options": [
+        "0.2 h-1",
+        "5 h-1",
+        "20 h-1",
+        "0.5 h-1"
+      ],
+      "correct": [0],
+      "explanation": "k = Cl / Vd = 2 / 10 = 0.2.",
+      "tags": ["Bài tập"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH046",
+      "type": "single",
+      "question": "Giá trị k = 0.1 h^-1 có ý nghĩa là gì?",
+      "options": [
+        "Mỗi giờ có 0.1 mg thuốc bị thải trừ",
+        "Mỗi giờ có 10% lượng thuốc còn lại trong cơ thể bị thải trừ",
+        "Thời gian bán thải là 10 giờ",
+        "Thể tích phân bố giảm đi 0.1 L mỗi giờ"
+      ],
+      "correct": [1],
+      "explanation": "Hằng số k trong động học bậc 1 biểu thị tỷ lệ phần trăm thuốc bị thải trừ trên một đơn vị thời gian.",
+      "tags": ["Bài tập"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH047",
+      "type": "single",
+      "question": "Trong suy thận, liều duy trì của thuốc đào thải qua thận cần điều chỉnh như thế nào?",
+      "options": [
+        "Tăng liều",
+        "Giảm liều hoặc kéo dài khoảng cách đưa thuốc",
+        "Giữ nguyên liều nhưng dùng thuốc lợi tiểu",
+        "Chuyển sang dùng đường tiêm"
+      ],
+      "correct": [1],
+      "explanation": "Suy thận làm giảm Cl, tăng t1/2, do đó cần giảm liều hoặc nới rộng khoảng cách đưa thuốc để tránh tích lũy gây độc.",
+      "tags": ["Lâm sàng"],
+      "difficulty": "medium",
+      "image": null
+    },
+    {
+      "id": "DDH048",
+      "type": "single",
+      "question": "Tiền dược (Prodrug) là thuốc:",
+      "options": [
+        "Có hoạt tính ngay khi vào cơ thể",
+        "Không có hoạt tính, cần chuyển hóa để trở thành dạng có hoạt tính",
+        "Là chất độc cần cơ thể thải trừ ngay",
+        "Là thuốc dùng kèm để tăng hấp thu"
+      ],
+      "correct": [1],
+      "explanation": "Tiền dược là chất chưa có hoạt tính, sau khi được chuyển hóa (thường là pha 1) mới trở thành dạng có hoạt tính dược lý (Ví dụ: L-Dopa -> Dopamin).",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DDH049",
+      "type": "single",
+      "question": "Phản ứng glucuronid hóa (Glucuronidation) được xúc tác bởi enzyme nào?",
+      "options": [
+        "UGT (UDP-glucuronosyltransferase)",
+        "CYP450",
+        "NAT (N-acetyltransferase)",
+        "GST (Glutathione S-transferase)"
+      ],
+      "correct": [0],
+      "explanation": "UGT xúc tác phản ứng liên hợp với acid glucuronic, là phản ứng pha 2 quan trọng nhất.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DDH050",
+      "type": "single",
+      "question": "Khi tiêm truyền tĩnh mạch liên tục (IV infusion), thời gian để đạt nồng độ ổn định (Css) phụ thuộc vào thông số nào?",
+      "options": [
+        "Tốc độ truyền (R)",
+        "Liều lượng",
+        "Thời gian bán thải (t1/2)",
+        "Thể tích tiêm"
+      ],
+      "correct": [2],
+      "explanation": "Thời gian đạt Css chỉ phụ thuộc vào t1/2 (khoảng 4-5 t1/2), không phụ thuộc vào tốc độ truyền hay liều lượng (tốc độ truyền chỉ quyết định giá trị Css cao hay thấp).",
+      "tags": ["Thông số DĐH"],
+      "difficulty": "hard",
+      "image": null
+    }
+  ]
+}
