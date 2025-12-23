@@ -1,0 +1,627 @@
+{
+  "meta": {
+    "title": "ĐỀ THI HÓA ĐẠI CƯƠNG - HỮU CƠ - HÓA SINH (ĐỀ SỐ 3)",
+    "time_limit_sec": 2700,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "Q001",
+      "type": "single",
+      "question": "Isotope (đồng vị) là những nguyên tử có cùng số proton nhưng khác nhau về số lượng hạt nào?",
+      "options": ["Electron", "Neutron", "Positron", "Quark"],
+      "correct": [1],
+      "explanation": "Đồng vị (Isotopes) là các nguyên tử của cùng một nguyên tố (cùng số proton Z) nhưng khác nhau về số khối A, do đó khác nhau về số neutron.",
+      "tags": ["Cấu tạo chất"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q002",
+      "type": "single",
+      "question": "Đâu là công thức tổng quát của một Carbohydrate?",
+      "options": ["Cn(H2O)n", "CnH2n+2", "R-COOH", "NH2-CHR-COOH"],
+      "correct": [0],
+      "explanation": "Carbohydrate (hydrate của carbon) thường có công thức chung là Cn(H2O)n.",
+      "tags": ["Hóa sinh"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q003",
+      "type": "single",
+      "question": "Liên kết peptide trong protein được hình thành giữa hai nhóm chức nào?",
+      "options": [
+        "Nhóm Carboxyl (-COOH) và nhóm Hydroxyl (-OH)",
+        "Nhóm Amino (-NH2) và nhóm Carboxyl (-COOH)",
+        "Hai nhóm Sulfhydryl (-SH)",
+        "Nhóm Phosphate và nhóm đường"
+      ],
+      "correct": [1],
+      "explanation": "Liên kết peptide là liên kết amide được hình thành do phản ứng ngưng tụ giữa nhóm alpha-carboxyl của amino acid này với nhóm alpha-amino của amino acid kia.",
+      "tags": ["Hóa sinh"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q004",
+      "type": "single",
+      "question": "Chất nào sau đây không tan trong nước (kỵ nước)?",
+      "options": ["Ethanol", "Glucose", "Acid béo chuỗi dài (Fatty acid)", "Natri clorua"],
+      "correct": [2],
+      "explanation": "Acid béo chuỗi dài có đuôi hydrocarbon dài không phân cực, làm cho chúng kỵ nước (hydrophobic) và không tan trong nước.",
+      "tags": ["Hóa sinh"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q005",
+      "type": "single",
+      "question": "Hệ đệm (Buffer) quan trọng nhất trong huyết tương người là gì?",
+      "options": [
+        "Hệ đệm Phosphate",
+        "Hệ đệm Bicarbonate (H2CO3/HCO3-)",
+        "Hệ đệm Acetat",
+        "Hệ đệm Amoni"
+      ],
+      "correct": [1],
+      "explanation": "Hệ đệm Bicarbonate đóng vai trò chủ chốt trong việc duy trì pH máu ổn định.",
+      "tags": ["Dung dịch", "Y học"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q006",
+      "type": "single",
+      "question": "Phản ứng thủy phân Ester trong môi trường kiềm (phản ứng xà phòng hóa) là phản ứng:",
+      "options": ["Thuận nghịch", "Một chiều", "Oxy hóa khử", "Thế gốc tự do"],
+      "correct": [1],
+      "explanation": "Thủy phân ester trong môi trường kiềm (NaOH/KOH) tạo ra muối carboxylate và ancol. Phản ứng này là một chiều do muối tạo thành không phản ứng ngược lại với ancol.",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q007",
+      "type": "single",
+      "question": "Đơn vị đo khối lượng nguyên tử (amu) được định nghĩa bằng:",
+      "options": [
+        "Khối lượng của 1 nguyên tử Hydro.",
+        "1/12 khối lượng của một nguyên tử Carbon-12.",
+        "Khối lượng của 1 proton.",
+        "1/16 khối lượng của một nguyên tử Oxy-16."
+      ],
+      "correct": [1],
+      "explanation": "1 amu (hoặc Dalton) được định nghĩa chính xác là 1/12 khối lượng của một nguyên tử Carbon-12 tự do.",
+      "tags": ["Cấu tạo chất"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q008",
+      "type": "single",
+      "question": "Trong phản ứng: Zn + Cu2+ -> Zn2+ + Cu, vai trò của Zn là gì?",
+      "options": ["Chất oxy hóa", "Chất khử", "Acid", "Base"],
+      "correct": [1],
+      "explanation": "Zn nhường electron để trở thành Zn2+ (số oxy hóa tăng từ 0 lên +2), nên Zn là chất khử.",
+      "tags": ["Oxy hóa - Khử"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q009",
+      "type": "single",
+      "question": "Lai hóa sp2 thường gặp ở nguyên tử Carbon trong liên kết nào?",
+      "options": ["Liên kết đơn C-C", "Liên kết đôi C=C", "Liên kết ba C≡C", "Chỉ trong vòng benzen"],
+      "correct": [1],
+      "explanation": "Carbon nối đôi (trong anken, carbonyl...) có lai hóa sp2 (hình học tam giác phẳng).",
+      "tags": ["Cấu tạo chất"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q010",
+      "type": "single",
+      "question": "Enzyme đóng vai trò gì trong các phản ứng sinh hóa?",
+      "options": [
+        "Làm tăng nhiệt độ phản ứng.",
+        "Làm thay đổi hằng số cân bằng.",
+        "Xúc tác sinh học làm giảm năng lượng hoạt hóa.",
+        "Là nguồn cung cấp năng lượng."
+      ],
+      "correct": [2],
+      "explanation": "Enzyme là chất xúc tác sinh học, giúp tăng tốc độ phản ứng bằng cách hạ thấp năng lượng hoạt hóa mà không bị tiêu hao hay thay đổi hằng số cân bằng.",
+      "tags": ["Hóa sinh", "Động hóa học"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q011",
+      "type": "single",
+      "question": "Phát biểu nào sau đây về năng lượng ion hóa thứ nhất (I1) là đúng?",
+      "options": [
+        "I1 tăng dần từ trên xuống dưới trong một nhóm.",
+        "I1 giảm dần từ trái sang phải trong một chu kỳ.",
+        "I1 là năng lượng cần thiết để tách electron đầu tiên ra khỏi nguyên tử ở trạng thái khí.",
+        "I1 của kim loại kiềm là lớn nhất trong chu kỳ."
+      ],
+      "correct": [2],
+      "explanation": "Năng lượng ion hóa thứ nhất là năng lượng tối thiểu cần thiết để tách 1 electron ra khỏi nguyên tử ở trạng thái khí cơ bản. Xu hướng tuần hoàn: tăng từ trái sang phải, giảm từ trên xuống dưới.",
+      "tags": ["Bảng tuần hoàn"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q012",
+      "type": "single",
+      "question": "Công thức Henderson-Hasselbalch dùng để tính pH của dung dịch đệm là:",
+      "options": [
+        "pH = pKa + log([Base]/[Acid])",
+        "pH = pKa - log([Base]/[Acid])",
+        "pH = -log Ka",
+        "pH = pKa + log([Acid]/[Base])"
+      ],
+      "correct": [0],
+      "explanation": "Công thức Henderson-Hasselbalch: pH = pKa + log([A-]/[HA]) (tức là log([Base]/[Acid])).",
+      "tags": ["Dung dịch"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q013",
+      "type": "single",
+      "question": "Dạng hình học của phân tử CH4 là gì?",
+      "options": ["Vuông phẳng", "Tứ diện đều", "Chóp tam giác", "Bát diện"],
+      "correct": [1],
+      "explanation": "Carbon trong CH4 lai hóa sp3, liên kết với 4 nguyên tử H giống nhau, tạo thành cấu trúc tứ diện đều với góc liên kết 109.5 độ.",
+      "tags": ["Liên kết hóa học"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q014",
+      "type": "single",
+      "question": "Phản ứng cộng H2O vào Anken (xúc tác acid) tuân theo quy tắc nào?",
+      "options": ["Quy tắc Zaitsev", "Quy tắc Markovnikov", "Quy tắc Huckel", "Quy tắc Bát tử"],
+      "correct": [1],
+      "explanation": "Phản ứng cộng nước (hydrat hóa) vào anken không đối xứng tuân theo quy tắc Markovnikov: H+ cộng vào C có nhiều H hơn, OH- cộng vào C bậc cao hơn.",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q015",
+      "type": "single",
+      "question": "Amino acid nào sau đây có chứa lưu huỳnh?",
+      "options": ["Glycine", "Alanine", "Cysteine", "Serine"],
+      "correct": [2],
+      "explanation": "Cysteine và Methionine là hai amino acid phổ biến có chứa nguyên tử lưu huỳnh. Cysteine có nhóm -SH (thiol).",
+      "tags": ["Hóa sinh"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q016",
+      "type": "single",
+      "question": "Trong pin điện hóa Daniel (Zn-Cu), cầu muối có vai trò gì?",
+      "options": [
+        "Dẫn dòng electron từ cực âm sang cực dương.",
+        "Cung cấp ion Cu2+ cho phản ứng.",
+        "Trung hòa điện tích trong hai dung dịch, khép kín mạch điện.",
+        "Tăng tốc độ phản ứng oxy hóa."
+      ],
+      "correct": [2],
+      "explanation": "Cầu muối (salt bridge) cho phép các ion di chuyển để trung hòa điện tích dư thừa sinh ra ở hai nửa pin (Zn2+ dư ở Anode, SO4 2- dư ở Cathode), giúp dòng điện chạy liên tục.",
+      "tags": ["Điện hóa"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q017",
+      "type": "single",
+      "question": "Khi hòa tan NaCl vào nước, hiện tượng gì xảy ra?",
+      "options": [
+        "Liên kết cộng hóa trị bị phá vỡ.",
+        "Các ion Na+ và Cl- bị hydrat hóa bởi các phân tử nước.",
+        "Xảy ra phản ứng oxy hóa khử.",
+        "Tạo thành kết tủa trắng."
+      ],
+      "correct": [1],
+      "explanation": "Nước là dung môi phân cực, các phân tử nước bao quanh các ion (Na+, Cl-) và tách chúng ra khỏi mạng lưới tinh thể. Quá trình này gọi là hydrat hóa.",
+      "tags": ["Dung dịch"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q018",
+      "type": "single",
+      "question": "Chất nào sau đây là Base Lewis?",
+      "options": ["BF3", "AlCl3", "NH3", "H+"],
+      "correct": [2],
+      "explanation": "Base Lewis là chất có cặp electron tự do để cho. NH3 có 1 cặp electron tự do trên Nitơ nên là một Base Lewis. BF3, AlCl3, H+ là Acid Lewis (thiếu electron/trống orbital).",
+      "tags": ["Acid-Base"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q019",
+      "type": "single",
+      "question": "Cấu hình electron của ion Fe3+ (Z=26) là:",
+      "options": [
+        "[Ar] 3d5",
+        "[Ar] 3d6 4s2",
+        "[Ar] 3d3 4s2",
+        "[Ar] 3d6"
+      ],
+      "correct": [0],
+      "explanation": "Fe (Z=26): [Ar] 3d6 4s2. Khi tạo ion, electron lớp ngoài cùng (4s) mất trước. Fe3+ mất 2e ở 4s và 1e ở 3d => [Ar] 3d5 (bán bão hòa bền vững).",
+      "tags": ["Cấu tạo chất"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q020",
+      "type": "single",
+      "question": "Phản ứng thế ái nhân lưỡng phân tử (SN2) có đặc điểm lập thể nào?",
+      "options": [
+        "Tạo hỗn hợp Racemic.",
+        "Giữ nguyên cấu hình.",
+        "Nghịch đảo cấu hình (Walden inversion).",
+        "Không xác định."
+      ],
+      "correct": [2],
+      "explanation": "Trong phản ứng SN2, tác nhân nucleophile tấn công từ phía đối diện với nhóm rời đi, dẫn đến sự nghịch đảo cấu hình (giống như lật ngược chiếc ô).",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q021",
+      "type": "single",
+      "question": "Tính nồng độ mol của dung dịch chứa 4g NaOH trong 500ml dung dịch (M NaOH = 40).",
+      "options": ["0.1 M", "0.2 M", "0.5 M", "1.0 M"],
+      "correct": [1],
+      "explanation": "Số mol NaOH = 4/40 = 0.1 mol. CM = n/V = 0.1 / 0.5 = 0.2 M.",
+      "tags": ["Dung dịch"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q022",
+      "type": "single",
+      "question": "Hiện tượng nào xảy ra khi cho hồng cầu vào dung dịch ưu trương (Hypertonic)?",
+      "options": [
+        "Hồng cầu giữ nguyên hình dạng.",
+        "Hồng cầu trương lên và vỡ (Tan máu).",
+        "Hồng cầu bị teo lại (Co nguyên sinh).",
+        "Hồng cầu biến thành màu xanh."
+      ],
+      "correct": [2],
+      "explanation": "Trong môi trường ưu trương (nồng độ chất tan bên ngoài cao hơn), nước thẩm thấu từ trong tế bào ra ngoài, làm tế bào mất nước và teo lại.",
+      "tags": ["Dung dịch"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q023",
+      "type": "single",
+      "question": "Liên kết chính tạo nên cấu trúc bậc 1 của protein là:",
+      "options": ["Liên kết hydro", "Liên kết peptide", "Liên kết ion", "Cầu nối disulfid"],
+      "correct": [1],
+      "explanation": "Cấu trúc bậc 1 là trình tự sắp xếp các amino acid trong chuỗi polypeptide, được duy trì bởi liên kết peptide (cộng hóa trị).",
+      "tags": ["Hóa sinh"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q024",
+      "type": "single",
+      "question": "Oxy hóa Ancol bậc 1 bằng tác nhân oxy hóa mạnh (như KMnO4, K2Cr2O7/H+) thu được sản phẩm cuối cùng là gì?",
+      "options": ["Aldehyde", "Ketone", "Acid carboxylic", "Ether"],
+      "correct": [2],
+      "explanation": "Ancol bậc 1 bị oxy hóa thành Aldehyde, nếu tác nhân mạnh sẽ tiếp tục oxy hóa Aldehyde thành Acid carboxylic.",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q025",
+      "type": "single",
+      "question": "Hiệu ứng nhiệt của phản ứng (Enthalpy reaction) phụ thuộc vào:",
+      "options": [
+        "Cách tiến hành phản ứng.",
+        "Trạng thái đầu và trạng thái cuối của hệ.",
+        "Thời gian phản ứng.",
+        "Chất xúc tác."
+      ],
+      "correct": [1],
+      "explanation": "Theo định luật Hess, biến thiên enthalpy chỉ phụ thuộc vào trạng thái đầu và cuối, không phụ thuộc vào các bước trung gian hay đường đi.",
+      "tags": ["Nhiệt động học"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q026",
+      "type": "single",
+      "question": "Sử dụng quy tắc (n+l), phân lớp nào sau đây có năng lượng cao nhất?",
+      "options": ["4s", "3d", "4p", "5s"],
+      "correct": [3],
+      "explanation": "4s (4+0=4), 3d (3+2=5), 4p (4+1=5), 5s (5+0=5). Các phân lớp 3d, 4p, 5s đều có tổng n+l=5. Xét n lớn hơn thì năng lượng cao hơn: 3d < 4p < 5s. Vậy 5s cao nhất.",
+      "tags": ["Cấu tạo chất"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q027",
+      "type": "single",
+      "question": "Khi chuẩn độ acid mạnh bằng base mạnh, pH tại điểm tương đương là:",
+      "options": ["< 7", "7", "> 7", "Bằng pKa của acid"],
+      "correct": [1],
+      "explanation": "Tại điểm tương đương của chuẩn độ acid mạnh - base mạnh, muối tạo thành trung tính (ví dụ NaCl), nên pH = 7 (ở 25 độ C).",
+      "tags": ["Acid-Base"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q028",
+      "type": "single",
+      "question": "Cấu trúc xoắn Alpha (Alpha helix) của protein được ổn định chủ yếu bởi liên kết nào?",
+      "options": [
+        "Liên kết peptide.",
+        "Liên kết hydro nội phân tử (giữa C=O của aa này và N-H của aa cách đó 4 gốc).",
+        "Liên kết ion giữa các chuỗi bên.",
+        "Tương tác kỵ nước."
+      ],
+      "correct": [1],
+      "explanation": "Cấu trúc xoắn alpha (cấu trúc bậc 2) được hình thành và ổn định nhờ các liên kết hydro giữa nhóm C=O của acid amin thứ n và nhóm N-H của acid amin thứ n+4.",
+      "tags": ["Hóa sinh"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q029",
+      "type": "single",
+      "question": "Chất béo (Triglyceride) là ester của Glycerol với:",
+      "options": ["Amino acid", "Acid phosphoric", "Acid béo (Fatty acid)", "Glucose"],
+      "correct": [2],
+      "explanation": "Triacylglycerol (chất béo) là tri-ester được tạo bởi 1 phân tử Glycerol và 3 phân tử Acid béo.",
+      "tags": ["Hóa sinh"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q030",
+      "type": "single",
+      "question": "Phản ứng nào sau đây dùng để nhận biết nhóm chức Aldehyde?",
+      "options": [
+        "Phản ứng tráng gương (với thuốc thử Tollens [Ag(NH3)2]+).",
+        "Phản ứng với quỳ tím.",
+        "Phản ứng ester hóa.",
+        "Phản ứng với Na kim loại."
+      ],
+      "correct": [0],
+      "explanation": "Aldehyde khử được ion Ag+ trong phức Tollens thành Ag kim loại (kết tủa sáng bóng như gương). Ketone không có phản ứng này.",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q031",
+      "type": "single",
+      "question": "Tính pH của dung dịch đệm gồm 0.1M CH3COOH và 0.1M CH3COONa (biết pKa của CH3COOH = 4.76).",
+      "options": ["4.76", "3.76", "5.76", "7.00"],
+      "correct": [0],
+      "explanation": "pH = pKa + log([Muối]/[Acid]). Khi [Muối] = [Acid] = 0.1M, log(1) = 0. Vậy pH = pKa = 4.76.",
+      "tags": ["Acid-Base"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q032",
+      "type": "single",
+      "question": "Trong phản ứng E2 (tách khử lưỡng phân tử), yếu tố nào sau đây làm tăng tốc độ phản ứng?",
+      "options": [
+        "Sử dụng dung môi phân cực proten.",
+        "Sử dụng Base yếu.",
+        "Sử dụng Base mạnh và nồng độ cao.",
+        "Chỉ phụ thuộc vào nồng độ cơ chất."
+      ],
+      "correct": [2],
+      "explanation": "Cơ chế E2 xảy ra đồng thời (tách H và nhóm rời đi cùng lúc), tốc độ phụ thuộc vào cả nồng độ cơ chất và Base. Base mạnh thúc đẩy quá trình tách proton.",
+      "tags": ["Cơ chế phản ứng"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q033",
+      "type": "single",
+      "question": "Tính hằng số cân bằng K của phản ứng: 2A ⇌ B, biết tại cân bằng [A] = 0.5M, [B] = 2.0M.",
+      "options": ["4.0", "8.0", "2.0", "0.25"],
+      "correct": [1],
+      "explanation": "K = [Sản phẩm]^hệ số / [Tham gia]^hệ số = [B] / [A]^2 = 2.0 / (0.5)^2 = 2.0 / 0.25 = 8.0.",
+      "tags": ["Cân bằng hóa học"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q034",
+      "type": "single",
+      "question": "Phân tử nào sau đây có moment lưỡng cực bằng 0 (không phân cực)?",
+      "options": ["H2O", "NH3", "CO2", "HCl"],
+      "correct": [2],
+      "explanation": "CO2 có cấu trúc thẳng hàng (O=C=O), hai liên kết C=O phân cực nhưng triệt tiêu nhau về vector, nên moment lưỡng cực tổng bằng 0.",
+      "tags": ["Liên kết hóa học"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q035",
+      "type": "single",
+      "question": "Đồng phân quang học (Enantiomers) có tính chất nào khác nhau?",
+      "options": [
+        "Nhiệt độ sôi.",
+        "Độ tan trong dung môi thông thường.",
+        "Góc quay cực riêng (chiều quay mặt phẳng ánh sáng phân cực).",
+        "Màu sắc."
+      ],
+      "correct": [2],
+      "explanation": "Hai đối quang (enantiomers) có tính chất vật lý giống hệt nhau (sôi, nóng chảy...), chỉ khác nhau ở khả năng làm quay mặt phẳng ánh sáng phân cực (một chất quay phải, một chất quay trái) và tương tác với các tác nhân chiral khác.",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q036",
+      "type": "single",
+      "question": "Sản phẩm chính khi cho Toluene tác dụng với Br2 (xúc tác FeBr3) là:",
+      "options": [
+        "Benzyl bromide (thế ở nhánh).",
+        "o-bromotoluene và p-bromotoluene.",
+        "m-bromotoluene.",
+        "Không phản ứng."
+      ],
+      "correct": [1],
+      "explanation": "Nhóm Methyl (-CH3) là nhóm đẩy electron, định hướng thế electrophile vào vị trí ortho và para. Xúc tác acid Lewis (FeBr3) định hướng thế vào vòng benzen (SEAr).",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q037",
+      "type": "single",
+      "question": "Cần bao nhiêu ml dung dịch NaOH 0.1M để trung hòa hoàn toàn 20ml dung dịch H2SO4 0.1M?",
+      "options": ["20 ml", "40 ml", "10 ml", "30 ml"],
+      "correct": [1],
+      "explanation": "H2SO4 là đi-acid (nhường 2 H+). Số mol H+ = 2 * nH2SO4 = 2 * (0.02 * 0.1) = 0.004 mol. Cần 0.004 mol OH-. V NaOH = n/C = 0.004 / 0.1 = 0.04 lít = 40 ml.",
+      "tags": ["Acid-Base"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q038",
+      "type": "single",
+      "question": "Dự đoán cấu hình electron lớp ngoài cùng của nguyên tố X thuộc chu kỳ 4, nhóm VIB?",
+      "options": ["4s2 4p4", "3d4 4s2", "3d5 4s1", "4s2 3d6"],
+      "correct": [2],
+      "explanation": "Nhóm VIB là kim loại chuyển tiếp (d). Cấu hình dự kiến 3d4 4s2, nhưng do hiệu ứng bán bão hòa bền vững, 1e từ 4s chuyển sang 3d => Cấu hình thực tế là 3d5 4s1 (Crom, Cr).",
+      "tags": ["Cấu tạo chất"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q039",
+      "type": "single",
+      "question": "Trong phức chất [Co(NH3)5Cl]Cl2, số oxy hóa và số phối trí của Co là bao nhiêu?",
+      "options": [
+        "+2, 6",
+        "+3, 6",
+        "+3, 5",
+        "+2, 5"
+      ],
+      "correct": [1],
+      "explanation": "Phức cầu nội là [Co(NH3)5Cl]2+ (do cân bằng với 2Cl- bên ngoài). NH3 trung hòa, Cl mang -1. => Co + 0 + (-1) = +2 (sai, tổng điện tích ion phức là +2). => Co + (-1) = +2 => Co = +3. Số phối trí = số ligand gắn trực tiếp = 5 NH3 + 1 Cl = 6.",
+      "tags": ["Phức chất"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q040",
+      "type": "single",
+      "question": "Nếu ΔG < 0 thì phản ứng sẽ:",
+      "options": [
+        "Xảy ra tự phát theo chiều thuận.",
+        "Không tự phát (xảy ra theo chiều nghịch).",
+        "Đạt trạng thái cân bằng.",
+        "Không xác định được."
+      ],
+      "correct": [0],
+      "explanation": "Biến thiên năng lượng tự do Gibbs (ΔG) âm cho biết quá trình là tự phát (spontaneous).",
+      "tags": ["Nhiệt động học"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q041",
+      "type": "single",
+      "question": "Thủy phân hoàn toàn tinh bột (starch) thu được monosaccharide nào?",
+      "options": ["Glucose", "Fructose", "Galactose", "Ribose"],
+      "correct": [0],
+      "explanation": "Tinh bột là polymer của alpha-D-glucose. Thủy phân hoàn toàn chỉ thu được Glucose.",
+      "tags": ["Hóa sinh"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q042",
+      "type": "single",
+      "question": "Phản ứng Grignard: R-MgX + HCHO (Formaldehyde) sau đó thủy phân tạo ra:",
+      "options": ["Ancol bậc 1", "Ancol bậc 2", "Ancol bậc 3", "Acid carboxylic"],
+      "correct": [0],
+      "explanation": "Thuốc thử Grignard (R-) tấn công vào C carbonyl. Với Formaldehyde (H-CHO), tạo thành R-CH2-OMgX, thủy phân cho R-CH2-OH (Ancol bậc 1).",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q043",
+      "type": "single",
+      "question": "Điểm đẳng điện pI của Glycine (pKa1=2.34, pKa2=9.60) là bao nhiêu?",
+      "options": ["5.97", "6.00", "11.94", "2.34"],
+      "correct": [0],
+      "explanation": "Với amino acid trung tính không có chuỗi bên phân cực, pI = (pKa1 + pKa2) / 2 = (2.34 + 9.60) / 2 = 5.97.",
+      "tags": ["Hóa sinh"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q044",
+      "type": "single",
+      "question": "Liên kết glycosidic trong Cellulose là loại nào, khiến con người không tiêu hóa được?",
+      "options": ["Alpha-1,4", "Beta-1,4", "Alpha-1,6", "Beta-1,2"],
+      "correct": [1],
+      "explanation": "Cellulose được nối bởi liên kết Beta-1,4-glycosidic. Enzyme amylase của người chỉ cắt được liên kết Alpha (trong tinh bột), không cắt được Beta.",
+      "tags": ["Hóa sinh"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q045",
+      "type": "single",
+      "question": "Trong phân tích thể tích bằng EDTA xác định độ cứng của nước, tại sao cần dùng dung dịch đệm pH=10?",
+      "options": [
+        "Để kết tủa hết kim loại.",
+        "Để chỉ thị Eriochrome Black T đổi màu rõ rệt và phức EDTA-Kim loại bền.",
+        "Để trung hòa acid trong nước.",
+        "Để ngăn cản sự thủy phân của kim loại."
+      ],
+      "correct": [1],
+      "explanation": "Ở pH 10, chỉ thị EBT hoạt động tốt nhất (chuyển từ đỏ nho sang xanh) và phức của EDTA với Ca2+, Mg2+ đủ bền vững (nếu pH quá thấp, H+ cạnh tranh với kim loại làm phức kém bền).",
+      "tags": ["Phân tích"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q046",
+      "type": "single",
+      "question": "Chất nào sau đây phản ứng với NaBH4 sinh ra Ancol bậc 2?",
+      "options": ["Formaldehyde (HCHO)", "Acetaldehyde (CH3CHO)", "Acetone (CH3COCH3)", "Acid Acetic (CH3COOH)"],
+      "correct": [2],
+      "explanation": "NaBH4 khử Aldehyde thành ancol bậc 1, khử Ketone thành ancol bậc 2. Acetone là ketone -> tạo Isopropyl alcohol (bậc 2). Acid carboxylic không bị khử bởi NaBH4.",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q047",
+      "type": "single",
+      "question": "Hằng số tốc độ k của phản ứng bậc 1 có đơn vị là:",
+      "options": ["M/s", "1/s (hoặc s^-1)", "M^-1.s^-1", "M^-2.s^-1"],
+      "correct": [1],
+      "explanation": "Vận tốc v = k[A]. Đơn vị v là M/s, [A] là M. => Đơn vị k = (M/s) / M = 1/s.",
+      "tags": ["Động hóa học"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q048",
+      "type": "single",
+      "question": "Cấu trúc bậc 4 của protein (Quaternary structure) đề cập đến:",
+      "options": [
+        "Trình tự amino acid.",
+        "Xoắn alpha và phiến beta.",
+        "Sự gấp nếp không gian 3 chiều của một chuỗi polypeptide.",
+        "Sự kết hợp của nhiều tiểu đơn vị (subunit) polypeptide với nhau."
+      ],
+      "correct": [3],
+      "explanation": "Cấu trúc bậc 4 là sự sắp xếp và tương tác giữa các tiểu đơn vị (các chuỗi polypeptide riêng biệt) để tạo thành protein hoàn chỉnh (ví dụ Hemoglobin gồm 4 tiểu đơn vị).",
+      "tags": ["Hóa sinh"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q049",
+      "type": "single",
+      "question": "Trong danh pháp R/S, thứ tự ưu tiên của các nhóm thế -OH, -CH3, -H, -Cl giảm dần là:",
+      "options": [
+        "Cl > OH > CH3 > H",
+        "OH > Cl > CH3 > H",
+        "Cl > CH3 > OH > H",
+        "H > CH3 > OH > Cl"
+      ],
+      "correct": [0],
+      "explanation": "Ưu tiên dựa trên số hiệu nguyên tử (Z) của nguyên tử gắn trực tiếp vào tâm bất đối: Cl (Z=17) > O (Z=8) > C (Z=6) > H (Z=1)..",
+      "tags": ["Hóa hữu cơ"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q050",
+      "type": "single",
+      "question": "Một phản ứng có ΔH < 0 và ΔS > 0 sẽ:",
+      "options": [
+        "Tự phát ở mọi nhiệt độ.",
+        "Chỉ tự phát ở nhiệt độ cao.",
+        "Chỉ tự phát ở nhiệt độ thấp.",
+        "Không bao giờ tự phát."
+      ],
+      "correct": [0],
+      "explanation": "ΔG = ΔH - TΔS. Nếu ΔH < 0 (âm) và ΔS > 0 (dương) thì -TΔS luôn âm (vì T > 0). Do đó ΔG luôn âm ở mọi nhiệt độ -> Luôn tự phát.",
+      "tags": ["Nhiệt động học"],
+      "difficulty": "hard"
+    }
+  ]
+}
