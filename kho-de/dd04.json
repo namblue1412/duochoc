@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "title": "ĐỀ SỐ 4: CHUYỂN HÓA - THẢI TRỪ - THÔNG SỐ (TRỌNG TÂM)",
+    "time_limit_sec": 1800,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "2.0"
+  },
+  "questions": [
+    {
+      "id": "D4_NEW_001",
+      "type": "single",
+      "question": "Mục đích chính của quá trình chuyển hóa thuốc (sinh chuyển hóa) là:",
+      "options": ["Làm cho thuốc trở nên phân cực hơn (tan trong nước) để dễ đào thải", "Làm cho thuốc tan trong dầu hơn để tích lũy", "Tăng hoạt tính của thuốc", "Giữ thuốc lâu trong cơ thể"],
+      "correct": [0],
+      "explanation": "Biến đổi chất thân dầu -> thân nước để thận/mật có thể đào thải ra ngoài.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_002",
+      "type": "single",
+      "question": "Phản ứng Pha 1 trong chuyển hóa thuốc bao gồm các phản ứng nào?",
+      "options": ["Oxy hóa, Khử, Thủy phân", "Liên hợp Glucuronid, Sulfat hóa", "Acetyl hóa, Methyl hóa", "Chỉ có Oxy hóa"],
+      "correct": [0],
+      "explanation": "Pha 1 là phản ứng biến đổi cấu trúc (Oxidation, Reduction, Hydrolysis). Pha 2 là liên hợp.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_003",
+      "type": "single",
+      "question": "Hệ enzyme Cytochrome P450 (CYP) nằm chủ yếu ở đâu trong tế bào gan?",
+      "options": ["Lưới nội chất trơn (Microsome)", "Ty thể", "Nhân tế bào", "Bộ máy Golgi"],
+      "correct": [0],
+      "explanation": "CYP450 là hệ enzyme microsome gắn trên màng lưới nội chất.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_004",
+      "type": "single",
+      "question": "Phản ứng liên hợp với acid glucuronic (Glucuronidation) cần co-factor nào?",
+      "options": ["UDP-GA (Uridine diphospho-glucuronic acid)", "PAPS", "Acetyl-CoA", "Glutathione"],
+      "correct": [0],
+      "explanation": "Chất cho nhóm glucuronic là UDP-GA.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "D4_NEW_005",
+      "type": "single",
+      "question": "Chu kỳ gan - ruột (Enterohepatic circulation) có vai trò gì trong dược động học?",
+      "options": ["Làm kéo dài thời gian tác dụng của thuốc", "Làm thuốc bị thải trừ nhanh hơn", "Ngăn cản hấp thu thuốc", "Làm thuốc bị phân hủy hoàn toàn"],
+      "correct": [0],
+      "explanation": "Thuốc thải qua mật xuống ruột -> tái hấp thu về gan -> vào máu lại. Quá trình này bảo tồn lượng thuốc trong cơ thể.",
+      "tags": ["Thải trừ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_006",
+      "type": "single",
+      "question": "Tổng độ thanh thải của cơ thể (Total Clearance) bằng:",
+      "options": ["Tổng độ thanh thải của tất cả các cơ quan (Cl thận + Cl gan + Cl khác)", "Cl thận - Cl gan", "Cl gan x Cl thận", "Cl thận / Cl gan"],
+      "correct": [0],
+      "explanation": "Tính cộng: Cl toàn phần = tổng Cl các đường thải trừ.",
+      "tags": ["Thải trừ"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_007",
+      "type": "single",
+      "question": "Quá trình lọc thuốc qua cầu thận phụ thuộc chủ yếu vào:",
+      "options": ["Áp suất lọc, kích thước phân tử thuốc và dạng tự do của thuốc", "Độ tan trong lipid", "pH nước tiểu", "Sự bài tiết chủ động"],
+      "correct": [0],
+      "explanation": "Chỉ thuốc ở dạng tự do (không gắn protein) và nhỏ mới qua được màng lọc cầu thận.",
+      "tags": ["Thải trừ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_008",
+      "type": "single",
+      "question": "Nếu kiềm hóa nước tiểu (tăng pH), sự thải trừ của thuốc có tính Acid yếu sẽ:",
+      "options": ["Tăng lên", "Giảm đi", "Không đổi", "Dừng lại"],
+      "correct": [0],
+      "explanation": "Acid yếu gặp Kiềm -> Ion hóa mạnh -> Không tái hấp thu được -> Bị đào thải ra ngoài.",
+      "tags": ["Thải trừ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_009",
+      "type": "single",
+      "question": "Thời gian bán thải (t1/2) là thời gian để:",
+      "options": ["Nồng độ thuốc trong huyết tương giảm đi một nửa", "Toàn bộ thuốc thải trừ hết", "Thuốc hấp thu được một nửa", "Thuốc đạt nồng độ đỉnh"],
+      "correct": [0],
+      "explanation": "Định nghĩa t1/2.",
+      "tags": ["Thông số DĐH"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_010",
+      "type": "single",
+      "question": "Công thức liên hệ giữa t1/2, Vd và Cl (động học bậc 1):",
+      "options": ["t1/2 = 0.693 * Vd / Cl", "t1/2 = Cl / Vd", "t1/2 = 0.693 * Cl / Vd", "t1/2 = Vd * Cl"],
+      "correct": [0],
+      "explanation": "Công thức cơ bản: t1/2 = ln(2) * Vd / Cl.",
+      "tags": ["Bài tập"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_011",
+      "type": "single",
+      "question": "Trạng thái ổn định (Steady State - Css) đạt được sau khoảng thời gian:",
+      "options": ["4 đến 5 lần t1/2", "1 lần t1/2", "10 lần t1/2", "Ngay sau liều đầu tiên"],
+      "correct": [0],
+      "explanation": "Quy tắc 5 t1/2 để đạt bão hòa hoặc thải trừ hết.",
+      "tags": ["Thông số DĐH"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_012",
+      "type": "single",
+      "question": "Liều duy trì (Maintenance dose) được tính bằng công thức:",
+      "options": ["D = Css * Cl", "D = Css * Vd", "D = Css * t1/2", "D = AUC * Cl"],
+      "correct": [0],
+      "explanation": "Rate in = Rate out = Css * Cl.",
+      "tags": ["Bài tập"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_013",
+      "type": "single",
+      "question": "Đặc điểm của dược động học bậc 1 (tuyến tính):",
+      "options": ["Tốc độ thải trừ tỷ lệ thuận với nồng độ thuốc", "Tốc độ thải trừ là hằng số", "Lượng thuốc thải trừ không đổi theo thời gian", "t1/2 thay đổi theo liều"],
+      "correct": [0],
+      "explanation": "Bậc 1: Càng nhiều thuốc thì thải càng nhanh (theo tỷ lệ %). t1/2 hằng định.",
+      "tags": ["Đại cương"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_014",
+      "type": "single",
+      "question": "Đặc điểm của dược động học bậc 0 (không tuyến tính / bão hòa):",
+      "options": ["Một lượng thuốc cố định bị thải trừ trong một đơn vị thời gian", "Một tỷ lệ phần trăm thuốc cố định bị thải trừ", "t1/2 là hằng số", "Không xảy ra bão hòa enzyme"],
+      "correct": [0],
+      "explanation": "Bậc 0: Enzyme bị bão hòa, chỉ thải được 1 lượng mg nhất định mỗi giờ (VD: Rượu).",
+      "tags": ["Đại cương"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_015",
+      "type": "single",
+      "question": "Tiền dược (Prodrug) là chất:",
+      "options": ["Không có hoạt tính, cần chuyển hóa mới có hoạt tính", "Có hoạt tính mạnh, bị chuyển hóa thành chất vô hoạt", "Thuốc độc", "Thuốc thải trừ nguyên vẹn"],
+      "correct": [0],
+      "explanation": "Prodrug được thiết kế để cải thiện hấp thu hoặc giảm độc tính, vào cơ thể mới được hoạt hóa.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_016",
+      "type": "single",
+      "question": "Chất nào sau đây là chỉ thị nội sinh dùng để đo độ lọc cầu thận (GFR)?",
+      "options": ["Creatinin", "Ure", "Glucose", "Natri"],
+      "correct": [0],
+      "explanation": "Creatinin được lọc và ít bài tiết/tái hấp thu, dùng để ước tính GFR (Clcr).",
+      "tags": ["Thải trừ"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_017",
+      "type": "single",
+      "question": "Quá trình bài tiết chủ động tại ống thận diễn ra chủ yếu ở:",
+      "options": ["Ống lượn gần", "Cầu thận", "Quai Henle", "Ống góp"],
+      "correct": [0],
+      "explanation": "Tại ống lượn gần có nhiều hệ thống vận chuyển (OAT, OCT) để bài tiết thuốc vào nước tiểu.",
+      "tags": ["Thải trừ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_018",
+      "type": "single",
+      "question": "Khi Cl = 10 L/h và Vd = 100 L, hằng số tốc độ thải trừ k là:",
+      "options": ["0.1 h^-1", "10 h^-1", "1000 h^-1", "0.01 h^-1"],
+      "correct": [0],
+      "explanation": "k = Cl / Vd = 10 / 100 = 0.1.",
+      "tags": ["Bài tập"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_019",
+      "type": "single",
+      "question": "Ý nghĩa của hằng số Michaelis-Menten (Km) trong chuyển hóa thuốc:",
+      "options": ["Nồng độ cơ chất mà tại đó tốc độ phản ứng bằng 1/2 tốc độ tối đa (Vmax)", "Tốc độ phản ứng tối đa", "Thời gian phản ứng", "Lượng enzyme"],
+      "correct": [0],
+      "explanation": "Định nghĩa Km trong động học enzyme.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "D4_NEW_020",
+      "type": "single",
+      "question": "Enzyme CYP3A4 chịu trách nhiệm chuyển hóa khoảng bao nhiêu phần trăm các thuốc trên lâm sàng?",
+      "options": ["50%", "10%", "90%", "5%"],
+      "correct": [0],
+      "explanation": "CYP3A4 là enzyme quan trọng nhất, chuyển hóa ~50% thuốc.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_021",
+      "type": "single",
+      "question": "Chất nào sau đây là chất ức chế enzyme (Enzyme Inhibitor)?",
+      "options": ["Ketoconazole, Erythromycin, Nước bưởi chùm", "Rifampicin, Phenobarbital", "Nước lọc", "Glucose"],
+      "correct": [0],
+      "explanation": "Nhóm ức chế enzyme điển hình.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_022",
+      "type": "single",
+      "question": "Hệ số ly trích tại gan (E) cao (> 0.7) nghĩa là:",
+      "options": ["Thuốc bị gan chuyển hóa rất nhiều (First-pass lớn)", "Thuốc ít bị chuyển hóa", "Thuốc không vào được gan", "Thuốc thải trừ qua thận là chính"],
+      "correct": [0],
+      "explanation": "E cao = Gan lọc sạch thuốc khỏi máu rất tốt -> Sinh khả dụng đường uống thấp.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_023",
+      "type": "single",
+      "question": "Thuốc có trọng lượng phân tử lớn (> 500 Da) và phân cực thường thải trừ qua:",
+      "options": ["Mật (phân)", "Thận (nước tiểu)", "Mồ hôi", "Hô hấp"],
+      "correct": [0],
+      "explanation": "Chất lớn và phân cực khó qua cầu thận, thường được gan bài tiết qua mật.",
+      "tags": ["Thải trừ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_024",
+      "type": "single",
+      "question": "Nếu tiêm IV Bolus 500mg, C0 = 25 mg/L. Vd là:",
+      "options": ["20 L", "50 L", "2 L", "200 L"],
+      "correct": [0],
+      "explanation": "Vd = Dose / C0 = 500 / 25 = 20 L.",
+      "tags": ["Bài tập"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_025",
+      "type": "single",
+      "question": "Clearance (Độ thanh thải) là đại lượng biểu thị:",
+      "options": ["Thể tích huyết tương được làm sạch thuốc trong một đơn vị thời gian", "Lượng thuốc (mg) bị thải ra ngoài", "Thời gian thuốc thải hết", "Tốc độ lọc cầu thận"],
+      "correct": [0],
+      "explanation": "Đơn vị là Thể tích/Thời gian (L/h, mL/min).",
+      "tags": ["Thông số DĐH"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_026",
+      "type": "single",
+      "question": "Phản ứng Acetyl hóa (Acetylation) thường liên quan đến tính đa hình di truyền (nhanh/chậm) của enzyme nào?",
+      "options": ["NAT2 (N-acetyltransferase)", "CYP2D6", "UGT", "MAO"],
+      "correct": [0],
+      "explanation": "NAT2 có tính đa hình cao (người Acetyl hóa nhanh/chậm - ví dụ thuốc Isoniazid).",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "D4_NEW_027",
+      "type": "single",
+      "question": "Trong suy thận, liều thuốc cần điều chỉnh dựa trên:",
+      "options": ["Độ thanh thải Creatinin (Clcr)", "Men gan (AST, ALT)", "Số lượng hồng cầu", "Huyết áp"],
+      "correct": [0],
+      "explanation": "Clcr phản ánh chức năng lọc của thận.",
+      "tags": ["Lâm sàng"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "D4_NEW_028",
+      "type": "single",
+      "question": "Thuốc tan tốt trong nước và không gắn protein sẽ được thận xử lý như thế nào?",
+      "options": ["Lọc qua cầu thận và thải ra ngoài (ít tái hấp thu)", "Tái hấp thu hoàn toàn", "Không lọc được", "Chuyển hóa tại thận"],
+      "correct": [0],
+      "explanation": "Tan trong nước -> lọc được nhưng không tái hấp thu được (vì không qua màng lipid ống thận) -> thải.",
+      "tags": ["Thải trừ"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_029",
+      "type": "single",
+      "question": "Một thuốc có t1/2 = 8h. Muốn duy trì nồng độ ổn định, khoảng cách đưa thuốc (tau) hợp lý thường là:",
+      "options": ["Khoảng 8h (tương đương t1/2)", "24h", "1h", "48h"],
+      "correct": [0],
+      "explanation": "Thường dùng thuốc mỗi t1/2 hoặc 2*t1/2 để nồng độ dao động trong khoảng cho phép.",
+      "tags": ["Bài tập"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "D4_NEW_030",
+      "type": "single",
+      "question": "Giá trị k (hằng số tốc độ thải trừ) phụ thuộc vào:",
+      "options": ["Cl và Vd", "Liều lượng", "Đường dùng", "Nồng độ thuốc"],
+      "correct": [0],
+      "explanation": "k = Cl/Vd. Là hằng số nội tại của thuốc (trong động học bậc 1).",
+      "tags": ["Bài tập"],
+      "difficulty": "medium"
+    }
+  ]
+}
