@@ -1,0 +1,437 @@
+{
+  "meta": {
+    "title": "ĐỀ THI KẾT THÚC MÔN HÓA ĐẠI CƯƠNG - HỮU CƠ",
+    "time_limit_sec": 5400,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "DL001",
+      "type": "single",
+      "question": "Phát biểu nào sau đây là ĐÚNG khi nói về nguyên tử theo mô hình của Rutherford?",
+      "options": [
+        "Electron chuyển động quanh hạt nhân theo những quỹ đạo tròn xác định.",
+        "Phần lớn khối lượng nguyên tử tập trung ở hạt nhân mang điện tích dương.",
+        "Hạt nhân chiếm phần lớn thể tích của nguyên tử.",
+        "Electron nằm yên trong hạt nhân cùng với proton."
+      ],
+      "correct": [1],
+      "explanation": "Theo mô hình Rutherford, phần lớn khối lượng nguyên tử (>99,95%) tập trung ở hạt nhân mang điện tích dương rất nhỏ bé, electron chuyển động xung quanh.",
+      "difficulty": "easy",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "DL002",
+      "type": "single",
+      "question": "Số lượng orbital trong phân lớp d là bao nhiêu?",
+      "options": ["1", "3", "5", "7"],
+      "correct": [2],
+      "explanation": "Phân lớp s có 1 orbital, p có 3, d có 5 và f có 7 orbital.",
+      "difficulty": "easy",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "DL003",
+      "type": "single",
+      "question": "Trong bảng tuần hoàn, các nguyên tố trong cùng một cột dọc (nhóm) có đặc điểm gì chung?",
+      "options": [
+        "Có cùng số khối.",
+        "Có cùng số lớp electron.",
+        "Có cùng số electron hóa trị (lớp ngoài cùng).",
+        "Có tính chất vật lý giống hệt nhau."
+      ],
+      "correct": [2],
+      "explanation": "Các nguyên tố trong cùng một nhóm có cùng số electron lớp ngoài cùng, dẫn đến tính chất hóa học tương tự nhau.",
+      "difficulty": "easy",
+      "tags": ["Bảng tuần hoàn"]
+    },
+    {
+      "id": "DL004",
+      "type": "single",
+      "question": "Liên kết ion thường được hình thành giữa:",
+      "options": [
+        "Hai nguyên tử kim loại.",
+        "Hai nguyên tử phi kim.",
+        "Một nguyên tử kim loại điển hình và một nguyên tử phi kim điển hình.",
+        "Hai khí hiếm."
+      ],
+      "correct": [2],
+      "explanation": "Liên kết ion được hình thành do lực hút tĩnh điện giữa ion dương (thường từ kim loại) và ion âm (thường từ phi kim).",
+      "difficulty": "easy",
+      "tags": ["Liên kết hóa học"]
+    },
+    {
+      "id": "DL005",
+      "type": "single",
+      "question": "Nguyên tử oxy trong phân tử H2O ở trạng thái lai hóa gì và góc liên kết H-O-H xấp xỉ bao nhiêu?",
+      "options": [
+        "sp, 180°",
+        "sp2, 120°",
+        "sp3, 109.5°",
+        "sp3, 104.5°"
+      ],
+      "correct": [3],
+      "explanation": "Oxy trong nước lai hóa sp3 (2 cặp e liên kết, 2 cặp e tự do). Do lực đẩy mạnh của các cặp electron tự do, góc liên kết bị ép nhỏ hơn góc tứ diện đều (109.5°), còn khoảng 104.5°.",
+      "difficulty": "easy",
+      "tags": ["Liên kết hóa học"]
+    },
+    {
+      "id": "DL006",
+      "type": "single",
+      "question": "Cấu hình electron của Titan (Ti, Z = 22) là:",
+      "options": [
+        "[Ar] 4s2 4p2",
+        "[Ar] 3d2 4s2",
+        "[Ar] 3d4",
+        "[Ar] 4s1 3d3"
+      ],
+      "correct": [1],
+      "explanation": "Cấu hình theo thứ tự mức năng lượng: 1s2 2s2 2p6 3s2 3p6 4s2 3d2. Viết gọn là [Ar] 3d2 4s2.",
+      "difficulty": "easy",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "DL007",
+      "type": "single",
+      "question": "Đơn vị cấu tạo cơ bản của protein là gì?",
+      "options": ["Monosaccharide", "Acid béo", "Amino acid", "Nucleotide"],
+      "correct": [2],
+      "explanation": "Protein là polymer được tạo thành từ các đơn phân là amino acid.",
+      "difficulty": "easy",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "DL008",
+      "type": "single",
+      "question": "Phản ứng tỏa nhiệt là phản ứng có:",
+      "options": [
+        "ΔH > 0, hấp thu nhiệt từ môi trường.",
+        "ΔH < 0, tỏa nhiệt ra môi trường.",
+        "ΔH = 0, không trao đổi nhiệt.",
+        "Nhiệt độ giảm xuống."
+      ],
+      "correct": [1],
+      "explanation": "Phản ứng tỏa nhiệt (exothermic) có enthalpy ΔH mang giá trị âm.",
+      "difficulty": "easy",
+      "tags": ["Nhiệt động học"]
+    },
+    {
+      "id": "DL009",
+      "type": "single",
+      "question": "Chất nào sau đây là acid theo thuyết Brønsted-Lowry?",
+      "options": ["Chất nhận proton (H+)", "Chất cho proton (H+)", "Chất tạo ra OH- trong nước", "Chất nhận cặp electron"],
+      "correct": [1],
+      "explanation": "Theo thuyết Brønsted-Lowry, acid là chất cho proton (H+), base là chất nhận proton.",
+      "difficulty": "easy",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "DL010",
+      "type": "single",
+      "question": "Đâu là công thức tính pH của một dung dịch?",
+      "options": [
+        "pH = -log[OH-]",
+        "pH = log[H+]",
+        "pH = -log[H+]",
+        "pH = 14 + log[H+]"
+      ],
+      "correct": [2],
+      "explanation": "pH được định nghĩa là logarit cơ số 10 đổi dấu của nồng độ ion H+: pH = -log[H+].",
+      "difficulty": "easy",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "DL011",
+      "type": "single",
+      "question": "Trong phản ứng oxy hóa - khử, chất khử là chất:",
+      "options": [
+        "Nhận electron và số oxy hóa giảm.",
+        "Nhường electron và số oxy hóa tăng.",
+        "Nhận electron và số oxy hóa tăng.",
+        "Nhường electron và số oxy hóa giảm."
+      ],
+      "correct": [1],
+      "explanation": "Chất khử (reducing agent) là chất nhường electron và bị oxy hóa lên mức oxy hóa cao hơn.",
+      "difficulty": "easy",
+      "tags": ["Oxy hóa - Khử"]
+    },
+    {
+      "id": "DL012",
+      "type": "single",
+      "question": "Liên kết hydro là liên kết yếu được hình thành giữa nguyên tử Hydro linh động và nguyên tử nào sau đây?",
+      "options": ["C, H, O", "N, O, F", "Na, K, Cl", "S, P, Si"],
+      "correct": [1],
+      "explanation": "Liên kết hydro hình thành giữa H (liên kết với nguyên tử có độ âm điện lớn) và các nguyên tử có độ âm điện lớn, bán kính nhỏ như N, O, F.",
+      "difficulty": "easy",
+      "tags": ["Liên kết hóa học"]
+    },
+    {
+      "id": "DL013",
+      "type": "single",
+      "question": "Tế bào hồng cầu sẽ bị vỡ khi đặt trong môi trường nào?",
+      "options": [
+        "Đẳng trương (Isotonic)",
+        "Ưu trương (Hypertonic)",
+        "Nhược trương (Hypotonic)",
+        "Môi trường dầu"
+      ],
+      "correct": [2],
+      "explanation": "Trong môi trường nhược trương (nồng độ chất tan bên ngoài thấp hơn bên trong tế bào), nước sẽ thẩm thấu vào trong tế bào làm nó trương lên và có thể bị vỡ.",
+      "difficulty": "easy",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "DL014",
+      "type": "single",
+      "question": "Sắp xếp các orbital sau theo thứ tự mức năng lượng tăng dần: 3d, 4s, 3p, 4p.",
+      "options": [
+        "3p < 3d < 4s < 4p",
+        "3p < 4s < 3d < 4p",
+        "4s < 3p < 3d < 4p",
+        "3d < 4s < 3p < 4p"
+      ],
+      "correct": [1],
+      "explanation": "Theo quy tắc Klechkowski (n+l), thứ tự năng lượng là: 3p (n=3, l=1) < 4s (n=4, l=0) < 3d (n=3, l=2) < 4p (n=4, l=1).",
+      "difficulty": "medium",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "DL015",
+      "type": "single",
+      "question": "Phân tử NH3 có hình học gì theo mô hình VSEPR?",
+      "options": [
+        "Tam giác phẳng",
+        "Tứ diện đều",
+        "Tháp tam giác",
+        "Đường thẳng"
+      ],
+      "correct": [2],
+      "explanation": "Nitơ trong NH3 lai hóa sp3, có 1 cặp electron tự do. Cấu trúc electron là tứ diện, nhưng hình học phân tử là tháp tam giác (trigonal pyramidal) do không tính cặp e tự do.",
+      "difficulty": "medium",
+      "tags": ["Liên kết hóa học"]
+    },
+    {
+      "id": "DL016",
+      "type": "single",
+      "question": "Xác định vai trò của nước trong cân bằng sau: H2O + CH3O- ⇌ OH- + CH3OH",
+      "options": ["Base", "Acid", "Chất oxy hóa", "Chất khử"],
+      "correct": [1],
+      "explanation": "Trong phản ứng thuận, H2O nhường proton (H+) cho CH3O- để tạo thành OH-, do đó H2O đóng vai trò là Acid.",
+      "difficulty": "medium",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "DL017",
+      "type": "single",
+      "question": "Hợp chất nào sau đây có khả năng tồn tại đồng phân quang học?",
+      "options": [
+        "CH3-CH2-CH3",
+        "CH3-CH(OH)-CH3",
+        "CH3-CH(OH)-CH2-CH3",
+        "CH2=CH-CH3"
+      ],
+      "correct": [2],
+      "explanation": "Để có đồng phân quang học, phân tử phải có carbon bất đối (gắn với 4 nhóm thế khác nhau). CH3-CH(OH)-CH2-CH3 có C số 2 gắn với: -H, -OH, -CH3, -CH2CH3.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "DL018",
+      "type": "single",
+      "question": "Theo quy tắc Markovnikov, phản ứng cộng HBr vào propene (CH3-CH=CH2) sẽ tạo ra sản phẩm chính là gì?",
+      "options": [
+        "1-bromopropane",
+        "2-bromopropane",
+        "1,2-dibromopropane",
+        "Propane"
+      ],
+      "correct": [1],
+      "explanation": "Quy tắc Markovnikov: H+ sẽ cộng vào C có nhiều Hydro hơn, Br- cộng vào C có ít Hydro hơn (bậc cao hơn) để tạo carbocation bền hơn. Sản phẩm chính là 2-bromopropane.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "DL019",
+      "type": "single",
+      "question": "Tính pH của dung dịch HCl 0.01 M?",
+      "options": ["1", "2", "12", "13"],
+      "correct": [1],
+      "explanation": "HCl là acid mạnh, phân ly hoàn toàn. [H+] = 0.01 = 10^-2 M. pH = -log(10^-2) = 2.",
+      "difficulty": "medium",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "DL020",
+      "type": "single",
+      "question": "Nguyên lý Le Chatelier dự đoán điều gì xảy ra khi tăng áp suất của hệ cân bằng: N2(k) + 3H2(k) ⇌ 2NH3(k)?",
+      "options": [
+        "Cân bằng chuyển dịch theo chiều thuận (tạo NH3).",
+        "Cân bằng chuyển dịch theo chiều nghịch (phân hủy NH3).",
+        "Không có sự chuyển dịch cân bằng.",
+        "Hằng số cân bằng Keq tăng lên."
+      ],
+      "correct": [0],
+      "explanation": "Khi tăng áp suất, cân bằng chuyển dịch theo chiều làm giảm số mol khí. Bên trái có 4 mol khí, bên phải có 2 mol khí, nên cân bằng chuyển sang phải.",
+      "difficulty": "medium",
+      "tags": ["Cân bằng hóa học"]
+    },
+    {
+      "id": "DL021",
+      "type": "single",
+      "question": "Dạng hình học của phức chất [Ag(NH3)2]+ là gì?",
+      "options": ["Tứ diện", "Bát diện", "Thẳng hàng", "Vuông phẳng"],
+      "correct": [2],
+      "explanation": "Ag+ tạo phức với 2 phối tử NH3 thường có cấu trúc thẳng hàng (linear).",
+      "difficulty": "medium",
+      "tags": ["Phức chất"]
+    },
+    {
+      "id": "DL022",
+      "type": "single",
+      "question": "Enthalpy tạo thành chuẩn (ΔHf°) của đơn chất bền ở điều kiện chuẩn bằng bao nhiêu?",
+      "options": ["100 kJ/mol", "0 kJ/mol", "-100 kJ/mol", "Phụ thuộc vào nhiệt độ"],
+      "correct": [1],
+      "explanation": "Theo quy ước, enthalpy tạo thành chuẩn của một đơn chất ở trạng thái bền vững nhất của nó là 0.",
+      "difficulty": "medium",
+      "tags": ["Nhiệt động học"]
+    },
+    {
+      "id": "DL023",
+      "type": "single",
+      "question": "Trong danh pháp R/S, nếu nhóm ưu tiên thấp nhất nằm trên liên kết hướng ra phía trước (nét đậm), ta xác định cấu hình như thế nào?",
+      "options": [
+        "Giữ nguyên kết quả xác định theo chiều mũi tên.",
+        "Đảo ngược kết quả (R thành S, S thành R).",
+        "Không xác định được.",
+        "Luôn là cấu hình R."
+      ],
+      "correct": [1],
+      "explanation": "Nếu nhóm ưu tiên thấp nhất (thường là H) nằm ở phía trước (wedge), ta xác định chiều quay (1->2->3) rồi đảo ngược kết quả (ngược chiều kim đồng hồ là R, cùng chiều là S).",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "DL024",
+      "type": "single",
+      "question": "Tác nhân nucleophile (ái nhân) là gì?",
+      "options": [
+        "Tiểu phân thiếu electron, tìm kiếm cặp electron.",
+        "Tiểu phân giàu electron, có khả năng cho cặp electron.",
+        "Tiểu phân trung hòa, không tham gia phản ứng.",
+        "Là acid Lewis."
+      ],
+      "correct": [1],
+      "explanation": "Nucleophile (ái nhân) là tiểu phân giàu electron (có cặp e tự do hoặc liên kết pi), có xu hướng tấn công vào các trung tâm dương điện (electrophile).",
+      "difficulty": "medium",
+      "tags": ["Cơ chế phản ứng"]
+    },
+    {
+      "id": "DL025",
+      "type": "single",
+      "question": "Disaccharide nào sau đây được tạo thành từ Glucose và Fructose?",
+      "options": ["Maltose", "Lactose", "Sucrose (Saccharose)", "Cellobiose"],
+      "correct": [2],
+      "explanation": "Sucrose là disaccharide được tạo thành từ liên kết glycosidic giữa Glucose và Fructose.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "DL026",
+      "type": "single",
+      "question": "Điểm đẳng điện (pI) của một amino acid là gì?",
+      "options": [
+        "pH mà tại đó amino acid tích điện dương cực đại.",
+        "pH mà tại đó amino acid tích điện âm cực đại.",
+        "pH mà tại đó điện tích ròng của amino acid bằng 0 (dạng lưỡng cực).",
+        "pH trung tính (bằng 7)."
+      ],
+      "correct": [2],
+      "explanation": "pI là giá trị pH mà tại đó amino acid tồn tại chủ yếu dưới dạng ion lưỡng cực (zwitterion) và tổng điện tích bằng 0.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "DL027",
+      "type": "single",
+      "question": "Chất nào sau đây có nhiệt độ sôi cao nhất?",
+      "options": ["CH4", "CH3-O-CH3", "CH3-CH2-OH", "C2H6"],
+      "correct": [2],
+      "explanation": "Ethanol (CH3-CH2-OH) có khả năng tạo liên kết hydro liên phân tử bền vững, nên có nhiệt độ sôi cao hơn hẳn các chất còn lại (chỉ có lực Van der Waals hoặc lưỡng cực-lưỡng cực).",
+      "difficulty": "medium",
+      "tags": ["Liên kết hóa học"]
+    },
+    {
+      "id": "DL028",
+      "type": "single",
+      "question": "Phương trình Nernst dùng để làm gì?",
+      "options": [
+        "Tính tốc độ phản ứng.",
+        "Tính thế điện cực trong điều kiện không chuẩn.",
+        "Tính nhiệt phản ứng.",
+        "Xác định độ tan của chất kết tủa."
+      ],
+      "correct": [1],
+      "explanation": "Phương trình Nernst mô tả mối quan hệ giữa thế điện cực và nồng độ các chất tham gia, cho phép tính thế trong điều kiện không chuẩn: E = E0 - (RT/nF)lnQ.",
+      "difficulty": "hard",
+      "tags": ["Điện hóa"]
+    },
+    {
+      "id": "DL029",
+      "type": "single",
+      "question": "Cho tích số tan Ksp của AgCl là 1.0 x 10^-10. Độ tan của AgCl trong nước nguyên chất là bao nhiêu?",
+      "options": ["1.0 x 10^-5 M", "1.0 x 10^-10 M", "0.5 x 10^-5 M", "1.0 x 10^-7 M"],
+      "correct": [0],
+      "explanation": "AgCl ⇌ Ag+ + Cl-. Gọi độ tan là s. Ksp = [Ag+][Cl-] = s*s = s^2. => s = căn bậc 2 của (1.0 x 10^-10) = 1.0 x 10^-5 M.",
+      "difficulty": "hard",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "DL030",
+      "type": "single",
+      "question": "Dự đoán sản phẩm chính của phản ứng tách nước (E1) từ 2-butanol (CH3-CH(OH)-CH2-CH3) có xúc tác acid?",
+      "options": [
+        "1-butene",
+        "cis-2-butene",
+        "trans-2-butene",
+        "2-butanone"
+      ],
+      "correct": [2],
+      "explanation": "Phản ứng tách tuân theo quy tắc Zaitsev: ưu tiên tạo anken thế nhiều hơn (bền hơn). 2-butene là sản phẩm chính. Trong đó, đồng phân trans bền hơn cis do ít tương tác không gian hơn.",
+      "difficulty": "hard",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "DL031",
+      "type": "single",
+      "question": "Cần bao nhiêu gam Glucose polymer (Mr ~ 18,000) để tạo ra áp suất thẩm thấu tương đương với dung dịch Sucrose trong thí nghiệm cân bằng áp suất lysosomes?",
+      "options": [
+        "Lượng bằng nhau về khối lượng.",
+        "Lượng bằng nhau về số mol.",
+        "Khối lượng lớn hơn nhiều so với Sucrose.",
+        "Khối lượng nhỏ hơn nhiều so với Sucrose."
+      ],
+      "correct": [2],
+      "explanation": "Áp suất thẩm thấu phụ thuộc vào nồng độ mol hạt chất tan (π = icRT). Vì polymer có khối lượng phân tử rất lớn (18,000), để có cùng số mol (cùng áp suất thẩm thấu) với Sucrose (nhỏ hơn nhiều), ta cần một khối lượng polymer rất lớn.",
+      "difficulty": "hard",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "DL032",
+      "type": "single",
+      "question": "Trong phép chuẩn độ complexon xác định độ cứng của nước, chỉ thị Eriochrome Black T đổi màu khi nào?",
+      "options": [
+        "Khi pH giảm xuống dưới 7.",
+        "Khi toàn bộ ion kim loại (Ca2+, Mg2+) đã tạo phức hết với EDTA.",
+        "Khi thêm dung dịch đệm NH3/NH4+.",
+        "Khi kết tủa bắt đầu xuất hiện."
+      ],
+      "correct": [1],
+      "explanation": "Eriochrome Black T tạo phức màu đỏ với Mg2+. Khi EDTA (tạo phức bền hơn) chiếm hết Mg2+ từ chỉ thị, chỉ thị được giải phóng ở dạng tự do có màu xanh, báo hiệu điểm tương đương.",
+      "difficulty": "hard",
+      "tags": ["Phân tích"]
+    }
+  ]
+}
