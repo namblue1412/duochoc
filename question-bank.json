@@ -7,6 +7,11 @@
       "file": "hdc02.json"
     },
     {
+      "id": "hoadaicuong25",
+      "title": "Hoá Đại Cương Cuối Kỳ Y25 - Đề 1",
+      "file": "hdc01.json"
+    },
+    {
       "id": "duocdonghd24",
       "title": "Dược Động HD24 - Đề 1 ",
       "file": "dd01.json"
@@ -32,9 +37,19 @@
       "file": "hdc03.json"
     },
     {
-      "id": "hoadaicuong25",
-      "title": "Hoá Đại Cương Cuối Kỳ Y25 - Đề 1",
-      "file": "hdc01.json"
+      "id": "benhhoc",
+      "title": "Lâm Sàng - Đề 1",
+      "file": "lsbh01.json"
+    },
+    {
+      "id": "benhhoc",
+      "title": "Lâm Sàng - Đề 2",
+      "file": "lsbh02.json"
+    },
+    {
+      "id": "benhhoc",
+      "title": "Lâm Sàng - Đề 3",
+      "file": "lsbh03.json"
     }
   ]
 }
