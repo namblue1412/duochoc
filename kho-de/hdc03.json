@@ -1,0 +1,517 @@
+{
+  "meta": {
+    "title": "ĐỀ THI HÓA HỌC TỔNG HỢP - ĐỀ 3",
+    "time_limit_sec": 2700,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "T3_Q01",
+      "type": "single",
+      "question": "Hạt nhân nguyên tử được cấu tạo bởi các hạt nào?",
+      "options": ["Proton và Electron", "Proton và Neutron", "Neutron và Electron", "Chỉ có Proton"],
+      "correct": [1],
+      "explanation": "Hạt nhân nguyên tử tập trung phần lớn khối lượng, gồm proton (mang điện dương) và neutron (không mang điện).",
+      "difficulty": "easy",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T3_Q02",
+      "type": "single",
+      "question": "Trong bảng tuần hoàn, độ âm điện biến đổi như thế nào trong một chu kỳ từ trái sang phải?",
+      "options": ["Giảm dần", "Tăng dần", "Không đổi", "Tăng rồi giảm"],
+      "correct": [1],
+      "explanation": "Trong một chu kỳ, điện tích hạt nhân tăng dần hút electron mạnh hơn, bán kính nguyên tử giảm, dẫn đến độ âm điện tăng dần.",
+      "difficulty": "easy",
+      "tags": ["Bảng tuần hoàn"]
+    },
+    {
+      "id": "T3_Q03",
+      "type": "single",
+      "question": "Liên kết cộng hóa trị phân cực được hình thành khi:",
+      "options": ["Hai nguyên tử giống hệt nhau liên kết.", "Hiệu độ âm điện giữa hai nguyên tử lớn (> 1.7).", "Hiệu độ âm điện giữa hai nguyên tử trung bình (0.4 - 1.7), cặp electron lệch về phía nguyên tử có độ âm điện lớn hơn.", "Các nguyên tử kim loại liên kết với nhau."],
+      "correct": [2],
+      "explanation": "Liên kết cộng hóa trị phân cực xảy ra khi cặp electron dùng chung bị hút lệch về phía nguyên tử có độ âm điện lớn hơn, tạo ra các cực tích điện một phần (delta +/-).",
+      "difficulty": "easy",
+      "tags": ["Liên kết hóa học"]
+    },
+    {
+      "id": "T3_Q04",
+      "type": "single",
+      "question": "Chất nào sau đây là đơn phân (monosaccharide) cấu tạo nên tinh bột?",
+      "options": ["Fructose", "Galactose", "Glucose", "Ribose"],
+      "correct": [2],
+      "explanation": "Tinh bột là polysaccharide được tạo thành từ sự trùng ngưng của các đơn vị Glucose.",
+      "difficulty": "easy",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T3_Q05",
+      "type": "single",
+      "question": "Phản ứng thủy phân chất béo (Triglyceride) trong môi trường kiềm gọi là phản ứng gì?",
+      "options": ["Ester hóa", "Xà phòng hóa", "Trùng ngưng", "Hydrat hóa"],
+      "correct": [1],
+      "explanation": "Thủy phân chất béo bằng kiềm (NaOH/KOH) tạo ra glycerol và muối của acid béo (xà phòng), gọi là phản ứng xà phòng hóa.",
+      "difficulty": "easy",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q06",
+      "type": "single",
+      "question": "Theo thuyết VSEPR, phân tử nước (H2O) có góc liên kết là bao nhiêu?",
+      "options": ["180 độ", "120 độ", "109.5 độ", "Khoảng 104.5 độ"],
+      "correct": [3],
+      "explanation": "Do sự đẩy mạnh của 2 cặp electron tự do trên Oxy, góc liên kết H-O-H bị ép nhỏ hơn góc tứ diện đều (109.5), còn khoảng 104.5 độ.",
+      "difficulty": "easy",
+      "tags": ["Cấu trúc phân tử"]
+    },
+    {
+      "id": "T3_Q07",
+      "type": "single",
+      "question": "Định luật bảo toàn khối lượng (Lavoisier) phát biểu rằng:",
+      "options": ["Năng lượng không tự sinh ra và không tự mất đi.", "Trong phản ứng hóa học, tổng khối lượng các chất sản phẩm bằng tổng khối lượng các chất tham gia.", "Khối lượng của một nguyên tử tập trung ở hạt nhân.", "Tốc độ phản ứng tỉ lệ thuận với nồng độ chất tham gia."],
+      "correct": [1],
+      "explanation": "Định luật bảo toàn khối lượng: Tổng khối lượng các chất trước và sau phản ứng hóa học là không đổi.",
+      "difficulty": "easy",
+      "tags": ["Đại cương"]
+    },
+    {
+      "id": "T3_Q08",
+      "type": "single",
+      "question": "Orbital p có hình dạng gì?",
+      "options": ["Hình cầu", "Hình số 8 nổi (2 thùy)", "Hình hoa thị 4 cánh", "Hình lục giác"],
+      "correct": [1],
+      "explanation": "Orbital s hình cầu, orbital p có hình số 8 nổi (gồm 2 thùy đối xứng qua hạt nhân).",
+      "difficulty": "easy",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T3_Q09",
+      "type": "single",
+      "question": "Nhóm chức đặc trưng của Ancol là:",
+      "options": ["-COOH", "-CHO", "-OH", "-NH2"],
+      "correct": [2],
+      "explanation": "Ancol (Alcohol) được đặc trưng bởi nhóm Hydroxyl (-OH) liên kết với nguyên tử carbon no.",
+      "difficulty": "easy",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q10",
+      "type": "single",
+      "question": "Trong phản ứng: 2Na + Cl2 -> 2NaCl, Clo đóng vai trò là:",
+      "options": ["Chất khử", "Chất oxy hóa", "Acid", "Base"],
+      "correct": [1],
+      "explanation": "Clo nhận electron (số oxy hóa giảm từ 0 xuống -1) nên là chất oxy hóa.",
+      "difficulty": "easy",
+      "tags": ["Oxy hóa - Khử"]
+    },
+    {
+      "id": "T3_Q11",
+      "type": "single",
+      "question": "Cấu hình electron của nguyên tố Neon (Z=10) là:",
+      "options": ["1s2 2s2 2p5", "1s2 2s2 2p6", "1s2 2s2 2p6 3s1", "1s2 2s2 2p4"],
+      "correct": [1],
+      "explanation": "Neon là khí hiếm chu kỳ 2, có cấu hình bão hòa bền vững 1s2 2s2 2p6.",
+      "difficulty": "medium",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T3_Q12",
+      "type": "single",
+      "question": "Phản ứng cộng HBr vào alken CH3-CH=CH2 tuân theo quy tắc nào để tạo sản phẩm chính?",
+      "options": ["Quy tắc Zaitsev", "Quy tắc Markovnikov", "Quy tắc Hund", "Quy tắc Pauli"],
+      "correct": [1],
+      "explanation": "Quy tắc Markovnikov: H+ cộng vào Carbon mang nhiều H hơn, Br- cộng vào Carbon bậc cao hơn.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q13",
+      "type": "single",
+      "question": "Trong dung dịch đệm, khi thêm một lượng nhỏ acid mạnh, pH của dung dịch sẽ:",
+      "options": ["Tăng mạnh", "Giảm mạnh", "Thay đổi không đáng kể", "Bằng 7"],
+      "correct": [2],
+      "explanation": "Dung dịch đệm có khả năng chống lại sự thay đổi pH khi thêm lượng nhỏ acid hoặc base mạnh.",
+      "difficulty": "medium",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "T3_Q14",
+      "type": "single",
+      "question": "Lipid nào sau đây là thành phần chính cấu tạo nên màng tế bào?",
+      "options": ["Triglyceride", "Sáp (Waxes)", "Phospholipid (Glycerophospholipid)", "Steroid"],
+      "correct": [2],
+      "explanation": "Phospholipid là thành phần chính của màng tế bào nhờ cấu trúc lưỡngiphilic (đầu ưa nước, đuôi kỵ nước) tạo thành lớp đôi.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T3_Q15",
+      "type": "single",
+      "question": "Lai hóa sp xảy ra khi một orbital s tổ hợp với bao nhiêu orbital p?",
+      "options": ["1 orbital p", "2 orbital p", "3 orbital p", "0 orbital p"],
+      "correct": [0],
+      "explanation": "Lai hóa sp (đường thẳng) là sự tổ hợp của 1 orbital s và 1 orbital p, tạo thành 2 orbital lai hóa sp.",
+      "difficulty": "medium",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T3_Q16",
+      "type": "single",
+      "question": "Hệ số Van't Hoff (i) của dung dịch NaCl loãng là bao nhiêu (giả sử phân ly hoàn toàn)?",
+      "options": ["1", "2", "3", "0.5"],
+      "correct": [1],
+      "explanation": "NaCl phân ly thành 2 ion (Na+ và Cl-), nên hệ số i = 2.",
+      "difficulty": "medium",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "T3_Q17",
+      "type": "single",
+      "question": "Phản ứng tách nước từ Ethanol (xúc tác H2SO4 đặc, 170 độ C) tạo ra sản phẩm chính là:",
+      "options": ["Ethane", "Ethene (Ethylene)", "Diethyl ether", "Acetaldehyde"],
+      "correct": [1],
+      "explanation": "Ở 170 độ C với H2SO4 đặc, ancol tách nước tạo anken: C2H5OH -> C2H4 + H2O.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q18",
+      "type": "single",
+      "question": "Trong quang phổ, ánh sáng vùng khả kiến (Visible) có bước sóng trong khoảng nào?",
+      "options": ["10 - 400 nm", "400 - 700 nm", "700 nm - 1 mm", "1 mm - 1 m"],
+      "correct": [1],
+      "explanation": "Vùng ánh sáng nhìn thấy nằm trong khoảng xấp xỉ 400 nm (tím) đến 700 nm (đỏ).",
+      "difficulty": "medium",
+      "tags": ["Quang phổ"]
+    },
+    {
+      "id": "T3_Q19",
+      "type": "single",
+      "question": "Nguyên lý bất định Heisenberg phát biểu rằng:",
+      "options": ["Không thể xác định chính xác đồng thời cả vị trí và động lượng của electron.", "Electron chuyển động theo quỹ đạo tròn xác định.", "Năng lượng của electron là liên tục.", "Mỗi orbital chỉ chứa tối đa 2 electron."],
+      "correct": [0],
+      "explanation": "Nguyên lý Heisenberg: Không thể xác định đồng thời chính xác vị trí và vận tốc (động lượng) của hạt vi mô.",
+      "difficulty": "medium",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T3_Q20",
+      "type": "single",
+      "question": "Chất nào sau đây có khả năng làm mất màu nước Brom?",
+      "options": ["Ethane (CH3-CH3)", "Ethene (CH2=CH2)", "Ethanol (C2H5OH)", "Acid Acetic (CH3COOH)"],
+      "correct": [1],
+      "explanation": "Ethene có liên kết đôi C=C, tham gia phản ứng cộng với Br2 làm mất màu dung dịch Brom.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q21",
+      "type": "single",
+      "question": "Amino acid nào sau đây không có tính quang hoạt (không có tâm bất đối)?",
+      "options": ["Alanine", "Glycine", "Valine", "Phenylalanine"],
+      "correct": [1],
+      "explanation": "Glycine (NH2-CH2-COOH) có carbon alpha liên kết với 2 nguyên tử Hydro, nên không có tâm bất đối và không quang hoạt.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T3_Q22",
+      "type": "single",
+      "question": "Phương trình trạng thái khí lý tưởng là:",
+      "options": ["PV = nRT", "P1V1 = P2V2", "V/T = const", "P = F/S"],
+      "correct": [0],
+      "explanation": "Phương trình Clapeyron-Mendeleev cho khí lý tưởng: PV = nRT.",
+      "difficulty": "medium",
+      "tags": ["Nhiệt động học"]
+    },
+    {
+      "id": "T3_Q23",
+      "type": "single",
+      "question": "Số lượng liên kết phối trí trong phức chất [Fe(CN)6]4- là bao nhiêu?",
+      "options": ["4", "5", "6", "2"],
+      "correct": [2],
+      "explanation": "Sắt (Fe) liên kết với 6 phối tử CN-, tạo thành 6 liên kết phối trí, cấu trúc bát diện.",
+      "difficulty": "medium",
+      "tags": ["Phức chất"]
+    },
+    {
+      "id": "T3_Q24",
+      "type": "single",
+      "question": "Phản ứng của Aldehyde với tác nhân nào sau đây tạo ra lớp bạc kim loại (phản ứng tráng gương)?",
+      "options": ["Dung dịch CuSO4", "Dung dịch AgNO3 trong NH3 (Thuốc thử Tollens)", "Dung dịch NaOH", "Dung dịch Brom"],
+      "correct": [1],
+      "explanation": "Aldehyde khử ion Ag+ trong phức amoniac ([Ag(NH3)2]+) thành Ag kim loại bám vào thành ống nghiệm.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q25",
+      "type": "single",
+      "question": "Liên kết Disulfide (-S-S-) trong cấu trúc protein được hình thành từ sự oxy hóa của hai nhóm chức nào?",
+      "options": ["-OH và -OH", "-SH và -SH", "-NH2 và -COOH", "-CH3 và -CH3"],
+      "correct": [1],
+      "explanation": "Cầu nối disulfide hình thành giữa hai nhóm Thiol (-SH) của hai gốc Cysteine, giúp ổn định cấu trúc bậc 3, 4 của protein.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T3_Q26",
+      "type": "single",
+      "question": "Đồng phân Cis-Trans xuất hiện ở hợp chất nào?",
+      "options": ["Butane", "2-butene", "1-butene", "Propyne"],
+      "correct": [1],
+      "explanation": "2-butene (CH3-CH=CH-CH3) có liên kết đôi và mỗi carbon mang nối đôi liên kết với 2 nhóm khác nhau (H và CH3), nên có đồng phân hình học cis/trans.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q27",
+      "type": "single",
+      "question": "Năng lượng ion hóa thứ nhất (I1) lớn nhất thuộc về nguyên tố nào trong chu kỳ 2?",
+      "options": ["Li", "C", "F", "Ne"],
+      "correct": [3],
+      "explanation": "Trong một chu kỳ, I1 tăng từ trái sang phải. Khí hiếm (Ne) có cấu hình bền vững nhất nên năng lượng ion hóa cao nhất.",
+      "difficulty": "medium",
+      "tags": ["Bảng tuần hoàn"]
+    },
+    {
+      "id": "T3_Q28",
+      "type": "single",
+      "question": "Trong pin Galvani Zn-Cu, điện cực Kẽm (Zn) đóng vai trò là:",
+      "options": ["Catod, cực dương", "Catod, cực âm", "Anod, cực dương", "Anod, cực âm"],
+      "correct": [3],
+      "explanation": "Trong pin Zn-Cu, Zn bị oxy hóa (nhường e) nên là Anod. Electron rời khỏi Zn nên Zn là cực âm (nguồn e).",
+      "difficulty": "medium",
+      "tags": ["Điện hóa"]
+    },
+    {
+      "id": "T3_Q29",
+      "type": "single",
+      "question": "Độ tan của chất khí trong chất lỏng thay đổi như thế nào khi tăng nhiệt độ?",
+      "options": ["Tăng lên", "Giảm đi", "Không đổi", "Tăng rồi giảm"],
+      "correct": [1],
+      "explanation": "Quá trình hòa tan khí vào lỏng thường tỏa nhiệt. Khi tăng nhiệt độ, cân bằng chuyển dịch theo chiều nghịch (thoát khí), làm giảm độ tan.",
+      "difficulty": "medium",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "T3_Q30",
+      "type": "single",
+      "question": "Sắc ký là phương pháp dùng để:",
+      "options": ["Đo nhiệt độ sôi.", "Tách các chất trong hỗn hợp dựa trên sự phân bố khác nhau giữa pha động và pha tĩnh.", "Xác định khối lượng phân tử.", "Đo độ dẫn điện."],
+      "correct": [1],
+      "explanation": "Sắc ký (Chromatography) là kỹ thuật tách chất dựa trên ái lực khác nhau của các chất với pha động và pha tĩnh.",
+      "difficulty": "medium",
+      "tags": ["Phân tích"]
+    },
+    {
+      "id": "T3_Q31",
+      "type": "single",
+      "question": "Trong danh pháp R/S, nếu nguyên tử liên kết trực tiếp với tâm bất đối là C, N, O, H thì thứ tự ưu tiên là:",
+      "options": ["C > N > O > H", "O > N > C > H", "H > C > N > O", "N > O > C > H"],
+      "correct": [1],
+      "explanation": "Thứ tự ưu tiên dựa trên số hiệu nguyên tử (Z): O(8) > N(7) > C(6) > H(1).",
+      "difficulty": "hard",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q32",
+      "type": "single",
+      "question": "Tính thế khử chuẩn của pin tạo bởi cặp Zn2+/Zn (-0.76V) và Cu2+/Cu (+0.34V)?",
+      "options": ["+0.42 V", "+1.10 V", "-0.42 V", "-1.10 V"],
+      "correct": [1],
+      "explanation": "E0_cell = E0_cathode (dương hơn) - E0_anode (âm hơn) = 0.34 - (-0.76) = 1.10 V.",
+      "difficulty": "hard",
+      "tags": ["Điện hóa"]
+    },
+    {
+      "id": "T3_Q33",
+      "type": "single",
+      "question": "Dạng hình học của phân tử SF6 (Lưu huỳnh hexafluoride) là gì?",
+      "options": ["Lục giác đều", "Bát diện đều (Octahedral)", "Tháp vuông", "Lăng trụ tam giác"],
+      "correct": [1],
+      "explanation": "Lưu huỳnh lai hóa sp3d2, liên kết với 6 nguyên tử F tạo thành cấu trúc bát diện đều với các góc 90 độ.",
+      "difficulty": "hard",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T3_Q34",
+      "type": "single",
+      "question": "Enzyme hoạt động theo cơ chế nào để làm tăng tốc độ phản ứng?",
+      "options": ["Tăng năng lượng tự do của hệ.", "Làm giảm năng lượng hoạt hóa (Activation Energy) của phản ứng.", "Làm thay đổi hằng số cân bằng K.", "Tăng nhiệt độ cục bộ."],
+      "correct": [1],
+      "explanation": "Enzyme tạo ra con đường phản ứng mới có năng lượng hoạt hóa thấp hơn, giúp phản ứng xảy ra nhanh hơn.",
+      "difficulty": "hard",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T3_Q35",
+      "type": "single",
+      "question": "Trong tổng hợp Gabriel để điều chế amino acid, thuốc thử nào được sử dụng để tạo nguồn Nitơ?",
+      "options": ["Amoniac (NH3)", "Kali Phthalimide", "Natri Azide (NaN3)", "Urea"],
+      "correct": [1],
+      "explanation": "Tổng hợp Gabriel sử dụng Kali Phthalimide phản ứng với alkyl halide để tạo ra amin bậc 1 tinh khiết (sau khi thủy phân), dùng để điều chế amino acid.",
+      "difficulty": "hard",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q36",
+      "type": "single",
+      "question": "Hiệu ứng nhà kính chủ yếu do khí nào gây ra?",
+      "options": ["N2", "O2", "CO2", "Ar"],
+      "correct": [2],
+      "explanation": "CO2 hấp thụ bức xạ hồng ngoại tỏa ra từ Trái đất, giữ nhiệt lại trong khí quyển gây hiệu ứng nhà kính (kiến thức phổ biến liên hệ thực tế).",
+      "difficulty": "medium",
+      "tags": ["Môi trường"]
+    },
+    {
+      "id": "T3_Q37",
+      "type": "single",
+      "question": "Phương trình Nernst cho nửa phản ứng khử: aOx + ne -> bRed là:",
+      "options": [
+        "E = E0 - (RT/nF) * ln([Red]^b / [Ox]^a)",
+        "E = E0 + (RT/nF) * ln([Red]^b / [Ox]^a)",
+        "E = E0 - (nF/RT) * ln([Ox] / [Red])",
+        "E = E0 * ln([Red] / [Ox])"
+      ],
+      "correct": [0],
+      "explanation": "Dạng chuẩn của phương trình Nernst: E = E0 - (RT/nF)lnQ, với Q = [Red]^b/[Ox]^a.",
+      "difficulty": "hard",
+      "tags": ["Điện hóa"]
+    },
+    {
+      "id": "T3_Q38",
+      "type": "single",
+      "question": "Phản ứng thế ái điện tử vào vòng benzen (SEAr) của Nitrobenzene sẽ định hướng nhóm thế tiếp theo vào vị trí nào?",
+      "options": ["Ortho", "Para", "Meta", "Bất kỳ vị trí nào"],
+      "correct": [2],
+      "explanation": "Nhóm Nitro (-NO2) là nhóm hút electron mạnh (phản hoạt hóa), định hướng thế vào vị trí meta.",
+      "difficulty": "hard",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q39",
+      "type": "single",
+      "question": "Chỉ số Iod của chất béo phản ánh điều gì?",
+      "options": ["Khối lượng phân tử của chất béo.", "Mức độ không no (số lượng liên kết đôi) của acid béo.", "Số lượng nhóm -OH tự do.", "Độ ôi thiu."],
+      "correct": [1],
+      "explanation": "Chỉ số Iod là số gam Iod cộng vào 100g chất béo. Iod cộng vào nối đôi C=C, nên chỉ số càng cao thì mức độ không no càng lớn.",
+      "difficulty": "hard",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T3_Q40",
+      "type": "single",
+      "question": "Tính pH của dung dịch NaOH 10^-8 M?",
+      "options": ["8.0", "6.0", "Giữa 7 và 8", "14.0"],
+      "correct": [2],
+      "explanation": "Với nồng độ base rất loãng (10^-8 M), phải tính đến sự phân ly của nước. [OH-] tổng > 10^-7. pH sẽ hơi lớn hơn 7 một chút (khoảng 7.02), không thể là 6 (acid) hay 8 (bỏ qua nước).",
+      "difficulty": "hard",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "T3_Q41",
+      "type": "single",
+      "question": "Phản ứng của Acetone với NaBH4 sau đó thủy phân cho sản phẩm là:",
+      "options": ["Propanal", "1-Propanol", "2-Propanol (Isopropyl alcohol)", "Propanoic acid"],
+      "correct": [2],
+      "explanation": "NaBH4 khử nhóm C=O của ketone (acetone) thành ancol bậc 2 (2-propanol).",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q42",
+      "type": "single",
+      "question": "Liên kết peptide (-CO-NH-) có cấu trúc không gian như thế nào?",
+      "options": ["Phẳng và cứng nhắc (Planar and rigid).", "Tự do quay quanh trục C-N.", "Có hình chóp tam giác.", "Luôn ở dạng cis."],
+      "correct": [0],
+      "explanation": "Do sự cộng hưởng của cặp electron trên N với nhóm C=O, liên kết C-N mang một phần tính chất nối đôi, làm cho nhóm peptide phẳng và không quay tự do được.",
+      "difficulty": "hard",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T3_Q43",
+      "type": "single",
+      "question": "Tích số tan Ksp của CaF2 là 3.9 x 10^-11. Nếu trộn lượng dư NaF vào dung dịch CaCl2, kết tủa CaF2 xuất hiện khi nào?",
+      "options": ["[Ca2+][F-] > Ksp", "[Ca2+][F-]^2 > Ksp", "[Ca2+][F-] < Ksp", "[Ca2+]^2[F-] > Ksp"],
+      "correct": [1],
+      "explanation": "Điều kiện xuất hiện kết tủa là tích số ion Q = [Ca2+][F-]^2 lớn hơn tích số tan Ksp.",
+      "difficulty": "hard",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "T3_Q44",
+      "type": "single",
+      "question": "Sphingolipid, một thành phần quan trọng của mô thần kinh, có chứa khung sườn cơ bản là gì?",
+      "options": ["Glycerol", "Sphingosine", "Cholesterol", "Glucose"],
+      "correct": [1],
+      "explanation": "Sphingolipid được xây dựng trên khung sphingosine (một aminodiol chuỗi dài) thay vì glycerol.",
+      "difficulty": "hard",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T3_Q45",
+      "type": "single",
+      "question": "Trong phản ứng SN1, giai đoạn quyết định tốc độ phản ứng là:",
+      "options": ["Sự tấn công của nucleophile.", "Sự tách nhóm rời đi tạo carbocation.", "Sự tách proton.", "Cả hai giai đoạn xảy ra đồng thời."],
+      "correct": [1],
+      "explanation": "SN1 là phản ứng đơn phân tử, tốc độ phụ thuộc vào giai đoạn chậm nhất là giai đoạn tạo thành carbocation trung gian (nhóm rời đi tách ra).",
+      "difficulty": "hard",
+      "tags": ["Cơ chế phản ứng"]
+    },
+    {
+      "id": "T3_Q46",
+      "type": "single",
+      "question": "Chất nào sau đây là acid yếu đa chức?",
+      "options": ["HCl", "H2SO4", "H3PO4", "CH3COOH"],
+      "correct": [2],
+      "explanation": "H3PO4 (Acid phosphoric) là acid yếu phân ly theo 3 nấc (đa chức). HCl, H2SO4 là acid mạnh. CH3COOH là acid yếu đơn chức.",
+      "difficulty": "medium",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "T3_Q47",
+      "type": "single",
+      "question": "Để tách các mảnh peptid trong xác định trình tự protein, người ta dùng thuốc thử nào để cắt đặc hiệu tại gốc Methionine?",
+      "options": ["Trypsin", "Chymotrypsin", "Cyanogen bromide (CNBr)", "Edman reagent"],
+      "correct": [2],
+      "explanation": "Cyanogen bromide (CNBr) cắt đặc hiệu liên kết peptide ở phía carboxyl của Methionine.",
+      "difficulty": "hard",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T3_Q48",
+      "type": "single",
+      "question": "Phức chất [Co(NH3)6]3+ có màu vàng cam, hấp thụ ánh sáng màu gì?",
+      "options": ["Đỏ", "Xanh lam (Blue)", "Vàng", "Lục"],
+      "correct": [1],
+      "explanation": "Màu của phức chất là màu phụ (màu bù) của ánh sáng bị hấp thụ. Màu vàng cam là màu bù của màu xanh lam (Blue).",
+      "difficulty": "hard",
+      "tags": ["Phức chất"]
+    },
+    {
+      "id": "T3_Q49",
+      "type": "single",
+      "question": "Trong danh pháp đồng phân hình học của anken 3,4-dimethylhex-3-ene, ta dùng hệ thống nào?",
+      "options": ["Cis/Trans", "E/Z", "R/S", "D/L"],
+      "correct": [1],
+      "explanation": "Khi 4 nhóm thế trên nối đôi khác nhau hoặc phức tạp, ta dùng hệ thống E/Z (Entgegen/Zusammen) dựa trên độ ưu tiên của nhóm thế ở mỗi carbon.",
+      "difficulty": "hard",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T3_Q50",
+      "type": "single",
+      "question": "Quá trình đường phân (Glycolysis) diễn ra ở đâu trong tế bào?",
+      "options": ["Ty thể", "Nhân tế bào", "Tế bào chất (Cytosol)", "Lưới nội chất"],
+      "correct": [2],
+      "explanation": "Đường phân là quá trình phân giải glucose xảy ra trong dịch tế bào (cytosol), không cần oxy.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    }
+  ]
+}
