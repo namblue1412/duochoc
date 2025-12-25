@@ -1,0 +1,512 @@
+{
+  "meta": {
+    "title": "ĐỀ THI HÓA HỌC TỔNG HỢP - ĐỀ 4",
+    "time_limit_sec": 2700,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "T4_Q01",
+      "type": "single",
+      "question": "Đơn vị cơ bản của mọi vật chất là:",
+      "options": ["Phân tử", "Nguyên tử", "Tế bào", "Mô"],
+      "correct": [1],
+      "explanation": "Nguyên tử (Atom) là hạt nhỏ nhất cấu tạo nên các nguyên tố hóa học và vật chất.",
+      "difficulty": "easy",
+      "tags": ["Đại cương"]
+    },
+    {
+      "id": "T4_Q02",
+      "type": "single",
+      "question": "Chất nào sau đây là Base theo thuyết Arrhenius?",
+      "options": ["HCl", "NaOH", "NH3", "CH3COOH"],
+      "correct": [1],
+      "explanation": "Theo Arrhenius, base là chất khi tan trong nước phân ly ra ion OH-. NaOH -> Na+ + OH-.",
+      "difficulty": "easy",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "T4_Q03",
+      "type": "single",
+      "question": "Số oxy hóa của Crom trong hợp chất K2Cr2O7 là:",
+      "options": ["+3", "+6", "+7", "+2"],
+      "correct": [1],
+      "explanation": "K(+1), O(-2). Gọi x là số oxy hóa của Cr. 2*(+1) + 2*x + 7*(-2) = 0 => 2x - 12 = 0 => x = +6.",
+      "difficulty": "easy",
+      "tags": ["Oxy hóa - Khử"]
+    },
+    {
+      "id": "T4_Q04",
+      "type": "single",
+      "question": "Phản ứng giữa Acid và Base tạo thành Muối và Nước gọi là phản ứng gì?",
+      "options": ["Phản ứng thế", "Phản ứng trung hòa", "Phản ứng oxy hóa khử", "Phản ứng phân hủy"],
+      "correct": [1],
+      "explanation": "Phản ứng trung hòa (Neutralization) là phản ứng giữa H+ (acid) và OH- (base) tạo thành H2O.",
+      "difficulty": "easy",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "T4_Q05",
+      "type": "single",
+      "question": "Liên kết đôi C=C bao gồm:",
+      "options": ["1 liên kết sigma", "1 liên kết pi", "1 liên kết sigma và 1 liên kết pi", "2 liên kết pi"],
+      "correct": [2],
+      "explanation": "Liên kết đôi gồm 1 liên kết sigma bền vững (trục nối tâm) và 1 liên kết pi kém bền hơn (xen phủ bên).",
+      "difficulty": "easy",
+      "tags": ["Liên kết hóa học"]
+    },
+    {
+      "id": "T4_Q06",
+      "type": "single",
+      "question": "Carbohydrate dự trữ năng lượng chính ở động vật là:",
+      "options": ["Tinh bột", "Cellulose", "Glycogen", "Sucrose"],
+      "correct": [2],
+      "explanation": "Glycogen là dạng polymer của glucose, dự trữ năng lượng trong gan và cơ của động vật.",
+      "difficulty": "easy",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T4_Q07",
+      "type": "single",
+      "question": "Trong phản ứng hạt nhân, hạt alpha thực chất là:",
+      "options": ["Proton", "Electron", "Hạt nhân nguyên tử Heli (He)", "Neutron"],
+      "correct": [2],
+      "explanation": "Hạt alpha là dòng hạt nhân Helium-4 (2 proton, 2 neutron).",
+      "difficulty": "easy",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T4_Q08",
+      "type": "single",
+      "question": "Dung dịch 1M (Molar) nghĩa là:",
+      "options": ["1 mol chất tan trong 1 lít dung môi.", "1 mol chất tan trong 1 lít dung dịch.", "1 gam chất tan trong 1 lít dung dịch.", "1 mol chất tan trong 1 kg dung môi."],
+      "correct": [1],
+      "explanation": "Nồng độ mol (Molarity) là số mol chất tan có trong 1 lít dung dịch (mol/L).",
+      "difficulty": "easy",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "T4_Q09",
+      "type": "single",
+      "question": "Chất nào sau đây có nhiệt độ nóng chảy cao nhất?",
+      "options": ["NaCl", "H2O", "CH4", "Cl2"],
+      "correct": [0],
+      "explanation": "NaCl là hợp chất ion với mạng lưới tinh thể bền vững, có lực hút tĩnh điện mạnh, nên nhiệt độ nóng chảy rất cao so với các chất cộng hóa trị.",
+      "difficulty": "medium",
+      "tags": ["Liên kết hóa học"]
+    },
+    {
+      "id": "T4_Q10",
+      "type": "single",
+      "question": "Khi ngâm rau sống trong nước muối ưu trương, rau bị héo là do hiện tượng gì?",
+      "options": ["Khuếch tán", "Thẩm thấu (Osmosis)", "Vận chuyển tích cực", "Hấp phụ"],
+      "correct": [1],
+      "explanation": "Nước từ trong tế bào rau đi ra ngoài môi trường ưu trương để cân bằng áp suất thẩm thấu, làm tế bào mất nước và héo.",
+      "difficulty": "medium",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "T4_Q11",
+      "type": "single",
+      "question": "Nguyên tắc Le Chatelier áp dụng cho hệ nào?",
+      "options": ["Hệ phản ứng một chiều.", "Hệ đang ở trạng thái cân bằng.", "Hệ chất rắn.", "Hệ chân không."],
+      "correct": [1],
+      "explanation": "Nguyên lý Le Chatelier dự đoán sự chuyển dịch của một hệ đang ở trạng thái cân bằng khi chịu tác động của các yếu tố bên ngoài.",
+      "difficulty": "medium",
+      "tags": ["Cân bằng hóa học"]
+    },
+    {
+      "id": "T4_Q12",
+      "type": "single",
+      "question": "Phản ứng Strecker được dùng để tổng hợp chất nào?",
+      "options": ["Acid béo", "Alpha-Amino acid", "Carbohydrate", "Nucleotide"],
+      "correct": [1],
+      "explanation": "Phản ứng Strecker đi từ aldehyde, NH3 và HCN để tổng hợp alpha-amino acid.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T4_Q13",
+      "type": "single",
+      "question": "Cấu hình electron 1s2 2s2 2p6 3s2 3p6 là của ion nào sau đây?",
+      "options": ["Na+", "Cl-", "O2-", "Mg+"],
+      "correct": [1],
+      "explanation": "Clo (Z=17): 1s2 2s2 2p6 3s2 3p5. Nhận 1e thành Cl- có cấu hình khí hiếm Argon: 1s2 2s2 2p6 3s2 3p6.",
+      "difficulty": "medium",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T4_Q14",
+      "type": "single",
+      "question": "Phenol (C6H5OH) có tính acid mạnh hơn Ethanol vì:",
+      "options": ["Nhóm OH của Phenol phân cực hơn.", "Vòng benzen hút electron làm tăng độ bền của ion phenoxide (cộng hưởng).", "Phenol tan tốt trong nước.", "Phenol có khối lượng phân tử lớn hơn."],
+      "correct": [1],
+      "explanation": "Vòng thơm giải tỏa điện tích âm của oxy trong ion phenoxide thông qua hiệu ứng cộng hưởng, làm cho anion này bền hơn so với ethoxide, do đó phenol dễ tách H+ hơn.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T4_Q15",
+      "type": "single",
+      "question": "Chất nào đóng vai trò vận chuyển oxy trong máu?",
+      "options": ["Myoglobin", "Hemoglobin", "Insulin", "Collagen"],
+      "correct": [1],
+      "explanation": "Hemoglobin là protein trong hồng cầu có chức năng vận chuyển oxy từ phổi đến các mô.",
+      "difficulty": "easy",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T4_Q16",
+      "type": "single",
+      "question": "Bậc của phản ứng SN2 là:",
+      "options": ["0", "1", "2", "3"],
+      "correct": [2],
+      "explanation": "SN2 là phản ứng thế ái nhân lưỡng phân tử, tốc độ phụ thuộc vào nồng độ của cả hai chất tham gia, nên là phản ứng bậc 2.",
+      "difficulty": "medium",
+      "tags": ["Cơ chế phản ứng"]
+    },
+    {
+      "id": "T4_Q17",
+      "type": "single",
+      "question": "Trong định lượng Nitơ bằng phương pháp Kjeldahl, Nitơ trong mẫu được chuyển thành dạng nào?",
+      "options": ["N2 khí", "NO3-", "NH4+ (Muối Amoni)", "NO2"],
+      "correct": [2],
+      "explanation": "Phương pháp Kjeldahl vô cơ hóa mẫu, chuyển toàn bộ Nitơ hữu cơ thành amoni sulfat (NH4)2SO4.",
+      "difficulty": "medium",
+      "tags": ["Phân tích"]
+    },
+    {
+      "id": "T4_Q18",
+      "type": "single",
+      "question": "Cấu trúc bậc 2 của protein có hai dạng chính là:",
+      "options": ["Xoắn Alpha và phiến Beta (Beta sheet).", "Dạng sợi và dạng cầu.", "Dạng cis và dạng trans.", "Dạng mạch thẳng và vòng."],
+      "correct": [0],
+      "explanation": "Hai mô hình cấu trúc bậc 2 phổ biến nhất được Pauling đề xuất là xoắn Alpha và phiến gấp nếp Beta.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T4_Q19",
+      "type": "single",
+      "question": "Trong phản ứng oxy hóa khử: Cu + 2Ag+ -> Cu2+ + 2Ag. Phát biểu nào đúng?",
+      "options": ["Cu bị khử.", "Ag+ là chất khử.", "Cu là chất khử.", "Ag là chất oxy hóa."],
+      "correct": [2],
+      "explanation": "Cu nhường electron (tăng số oxy hóa) nên là chất khử. Ag+ nhận electron nên là chất oxy hóa.",
+      "difficulty": "medium",
+      "tags": ["Oxy hóa - Khử"]
+    },
+    {
+      "id": "T4_Q20",
+      "type": "single",
+      "question": "Vùng vân tay (Fingerprint region) trong phổ hồng ngoại (IR) nằm trong khoảng nào?",
+      "options": ["4000 - 1500 cm-1", "1500 - 500 cm-1", "200 - 400 nm", "10 - 100 ppm"],
+      "correct": [1],
+      "explanation": "Vùng 1500 - 500 cm-1 chứa nhiều pic phức tạp đặc trưng cho từng phân tử cụ thể, gọi là vùng vân tay.",
+      "difficulty": "hard",
+      "tags": ["Phân tích"]
+    },
+    {
+      "id": "T4_Q21",
+      "type": "single",
+      "question": "Chất nào sau đây là Base Bronsted nhưng không phải là Base Arrhenius?",
+      "options": ["NaOH", "KOH", "NH3 (trong phản ứng khí)", "Ca(OH)2"],
+      "correct": [2],
+      "explanation": "NH3 nhận proton (H+) là Base Bronsted. Nhưng ở dạng khí hoặc dung môi không nước, nó không tạo OH- trực tiếp như định nghĩa Arrhenius.",
+      "difficulty": "medium",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "T4_Q22",
+      "type": "single",
+      "question": "Hợp chất CH3-O-CH3 và CH3-CH2-OH là đồng phân gì của nhau?",
+      "options": ["Đồng phân mạch carbon", "Đồng phân vị trí", "Đồng phân nhóm chức", "Đồng phân hình học"],
+      "correct": [2],
+      "explanation": "Cùng công thức C2H6O, nhưng một chất là Ether, một chất là Alcohol, nên là đồng phân nhóm chức.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T4_Q23",
+      "type": "single",
+      "question": "Biến thiên Entropy (ΔS) của quá trình nước đá tan chảy (H2O rắn -> H2O lỏng) mang dấu gì?",
+      "options": ["Dương (>0)", "Âm (<0)", "Bằng 0", "Không xác định"],
+      "correct": [0],
+      "explanation": "Chuyển từ rắn sang lỏng làm tăng độ hỗn loạn của các phân tử, do đó Entropy tăng (ΔS > 0).",
+      "difficulty": "medium",
+      "tags": ["Nhiệt động học"]
+    },
+    {
+      "id": "T4_Q24",
+      "type": "single",
+      "question": "Trong danh pháp IUPAC, nhóm ưu tiên cao nhất khi đánh số mạch chính là:",
+      "options": ["-OH", "-NH2", "-COOH", "-CHO"],
+      "correct": [2],
+      "explanation": "Thứ tự ưu tiên nhóm chức: Acid Carboxylic (-COOH) > Ester > Amide > Aldehyde > Ketone > Alcohol > Amine.",
+      "difficulty": "hard",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T4_Q25",
+      "type": "single",
+      "question": "Liên kết nào quyết định cấu trúc bậc 3 của protein?",
+      "options": ["Chỉ liên kết peptide.", "Tương tác kỵ nước, liên kết ion, liên kết hydro, cầu disulfid giữa các chuỗi bên (R).", "Liên kết kim loại.", "Liên kết cộng hóa trị giữa các C alpha."],
+      "correct": [1],
+      "explanation": "Cấu trúc bậc 3 (hình dạng không gian 3 chiều) được ổn định bởi các tương tác yếu và cầu disulfide giữa các nhóm R của các amino acid ở xa nhau trong mạch.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T4_Q26",
+      "type": "single",
+      "question": "Tính nồng độ H+ của dung dịch có pH = 3.5?",
+      "options": ["3.5 M", "10^-3.5 M", "-3.5 M", "0.35 M"],
+      "correct": [1],
+      "explanation": "[H+] = 10^(-pH) = 10^(-3.5) M.",
+      "difficulty": "medium",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "T4_Q27",
+      "type": "single",
+      "question": "Chất nào sau đây phản ứng với thuốc thử Fehling tạo kết tủa đỏ gạch (Cu2O)?",
+      "options": ["Sucrose", "Hồ tinh bột", "Glucose", "Cellulose"],
+      "correct": [2],
+      "explanation": "Glucose có nhóm aldehyde (-CHO) tự do (dạng mở vòng) nên có tính khử, phản ứng với Cu2+ trong Fehling tạo tủa đỏ gạch. Sucrose không có tính khử.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T4_Q28",
+      "type": "single",
+      "question": "Hợp chất Grignard (R-Mg-X) phản ứng với CO2, sau đó thủy phân sẽ tạo ra:",
+      "options": ["Ketone", "Aldehyde", "Acid Carboxylic (tăng 1 Carbon)", "Este"],
+      "correct": [2],
+      "explanation": "R-MgX + CO2 -> R-COO-MgX. Thủy phân H3O+ -> R-COOH. Mạch carbon tăng thêm 1 C từ CO2.",
+      "difficulty": "hard",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T4_Q29",
+      "type": "single",
+      "question": "Định luật Hess cho phép tính toán đại lượng nào của phản ứng?",
+      "options": ["Tốc độ phản ứng", "Hằng số cân bằng", "Biến thiên Enthalpy (ΔH)", "Bậc phản ứng"],
+      "correct": [2],
+      "explanation": "Định luật Hess: Biến thiên enthalpy của phản ứng toàn phần bằng tổng biến thiên enthalpy của các giai đoạn thành phần.",
+      "difficulty": "medium",
+      "tags": ["Nhiệt động học"]
+    },
+    {
+      "id": "T4_Q30",
+      "type": "single",
+      "question": "Trong phản ứng tạo Hemiacetal, xúc tác acid có vai trò gì?",
+      "options": ["Proton hóa nguyên tử Oxy của nhóm Carbonyl để làm tăng tính electrophile.", "Proton hóa nucleophile.", "Trung hòa môi trường.", "Tạo kết tủa."],
+      "correct": [0],
+      "explanation": "Acid (H+) proton hóa oxy của C=O, tạo ra cation cộng hưởng, làm Carbon carbonyl dương điện hơn, dễ bị nucleophile (ROH) tấn công.",
+      "difficulty": "hard",
+      "tags": ["Cơ chế phản ứng"]
+    },
+    {
+      "id": "T4_Q31",
+      "type": "single",
+      "question": "Tế bào vi khuẩn gram dương có thành tế bào chứa peptidoglycan dày. Peptidoglycan là sự kết hợp của:",
+      "options": ["Lipid và Protein", "Carbohydrate và Amino acid (Peptide)", "DNA và RNA", "Acid béo và Glycerol"],
+      "correct": [1],
+      "explanation": "Peptidoglycan là polymer gồm các chuỗi polysaccharide đan chéo với các đoạn peptide ngắn.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T4_Q32",
+      "type": "single",
+      "question": "Tính chất nào sau đây KHÔNG phải là tính chất cộng tính (colligative property) của dung dịch?",
+      "options": ["Áp suất hơi bão hòa giảm.", "Nhiệt độ sôi tăng.", "Nhiệt độ đông đặc giảm.", "Màu sắc dung dịch."],
+      "correct": [3],
+      "explanation": "Tính chất cộng tính chỉ phụ thuộc vào số lượng hạt chất tan, không phụ thuộc bản chất. Màu sắc phụ thuộc bản chất chất tan.",
+      "difficulty": "medium",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "T4_Q33",
+      "type": "single",
+      "question": "Trong phân tử Benzene, các nguyên tử Carbon ở trạng thái lai hóa nào?",
+      "options": ["sp3", "sp2", "sp", "sp3d"],
+      "correct": [1],
+      "explanation": "Cả 6 carbon trong vòng benzene đều lai hóa sp2, tạo cấu trúc phẳng lục giác đều và hệ liên hợp pi bền vững.",
+      "difficulty": "easy",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T4_Q34",
+      "type": "single",
+      "question": "Phương pháp nào dùng để xác định nồng độ ion kim loại trong nước bằng cách tạo phức màu?",
+      "options": ["Chuẩn độ Acid-Base", "Chuẩn độ Complexon (EDTA)", "Chuẩn độ Oxy hóa khử", "Phương pháp chưng cất"],
+      "correct": [1],
+      "explanation": "Chuẩn độ Complexon sử dụng EDTA để tạo phức bền với ion kim loại, dùng chỉ thị màu kim loại (như EBT) để nhận biết điểm tương đương.",
+      "difficulty": "medium",
+      "tags": ["Phân tích"]
+    },
+    {
+      "id": "T4_Q35",
+      "type": "single",
+      "question": "Hằng số khí lý tưởng R có giá trị bao nhiêu (theo đơn vị SI)?",
+      "options": ["0.082 L.atm/mol.K", "8.314 J/mol.K", "9.8 m/s2", "6.022 x 10^23"],
+      "correct": [1],
+      "explanation": "Trong hệ SI (Joule), R = 8.314 J/(mol.K).",
+      "difficulty": "easy",
+      "tags": ["Đại cương"]
+    },
+    {
+      "id": "T4_Q36",
+      "type": "single",
+      "question": "Sản phẩm chính của phản ứng nitro hóa Toluene (với HNO3/H2SO4) ở điều kiện êm dịu là:",
+      "options": ["m-nitrotoluene", "Hỗn hợp o-nitrotoluene và p-nitrotoluene", "1,3,5-trinitrotoluene (TNT)", "Benzoic acid"],
+      "correct": [1],
+      "explanation": "Nhóm Methyl định hướng ortho/para. Phản ứng nitro hóa giai đoạn đầu tạo hỗn hợp ortho và para. TNT cần điều kiện khắc nghiệt hơn.",
+      "difficulty": "hard",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T4_Q37",
+      "type": "single",
+      "question": "Mô hình 'Khóa và Chìa' (Lock and Key) mô tả tương tác nào?",
+      "options": ["Kháng nguyên - Kháng thể", "Enzyme - Cơ chất", "Hormone - Thụ thể", "Cả 3 phương án trên"],
+      "correct": [3],
+      "explanation": "Mô hình này mô tả sự tương thích đặc hiệu về cấu trúc không gian giữa hai phân tử sinh học, điển hình nhất là Enzyme và Cơ chất.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T4_Q38",
+      "type": "single",
+      "question": "Để pha 500ml dung dịch NaCl 0.9% (D = 1g/ml) cần bao nhiêu gam NaCl?",
+      "options": ["4.5 g", "9.0 g", "0.9 g", "45 g"],
+      "correct": [0],
+      "explanation": "m dung dịch = 500 ml * 1 g/ml = 500g. m NaCl = 500 * 0.9 / 100 = 4.5g.",
+      "difficulty": "easy",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "T4_Q39",
+      "type": "single",
+      "question": "Đồng vị phóng xạ Carbon-14 thường được dùng để:",
+      "options": ["Điều trị ung thư.", "Xác định niên đại cổ vật.", "Làm nhiên liệu hạt nhân.", "Tiệt trùng thực phẩm."],
+      "correct": [1],
+      "explanation": "C-14 có chu kỳ bán rã xác định, dùng để định tuổi các mẫu vật hữu cơ cổ (phương pháp đồng vị phóng xạ).",
+      "difficulty": "medium",
+      "tags": ["Ứng dụng"]
+    },
+    {
+      "id": "T4_Q40",
+      "type": "single",
+      "question": "Tính chất lưỡng tính (Amphoteric) của nước thể hiện ở chỗ:",
+      "options": ["Nước vừa có thể đông đặc vừa có thể bay hơi.", "Nước vừa là dung môi phân cực vừa hòa tan chất vô cơ.", "Nước vừa có thể nhận proton (như base) vừa có thể cho proton (như acid).", "Nước có pH = 7."],
+      "correct": [2],
+      "explanation": "Theo Bronsted, nước lưỡng tính vì: H2O + H+ -> H3O+ (Base) và H2O -> H+ + OH- (Acid).",
+      "difficulty": "medium",
+      "tags": ["Acid-Base"]
+    },
+    {
+      "id": "T4_Q41",
+      "type": "single",
+      "question": "Phản ứng este hóa Fischer giữa Acid Acetic và Ethanol cần xúc tác gì?",
+      "options": ["Base mạnh (NaOH)", "Acid mạnh (H2SO4 đặc)", "Kim loại Na", "Ánh sáng"],
+      "correct": [1],
+      "explanation": "Phản ứng ester hóa là thuận nghịch, cần acid mạnh (H2SO4) làm xúc tác và hút nước để cân bằng chuyển dịch theo chiều tạo ester.",
+      "difficulty": "medium",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T4_Q42",
+      "type": "single",
+      "question": "Điện cực hydro tiêu chuẩn (SHE) có thế điện cực được quy ước bằng:",
+      "options": ["1.0 V", "0.0 V", "-1.0 V", "0.5 V"],
+      "correct": [1],
+      "explanation": "SHE (Standard Hydrogen Electrode) được chọn làm mốc so sánh, có thế điện cực quy ước là 0.00 V ở mọi nhiệt độ.",
+      "difficulty": "easy",
+      "tags": ["Điện hóa"]
+    },
+    {
+      "id": "T4_Q43",
+      "type": "single",
+      "question": "Dạng Zwitterion của một amino acid tồn tại chủ yếu ở môi trường nào?",
+      "options": ["Acid mạnh (pH=1)", "Kiềm mạnh (pH=13)", "Tại điểm đẳng điện (pI)", "Dung môi không phân cực"],
+      "correct": [2],
+      "explanation": "Tại pH = pI, amino acid tồn tại dưới dạng ion lưỡng cực (Zwitterion, NH3+-R-COO-) với tổng điện tích bằng 0.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T4_Q44",
+      "type": "single",
+      "question": "Khí nào sau đây nhẹ hơn không khí (d < 29)?",
+      "options": ["CO2 (44)", "Cl2 (71)", "CH4 (16)", "NO2 (46)"],
+      "correct": [2],
+      "explanation": "Khối lượng mol trung bình của không khí ~29 g/mol. CH4 (16) < 29 nên nhẹ hơn không khí.",
+      "difficulty": "easy",
+      "tags": ["Đại cương"]
+    },
+    {
+      "id": "T4_Q45",
+      "type": "single",
+      "question": "Quy tắc Hund phát biểu về sự phân bố electron như thế nào?",
+      "options": ["Electron điền vào mức năng lượng thấp nhất trước.", "Mỗi orbital chứa tối đa 2 electron đối song.", "Trong một phân lớp, electron phân bố sao cho số electron độc thân là tối đa và cùng chiều tự quay.", "Không thể xác định vị trí electron."],
+      "correct": [2],
+      "explanation": "Quy tắc Hund (Maximum Multiplicity): Electron điền lẻ vào các orbital cùng năng lượng (degenerate) trước khi ghép đôi.",
+      "difficulty": "hard",
+      "tags": ["Cấu tạo chất"]
+    },
+    {
+      "id": "T4_Q46",
+      "type": "single",
+      "question": "Phản ứng thủy phân Sucrose (đường mía) tạo ra hỗn hợp Glucose và Fructose được gọi là:",
+      "options": ["Đường phèn", "Đường nghịch đảo (Invert sugar)", "Maltose", "Galactose"],
+      "correct": [1],
+      "explanation": "Hỗn hợp Glucose và Fructose sau thủy phân làm quay mặt phẳng ánh sáng phân cực ngược chiều so với Sucrose ban đầu, gọi là đường nghịch đảo.",
+      "difficulty": "hard",
+      "tags": ["Hóa sinh"]
+    },
+    {
+      "id": "T4_Q47",
+      "type": "single",
+      "question": "Tính nồng độ % (C%) của dung dịch thu được khi hòa tan 20g đường vào 80g nước?",
+      "options": ["20%", "25%", "16%", "80%"],
+      "correct": [0],
+      "explanation": "C% = (mct / mdd) * 100 = (20 / (20+80)) * 100 = 20%.",
+      "difficulty": "medium",
+      "tags": ["Dung dịch"]
+    },
+    {
+      "id": "T4_Q48",
+      "type": "single",
+      "question": "Cấu dạng ghế (Chair conformation) của Cyclohexane bền hơn cấu dạng thuyền (Boat) vì:",
+      "options": ["Ít sức căng góc và ít tương tác đẩy giữa các nguyên tử Hydro.", "Có góc liên kết 90 độ.", "Các nguyên tử Hydro ở gần nhau hơn.", "Nó phẳng hoàn toàn."],
+      "correct": [0],
+      "explanation": "Cấu dạng ghế giảm thiểu sức căng xoắn (torsional strain) và tương tác không gian (steric strain) giữa các nguyên tử H (mọi H đều so le), trong khi dạng thuyền có tương tác đẩy (cột cờ).",
+      "difficulty": "hard",
+      "tags": ["Hóa hữu cơ"]
+    },
+    {
+      "id": "T4_Q49",
+      "type": "single",
+      "question": "Hằng số cân bằng K > 1 cho biết điều gì về phản ứng tại trạng thái cân bằng?",
+      "options": ["Nồng độ sản phẩm lớn hơn nồng độ chất tham gia (phản ứng thuận ưu thế).", "Nồng độ chất tham gia lớn hơn sản phẩm.", "Phản ứng diễn ra rất chậm.", "Phản ứng tỏa nhiệt."],
+      "correct": [0],
+      "explanation": "K = [Sản phẩm]/[Tham gia]. K > 1 tức là tử số lớn hơn mẫu số, sản phẩm chiếm ưu thế.",
+      "difficulty": "medium",
+      "tags": ["Cân bằng hóa học"]
+    },
+    {
+      "id": "T4_Q50",
+      "type": "single",
+      "question": "Vitamin nào sau đây tan trong dầu (lipid)?",
+      "options": ["Vitamin C", "Vitamin B1", "Vitamin A", "Vitamin B12"],
+      "correct": [2],
+      "explanation": "Các vitamin tan trong dầu gồm A, D, E, K (có cấu trúc kỵ nước). Vitamin nhóm B và C tan trong nước.",
+      "difficulty": "medium",
+      "tags": ["Hóa sinh"]
+    }
+  ]
+}
