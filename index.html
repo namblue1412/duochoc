@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>UMP NHN </title>
+  <title>UMP NHN</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,9 +13,9 @@
         <h1>Thi thử 3A/3B</h1>
         <div class="muted"></div>
       </div>
-      <div class="pill" id="headerInfo">Chưa tải đề</div>
-      <button class="help-icon" id="btnHelp" title="Hướng dẫn" aria-label="Hướng dẫn">❓</button>
       <div class="pill">⏱ <span class="timer" id="headerTimer">00:00</span></div>
+      <div class="pill hide" id="headerInfo">Chưa tải đề</div>
+      <button class="help-icon" id="btnHelp" title="Hướng dẫn" aria-label="Hướng dẫn">❓</button>
     </div>
   </header>
 
@@ -80,59 +80,63 @@
       </div>
     </section>
 
-    <section id="quizPanel" class="two hide">
-      <div class="qview">
-        <div class="card pad" id="qCard">
-          <div class="qtitle" id="qTitle">Câu 1</div>
-          <div class="muted" id="qMeta">—</div>
-          <div class="qtext mt8" id="qText"></div>
-          <div id="qImage" class="mt8 mb2"></div>
-          <div class="opts mt8" id="qOpts"></div>
-          <div class="exp" id="qExp"></div>
+    <section id="quizPanel" class="hide">
+      
+      <div class="status-bar mb10">
+        <div class="bar spaced">
+          <div id="sideMeta" class="muted">0/0 câu</div>
+          <div class="pill hide" id="scorePill">Điểm: 0/0 (0%)</div>
+          <span id="bigTimer" class="hide">00:00</span>
         </div>
+        <div class="progress" aria-label="Tiến độ"><span id="bar"></span></div>
       </div>
 
-      <aside class="side">
-        <div class="section">
-          <div class="pad">
-            <div class="bar spaced">
-              <div class="pill">⏱ <span class="timer" id="bigTimer">00:00</span></div>
-              <div class="pill hide" id="scorePill">Điểm: 0/0 (0%)</div>
-            </div>
-            <div id="sideMeta" class="muted">0/0 câu</div>
-            <div class="progress" aria-label="Tiến độ"><span id="bar"></span></div>
-            
-            <div class="nav-group mt10">
-              <button class="btn" id="btnPrev">← Trước</button>
-              <button class="btn" id="btnNext">Tiếp →</button>
-              <button class="btn" id="btnSubmit">Nộp bài</button>
-            </div>
-            
-            <div class="chips mt10" id="filterGroup">
-              <button class="chip active" data-filter="all">Tất cả</button>
-              <button class="chip" data-filter="answered">Đã làm</button>
-              <button class="chip" data-filter="unanswered">Chưa làm</button>
-            </div>
+      <div class="two">
+        <div class="qview">
+          <div class="card pad" id="qCard">
+            <div class="qtitle" id="qTitle">Câu 1</div>
+            <div class="muted" id="qMeta">—</div>
+            <div class="qtext mt8" id="qText"></div>
+            <div id="qImage" class="mt8 mb2"></div>
+            <div class="opts mt8" id="qOpts"></div>
+            <div class="exp" id="qExp"></div>
           </div>
         </div>
 
-        <div class="section">
-          <div class="pad space-between">
-            <b>Danh sách câu & chọn nhanh</b>
-            <div class="legend"><span>Single: tròn</span><span>Multi: vuông</span></div>
+        <aside class="side">
+          <div class="section">
+            <div class="pad space-between">
+              <b>Danh sách câu</b>
+              <div class="legend"><span>Single: tròn</span><span>Multi: vuông</span></div>
+            </div>
+            
+            <div class="matrix" id="qMatrix"></div>
+            
+            <div class="pad" style="padding-top:10px; border-top:1px solid #222;">
+               <div class="chips" id="filterGroup">
+                <button class="chip active" data-filter="all">Tất cả</button>
+                <button class="chip" data-filter="answered">Đã làm</button>
+                <button class="chip" data-filter="unanswered">Chưa làm</button>
+              </div>
+            </div>
           </div>
-          <div class="matrix" id="qMatrix"></div>
-        </div>
 
-        <div class="section">
-          <div class="pad btn-row">
-            <button class="btn" id="btnReview">🔍 Xem/ẩn giải thích</button>
-            <button class="btn" id="btnShuffle">🔀 Xáo lại</button>
-            <button class="btn" id="btnRedo">↺ Làm lại đề</button>
-            <button class="btn" id="btnNew">📥 Làm đề mới</button>
+          <div class="nav-group">
+            <button class="btn" id="btnPrev">← Trước</button>
+            <button class="btn" id="btnNext">Tiếp →</button>
+            <button class="btn" id="btnSubmit">Nộp bài</button>
           </div>
-        </div>
-      </aside>
+
+          <div class="section">
+            <div class="pad btn-row">
+              <button class="btn" id="btnReview">🔍 Xem/ẩn giải thích</button>
+              <button class="btn" id="btnShuffle">🔀 Xáo lại</button>
+              <button class="btn" id="btnRedo">↺ Làm lại đề</button>
+              <button class="btn" id="btnNew">📥 Làm đề mới</button>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <section id="resultPanel" class="hide">
@@ -162,13 +166,6 @@
 - Độ khó: 50% easy, 40% medium, 10% hard
 - time_limit_sec=2400, shuffle_questions=true, shuffle_options=true, pass_mark=0.6
 - id DL001…DL050; mỗi câu có explanation ngắn; chỉ trả JSON hợp lệ.</pre>
-        <pre>Tôi gửi danh sách Q/A (A/B/C/D + đáp án đúng). Hãy CHUYỂN thành JSON TEMPLATE.
-- Single nếu 1 đáp án đúng; Multi nếu >1
-- Giữ nguyên câu hỏi/đáp án, explanation ngắn
-- id DL001…; difficulty=medium nếu không suy ra</pre>
-        <pre>Tạo đề LUYỆN SAI từ JSON cũ với ids: [DL002, DL015, DL021,…]
-- Giữ nội dung, đảo thứ tự đáp án
-- title = "Luyện sai – [tên cũ]"; shuffle_options=true</pre>
         <p class="muted">Lưu JSON thành <code>.json</code> rồi import bằng <b>Chọn file JSON</b> hoặc dán vào vùng paste.</p>
       </div>
     </div>
