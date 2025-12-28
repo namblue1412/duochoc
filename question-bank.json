@@ -55,6 +55,21 @@
       "id": "benhhoc",
       "title": "Lâm Sàng Nội - Đề 3",
       "file": "lsbh03.json"
-    }
+    },
+    {
+      "id": "benhhoc",
+      "title": "Lâm Sàng Nội - Đề 4",
+      "file": "lsbh04.json"
+    },
+    {
+      "id": "benhhoc",
+      "title": "Lâm Sàng Nội - Đề 5",
+      "file": "lsbh05.json"
+    },
+    {
+      "id": "benhhoc",
+      "title": "Lâm Sàng Nội - Đề 6",
+      "file": "lsbh06.json"
+    },
   ]
 }
