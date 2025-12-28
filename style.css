@@ -88,7 +88,7 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
 .modal pre { white-space: pre-wrap; background: #000; border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 13px; color: #ccc; }
 
 /* =========================================
-   RESPONSIVE
+   RESPONSIVE (MOBILE)
    ========================================= */
 @media (max-width: 900px) {
   .grid-2, .two { grid-template-columns: 1fr; }
@@ -102,7 +102,41 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
   .header h1 { font-size: 16px; max-width: 150px; }
   #headerInfo { display: none; }
   
-  /* --- THANH ĐIỀU HƯỚNG DÍNH ĐÁY MOBILE --- */
+  /* --- 1. THANH TIẾN ĐỘ GHIM TRÊN CÙNG --- */
+  /* Ghim ngay dưới Header (Header cao khoảng 61px) */
+  .progress {
+    position: fixed;
+    top: 61px;              
+    left: 0; right: 0;
+    z-index: 91;
+    margin: 0;
+    border-radius: 0;
+    height: 4px;            /* Mỏng lại cho đẹp */
+    background: rgba(255,255,255,0.1);
+  }
+
+  /* --- 2. NHÓM NÚT LỌC (CHIPS) GHIM DƯỚI PROGRESS --- */
+  #filterGroup {
+    position: fixed;
+    top: 65px;              /* 61px Header + 4px Progress */
+    left: 0; right: 0;
+    z-index: 90;
+    background: rgba(10, 10, 10, 0.95); /* Màu nền đè nội dung */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 16px;
+    margin: 0 !important;
+    justify-content: center; /* Căn giữa các nút */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  /* --- 3. ĐẨY NỘI DUNG XUỐNG --- */
+  /* Để không bị Header + Progress + Chips che mất nội dung đầu tiên */
+  #quizPanel {
+    margin-top: 50px; 
+  }
+  
+  /* --- 4. THANH ĐIỀU HƯỚNG DÍNH ĐÁY (Giữ nguyên) --- */
   .nav-group {
     position: fixed;
     bottom: 0; left: 0; right: 0; z-index: 90;
@@ -112,14 +146,12 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
     padding: 10px 16px;
     padding-bottom: var(--safe-area-bottom);
     box-shadow: 0 -4px 30px rgba(0,0,0,0.5);
-    margin: 0; /* Xoá margin để dính sát */
+    margin: 0; 
     border-radius: 20px 20px 0 0;
   }
   
-  /* Tạo khoảng trống để nội dung không bị thanh nav che mất */
   main.wrap { padding-bottom: 90px; }
   
-  /* Modal full màn hình */
   .modal { max-height: 100%; border-radius: 0; height: 100%; border: none; }
 }
 
