@@ -2,12 +2,11 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>UMP NHN</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="wrap bar">
       <div class="grow">
@@ -21,7 +20,6 @@
   </header>
 
   <main class="wrap">
-    <!-- Loader -->
     <section class="card pad" id="loader">
       <div class="grid-2">
         <div>
@@ -39,11 +37,9 @@
             </div>
           </div>
 
-          <!-- Kho đề -->
           <div class="mt10">
             <h3>1b) Chọn đề từ kho đề</h3>
-            <div class="muted">
-            </div>
+            <div class="muted"></div>
             <div class="btn-row mt6">
               <select id="bankSelect">
                 <option value="">-- Chọn đề trong kho --</option>
@@ -84,9 +80,7 @@
       </div>
     </section>
 
-    <!-- Quiz two-pane -->
     <section id="quizPanel" class="two hide">
-      <!-- Left: read-only question -->
       <div class="qview">
         <div class="card pad" id="qCard">
           <div class="qtitle" id="qTitle">Câu 1</div>
@@ -98,7 +92,6 @@
         </div>
       </div>
 
-      <!-- Right: answer matrix -->
       <aside class="side">
         <div class="section">
           <div class="pad">
@@ -108,7 +101,14 @@
             </div>
             <div id="sideMeta" class="muted">0/0 câu</div>
             <div class="progress" aria-label="Tiến độ"><span id="bar"></span></div>
-            <div class="chips" id="filterGroup">
+            
+            <div class="nav-group mt10">
+              <button class="btn" id="btnPrev">← Trước</button>
+              <button class="btn" id="btnNext">Tiếp →</button>
+              <button class="btn" id="btnSubmit">Nộp bài</button>
+            </div>
+            
+            <div class="chips mt10" id="filterGroup">
               <button class="chip active" data-filter="all">Tất cả</button>
               <button class="chip" data-filter="answered">Đã làm</button>
               <button class="chip" data-filter="unanswered">Chưa làm</button>
@@ -126,9 +126,6 @@
 
         <div class="section">
           <div class="pad btn-row">
-            <button class="btn" id="btnPrev">← Trước</button>
-            <button class="btn" id="btnNext">Tiếp →</button>
-            <button class="btn" id="btnSubmit">📤 Nộp bài</button>
             <button class="btn" id="btnReview">🔍 Xem/ẩn giải thích</button>
             <button class="btn" id="btnShuffle">🔀 Xáo lại</button>
             <button class="btn" id="btnRedo">↺ Làm lại đề</button>
@@ -138,13 +135,11 @@
       </aside>
     </section>
 
-    <!-- Result list -->
     <section id="resultPanel" class="hide">
       <div class="card pad" id="wrongList"></div>
     </section>
   </main>
 
-  <!-- Help Modal -->
   <div id="helpModal" class="modal-backdrop hide" aria-hidden="true" role="dialog" aria-labelledby="helpTitle">
     <div class="modal card">
       <div class="modal-header">
