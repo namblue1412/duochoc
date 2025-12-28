@@ -9,18 +9,18 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 a { color: var(--text); text-decoration: none; }
 
 /* HEADER */
-.header { position: sticky; top: 0; z-index: 50; background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.header { position: sticky; top: 0; z-index: 50; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 12px 16px; }
 .bar { display: flex; align-items: center; gap: 12px; }
 .bar.spaced { justify-content: space-between; }
 .grow { flex: 1 1 auto; min-width: 0; }
 .grow h1 { margin: 0; font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pill { border: 1px solid var(--line); border-radius: 99px; padding: 4px 10px; color: var(--muted); font-size: 13px; background: rgba(255,255,255,0.03); white-space: nowrap; }
-.timer { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--text); }
+.timer { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--accent); font-size: 16px; }
 .help-icon { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--muted); cursor: pointer; flex: 0 0 auto; }
 
 /* UTILS & COMPONENTS */
-.mt0{margin-top:0}.mt6{margin-top:6px}.mt8{margin-top:8px}.mt10{margin-top:10px}.mb2{margin-bottom:2px}.hide{display:none!important}
+.mt0{margin-top:0}.mt6{margin-top:6px}.mt8{margin-top:8px}.mt10{margin-top:10px}.mb2{margin-bottom:2px}.mb10{margin-bottom:10px}.hide{display:none!important}
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
 .pad { padding: 20px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line); border-radius: 12px; padding: 10px 16px; background: #1a1a1a; color: var(--text); font-weight: 600; font-size: 14px; cursor: pointer; transition: 0.2s; touch-action: manipulation; }
@@ -36,6 +36,14 @@ textarea, input[type=number], select { width: 100%; background: #0f0f0f; border:
 /* LAYOUT */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .two { display: grid; grid-template-columns: 1fr 350px; gap: 24px; align-items: start; }
+
+/* STATUS BAR (NEW - Top of Content) */
+.status-bar {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.progress { height: 6px; background: #1a1a1a; border-radius: 99px; overflow: hidden; width: 100%; }
+.progress > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.3s; }
 
 /* QUIZ VIEW */
 .qview { display: grid; gap: 16px; }
@@ -55,8 +63,7 @@ textarea, input[type=number], select { width: 100%; background: #0f0f0f; border:
 /* SIDEBAR & MATRIX */
 aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-content; }
 .section { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-.progress { height: 6px; background: #1a1a1a; border-radius: 99px; overflow: hidden; margin: 10px 0; }
-.progress > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.3s; }
+
 .chips { display: flex; gap: 8px; flex-wrap: wrap; }
 .chip { border: 1px solid var(--line); border-radius: 99px; padding: 6px 12px; background: #0f0f0f; color: var(--muted); font-size: 12px; cursor: pointer; }
 .chip.active { color: #000; background: #fff; border-color: #fff; font-weight: 600; }
@@ -74,8 +81,8 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
 .mopt.correct { border-color: var(--ok); } 
 .mopt.wrong { border-color: var(--bad); }
 
-/* --- NAVIGATION GROUP (New) --- */
-.nav-group { display: flex; gap: 8px; }
+/* --- NAVIGATION GROUP --- */
+.nav-group { display: flex; gap: 8px; margin-top: 10px; }
 .nav-group #btnPrev, .nav-group #btnNext { flex: 1; }
 .nav-group #btnSubmit { flex: 0 0 auto; background: var(--accent); color: #000; border-color: var(--accent); }
 
@@ -102,22 +109,21 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
   .header h1 { font-size: 16px; max-width: 150px; }
   #headerInfo { display: none; }
   
-  /* --- THANH ĐIỀU HƯỚNG DÍNH ĐÁY MOBILE --- */
+  /* --- THANH ĐIỀU HƯỚNG DÍNH ĐÁY MOBILE (Fixed Bottom) --- */
   .nav-group {
     position: fixed;
     bottom: 0; left: 0; right: 0; z-index: 90;
-    background: rgba(17, 17, 17, 0.95);
+    background: rgba(17, 17, 17, 0.98);
     backdrop-filter: blur(10px);
     border-top: 1px solid #333;
     padding: 10px 16px;
-    padding-bottom: var(--safe-area-bottom);
+    padding-bottom: max(10px, var(--safe-area-bottom));
     box-shadow: 0 -4px 30px rgba(0,0,0,0.5);
-    margin: 0; /* Xoá margin để dính sát */
-    border-radius: 20px 20px 0 0;
+    margin: 0; 
   }
   
   /* Tạo khoảng trống để nội dung không bị thanh nav che mất */
-  main.wrap { padding-bottom: 90px; }
+  main.wrap { padding-bottom: 100px; }
   
   /* Modal full màn hình */
   .modal { max-height: 100%; border-radius: 0; height: 100%; border: none; }
