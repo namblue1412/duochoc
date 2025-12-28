@@ -9,18 +9,17 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 a { color: var(--text); text-decoration: none; }
 
 /* HEADER */
-.header { position: sticky; top: 0; z-index: 50; background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); height: 54px; display: flex; align-items: center; }
-.header .wrap { width: 100%; }
-.wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+.header { position: sticky; top: 0; z-index: 50; background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 12px 16px; }
 .bar { display: flex; align-items: center; gap: 12px; }
 .bar.spaced { justify-content: space-between; }
 .grow { flex: 1 1 auto; min-width: 0; }
 .grow h1 { margin: 0; font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pill { border: 1px solid var(--line); border-radius: 99px; padding: 4px 10px; color: var(--muted); font-size: 13px; background: rgba(255,255,255,0.03); white-space: nowrap; }
 .timer { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--text); }
-.help-icon { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--muted); cursor: pointer; flex: 0 0 auto; }
+.help-icon { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--muted); cursor: pointer; flex: 0 0 auto; }
 
-/* UTILS */
+/* UTILS & COMPONENTS */
 .mt0{margin-top:0}.mt6{margin-top:6px}.mt8{margin-top:8px}.mt10{margin-top:10px}.mb2{margin-bottom:2px}.hide{display:none!important}
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
 .pad { padding: 20px; }
@@ -37,7 +36,6 @@ textarea, input[type=number], select { width: 100%; background: #0f0f0f; border:
 /* LAYOUT */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .two { display: grid; grid-template-columns: 1fr 350px; gap: 24px; align-items: start; }
-main.wrap { padding-top: 20px; padding-bottom: 40px; }
 
 /* QUIZ VIEW */
 .qview { display: grid; gap: 16px; }
@@ -55,7 +53,7 @@ main.wrap { padding-top: 20px; padding-bottom: 40px; }
 .exp.show { display: block; animation: fadeIn 0.3s; }
 
 /* SIDEBAR & MATRIX */
-aside.side { display: grid; gap: 16px; position: sticky; top: 70px; height: max-content; }
+aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-content; }
 .section { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
 .progress { height: 6px; background: #1a1a1a; border-radius: 99px; overflow: hidden; margin: 10px 0; }
 .progress > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.3s; }
@@ -76,12 +74,13 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 70px; height: max-
 .mopt.correct { border-color: var(--ok); } 
 .mopt.wrong { border-color: var(--bad); }
 
-/* DESKTOP NAV GROUP */
-.desktop-nav { display: flex; }
-.mobile-nav { display: none; }
+/* --- NAVIGATION GROUP (New) --- */
+.nav-group { display: flex; gap: 8px; }
+.nav-group #btnPrev, .nav-group #btnNext { flex: 1; }
+.nav-group #btnSubmit { flex: 0 0 auto; background: var(--accent); color: #000; border-color: var(--accent); }
 
 /* MODAL */
-.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; z-index: 200; backdrop-filter: blur(4px); padding: 16px; }
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; z-index: 100; backdrop-filter: blur(4px); padding: 16px; }
 .modal-backdrop.show { display: flex; }
 .modal { width: 100%; max-width: 800px; max-height: 85vh; overflow-y: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
 .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 16px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--surface); }
@@ -89,7 +88,7 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 70px; height: max-
 .modal pre { white-space: pre-wrap; background: #000; border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 13px; color: #ccc; }
 
 /* =========================================
-   RESPONSIVE (TABLET & MOBILE)
+   RESPONSIVE
    ========================================= */
 @media (max-width: 900px) {
   .grid-2, .two { grid-template-columns: 1fr; }
@@ -99,70 +98,28 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 70px; height: max-
 
 @media (max-width: 600px) {
   .pad { padding: 16px; }
-  .header .wrap { padding: 0 14px; }
+  .header .wrap { padding: 10px 14px; }
+  .header h1 { font-size: 16px; max-width: 150px; }
+  #headerInfo { display: none; }
   
-  /* Ẩn bớt thông tin thừa trên Header */
-  #headerInfo, #headerTimer { display: none; }
-  .desktop-nav { display: none !important; }
-  .mobile-nav { display: flex !important; }
-
-  /* -------------------------------------
-     MOBILE DASHBOARD (CỐ ĐỊNH TRÊN CÙNG)
-     ------------------------------------- */
-
-  /* 1. Dòng 1: Đồng hồ & Điểm số (60% trái) */
-  #dashTimerRow {
-    position: fixed; top: 54px; left: 0; width: 60%;
-    z-index: 95; background: #0a0a0a;
-    padding: 8px 16px; margin: 0; border: none; height: 40px;
-    align-items: center; justify-content: flex-start; gap: 10px;
-  }
-
-  /* 2. Dòng 1: Số câu (40% phải) */
-  #sideMeta {
-    position: fixed; top: 54px; right: 0; width: 40%;
-    z-index: 95; background: #0a0a0a;
-    padding: 8px 16px; margin: 0; height: 40px;
-    text-align: right; line-height: 24px;
-    border-left: 1px solid #1a1a1a;
-  }
-
-  /* 3. Dòng 2: Thanh thời gian */
-  .progress {
-    position: fixed; top: 94px; left: 0; right: 0;
-    z-index: 96; margin: 0; border-radius: 0; height: 4px;
-    background: rgba(255,255,255,0.1);
-  }
-
-  /* 4. Dòng 3: Bộ lọc (Chips) */
-  #filterGroup {
-    position: fixed; top: 98px; left: 0; right: 0;
-    z-index: 94; background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-    padding: 8px 0; margin: 0 !important;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
-
-  /* Đẩy nội dung xuống để không bị Dashboard che */
-  #quizPanel { margin-top: 135px; } /* 54(Head) + 40(Timer) + 4(Prog) + 37(Chip) */
-
-  /* -------------------------------------
-     BOTTOM NAV (CỐ ĐỊNH DƯỚI CÙNG)
-     ------------------------------------- */
-  .nav-group.mobile-nav {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+  /* --- THANH ĐIỀU HƯỚNG DÍNH ĐÁY MOBILE --- */
+  .nav-group {
+    position: fixed;
+    bottom: 0; left: 0; right: 0; z-index: 90;
     background: rgba(17, 17, 17, 0.95);
     backdrop-filter: blur(10px);
     border-top: 1px solid #333;
     padding: 10px 16px;
     padding-bottom: var(--safe-area-bottom);
     box-shadow: 0 -4px 30px rgba(0,0,0,0.5);
-    margin: 0; border-radius: 20px 20px 0 0;
+    margin: 0; /* Xoá margin để dính sát */
+    border-radius: 20px 20px 0 0;
   }
   
+  /* Tạo khoảng trống để nội dung không bị thanh nav che mất */
   main.wrap { padding-bottom: 90px; }
+  
+  /* Modal full màn hình */
   .modal { max-height: 100%; border-radius: 0; height: 100%; border: none; }
 }
 
