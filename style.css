@@ -90,6 +90,9 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
 /* =========================================
    RESPONSIVE (MOBILE)
    ========================================= */
+/* =========================================
+   RESPONSIVE (MOBILE) - Cập nhật mới
+   ========================================= */
 @media (max-width: 900px) {
   .grid-2, .two { grid-template-columns: 1fr; }
   aside.side { position: static; margin-top: 20px; }
@@ -100,43 +103,79 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
   .pad { padding: 16px; }
   .header .wrap { padding: 10px 14px; }
   .header h1 { font-size: 16px; max-width: 150px; }
-  #headerInfo { display: none; }
   
-  /* --- 1. THANH TIẾN ĐỘ GHIM TRÊN CÙNG --- */
-  /* Ghim ngay dưới Header (Header cao khoảng 61px) */
+  /* Ẩn bớt đồng hồ nhỏ trên Header chính cho đỡ rối mắt */
+  #headerInfo, #headerTimer { display: none; }
+  
+  /* --- 1. CỤM ĐỒNG HỒ & ĐIỂM SỐ (Bên trái) --- */
+  /* Lấy từ aside.side đưa lên fixed */
+  aside.side .section .pad .bar.spaced {
+    position: fixed;
+    top: 53px;              /* Ngay dưới Header */
+    left: 0;
+    width: 60%;             /* Chiếm 60% bên trái */
+    z-index: 95;
+    background: rgba(10, 10, 10, 0.95);
+    margin: 0;
+    padding: 8px 16px;
+    border-bottom: none;
+    align-items: center;
+    display: flex;
+  }
+  
+  /* --- 2. CỤM SỐ CÂU (0/0 câu) (Bên phải) --- */
+  #sideMeta {
+    position: fixed;
+    top: 53px;              /* Ngang hàng với đồng hồ */
+    right: 0;
+    width: 40%;             /* Chiếm 40% còn lại */
+    text-align: right;
+    z-index: 95;
+    background: rgba(10, 10, 10, 0.95);
+    margin: 0;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 13px;
+    display: block !important; /* Đảm bảo luôn hiện */
+  }
+
+  /* --- 3. THANH TIẾN ĐỘ --- */
+  /* Nằm ngay dưới cụm Đồng hồ/Số câu */
   .progress {
     position: fixed;
-    top: 61px;              
+    top: 92px;              /* 53px (Top) + ~39px (Chiều cao dòng trên) */
     left: 0; right: 0;
-    z-index: 91;
+    z-index: 96;
     margin: 0;
     border-radius: 0;
-    height: 4px;            /* Mỏng lại cho đẹp */
+    height: 4px;
     background: rgba(255,255,255,0.1);
   }
 
-  /* --- 2. NHÓM NÚT LỌC (CHIPS) GHIM DƯỚI PROGRESS --- */
+  /* --- 4. CỤM NÚT LỌC (Chips) --- */
+  /* Nằm dưới thanh tiến độ */
   #filterGroup {
     position: fixed;
-    top: 65px;              /* 61px Header + 4px Progress */
+    top: 96px;              /* 92px + 4px */
     left: 0; right: 0;
-    z-index: 90;
-    background: rgba(10, 10, 10, 0.95); /* Màu nền đè nội dung */
+    z-index: 94;
+    background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
-    padding: 8px 16px;
+    padding: 8px 0;
     margin: 0 !important;
-    justify-content: center; /* Căn giữa các nút */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   }
 
-  /* --- 3. ĐẨY NỘI DUNG XUỐNG --- */
-  /* Để không bị Header + Progress + Chips che mất nội dung đầu tiên */
+  /* --- 5. ĐẨY NỘI DUNG XUỐNG --- */
+  /* Cách ra một khoảng lớn để không bị cụm điều khiển che mất câu hỏi */
   #quizPanel {
-    margin-top: 50px; 
+    margin-top: 100px; 
   }
   
-  /* --- 4. THANH ĐIỀU HƯỚNG DÍNH ĐÁY (Giữ nguyên) --- */
+  /* --- 6. NAV BOTTOM (Giữ nguyên) --- */
   .nav-group {
     position: fixed;
     bottom: 0; left: 0; right: 0; z-index: 90;
@@ -151,8 +190,5 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
   }
   
   main.wrap { padding-bottom: 90px; }
-  
   .modal { max-height: 100%; border-radius: 0; height: 100%; border: none; }
 }
-
-@keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
