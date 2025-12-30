@@ -1,0 +1,532 @@
+{
+  "meta": {
+    "title": "BỘ ĐỀ 40 CÂU HÓA DƯỢC TỔNG HỢP",
+    "time_limit_sec": 5400,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.1"
+  },
+  "questions": [
+    {
+      "id": "DL001",
+      "type": "single",
+      "question": "Độ tan của một chất được định nghĩa là gì?",
+      "options": [
+        "Khả năng tan của 1 chất trong dung môi",
+        "Tốc độ chất đó biến mất trong nước",
+        "Khối lượng chất tan trong 1 lít máu",
+        "Tỷ lệ giữa dạng ion hóa và không ion hóa"
+      ],
+      "correct": [0],
+      "explanation": "Độ tan là khả năng hòa tan của một chất trong một đơn vị dung môi nhất định.",
+      "tags": ["Độ tan"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL002",
+      "type": "single",
+      "question": "Hệ số phân bố LogP phản ánh tính chất nào của thuốc?",
+      "options": ["Tính acid", "Tính thân dầu/thân nước", "Độ bền nhiệt", "Trọng lượng phân tử"],
+      "correct": [1],
+      "explanation": "LogP là logarit tỉ số nồng độ thuốc trong octanol (dầu) và nước, phản ánh tính thân dầu.",
+      "tags": ["Hệ số phân bố"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL003",
+      "type": "single",
+      "question": "Thuốc muốn hấp thu tốt qua đường tiêu hóa cần có sự cân bằng giữa?",
+      "options": [
+        "Độ tan trong nước và tính thân dầu",
+        "Độ bền nhiệt và độ ẩm",
+        "Kích thước hạt và màu sắc",
+        "Tỷ trọng và áp suất thẩm thấu"
+      ],
+      "correct": [0],
+      "explanation": "Thuốc cần tan trong dịch tiêu hóa (nước) và thấm qua màng tế bào (lipid).",
+      "tags": ["Độ tan"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL004",
+      "type": "single",
+      "question": "Mục tiêu chính của quá trình chuyển hóa thuốc là gì?",
+      "options": ["Tăng độc tính", "Tăng tính phân cực để dễ đào thải", "Giảm độ tan trong nước", "Tăng thời gian lưu giữ trong mỡ"],
+      "correct": [1],
+      "explanation": "Chuyển hóa biến thuốc thành chất phân cực hơn, dễ tan trong nước để thải trừ qua thận.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL005",
+      "type": "single",
+      "question": "Hệ enzyme nào thực hiện các phản ứng oxy hóa ở Pha I?",
+      "options": ["Protease", "Cytochrome P450 (CYP450)", "Lipase", "Amylase"],
+      "correct": [1],
+      "explanation": "CYP450 là hệ enzyme gan quan trọng nhất cho chuyển hóa pha I.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL006",
+      "type": "single",
+      "question": "Phản ứng nào sau đây thuộc chuyển hóa Pha II?",
+      "options": ["Thủy phân", "Oxy hóa", "Liên hợp acid glucuronic", "Khử hóa"],
+      "correct": [2],
+      "explanation": "Pha II gồm các phản ứng liên hợp (glucuronic, sulfate, glutathione...).",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL007",
+      "type": "single",
+      "question": "Carbon bất đối (chiral center) là nguyên tử carbon gắn với?",
+      "options": [
+        "4 nhóm thế giống nhau",
+        "2 nhóm thế giống nhau",
+        "4 nhóm thế khác nhau đôi một",
+        "1 liên kết đôi"
+      ],
+      "correct": [2],
+      "explanation": "C bất đối gắn với 4 nhóm thế hoàn toàn khác nhau.",
+      "tags": ["Hóa lập thể"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL008",
+      "type": "single",
+      "question": "Hỗn hợp Racemic chứa tỷ lệ các đối quang là bao nhiêu?",
+      "options": ["25:75", "50:50", "0:100", "10:90"],
+      "correct": [1],
+      "explanation": "Hỗn hợp racemic chứa 50% mỗi đối quang và không làm quay mặt phẳng ánh sáng phân cực.",
+      "tags": ["Hóa lập thể"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL009",
+      "type": "single",
+      "question": "NSAIDs là nhóm thuốc viết tắt của cụm từ nào?",
+      "options": [
+        "Thuốc giảm đau gây nghiện",
+        "Thuốc kháng viêm không steroid",
+        "Thuốc trợ tim",
+        "Thuốc hạ huyết áp"
+      ],
+      "correct": [1],
+      "explanation": "Non-Steroidal Anti-Inflammatory Drugs.",
+      "tags": ["NSAIDs"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL010",
+      "type": "single",
+      "question": "Cơ chế chính của NSAIDs là ức chế enzyme nào?",
+      "options": ["MAO", "Cyclooxygenase (COX)", "ACE", "HMG-CoA Reductase"],
+      "correct": [1],
+      "explanation": "Ức chế COX ngăn tạo Prostaglandin gây viêm.",
+      "tags": ["NSAIDs"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL011",
+      "type": "single",
+      "question": "Sự khác biệt giữa LogP và LogD là gì?",
+      "options": [
+        "LogD phụ thuộc vào pH môi trường",
+        "LogP phụ thuộc vào áp suất",
+        "LogD chỉ dùng cho chất lỏng",
+        "Không có sự khác biệt"
+      ],
+      "correct": [0],
+      "explanation": "LogD là hệ số phân bố biểu kiến, tính đến sự ion hóa tại pH cụ thể.",
+      "tags": ["Độ tan"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL012",
+      "type": "single",
+      "question": "Tại sao việc tạo muối Natri (Na+) lại làm tăng độ tan của Acid yếu?",
+      "options": [
+        "Tăng tính thân dầu",
+        "Dễ dàng solvate hóa bởi các phân tử nước",
+        "Làm tăng kích thước phân tử",
+        "Tạo ra liên kết cộng hóa trị với nước"
+      ],
+      "correct": [1],
+      "explanation": "Dạng muối ion hóa dễ tương tác với các lưỡng cực của nước.",
+      "tags": ["Độ tan"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL013",
+      "type": "single",
+      "question": "Brimonidine tartrate là một ví dụ về việc sử dụng muối gì để tăng độ tan?",
+      "options": ["Muối vô cơ", "Muối hữu cơ tan trong nước", "Muối hữu cơ tan trong dầu", "Hỗn hợp dầu/nước"],
+      "correct": [1],
+      "explanation": "Acid tartaric là acid hữu cơ dùng tạo muối tan tốt trong nước cho dược chất.",
+      "tags": ["Độ tan"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL014",
+      "type": "single",
+      "question": "Vai trò của Vitamin K tan trong dầu là nhờ cấu trúc nào?",
+      "options": ["Vòng thơm cồng kềnh", "Chuỗi hydrocarbon dài (phytol)", "Nhóm acid sulfonic", "Nhóm hydroxyl tự do"],
+      "correct": [1],
+      "explanation": "Chuỗi phytol dài làm tăng tính kỵ nước của Vitamin K.",
+      "tags": ["Độ tan"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL015",
+      "type": "single",
+      "question": "Tiền dược (Prodrug) thường được thiết kế để?",
+      "options": ["Tăng độ tan hoặc tính thấm", "Giảm tác dụng của thuốc", "Tăng khả năng bị phá hủy ở dạ dày", "Làm thuốc không tan trong nước"],
+      "correct": [0],
+      "explanation": "Tiền dược giúp cải thiện dược động học của dược chất gốc.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL016",
+      "type": "single",
+      "question": "Phản ứng chuyển hóa Simvastatin từ dạng lactone sang dạng acid hoạt tính là phản ứng gì?",
+      "options": ["Oxy hóa", "Khử hóa", "Thủy phân", "Liên hợp"],
+      "correct": [2],
+      "explanation": "Vòng lactone bị thủy phân bởi esterase tạo dạng acid carboxylic có hoạt tính.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL017",
+      "type": "single",
+      "question": "Chất độc NAPQI được tạo thành từ chuyển hóa Paracetamol qua con đường nào?",
+      "options": ["Liên hợp glucuronic", "Oxy hóa bởi CYP2E1/CYP3A4", "Liên hợp sulfate", "Thủy phân amide"],
+      "correct": [1],
+      "explanation": "Một phần nhỏ Paracetamol bị oxy hóa thành NAPQI cực độc cho gan.",
+      "tags": ["NSAIDs", "Chuyển hóa"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL018",
+      "type": "single",
+      "question": "N-acetylcystein giải độc Paracetamol bằng cách nào?",
+      "options": [
+        "Ức chế hấp thu Paracetamol",
+        "Cung cấp nhóm -SH để trung hòa NAPQI",
+        "Kích thích nôn",
+        "Tăng đào thải qua nước tiểu"
+      ],
+      "correct": [1],
+      "explanation": "N-acetylcystein đóng vai trò như 'mồi nhử' thay thế glutathione gắn vào NAPQI.",
+      "tags": ["NSAIDs"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL019",
+      "type": "single",
+      "question": "Đồng phân cấu dạng khác đồng phân cấu hình ở điểm nào?",
+      "options": [
+        "Chỉ cần quay quanh liên kết đơn để chuyển đổi",
+        "Phải bẻ gãy liên kết hóa học mới chuyển đổi được",
+        "Luôn có tính quang hoạt",
+        "Không có sự khác biệt"
+      ],
+      "correct": [0],
+      "explanation": "Cấu dạng (conformation) là sự xoay tự do quanh liên kết đơn.",
+      "tags": ["Hóa lập thể"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL020",
+      "type": "single",
+      "question": "Hệ thống R/S dùng để xác định gì?",
+      "options": [
+        "Hướng quay cực của thuốc",
+        "Cấu hình tuyệt đối của trung tâm bất đối",
+        "Nhiệt độ sôi",
+        "Tên gọi theo dược điển Anh"
+      ],
+      "correct": [1],
+      "explanation": "R (Rectus - phải) và S (Sinister - trái) xác định sắp xếp không gian của nhóm thế.",
+      "tags": ["Hóa lập thể"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL021",
+      "type": "single",
+      "question": "Diastereomers (Đồng phân không đối quang) có tính chất lý hóa như thế nào?",
+      "options": [
+        "Hoàn toàn giống nhau",
+        "Khác nhau (nhiệt độ nóng chảy, độ tan...)",
+        "Chỉ khác nhau hướng quay cực",
+        "Giống nhau về độ tan trong dầu"
+      ],
+      "correct": [1],
+      "explanation": "Diastereomers không phải ảnh của nhau qua gương nên tính chất lý hóa khác nhau.",
+      "tags": ["Hóa lập thể"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL022",
+      "type": "single",
+      "question": "Esmeprazole (Nexium) là đồng phân nào của Omeprazole?",
+      "options": ["Đồng phân R", "Đồng phân S", "Hỗn hợp Racemic", "Đồng phân hình học Cis"],
+      "correct": [1],
+      "explanation": "Esomeprazole là (S)-Omeprazole đơn lẻ.",
+      "tags": ["Hóa lập thể"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL023",
+      "type": "single",
+      "question": "Aspirin (Acid acetylsalicylic) ức chế COX theo cách nào?",
+      "options": [
+        "Thuận nghịch",
+        "Không thuận nghịch qua việc acetyl hóa Serine",
+        "Ức chế chọn lọc COX-2",
+        "Cạnh tranh tại vị trí gắn của ATP"
+      ],
+      "correct": [1],
+      "explanation": "Aspirin gắn nhóm acetyl vào Ser529 (COX-1) hoặc Ser516 (COX-2) làm enzyme bất hoạt vĩnh viễn.",
+      "tags": ["NSAIDs"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL024",
+      "type": "single",
+      "question": "Thuốc nào sau đây là dẫn chất của acid Oxicam?",
+      "options": ["Ibuprofen", "Diclofenac", "Piroxicam", "Indomethacin"],
+      "correct": [2],
+      "explanation": "Piroxicam, Meloxicam thuộc nhóm Oxicam có tính acid enolic.",
+      "tags": ["NSAIDs"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL025",
+      "type": "single",
+      "question": "Cấu trúc chung của đa số NSAIDs có đặc điểm gì?",
+      "options": [
+        "Có một nhóm acid mạnh và một nhóm base mạnh",
+        "Có một trung tâm acid gắn với một nhóm kỵ nước",
+        "Chứa vòng steroid",
+        "Luôn có nhóm sulfonamide"
+      ],
+      "correct": [1],
+      "explanation": "SAR của NSAID thường gồm 1 nhóm acid (COOH, enol) và các vòng thơm kỵ nước.",
+      "tags": ["NSAIDs"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL026",
+      "type": "single",
+      "question": "Tại sao Celecoxib ít gây loét dạ dày hơn Aspirin?",
+      "options": [
+        "Vì nó tan tốt trong nước",
+        "Vì nó ức chế chọn lọc COX-2, bảo tồn COX-1 ở dạ dày",
+        "Vì nó không có tính acid",
+        "Vì nó bị chuyển hóa nhanh ở gan"
+      ],
+      "correct": [1],
+      "explanation": "COX-1 tạo Prostaglandin bảo vệ niêm mạc dạ dày. Celecoxib tránh ức chế COX-1.",
+      "tags": ["NSAIDs"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL027",
+      "type": "single",
+      "question": "Theo quy tắc CIP, thứ tự ưu tiên của các nhóm sau là gì: -OH, -COOH, -CH2OH, -H?",
+      "options": [
+        "-OH > -COOH > -CH2OH > -H",
+        "-COOH > -OH > -CH2OH > -H",
+        "-H > -OH > -CH2OH > -COOH",
+        "-CH2OH > -OH > -COOH > -H"
+      ],
+      "correct": [0],
+      "explanation": "Dựa trên số hiệu nguyên tử (O > C > H). Giữa 2 nhóm C, -COOH (C gắn với 3 O) > -CH2OH (C gắn với 1 O).",
+      "tags": ["Hóa lập thể"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DL028",
+      "type": "single",
+      "question": "Phản ứng liên hợp với Glutathione (GSH) thường nhắm vào các nhóm chức nào?",
+      "options": [
+        "Nhóm chức ái nhân (nucleophile)",
+        "Nhóm chức ái điện tử (electrophile) độc hại",
+        "Nhóm chức trơ",
+        "Chỉ các vòng thơm"
+      ],
+      "correct": [1],
+      "explanation": "GSH (ái nhân) tấn công các chất trung gian ái điện tử để giải độc.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DL029",
+      "type": "single",
+      "question": "Dưới đây là một phần cấu trúc của Paracetamol. Tạp chất liên quan A của Paracetamol trong dược điển là chất nào?",
+      "options": ["p-Nitrophenol", "p-Aminophenol", "Acetanilide", "o-Acetylparacetamol"],
+      "correct": [1],
+      "explanation": "p-Aminophenol là nguyên liệu tổng hợp và cũng là sản phẩm phân hủy (Tạp A).",
+      "tags": ["NSAIDs"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DL030",
+      "type": "single",
+      "question": "Sự chuyển đổi (bioinversion) từ dạng (R)-Ibuprofen sang (S)-Ibuprofen xảy ra ở đâu?",
+      "options": ["Trong dạ dày", "Trong huyết tương", "Tại gan", "Trong thận"],
+      "correct": [2],
+      "explanation": "Quá trình chuyển đổi cấu hình từ R sang S diễn ra tại gan thông qua dẫn chất thioester với Coenzyme A.",
+      "tags": ["Hóa lập thể", "NSAIDs"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DL031",
+      "type": "single",
+      "question": "Giá trị LogP tối ưu để thuốc có thể vượt qua hàng rào máu não là khoảng?",
+      "options": ["< 0", "1 - 3", "2.0", "> 5"],
+      "correct": [2],
+      "explanation": "LogP quanh mức 2.0 thường cho phép thuốc thấm qua hàng rào máu não tốt nhất.",
+      "tags": ["Độ tan"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL032",
+      "type": "single",
+      "question": "Phương pháp định lượng Paracetamol bằng đo phổ tử ngoại (UV) thường thực hiện ở bước sóng nào?",
+      "options": ["243 nm", "257 nm", "280 nm", "310 nm"],
+      "correct": [0],
+      "explanation": "Paracetamol có cực đại hấp thụ ở khoảng 243-245 nm trong môi trường acid.",
+      "tags": ["NSAIDs"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL033",
+      "type": "single",
+      "question": "Cấu trúc nào dưới đây đóng vai trò là 'trung tâm acid' trong Celecoxib?",
+      "options": ["Nhóm Carboxylic", "Nhóm Sulfonamide (-SO2NH2)", "Nhóm Enol", "Vòng Tetrazole"],
+      "correct": [1],
+      "explanation": "Trong các 'coxib', nhóm sulfonamide hoặc sulfone thay thế cho nhóm acid carboxylic truyền thống.",
+      "tags": ["NSAIDs"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DL034",
+      "type": "single",
+      "question": "Phản ứng thủy phân Procainamide chậm hơn Procaine do?",
+      "options": ["Nhóm Amide bền hơn nhóm Ester đối với sự thủy phân", "Procainamide tan kém hơn", "Procainamide có vòng thơm lớn hơn", "Do ảnh hưởng của pH"],
+      "correct": [0],
+      "explanation": "Amide bền hơn ester, giúp Procainamide có thời gian bán thải dài hơn Procaine.",
+      "tags": ["Chuyển hóa"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DL035",
+      "type": "single",
+      "question": "Trong hóa lập thể, ký hiệu (d) và (l) tương ứng với?",
+      "options": ["(+) và (-)", "R và S", "Cis và Trans", "E và Z"],
+      "correct": [0],
+      "explanation": "d (dextrorotatory - hữu truyền) là (+) và l (levorotatory - tả truyền) là (-).",
+      "tags": ["Hóa lập thể"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL036",
+      "type": "single",
+      "question": "Indomethacin thuộc nhóm dẫn chất acid nào?",
+      "options": ["Acid salicylic", "Acid indole-acetic", "Acid propionic", "Acid fenamic"],
+      "correct": [1],
+      "explanation": "Indomethacin có khung indole gắn nhóm acid acetic.",
+      "tags": ["NSAIDs"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL037",
+      "type": "single",
+      "question": "Tác dụng phụ gây cơn hen giả (pseudo-asthma) của NSAIDs là do tăng tổng hợp chất nào?",
+      "options": ["Prostaglandin", "Leukotrienes", "Thromboxane", "Histamine"],
+      "correct": [1],
+      "explanation": "Ức chế COX làm acid arachidonic chuyển sang đường LOX tạo Leukotrienes gây co thắt phế quản.",
+      "tags": ["NSAIDs"],
+      "difficulty": "normal",
+      "image": null
+    },
+    {
+      "id": "DL038",
+      "type": "single",
+      "question": "Tại sao không dùng Aspirin cho trẻ em bị nhiễm virus (hội chứng Reye)?",
+      "options": ["Gây điếc", "Gây tổn thương gan và não cấp tính", "Gây lùn", "Gây sâu răng"],
+      "correct": [1],
+      "explanation": "Aspirin liên quan đến hội chứng Reye nguy hiểm ở trẻ em.",
+      "tags": ["NSAIDs"],
+      "difficulty": "easy",
+      "image": null
+    },
+    {
+      "id": "DL039",
+      "type": "single",
+      "question": "Đồng phân Meso là gì?",
+      "options": [
+        "Chất có trung tâm bất đối nhưng không quang hoạt do có mặt phẳng đối xứng nội phân tử",
+        "Hỗn hợp của 2 đối quang",
+        "Chất luôn làm quay cực sang phải",
+        "Đồng phân hình học dạng Trans"
+      ],
+      "correct": [0],
+      "explanation": "Hợp chất meso có mặt phẳng đối xứng làm triệt tiêu tính quang hoạt.",
+      "tags": ["Hóa lập thể"],
+      "difficulty": "hard",
+      "image": null
+    },
+    {
+      "id": "DL040",
+      "type": "single",
+      "question": "Sự kết hợp Paracetamol và Codeine nhằm mục đích gì?",
+      "options": ["Tăng độ tan", "Hiệp đồng tác dụng giảm đau", "Giảm độc tính gan", "Dễ bào chế"],
+      "correct": [1],
+      "explanation": "Phối hợp thuốc giảm đau ngoại vi và trung ương tăng hiệu quả điều trị.",
+      "tags": ["NSAIDs"],
+      "difficulty": "easy",
+      "image": null
+    }
+  ]
+}
