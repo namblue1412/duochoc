@@ -70,6 +70,11 @@
       "id": "benhhoc",
       "title": "Lâm Sàng Nội - Đề 6",
       "file": "lsbh06.json"
+    },
+    {
+      "id": "hduoc",
+      "title": "Hoá Dược 1 - Đề 1",
+      "file": "hduoc1.json"
     }
   ]
 }
