@@ -55,6 +55,11 @@
       "id": "hduoc",
       "title": "Hoá Dược 1 - Đề 1",
       "file": "hduoc1.json"
+    },
+    {
+      "id": "dly",
+      "title": "Dược lý 2 - Đề 1",
+      "file": "dly2_01.json"
     }
   ]
 }
