@@ -1,0 +1,762 @@
+{
+  "meta": {
+    "title": "ĐỀ THI DƯỢC LÝ 2 - PHẦN KHÁNG SINH BETA-LACTAM",
+    "time_limit_sec": 900,
+    "shuffle_questions": true,
+    "shuffle_options": true,
+    "pass_mark": 0.5,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "BL001",
+      "type": "single",
+      "question": "Nhóm kháng sinh nào sau đây có cơ chế tác động bằng cách ức chế tổng hợp thành tế bào vi khuẩn thông qua gắn vào PBP (Penicillin-Binding Protein)?",
+      "options": [
+        "A. Aminoglycosid",
+        "B. Macrolid",
+        "C. Beta-lactam",
+        "D. Tetracyclin"
+      ],
+      "correct": [2],
+      "explanation": "Beta-lactam (bao gồm Penicillin, Cephalosporin, Carbapenem, Monobactam) có cơ chế tác động chính là ức chế hoạt tính của PBP, dẫn đến ức chế tổng hợp thành tế bào vi khuẩn.",
+      "tags": ["Beta-lactam", "Cơ chế tác động"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL002",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây thuộc nhóm Penicillin tự nhiên, có phổ hẹp, chủ yếu trên vi khuẩn Gram dương và bị phá hủy bởi penicillinase?",
+      "options": [
+        "A. Amoxicillin",
+        "B. Oxacillin",
+        "C. Penicillin G",
+        "D. Piperacillin"
+      ],
+      "correct": [2],
+      "explanation": "Penicillin G (Benzylpenicillin) là penicillin tự nhiên, phổ hẹp (Gram dương, một số Gram âm như Neisseria, xoắn khuẩn), và bị phá hủy bởi penicillinase của tụ cầu và beta-lactamase của Gram âm.",
+      "tags": ["Penicillin", "Phổ kháng khuẩn"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL003",
+      "type": "single",
+      "question": "Penicillin nào sau đây thuộc nhóm 'kháng penicillinase' (Penicillin M) và là lựa chọn đầu tay cho nhiễm MSSA?",
+      "options": [
+        "A. Ampicillin",
+        "B. Penicillin V",
+        "C. Oxacillin",
+        "D. Ticarcillin"
+      ],
+      "correct": [2],
+      "explanation": "Oxacillin thuộc nhóm Penicillin kháng penicillinase (nhóm M). Chúng ổn định với penicillinase của tụ cầu và là lựa chọn ưu tiên cho nhiễm khuẩn do Staphylococcus aureus nhạy cảm methicillin (MSSA).",
+      "tags": ["Penicillin M", "MSSA"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL004",
+      "type": "single",
+      "question": "Phối hợp kháng sinh nào sau đây được sử dụng để mở rộng phổ và bảo vệ kháng sinh khỏi beta-lactamase?",
+      "options": [
+        "A. Penicillin G + Probeneci",
+        "B. Amoxicillin + Acid clavulanic",
+        "C. Oxacillin + Gentamicin",
+        "D. Ceftriaxone + Aztreonam"
+      ],
+      "correct": [1],
+      "explanation": "Amoxicillin + Acid clavulanic (Augmentin) là phối hợp giữa một aminopenicillin và chất ức chế beta-lactamase. Clavulanate bảo vệ amoxicillin khỏi bị phá hủy bởi nhiều loại beta-lactamase, mở rộng phổ tác dụng.",
+      "tags": ["Chất ức chế beta-lactamase", "Phối hợp"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL005",
+      "type": "single",
+      "question": "Cephalosporin thế hệ 1 có đặc điểm nào sau đây?",
+      "options": [
+        "A. Phổ rất rộng trên Gram âm, kém trên Gram dương.",
+        "B. Phổ mạnh trên Gram dương, hẹp trên Gram âm, kháng được penicillinase của tụ cầu.",
+        "C. Có hoạt tính mạnh trên Pseudomonas aeruginosa.",
+        "D. Là lựa chọn chính cho nhiễm khuẩn do ESBL."
+      ],
+      "correct": [1],
+      "explanation": "Cephalosporin thế hệ 1 (vd: Cefazolin) có phổ mạnh trên vi khuẩn Gram dương (Staphylococcus, Streptococcus), phổ hẹp trên Gram âm (một số E. coli, Klebsiella nhạy cảm), và ổn định với penicillinase của tụ cầu (MSSA).",
+      "tags": ["Cephalosporin", "Thế hệ 1"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL006",
+      "type": "single",
+      "question": "Kháng sinh nào thuộc Cephalosporin thế hệ 3, có thời gian bán thải dài (~8 giờ), có thể tiêm 1 lần/ngày và vào dịch não tủy tốt?",
+      "options": [
+        "A. Cefazolin",
+        "B. Cefuroxime",
+        "C. Ceftriaxone",
+        "D. Cefepime"
+      ],
+      "correct": [2],
+      "explanation": "Ceftriaxone là cephalosporin thế hệ 3 có thời gian bán thải dài (khoảng 8 giờ), cho phép dùng 1-2 lần/ngày. Nó phân bố tốt vào dịch não tủy, được dùng trong viêm màng não mủ.",
+      "tags": ["Cephalosporin", "Thế hệ 3", "Ceftriaxone"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL007",
+      "type": "single",
+      "question": "Cephalosporin thế hệ 4 (Cefepime) có ưu điểm nổi bật nào so với thế hệ 3?",
+      "options": [
+        "A. Rẻ tiền hơn.",
+        "B. Uống được.",
+        "C. Ổn định hơn với enzyme AmpC beta-lactamase và có phổ cân bằng giữa Gram dương và Gram âm.",
+        "D. Có hoạt tính mạnh nhất trên MRSA."
+      ],
+      "correct": [2],
+      "explanation": "Cefepime (thế hệ 4) có cấu trúc zwitterion, ổn định hơn với nhiều beta-lactamase, đặc biệt là AmpC. Nó có phổ cân bằng, mạnh cả trên Gram dương (tương tự CG1) và Gram âm (tương tự CG3), bao gồm Pseudomonas.",
+      "tags": ["Cephalosporin", "Thế hệ 4", "Cefepime"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL008",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây là Cephalosporin thế hệ 5, có hoạt tính trên MRSA?",
+      "options": [
+        "A. Ceftazidime",
+        "B. Ceftaroline",
+        "C. Cefoxitin",
+        "D. Cefoperazon"
+      ],
+      "correct": [1],
+      "explanation": "Ceftaroline là cephalosporin thế hệ 5 đầu tiên được FDA chấp thuận. Nó có cấu trúc đặc biệt cho phép gắn vào PBP2a của MRSA, do đó có hoạt tính trên MRSA và các vi khuẩn Gram dương kháng thuốc khác.",
+      "tags": ["Cephalosporin", "Thế hệ 5", "MRSA", "Ceftaroline"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL009",
+      "type": "single",
+      "question": "Carbapenem có đặc điểm nào sau đây?",
+      "options": [
+        "A. Phổ rất hẹp, chỉ trên vi khuẩn Gram dương.",
+        "B. Phổ rất rộng, bao phủ cả vi khuẩn Gram dương, Gram âm (bao gồm Pseudomonas, Acinetobacter), và kỵ khí; thường là lựa chọn cuối cùng cho nhiễm khuẩn đa kháng.",
+        "C. Chỉ có hoạt tính trên vi khuẩn Gram âm hiếu khí.",
+        "D. Bị phá hủy bởi hầu hết các beta-lactamase, kể cả ESBL và carbapenemase."
+      ],
+      "correct": [1],
+      "explanation": "Carbapenem (Imipenem, Meropenem, Doripenem, Ertapenem) có phổ kháng khuẩn rất rộng, bao phủ vi khuẩn Gram dương (trừ MRSA, VRE), Gram âm (kể cả Pseudomonas, Acinetobacter), và kỵ khí (Bacteroides fragilis). Chúng ổn định với hầu hết beta-lactamase (trừ carbapenemase) và thường là lựa chọn điều trị nhiễm khuẩn nặng, đa kháng, đặc biệt là ESBL.",
+      "tags": ["Carbapenem", "Phổ kháng khuẩn"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL010",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây là Monobactam, chỉ có tác dụng trên vi khuẩn Gram âm hiếu khí và không có tác dụng trên vi khuẩn Gram dương và kỵ khí?",
+      "options": [
+        "A. Aztreonam",
+        "B. Imipenem",
+        "C. Ticarcillin",
+        "D. Vancomycin"
+      ],
+      "correct": [0],
+      "explanation": "Aztreonam là đại diện duy nhất của nhóm Monobactam. Nó có phổ chọn lọc trên vi khuẩn Gram âm hiếu khí (Enterobacteriaceae, Pseudomonas aeruginosa, Haemophilus, Neisseria), không tác dụng trên Gram dương và vi khuẩn kỵ khí. Nó không bị ảnh hưởng bởi hầu hết beta-lactamase của Gram dương.",
+      "tags": ["Monobactam", "Aztreonam"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL011",
+      "type": "single",
+      "question": "Tác dụng không mong muốn (ADR) nghiêm trọng nào có thể xảy ra với Penicillin?",
+      "options": [
+        "A. Độc tính trên thính giác (gây điếc).",
+        "B. Viêm thận mô kẽ (đặc biệt với Methicillin).",
+        "C. Rối loạn thị giác.",
+        "D. Rối loạn tâm thần."
+      ],
+      "correct": [1],
+      "explanation": "Methicillin (một penicillin kháng penicillinase) có thể gây viêm thận mô kẽ, mặc dù hiện nay ít dùng. Tất cả penicillin đều có nguy cơ gây dị ứng, từ phát ban đến sốc phản vệ. Liều cao penicillin G có thể gây co giật, đặc biệt ở bệnh nhân suy thận.",
+      "tags": ["Penicillin", "ADR"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL012",
+      "type": "single",
+      "question": "ADR đặc trưng của Cephalosporin có chứa nhóm methyl-thio-tetrazol (MTT) như Cefoperazon, Cefotetan là gì?",
+      "options": [
+        "A. Độc tính trên thần kinh thính giác.",
+        "B. Gây hội chứng giống disulfiram (không uống được rượu) và rối loạn đông máu.",
+        "C. Gây vàng răng vĩnh viễn ở trẻ em.",
+        "D. Gây xơ phổi."
+      ],
+      "correct": [1],
+      "explanation": "Các cephalosporin có nhóm MTT (Cefoperazon, Cefotetan, Cefamandol) có thể gây phản ứng giống disulfiram (buồn nôn, nôn, đỏ bừng khi uống rượu) do ức chế aldehyde dehydrogenase. Chúng cũng có thể gây rối loạn đông máu (giảm prothrombin) do ức chế tổng hợp vitamin K.",
+      "tags": ["Cephalosporin", "ADR", "Nhóm MTT"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL013",
+      "type": "single",
+      "question": "Imipenem thường được phối hợp với Cilastatin vì lý do gì?",
+      "options": [
+        "A. Để mở rộng phổ kháng khuẩn lên vi rút.",
+        "B. Để tăng hấp thu qua đường tiêu hóa.",
+        "C. Để ngăn chặn sự phá hủy của Imipenem bởi men dehydrogenpeptidase I ở ống thận, từ đó giảm độc tính thận và tăng nồng độ thuốc trong nước tiểu.",
+        "D. Để giảm nguy cơ gây co giật."
+      ],
+      "correct": [2],
+      "explanation": "Imipenem bị thủy phân bởi men dehydrogenpeptidase I (DHP-1) ở ống lượn gần của thận. Cilastatin là chất ức chế men này, giúp bảo vệ Imipenem, tăng nồng độ thuốc hoạt động trong nước tiểu và giảm nguy cơ độc tính thận của một chất chuyển hóa.",
+      "tags": ["Carbapenem", "Imipenem", "Cilastatin"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL014",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây thuộc nhóm Ureidopenicillin, có phổ rất rộng, hoạt tính mạnh trên Pseudomonas aeruginosa và thường được phối hợp với Tazobactam?",
+      "options": [
+        "A. Ampicillin",
+        "B. Piperacillin",
+        "C. Ticarcillin",
+        "D. Oxacillin"
+      ],
+      "correct": [1],
+      "explanation": "Piperacillin là một Ureidopenicillin. Nó có phổ rất rộng, mạnh trên Gram âm (bao gồm Pseudomonas aeruginosa, Klebsiella), Gram dương và kỵ khí (Bacteroides). Phối hợp Piperacillin/Tazobactam (TAZOCIN) được dùng cho nhiễm khuẩn nặng trong bệnh viện.",
+      "tags": ["Penicillin", "Ureidopenicillin", "Piperacillin"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL015",
+      "type": "single",
+      "question": "Cephalosporin nào sau đây thuộc thế hệ 2 và có hoạt tính tốt trên vi khuẩn kỵ khí Bacteroides fragilis?",
+      "options": [
+        "A. Cefuroxime",
+        "B. Cefaclor",
+        "C. Cefoxitin",
+        "D. Cefprozil"
+      ],
+      "correct": [2],
+      "explanation": "Cefoxitin (và Cefotetan) thuộc nhóm cephamycin, được xếp vào cephalosporin thế hệ 2. Chúng có hoạt tính tốt trên vi khuẩn kỵ khí, đặc biệt là Bacteroides fragilis, do có nhóm methoxy ở vị trí 7-alpha giúp ổn định với beta-lactamase của kỵ khí.",
+      "tags": ["Cephalosporin", "Thế hệ 2", "Kỵ khí", "Cefoxitin"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL016",
+      "type": "single",
+      "question": "Chỉ định chính của Vancomycin (một glycopeptid) là gì?",
+      "options": [
+        "A. Nhiễm khuẩn Gram âm thông thường.",
+        "B. Nhiễm khuẩn do vi khuẩn nội bào (Chlamydia, Mycoplasma).",
+        "C. Nhiễm khuẩn nặng do vi khuẩn Gram dương kháng, đặc biệt là MRSA, Enterococcus (kháng Ampicillin) và viêm đại tràng giả mạc do Clostridium difficile (đường uống).",
+        "D. Nhiễm khuẩn đường tiểu không biến chứng."
+      ],
+      "correct": [2],
+      "explanation": "Vancomycin là kháng sinh quan trọng trong điều trị nhiễm khuẩn Gram dương kháng thuốc: MRSA, Enterococcus kháng ampicillin (nhưng không phải VRE), và liên cầu kháng. Dạng uống được dùng để điều trị viêm đại tràng giả mạc do C. difficile.",
+      "tags": ["Glycopeptid", "Vancomycin", "Chỉ định"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL017",
+      "type": "single",
+      "question": "Cơ chế đề kháng nào sau đây KHÔNG phải là cơ chế phổ biến của vi khuẩn đối với beta-lactam?",
+      "options": [
+        "A. Sản xuất beta-lactamase.",
+        "B. Thay đổi đích tác dụng PBP (ví dụ PBP2a ở MRSA).",
+        "C. Giảm tính thấm của màng ngoài (ở Gram âm).",
+        "D. Thay đổi tiểu đơn vị 30S của ribosome."
+      ],
+      "correct": [3],
+      "explanation": "Ba cơ chế đầu (A, B, C) là cơ chế đề kháng phổ biến của vi khuẩn với beta-lactam. Cơ chế D (thay đổi ribosome) là cơ chế đề kháng của vi khuẩn với các kháng sinh nhóm aminoglycosid, tetracyclin, macrolid... chứ không phải với beta-lactam.",
+      "tags": ["Beta-lactam", "Cơ chế đề kháng"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL018",
+      "type": "single",
+      "question": "ESBL (Extended-Spectrum Beta-Lactamase) là enzyme do vi khuẩn tiết ra, có khả năng phá hủy những kháng sinh nào sau đây?",
+      "options": [
+        "A. Chỉ Penicillin.",
+        "B. Chỉ Cephalosporin thế hệ 1 và 2.",
+        "C. Hầu hết Penicillin, Cephalosporin (kể cả thế hệ 3,4) và Monobactam (Aztreonam).",
+        "D. Chỉ Carbapenem."
+      ],
+      "correct": [2],
+      "explanation": "ESBL là beta-lactamase phổ rộng, có khả năng thủy phân hầu hết các Penicillin, Cephalosporin (từ thế hệ 1 đến 4) và Monobactam (Aztreonam). Chúng không phá hủy được Carbapenem, do đó Carbapenem là lựa chọn điều trị chính cho nhiễm khuẩn ESBL.",
+      "tags": ["ESBL", "Cơ chế đề kháng"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL019",
+      "type": "single",
+      "question": "Carbapenem nào sau đây có thời gian bán thải dài, được dùng 1 lần/ngày, nhưng không có hoạt tính đáng kể trên Pseudomonas aeruginosa?",
+      "options": [
+        "A. Imipenem",
+        "B. Meropenem",
+        "C. Doripenem",
+        "D. Ertapenem"
+      ],
+      "correct": [3],
+      "explanation": "Ertapenem có thời gian bán thải dài (~4 giờ), cho phép dùng 1 lần/ngày. Tuy có phổ rộng trên nhiều vi khuẩn Gram dương, Gram âm và kỵ khí, nhưng nó không có hoạt tính đáng kể trên Pseudomonas aeruginosa và Acinetobacter, khác với các carbapenem khác (Imipenem, Meropenem, Doripenem).",
+      "tags": ["Carbapenem", "Ertapenem"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL020",
+      "type": "single",
+      "question": "Đối với bệnh nhân có tiền sử dị ứng nặng (sốc phản vệ) với Penicillin, việc sử dụng Cephalosporin nên như thế nào?",
+      "options": [
+        "A. Hoàn toàn chống chỉ định vì chắc chắn có phản ứng chéo.",
+        "B. Có thể sử dụng an toàn vì không có phản ứng chéo.",
+        "C. Cần thận trọng, chỉ sử dụng khi thật cần thiết và có sẵn phương tiện cấp cứu vì tỉ lệ dị ứng chéo khoảng 10-15%.",
+        "D. Chỉ nên dùng Cephalosporin thế hệ 1, tránh các thế hệ sau."
+      ],
+      "correct": [2],
+      "explanation": "Giữa Penicillin và Cephalosporin có tỉ lệ dị ứng chéo khoảng 10-15%, đặc biệt ở những người có phản ứng kiểu IgE (tức thì, sốc phản vệ). Do đó, với bệnh nhân có tiền sử dị ứng nặng với Penicillin, cần thận trọng cao khi dùng Cephalosporin: chỉ dùng khi không có lựa chọn thay thế nào khác và phải được theo dõi sát, có sẵn thuốc và dụng cụ cấp cứu.",
+      "tags": ["Dị ứng", "Penicillin", "Cephalosporin"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL021",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây là sự phối hợp giữa một Penicillin và một chất ức chế beta-lactamase, được dùng phổ biến trong nhiễm khuẩn cộng đồng?",
+      "options": [
+        "A. Piperacillin/Tazobactam",
+        "B. Amoxicillin/Clavulanate",
+        "C. Ceftazidime/Avibactam",
+        "D. Imipenem/Cilastatin"
+      ],
+      "correct": [1],
+      "explanation": "Amoxicillin/Clavulanate (Augmentin) là phối hợp phổ biến nhất trong cộng đồng. Clavulanate ức chế nhiều beta-lactamase, giúp Amoxicillin có tác dụng trên các vi khuẩn tiết enzyme như Staphylococcus aureus, Haemophilus influenzae, Moraxella catarrhalis, E. coli. Nó được dùng cho nhiễm khuẩn hô hấp, da mô mềm, tiết niệu.",
+      "tags": ["Chất ức chế beta-lactamase", "Amoxicillin/Clavulanate"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL022",
+      "type": "single",
+      "question": "Cephalosporin thế hệ 3 nào sau đây có hoạt tính mạnh nhất trên Pseudomonas aeruginosa?",
+      "options": [
+        "A. Cefotaxime",
+        "B. Ceftriaxone",
+        "C. Ceftazidime",
+        "D. Cefoperazone"
+      ],
+      "correct": [2],
+      "explanation": "Trong số các cephalosporin thế hệ 3, Ceftazidime có hoạt tính mạnh nhất và đáng tin cậy nhất trên Pseudomonas aeruginosa do cấu trúc đặc biệt. Cefoperazone cũng có hoạt tính nhưng kém hơn và không ổn định bằng Ceftazidime.",
+      "tags": ["Cephalosporin", "Thế hệ 3", "Pseudomonas", "Ceftazidime"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL023",
+      "type": "single",
+      "question": "Tác dụng không mong muốn đáng chú ý của Carbapenem, đặc biệt là Imipenem, là gì?",
+      "options": [
+        "A. Độc tính trên thính giác gây điếc.",
+        "B. Gây hội chứng Red Man khi truyền nhanh.",
+        "C. Kích thích hệ thần kinh trung ương, có thể gây co giật, đặc biệt ở bệnh nhân suy thận, người già, hoặc dùng liều cao.",
+        "D. Gây thiếu máu bất sản tủy."
+      ],
+      "correct": [2],
+      "explanation": "Carbapenem, đặc biệt là Imipenem, có khả năng gây kích thích thần kinh trung ương, dẫn đến co giật. Nguy cơ này tăng lên ở bệnh nhân suy thận (do tích lũy thuốc), người cao tuổi, có tổn thương não từ trước, hoặc dùng liều cao. Meropenem có nguy cơ thấp hơn Imipenem.",
+      "tags": ["Carbapenem", "ADR", "Co giật"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL024",
+      "type": "single",
+      "question": "Aminopenicillin (nhóm A) như Ampicillin và Amoxicillin có phổ tác dụng mở rộng hơn Penicillin G chủ yếu trên nhóm vi khuẩn nào?",
+      "options": [
+        "A. Vi khuẩn Gram dương kháng Penicillin.",
+        "B. Vi khuẩn Gram âm hiếu khí đường ruột (Enterobacteriaceae) và Haemophilus influenzae không tiết beta-lactamase.",
+        "C. Vi khuẩn kỵ khí như Bacteroides fragilis.",
+        "D. Pseudomonas aeruginosa."
+      ],
+      "correct": [1],
+      "explanation": "Aminopenicillin (Ampicillin, Amoxicillin) có thêm nhóm amin giúp xuyên qua màng ngoài của một số vi khuẩn Gram âm tốt hơn. Do đó, phổ của chúng bao gồm phổ của Penicillin G cộng thêm một số vi khuẩn Gram âm đường ruột (E. coli, Proteus mirabilis, Salmonella, Shigella) và Haemophilus influenzae (chủng không tiết beta-lactamase).",
+      "tags": ["Aminopenicillin", "Phổ kháng khuẩn"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL025",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây KHÔNG thuộc nhóm beta-lactam?",
+      "options": [
+        "A. Aztreonam",
+        "B. Erythromycin",
+        "C. Cefepime",
+        "D. Meropenem"
+      ],
+      "correct": [1],
+      "explanation": "Erythromycin thuộc nhóm Macrolid, có cơ chế ức chế tổng hợp protein tại ribosome. Aztreonam (Monobactam), Cefepime (Cephalosporin), Meropenem (Carbapenem) đều là các kháng sinh beta-lactam.",
+      "tags": ["Beta-lactam", "Phân loại"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL026",
+      "type": "single",
+      "question": "Chỉ định nào sau đây KHÔNG phải của Penicillin G?",
+      "options": [
+        "A. Giang mai.",
+        "B. Viêm nội tâm mạc do Enterococcus (phối hợp với Gentamicin).",
+        "C. Nhiễm khuẩn hô hấp cộng đồng do Mycoplasma pneumoniae.",
+        "D. Uốn ván, bạch hầu."
+      ],
+      "correct": [2],
+      "explanation": "Penicillin G được dùng cho các bệnh nhiễm khuẩn cổ điển: Giang mai (Treponema pallidum), viêm nội tâm mạc do liên cầu nhạy cảm hoặc Enterococcus (phối hợp), uốn ván (Clostridium tetani), bạch hầu (Corynebacterium diphtheriae). Mycoplasma pneumoniae không có thành tế bào, nên kháng sinh beta-lactam như Penicillin G hoàn toàn vô hiệu. Điều trị Mycoplasma dùng Macrolid, Tetracyclin hoặc Fluoroquinolon.",
+      "tags": ["Penicillin G", "Chỉ định"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL027",
+      "type": "single",
+      "question": "Cephalosporin thế hệ nào có hoạt tính tốt trên vi khuẩn Gram dương nhưng yếu hơn thế hệ 1, đồng thời có hoạt tính tốt hơn trên Gram âm, bao gồm Haemophilus influenzae và Moraxella catarrhalis?",
+      "options": [
+        "A. Thế hệ 1",
+        "B. Thế hệ 2",
+        "C. Thế hệ 3",
+        "D. Thế hệ 4"
+      ],
+      "correct": [1],
+      "explanation": "Cephalosporin thế hệ 2 (vd: Cefuroxime, Cefaclor) có hoạt tính trên Gram dương vẫn tốt nhưng kém hơn một chút so với thế hệ 1. Tuy nhiên, hoạt tính trên Gram âm được cải thiện rõ rệt, đặc biệt trên H. influenzae và M. catarrhalis (kể cả chủng tiết beta-lactamase), nhờ độ ổn định với enzyme TEM-1 cao hơn.",
+      "tags": ["Cephalosporin", "Thế hệ 2"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL028",
+      "type": "single",
+      "question": "Để điều trị nhiễm khuẩn do vi khuẩn tiết ESBL (Extended-Spectrum Beta-Lactamase), lựa chọn kháng sinh tốt nhất trong số các thuốc dưới đây là gì?",
+      "options": [
+        "A. Ceftriaxone (Cephalosporin thế hệ 3).",
+        "B. Piperacillin/Tazobactam.",
+        "C. Meropenem (Carbapenem).",
+        "D. Amoxicillin/Clavulanate."
+      ],
+      "correct": [2],
+      "explanation": "Carbapenem (Imipenem, Meropenem, Doripenem, Ertapenem) có độ ổn định rất cao với ESBL và là lựa chọn hàng đầu (drug of choice) cho nhiễm khuẩn nặng do vi khuẩn sinh ESBL. Cephalosporin thế hệ 3 và hầu hết Penicillin (kể cả phối hợp với chất ức chế cũ) bị ESBL phá hủy.",
+      "tags": ["ESBL", "Điều trị", "Carbapenem"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL029",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây có thể dùng đường uống để điều trị viêm đại tràng giả mạc do Clostridium difficile?",
+      "options": [
+        "A. Vancomycin (đường uống).",
+        "B. Penicillin G (đường uống).",
+        "C. Ceftriaxone (đường uống).",
+        "D. Imipenem (đường uống)."
+      ],
+      "correct": [0],
+      "explanation": "Vancomycin đường uống không hấp thu vào máu, do đó đạt nồng độ rất cao trong lòng ruột, có tác dụng tại chỗ tiêu diệt Clostridium difficile. Đây là một trong những lựa chọn hàng đầu cho viêm đại tràng giả mạc nặng hoặc tái phát. Metronidazol đường uống cũng là một lựa chọn.",
+      "tags": ["Vancomycin", "Clostridium difficile", "Chỉ định"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL030",
+      "type": "single",
+      "question": "ADR 'Hội chứng Red Man' (người đỏ) thường liên quan đến kháng sinh nào khi truyền tĩnh mạch quá nhanh?",
+      "options": [
+        "A. Penicillin G",
+        "B. Vancomycin",
+        "C. Ceftriaxone",
+        "D. Aztreonam"
+      ],
+      "correct": [1],
+      "explanation": "Hội chứng Red Man (hay Red Neck) là phản ứng giống phản vệ không qua trung gian IgE, đặc trưng bởi ban đỏ, ngứa ở mặt, cổ, ngực trên, và có thể tụt huyết áp. Nó xảy ra khi truyền Vancomycin quá nhanh. Phòng ngừa bằng cách truyền chậm trong ít nhất 60 phút và dùng kháng histamine trước đó.",
+      "tags": ["Vancomycin", "ADR", "Hội chứng Red Man"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL031",
+      "type": "single",
+      "question": "Cephalosporin thế hệ 1 nào thường được dùng để dự phòng nhiễm khuẩn trong phẫu thuật do có hoạt tính mạnh trên Gram dương và thời gian bán thải tương đối dài?",
+      "options": [
+        "A. Cephalexin",
+        "B. Cefazolin",
+        "C. Cefadroxil",
+        "D. Cephalothin"
+      ],
+      "correct": [1],
+      "explanation": "Cefazolin là cephalosporin thế hệ 1 được ưa chuộng để dự phòng phẫu thuật vì: hoạt tính mạnh trên Gram dương (đặc biệt tụ cầu da), thời gian bán thải dài hơn (~1.8 giờ) so với các cephalosporin thế hệ 1 khác, cho phép dùng một liều duy nhất trước mổ, và nồng độ trong mô cao.",
+      "tags": ["Cephalosporin", "Thế hệ 1", "Dự phòng phẫu thuật", "Cefazolin"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL032",
+      "type": "single",
+      "question": "Penicillin nào sau đây có thể dùng đường uống và bền vững hơn trong môi trường acid dạ dày so với Penicillin G?",
+      "options": [
+        "A. Penicillin G",
+        "B. Methicillin",
+        "C. Penicillin V (Phenoxymethylpenicillin)",
+        "D. Carbenicillin"
+      ],
+      "correct": [2],
+      "explanation": "Penicillin V (Phenoxymethylpenicillin) là dẫn chất bán tổng hợp của Penicillin G, có khả năng kháng acid tốt hơn, do đó có thể dùng đường uống. Nó được chỉ định cho các nhiễm khuẩn nhẹ như viêm họng liên cầu. Penicillin G bị phá hủy bởi acid dạ dày nên không uống được.",
+      "tags": ["Penicillin", "Penicillin V", "Đường dùng"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL033",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây là chất ức chế beta-lactamase mới, được phối hợp với Ceftazidime để điều trị nhiễm khuẩn do vi khuẩn kháng carbapenem (KPC)?",
+      "options": [
+        "A. Clavulanate",
+        "B. Sulbactam",
+        "C. Tazobactam",
+        "D. Avibactam"
+      ],
+      "correct": [3],
+      "explanation": "Avibactam là chất ức chế beta-lactamase phổ rộng thế hệ mới, có khả năng ức chế nhiều loại enzyme bao gồm ESBL, AmpC, và quan trọng là KPC (Klebsiella pneumoniae carbapenemase). Phối hợp Ceftazidime/Avibactam là một lựa chọn quan trọng cho nhiễm khuẩn Gram âm đa kháng, đặc biệt là CRE (Carbapenem-Resistant Enterobacteriaceae).",
+      "tags": ["Chất ức chế beta-lactamase", "Avibactam", "CRE"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL034",
+      "type": "single",
+      "question": "Cephalosporin thế hệ 3 nào có thải trừ chủ yếu qua mật và cần thận trọng ở bệnh nhân có bệnh lý gan mật?",
+      "options": [
+        "A. Cefotaxime",
+        "B. Ceftriaxone",
+        "C. Ceftazidime",
+        "D. Cefoperazone"
+      ],
+      "correct": [3],
+      "explanation": "Cefoperazone là cephalosporin thế hệ 3 được thải trừ chủ yếu qua mật (khoảng 80%), khác với các cephalosporin thế hệ 3 khác thải trừ chủ yếu qua thận. Do đó, ở bệnh nhân suy gan hoặc tắc mật, thời gian bán thải của Cefoperazone có thể kéo dài, cần điều chỉnh liều.",
+      "tags": ["Cephalosporin", "Thế hệ 3", "Dược động học", "Cefoperazone"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL035",
+      "type": "single",
+      "question": "Đặc điểm nào sau đây mô tả đúng nhất về Aztreonam?",
+      "options": [
+        "A. Là kháng sinh phổ rộng, diệt cả Gram dương và Gram âm.",
+        "B. Là kháng sinh nhóm Monobactam, chỉ có tác dụng trên vi khuẩn Gram âm hiếu khí, và có thể dùng thay thế an toàn cho bệnh nhân dị ứng nặng với Penicillin.",
+        "C. Là kháng sinh nhóm Carbapenem, dùng cho nhiễm khuẩn nặng.",
+        "D. Là kháng sinh nhóm Penicillin, dùng cho nhiễm Pseudomonas."
+      ],
+      "correct": [1],
+      "explanation": "Aztreonam là Monobactam, có phổ hẹp chỉ trên vi khuẩn Gram âm hiếu khí (Enterobacteriaceae, P. aeruginosa, H. influenzae, Neisseria). Một ưu điểm quan trọng là nó không có phản ứng dị ứng chéo với Penicillin hoặc Cephalosporin (do cấu trúc vòng đơn khác biệt), nên có thể dùng an toàn cho bệnh nhân có tiền sử dị ứng nặng với các beta-lactam khác.",
+      "tags": ["Monobactam", "Aztreonam", "Dị ứng"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL036",
+      "type": "single",
+      "question": "Phối hợp kháng sinh nào sau đây được dùng để điều trị nhiễm khuẩn ổ bụng phức tạp và viêm phổi bệnh viện do phổ rất rộng (Gram dương, Gram âm, kỵ khí)?",
+      "options": [
+        "A. Amoxicillin/Clavulanate",
+        "B. Piperacillin/Tazobactam",
+        "C. Ceftriaxone",
+        "D. Cefuroxime"
+      ],
+      "correct": [1],
+      "explanation": "Piperacillin/Tazobactam (TAZOCIN) là phối hợp giữa một ureidopenicillin phổ rộng và chất ức chế beta-lactamase. Nó có phổ rất rộng, bao phủ vi khuẩn Gram dương (trừ MRSA), Gram âm (bao gồm Pseudomonas), và kỵ khí (Bacteroides fragilis). Do đó, nó thường được dùng cho nhiễm khuẩn nặng trong bệnh viện như nhiễm khuẩn ổ bụng, viêm phổi bệnh viện, nhiễm khuẩn huyết.",
+      "tags": ["Piperacillin/Tazobactam", "Chỉ định"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL037",
+      "type": "single",
+      "question": "Carbapenem nào có hoạt tính mạnh hơn trên Pseudomonas aeruginosa so với Imipenem?",
+      "options": [
+        "A. Ertapenem",
+        "B. Meropenem và Doripenem",
+        "C. Chỉ Meropenem",
+        "D. Tất cả carbapenem đều có hoạt tính tương đương."
+      ],
+      "correct": [1],
+      "explanation": "Meropenem và Doripenem có hoạt tính in vitro mạnh hơn trên Pseudomonas aeruginosa so với Imipenem. Doripenem được thiết kế để có hoạt tính mạnh hơn nữa trên P. aeruginosa. Ertapenem thì hầu như không có hoạt tính trên loại vi khuẩn này.",
+      "tags": ["Carbapenem", "Pseudomonas aeruginosa"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL038",
+      "type": "single",
+      "question": "Cơ chế tác động chung của tất cả các kháng sinh beta-lactam là gì?",
+      "options": [
+        "A. Ức chế tổng hợp protein tại tiểu đơn vị 50S của ribosome.",
+        "B. Ức chế tổng hợp acid nucleic (DNA/RNA).",
+        "C. Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn vào PBP (Penicillin-Binding Protein).",
+        "D. Phá hủy tính toàn vẹn của màng tế bào chất."
+      ],
+      "correct": [2],
+      "explanation": "Tất cả các kháng sinh beta-lactam (Penicillin, Cephalosporin, Carbapenem, Monobactam) đều có chung cơ chế tác động: chúng gắn vào các PBP (protein gắn penicillin) trên màng tế bào vi khuẩn, ức chế quá trình tổng hợp và sửa chữa thành tế bào peptidoglycan, dẫn đến ly giải tế bào và làm chết vi khuẩn (diệt khuẩn).",
+      "tags": ["Beta-lactam", "Cơ chế tác động"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL039",
+      "type": "single",
+      "question": "Khi một chủng Staphylococcus aureus được báo cáo là 'MSSA', điều đó có nghĩa là gì?",
+      "options": [
+        "A. Nó kháng Methicillin và tất cả các beta-lactam.",
+        "B. Nó nhạy cảm với Methicillin và các penicillin kháng penicillinase (Oxacillin).",
+        "C. Nó chỉ nhạy cảm với Vancomycin.",
+        "D. Nó tiết ESBL."
+      ],
+      "correct": [1],
+      "explanation": "MSSA (Methicillin-Sensitive Staphylococcus aureus) là chủng tụ cầu vàng còn nhạy cảm với Methicillin và các penicillin kháng penicillinase khác (Oxacillin, Cloxacillin, Nafcillin). Điều này cũng đồng nghĩa với việc nó nhạy cảm với hầu hết các cephalosporin (trừ một số chủng khác). MSSA có thể kháng Penicillin G do tiết penicillinase, nhưng không kháng các penicillin kháng enzyme.",
+      "tags": ["MSSA", "Định nghĩa"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL040",
+      "type": "single",
+      "question": "Điều nào sau đây là SAI khi nói về đặc điểm dược động học của phần lớn Cephalosporin?",
+      "options": [
+        "A. Thải trừ chủ yếu qua thận ở dạng không đổi.",
+        "B. Hầu hết không hấp thu qua đường tiêu hóa, phải tiêm.",
+        "C. Tất cả đều qua được hàng rào máu não tốt.",
+        "D. Một số thế hệ (3,4) vào dịch não tủy tốt, đủ để điều trị viêm màng não."
+      ],
+      "correct": [2],
+      "explanation": "Phần lớn cephalosporin thải trừ qua thận. Nhiều loại phải dùng đường tiêm, nhưng một số có thể uống (Cephalexin, Cefaclor, Cefuroxime axetil, Cefixime...). Chỉ một số cephalosporin (đặc biệt thế hệ 3 như Cefotaxime, Ceftriaxone, Ceftazidime và thế hệ 4 Cefepime) mới vào dịch não tủy đủ nồng độ để điều trị viêm màng não. Không phải tất cả cephalosporin đều qua được hàng rào máu não tốt (ví dụ CG1 hầu như không vào).",
+      "tags": ["Cephalosporin", "Dược động học"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL041",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây có nguy cơ gây tiêu chảy và viêm đại tràng giả mạc do mất cân bằng hệ vi khuẩn đường ruột?",
+      "options": [
+        "A. Chỉ có Clindamycin.",
+        "B. Hầu hết các kháng sinh phổ rộng, đặc biệt là những loại tác động lên hệ vi khuẩn kỵ khí đường ruột (như Ampicillin, Cephalosporin, Clindamycin).",
+        "C. Chỉ có Penicillin.",
+        "D. Chỉ có Vancomycin đường uống."
+      ],
+      "correct": [1],
+      "explanation": "Tiêu chảy liên quan đến kháng sinh và viêm đại tràng giả mạc có thể xảy ra với hầu hết các kháng sinh phổ rộng, đặc biệt là những loại có hoạt tính trên vi khuẩn kỵ khí đường ruột (đặc biệt là Bacteroides), dẫn đến mất cân bằng và cho phép Clostridium difficile phát triển quá mức. Các nhóm có nguy cơ cao bao gồm Clindamycin, Cephalosporin (đặc biệt thế hệ 3), Ampicillin/Amoxicillin, và Fluoroquinolon.",
+      "tags": ["ADR", "Tiêu chảy", "Viêm đại tràng giả mạc"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL042",
+      "type": "single",
+      "question": "Cephalosporin thế hệ nào được cho là có liên quan đến việc cảm ứng mạnh sản xuất ESBL ở vi khuẩn Gram âm?",
+      "options": [
+        "A. Thế hệ 1",
+        "B. Thế hệ 2",
+        "C. Thế hệ 3",
+        "D. Thế hệ 4"
+      ],
+      "correct": [2],
+      "explanation": "Việc lạm dụng cephalosporin thế hệ 3 (đặc biệt là Ceftriaxone, Ceftazidime) là một yếu tố chính dẫn đến sự chọn lọc và lan rộng của các chủng vi khuẩn Gram âm sản xuất ESBL (Extended-Spectrum Beta-Lactamase). Áp lực chọn lọc từ việc sử dụng rộng rãi các kháng sinh này tạo điều kiện cho các chủng tiết ESBL (vốn kháng lại chúng) phát triển.",
+      "tags": ["Cephalosporin", "ESBL", "Lạm dụng kháng sinh"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL043",
+      "type": "single",
+      "question": "Để điều trị nhiễm khuẩn nặng do MRSA, kháng sinh nào sau đây thường được lựa chọn đầu tay (trừ khi dị ứng)?",
+      "options": [
+        "A. Oxacillin",
+        "B. Ceftriaxone",
+        "C. Vancomycin (đường tĩnh mạch)",
+        "D. Amoxicillin/Clavulanate"
+      ],
+      "correct": [2],
+      "explanation": "Vancomycin đường tĩnh mạch là lựa chọn tiêu chuẩn đầu tay (first-line) cho hầu hết các nhiễm khuẩn nặng do MRSA. Oxacillin và các penicillin kháng penicillinase khác chỉ có tác dụng trên MSSA. Cephalosporin thông thường (như Ceftriaxone) cũng không có tác dụng trên MRSA. Các lựa chọn thay thế bao gồm Daptomycin, Linezolid, Ceftaroline.",
+      "tags": ["MRSA", "Điều trị", "Vancomycin"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "BL044",
+      "type": "single",
+      "question": "Cephalosporin thế hệ 2 nào có dạng uống và được dùng cho nhiễm khuẩn hô hấp cộng đồng?",
+      "options": [
+        "A. Cefoxitin",
+        "B. Cefotetan",
+        "C. Cefuroxime axetil",
+        "D. Tất cả đều đúng."
+      ],
+      "correct": [2],
+      "explanation": "Cefuroxime axetil là dạng ester của Cefuroxime, cho phép hấp thu qua đường uống. Nó là một lựa chọn cho nhiễm khuẩn hô hấp cộng đồng (viêm phổi, viêm tai giữa) do phổ bao phủ được các tác nhân phổ biến như Streptococcus pneumoniae, Haemophilus influenzae, Moraxella catarrhalis. Cefoxitin và Cefotetan chỉ có dạng tiêm.",
+      "tags": ["Cephalosporin", "Thế hệ 2", "Đường uống", "Cefuroxime"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL045",
+      "type": "single",
+      "question": "Các chất ức chế beta-lactamase như Clavulanate, Sulbactam, Tazobactam có cơ chế tác động nào?",
+      "options": [
+        "A. Diệt khuẩn trực tiếp bằng cách phá hủy thành tế bào.",
+        "B. Ức chế cạnh tranh, không hồi phục (ức chế suicide) các enzyme beta-lactamase, bảo vệ kháng sinh beta-lactam đi kèm khỏi bị thủy phân.",
+        "C. Tăng cường hấp thu của kháng sinh beta-lactam.",
+        "D. Ngăn chặn vi khuẩn đào thải kháng sinh."
+      ],
+      "correct": [1],
+      "explanation": "Các chất ức chế beta-lactamase (Clavulanate, Sulbactam, Tazobactam) có cấu trúc giống beta-lactam. Chúng gắn vào và bất hoạt vĩnh viễn (ức chế suicide) nhiều loại beta-lactamase (đặc biệt là penicillinase và một số ESBL), từ đó bảo vệ kháng sinh beta-lactam đi kèm (như Amoxicillin, Ampicillin, Ticarcillin, Piperacillin) khỏi bị phá hủy, khôi phục hoạt tính của chúng.",
+      "tags": ["Chất ức chế beta-lactamase", "Cơ chế"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL046",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây có cấu trúc là một Carbapenem và được dùng 1 lần/ngày do thời gian bán thải dài?",
+      "options": [
+        "A. Imipenem",
+        "B. Meropenem",
+        "C. Doripenem",
+        "D. Ertapenem"
+      ],
+      "correct": [3],
+      "explanation": "Ertapenem có thời gian bán thải dài (~4 giờ) so với các carbapenem khác (Imipenem ~1 giờ, Meropenem ~1 giờ, Doripenem ~1 giờ). Điều này cho phép dùng Ertapenem 1 lần/ngày, trong khi các carbapenem khác thường phải dùng 3-4 lần/ngày.",
+      "tags": ["Carbapenem", "Ertapenem", "Dược động học"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL047",
+      "type": "single",
+      "question": "ADR nào sau đây có thể gặp khi dùng Vancomycin đường tĩnh mạch, đặc biệt nếu nồng độ trong máu quá cao?",
+      "options": [
+        "A. Độc tính trên thận (suy thận) và độc tính trên tai (mất thính lực).",
+        "B. Vàng răng.",
+        "C. Loạn sản xương.",
+        "D. Thiếu máu bất sản."
+      ],
+      "correct": [0],
+      "explanation": "Vancomycin có thể gây độc tính trên thận (nephrotoxicity) và độc tính trên tai (ototoxicity), đặc biệt khi nồng độ đỉnh trong huyết thanh >40-50 mcg/mL hoặc nồng độ thung lũng >15-20 mcg/mL. Các yếu tố nguy cơ bao gồm dùng kéo dài, liều cao, kết hợp với các thuốc độc thận khác (aminoglycosid, amphotericin B), suy thận. Cần theo dõi nồng độ thuốc trong máu.",
+      "tags": ["Vancomycin", "ADR", "Độc tính thận", "Độc tính tai"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL048",
+      "type": "single",
+      "question": "Trong số các penicillin dưới đây, loại nào có phổ bao gồm cả Pseudomonas aeruginosa?",
+      "options": [
+        "A. Penicillin G",
+        "B. Ampicillin",
+        "C. Oxacillin",
+        "D. Piperacillin"
+      ],
+      "correct": [3],
+      "explanation": "Trong các nhóm penicillin, chỉ có các penicillin phổ rộng hướng Gram âm mạnh (Carboxypenicillin: Ticarcillin; và Ureidopenicillin: Piperacillin, Mezlocillin) mới có hoạt tính đáng kể trên Pseudomonas aeruginosa. Piperacillin có hoạt tính mạnh nhất trong nhóm này.",
+      "tags": ["Penicillin", "Pseudomonas aeruginosa", "Piperacillin"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "BL049",
+      "type": "single",
+      "question": "Kháng sinh nào sau đây KHÔNG phải là lựa chọn để điều trị nhiễm khuẩn do Enterococcus faecalis kháng Ampicillin (VRE)?",
+      "options": [
+        "A. Linezolid",
+        "B. Daptomycin",
+        "C. Vancomycin (nếu là VRE, thì Vancomycin cũng kháng)",
+        "D. Amoxicillin/Clavulanate"
+      ],
+      "correct": [3],
+      "explanation": "Enterococcus kháng Ampicillin (thường là Enterococcus faecium) thường cũng kháng Vancomycin (VRE). Do đó, Vancomycin không có tác dụng. Amoxicillin/Clavulanate cũng không có tác dụng vì cơ chế kháng của VRE thường là do thay đổi PBP, không phải do beta-lactamase. Các lựa chọn điều trị VRE bao gồm Linezolid, Daptomycin, Tigecycline, và Quinupristin/Dalfopristin (chỉ với E. faecium).",
+      "tags": ["VRE", "Enterococcus", "Điều trị"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "BL050",
+      "type": "single",
+      "question": "Cephalosporin thế hệ mới nào được mô tả là 'Cephalosporin siderophore', có cơ chế vận chuyển độc đáo vào tế bào vi khuẩn và được dùng cho vi khuẩn Gram âm đa kháng?",
+      "options": [
+        "A. Ceftaroline",
+        "B. Ceftolozane/Tazobactam",
+        "C. Cefiderocol",
+        "D. Ceftazidime/Avibactam"
+      ],
+      "correct": [2],
+      "explanation": "Cefiderocol là một cephalosporin siderophore. Nó được gắn với một nhóm siderophore, cho phép nó 'lừa' hệ thống vận chuyển sắt của vi khuẩn Gram âm để xâm nhập vào tế bào, ngay cả khi kênh porin bị đóng. Điều này giúp nó có hoạt tính trên nhiều vi khuẩn Gram âm đa kháng, bao gồm các chủng kháng carbapenem (CRE), Pseudomonas aeruginosa đa kháng, và Acinetobacter baumannii.",
+      "tags": ["Cephalosporin", "Cefiderocol", "Siderophore", "Đa kháng"],
+      "difficulty": "hard"
+    }
+  ]
+}
