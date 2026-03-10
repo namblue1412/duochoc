@@ -2,6 +2,11 @@
   "folder": "kho-de",
   "items": [
     {
+      "id": "toanhinh0",
+      "title": "Ôn Toán Hình 9 - Đề 1 ",
+      "file": "oth1.json"
+    },   
+    {
       "id": "duocdonghd24",
       "title": "Dược Động HD24 - Đề 1 ",
       "file": "dd01.json"
