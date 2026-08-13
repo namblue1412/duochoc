@@ -1,6 +1,6 @@
 :root {
   --bg: #0a0a0a; --surface: #111; --muted: #a3a3a3; --text: #f5f5f5; --line: #262626;
-  --accent: #fff; --ok: #22c55e; --bad: #ef4444;
+  --accent: #fff; --ok: #22c55e; --bad: #ef4444; --warn: #f59e0b;
   --safe-area-bottom: env(safe-area-inset-bottom, 20px);
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -8,47 +8,44 @@ html, body { height: 100%; }
 body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.5; }
 a { color: var(--text); text-decoration: none; }
 
-/* HEADER */
 .header { position: sticky; top: 0; z-index: 50; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 12px 16px; }
 .bar { display: flex; align-items: center; gap: 12px; }
 .bar.spaced { justify-content: space-between; }
+.space-between { display: flex; justify-content: space-between; align-items: center; }
 .grow { flex: 1 1 auto; min-width: 0; }
 .grow h1 { margin: 0; font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pill { border: 1px solid var(--line); border-radius: 99px; padding: 4px 10px; color: var(--muted); font-size: 13px; background: rgba(255,255,255,0.03); white-space: nowrap; }
 .timer { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--accent); font-size: 16px; }
 .help-icon { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--muted); cursor: pointer; flex: 0 0 auto; }
 
-/* UTILS & COMPONENTS */
 .mt0{margin-top:0}.mt6{margin-top:6px}.mt8{margin-top:8px}.mt10{margin-top:10px}.mb2{margin-bottom:2px}.mb10{margin-bottom:10px}.hide{display:none!important}
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
 .pad { padding: 20px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line); border-radius: 12px; padding: 10px 16px; background: #1a1a1a; color: var(--text); font-weight: 600; font-size: 14px; cursor: pointer; transition: 0.2s; touch-action: manipulation; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line); border-radius: 12px; padding: 10px 16px; background: #1a1a1a; color: var(--text); font-weight: 600; font-size: 14px; cursor: pointer; transition: 0.2s; }
 .btn:active { transform: scale(0.96); background: #222; }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-.btn.ghost { background: transparent; border-color: transparent; }
+.btn.ghost { background: transparent; border-color: var(--line); }
+.btn.btn-sm { padding: 6px 10px; font-size: 12px; border-radius: 8px; }
+.btn.btn-flagged { background: rgba(245, 158, 11, 0.2); border-color: var(--warn); color: var(--warn); }
 .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
 input[type=file] { display: none; }
 textarea, input[type=number], select { width: 100%; background: #0f0f0f; border: 1px solid var(--line); color: var(--text); border-radius: 12px; padding: 12px; font-size: 15px; outline: none; }
 .drop { border: 2px dashed var(--line); border-radius: 16px; padding: 24px; text-align: center; color: var(--muted); transition: 0.2s; }
 .drop.drag { border-color: var(--accent); color: var(--text); background: rgba(255,255,255,0.05); }
 
-/* LAYOUT */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .two { display: grid; grid-template-columns: 1fr 350px; gap: 24px; align-items: start; }
 
-/* STATUS BAR (NEW - Top of Content) */
-.status-bar {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px;
-  display: flex; flex-direction: column; gap: 8px;
-}
+.status-bar { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; }
 .progress { height: 6px; background: #1a1a1a; border-radius: 99px; overflow: hidden; width: 100%; }
 .progress > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.3s; }
 
-/* QUIZ VIEW */
 .qview { display: grid; gap: 16px; }
 .qtitle { font-size: 18px; font-weight: 700; color: var(--accent); }
 .qtext { font-size: 16px; line-height: 1.6; }
+.zoomable-img { cursor: zoom-in; transition: 0.2s; }
+.zoomable-img:hover { opacity: 0.8; }
 .opts { display: grid; gap: 10px; }
 .opt { display: flex; gap: 12px; align-items: flex-start; border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: #0f0f0f; cursor: pointer; transition: background 0.15s; }
 .opt:hover { border-color: #444; }
@@ -60,10 +57,8 @@ textarea, input[type=number], select { width: 100%; background: #0f0f0f; border:
 .exp { margin-top: 16px; border: 1px dashed var(--line); border-radius: 12px; padding: 16px; background: #0e0e0e; color: #ccc; display: none; line-height: 1.6; }
 .exp.show { display: block; animation: fadeIn 0.3s; }
 
-/* SIDEBAR & MATRIX */
 aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-content; }
 .section { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-
 .chips { display: flex; gap: 8px; flex-wrap: wrap; }
 .chip { border: 1px solid var(--line); border-radius: 99px; padding: 6px 12px; background: #0f0f0f; color: var(--muted); font-size: 12px; cursor: pointer; }
 .chip.active { color: #000; background: #fff; border-color: #fff; font-weight: 600; }
@@ -73,6 +68,7 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
 .mrow.current { background: #1c1c1c; border-left: 3px solid var(--accent); }
 .mrow.ok { border-left: 3px solid var(--ok); }
 .mrow.bad { border-left: 3px solid var(--bad); }
+.mrow.is-flagged .mnum { border-color: var(--warn); color: var(--warn); }
 .mnum { display: flex; align-items: center; justify-content: center; width: 36px; height: 32px; border: 1px solid var(--line); border-radius: 8px; font-weight: 700; cursor: pointer; color: var(--muted); }
 .mnum.current { color: var(--text); border-color: var(--text); background: #222; }
 .mopts { display: flex; gap: 6px; }
@@ -81,52 +77,49 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
 .mopt.correct { border-color: var(--ok); } 
 .mopt.wrong { border-color: var(--bad); }
 
-/* --- NAVIGATION GROUP --- */
 .nav-group { display: flex; gap: 8px; margin-top: 10px; }
 .nav-group #btnPrev, .nav-group #btnNext { flex: 1; }
 .nav-group #btnSubmit { flex: 0 0 auto; background: var(--accent); color: #000; border-color: var(--accent); }
 
-/* MODAL */
-.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; z-index: 100; backdrop-filter: blur(4px); padding: 16px; }
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; align-items: center; justify-content: center; z-index: 100; backdrop-filter: blur(4px); padding: 16px; }
 .modal-backdrop.show { display: flex; }
 .modal { width: 100%; max-width: 800px; max-height: 85vh; overflow-y: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
-.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 16px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--surface); }
+.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 16px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--surface); z-index: 10;}
 .modal-body { padding: 16px; }
-.modal pre { white-space: pre-wrap; background: #000; border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 13px; color: #ccc; }
 
-/* =========================================
-   RESPONSIVE
-   ========================================= */
+/* In Kết Quả PDF */
+.print-only { display: none; }
+@media print {
+  @page { margin: 15mm; size: A4 portrait; }
+  body { background: #fff; color: #000; font-size: 14px; }
+  .hide-print { display: none !important; }
+  .print-only { display: block; border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 20px;}
+  
+  #resultPanel { display: block !important; }
+  #printArea { background: #fff; width: 100%; }
+  
+  .card { box-shadow: none; border: none; padding: 0; background: #fff; }
+  .qview { gap: 20px; }
+  .qview .card.pad { margin-bottom: 20px; page-break-inside: avoid; border: 1px solid #ccc; padding: 15px; border-radius: 8px;}
+  
+  .opt { background: #fff; border-color: #ddd; color: #000; padding: 10px;}
+  .opt.correct { background: #dcfce7; border-color: #22c55e; }
+  .opt.wrong { background: #fee2e2; border-color: #ef4444; }
+  .badge { background: #eee; color: #000; border-color: #aaa; }
+  .exp { background: #f8fafc; border: 1px solid #94a3b8; color: #000; }
+}
+
 @media (max-width: 900px) {
   .grid-2, .two { grid-template-columns: 1fr; }
   aside.side { position: static; margin-top: 20px; }
   .matrix { max-height: 300px; }
 }
-
 @media (max-width: 600px) {
   .pad { padding: 16px; }
   .header .wrap { padding: 10px 14px; }
   .header h1 { font-size: 16px; max-width: 150px; }
   #headerInfo { display: none; }
-  
-  /* --- THANH ĐIỀU HƯỚNG DÍNH ĐÁY MOBILE (Fixed Bottom) --- */
-  .nav-group {
-    position: fixed;
-    bottom: 0; left: 0; right: 0; z-index: 90;
-    background: rgba(17, 17, 17, 0.98);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid #333;
-    padding: 10px 16px;
-    padding-bottom: max(10px, var(--safe-area-bottom));
-    box-shadow: 0 -4px 30px rgba(0,0,0,0.5);
-    margin: 0; 
-  }
-  
-  /* Tạo khoảng trống để nội dung không bị thanh nav che mất */
+  .nav-group { position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; background: rgba(17, 17, 17, 0.98); border-top: 1px solid #333; padding: 10px 16px; padding-bottom: max(10px, var(--safe-area-bottom)); box-shadow: 0 -4px 30px rgba(0,0,0,0.5); margin: 0; }
   main.wrap { padding-bottom: 100px; }
-  
-  /* Modal full màn hình */
-  .modal { max-height: 100%; border-radius: 0; height: 100%; border: none; }
 }
-
 @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
