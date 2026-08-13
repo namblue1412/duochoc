@@ -78,7 +78,7 @@ function normalizeQuiz(json){
 }
 
 /* ============ Import / Loader ============ */
-function setHeaderInfo(t){ byId('headerInfo').textContent=t; }
+function setHeaderInfo(t){ byId('headerInfo').textContent=t; byId('headerInfo').classList.remove('hide'); }
 function loadQuizObject(json){
   try{ validateQuiz(json); renderStart(json); }
   catch(e){ alert('Lỗi JSON: '+e.message); console.error(e); }
@@ -96,13 +96,43 @@ drop.addEventListener('drop', async e=>{ e.preventDefault(); drop.classList.remo
 byId('btnParse').addEventListener('click', ()=>{ const t=byId('paste').value.trim(); if(!t) return alert('Dán JSON trước.'); tryParse(t); });
 byId('btnTemplate').addEventListener('click', ()=> download('pharma-quiz-template.json', JSON.stringify({meta:{title:"Đề mẫu",time_limit_sec:900,shuffle_questions:true,shuffle_options:true},questions:[{id:"Q1",type:"single",question:"Nội dung câu hỏi",options:["A","B","C","D"],correct:[0],explanation:"Giải thích"}]},null,2)));
 
+if(byId('btnSample')) {
+  byId('btnSample').addEventListener('click', () => {
+    const sample = {
+      "meta": { "title": "Đề Demo Sinh lý học", "time_limit_sec": 600, "shuffle_questions": true, "shuffle_options": true },
+      "questions": [
+        { "id": "Q1", "type": "single", "question": "Cơ quan nào sau đây là trung tâm của hệ tuần hoàn?", "options": ["Phổi", "Tim", "Gan", "Não"], "correct": [1], "explanation": "Tim bơm máu đi nuôi cơ thể, là trung tâm của hệ tuần hoàn." },
+        { "id": "Q2", "type": "multi", "question": "Những nhóm máu nào sau đây có thể truyền cho người nhóm máu AB? (Chọn nhiều)", "options": ["Nhóm máu A", "Nhóm máu B", "Nhóm máu O", "Chỉ nhóm máu AB"], "correct": [0, 1, 2], "explanation": "Người nhóm máu AB là 'người nhận phổ quát', có thể nhận máu từ O, A, B và AB." }
+      ]
+    };
+    loadQuizObject(sample);
+  });
+}
+
+const mockBankData = [ { id: 'b1', name: 'Đề thi Dược lý 1 (Demo)' }, { id: 'b2', name: 'Đề thi Sinh lý học 1 (Demo)' } ];
+const bankSelect = byId('bankSelect');
+if(bankSelect) {
+  mockBankData.forEach(b => {
+    const opt = document.createElement('option');
+    opt.value = b.id; opt.textContent = b.name;
+    bankSelect.appendChild(opt);
+  });
+}
+if(byId('btnBankLoad')) {
+  byId('btnBankLoad').addEventListener('click', () => {
+    if(!bankSelect.value) return alert('Vui lòng chọn một đề trong kho!');
+    alert('Tính năng fetch file JSON từ Server đang phát triển. Ứng dụng sẽ tự động tải đề mẫu thay thế!');
+    byId('btnSample').click();
+  });
+}
+
 function renderStart(json){
   state.raw=json; state.quiz=normalizeQuiz(json);
   setHeaderInfo(`Đã tải: ${state.quiz.meta.title}`);
   byId('btnStart').disabled=false; byId('btnReset').disabled=false;
 }
-byId('btnStart').addEventListener('click', ()=>{ if(!state.quiz) return; resetAll(); computeOrder(); startQuiz(); });
-byId('btnReset').addEventListener('click', ()=> resetAll());
+byId('btnStart').addEventListener('click', ()=>{ if(!state.quiz) return; resetAll(false); computeOrder(); startQuiz(); });
+byId('btnReset').addEventListener('click', ()=> resetAll(true));
 
 /* ============ Quiz flow ============ */
 function computeOrder(){
@@ -155,7 +185,6 @@ function renderQuestion(qShownIdx){
   byId('qMeta').textContent  = `${isMulti?'Chọn nhiều':'Chọn một'} • ${state.quiz.questions.length} câu`;
   byId('qText').innerHTML   = q.question;
 
-  // Render Cờ (Flag)
   const btnFlag = byId('btnFlag');
   if(state.flagged.has(qShownIdx)) {
     btnFlag.classList.add('btn-flagged'); btnFlag.textContent = '🚩 Đã đánh dấu';
@@ -163,11 +192,10 @@ function renderQuestion(qShownIdx){
     btnFlag.classList.remove('btn-flagged'); btnFlag.textContent = '🚩 Đánh dấu';
   }
 
-  // Render Ảnh
   const imgHost=byId('qImage'); imgHost.innerHTML='';
   if(q.image){ 
     const img=new Image(); img.src=q.image; img.className='zoomable-img'; 
-    img.style.maxWidth='50%'; img.style.borderRadius='8px';
+    img.style.maxWidth='100%'; img.style.borderRadius='8px';
     img.title = "Bấm để phóng to";
     img.addEventListener('click', () => openLightbox(q.image));
     imgHost.appendChild(img); 
@@ -179,7 +207,6 @@ function renderQuestion(qShownIdx){
     const lab=document.createElement('div'); lab.className='opt';
     lab.addEventListener('click', (e) => {
         if(state.submitted) return;
-        // Tránh double click nếu click vào badge
         if(e.target.closest('.badge') && e.target !== lab) return;
         onSelect(qShownIdx, shownIdx, isMulti);
     });
@@ -313,8 +340,6 @@ function applyFilter(){
 
 function submitQuiz(auto=false){
   if(state.submitted) return; 
-  
-  // Cảnh báo nếu chưa làm hết (chỉ khi bấm nộp thủ công)
   if(!auto) {
     const answeredCount = [...state.answers.values()].filter(s=>s.size>0).length;
     if(answeredCount < state.orderMap.length) {
@@ -322,7 +347,7 @@ function submitQuiz(auto=false){
     }
   }
 
-  state.submitted=true; clearInterval(state.timer); clearProgress(); // Xoá save vì đã nộp bài
+  state.submitted=true; clearInterval(state.timer); clearProgress(); 
 
   const total=state.orderMap.length; let correct=0; for(let i=0;i<total;i++) if(checkQuestion(i)) correct++;
   const pct= total? Math.round(correct/total*100):0;
@@ -347,7 +372,6 @@ function renderResultList() {
   
   state.orderMap.forEach((m, i)=>{
     const ok=checkQuestion(i); 
-    // Lọc: Nếu resultViewAll = false, chỉ hiện câu sai/chưa làm. Nếu true, hiện tất cả.
     if(!state.resultViewAll && ok) return; 
 
     const q=state.quiz.questions[m.qIdx];
@@ -394,10 +418,50 @@ byId('btnToggleResultView').addEventListener('click', (e) => {
 
 byId('btnPrint').addEventListener('click', () => { window.print(); });
 
-/* ============ Phím tắt Keyboard ============ */
+/* ============ Hướng dẫn mới & Phím tắt ============ */
+const guideOverlay = byId('guideOverlay');
+const toggleGuide = () => guideOverlay.classList.toggle('active');
+
+byId('btnHelp').addEventListener('click', toggleGuide);
+byId('closeGuide').addEventListener('click', () => guideOverlay.classList.remove('active'));
+guideOverlay.addEventListener('click', e => { if(e.target === guideOverlay) guideOverlay.classList.remove('active'); });
+
+// Copy Prompt AI nhanh
+byId('btnCopyPrompt').addEventListener('click', () => {
+  const promptText = byId('promptText').innerText;
+  navigator.clipboard.writeText(promptText).then(() => {
+    const btn = byId('btnCopyPrompt');
+    btn.textContent = "✅ Đã Copy vào bộ nhớ tạm!";
+    btn.style.background = "#fff";
+    setTimeout(() => {
+      btn.textContent = "📋 Copy Prompt";
+      btn.style.background = "var(--ok)";
+    }, 2500);
+  });
+});
+
 window.addEventListener('keydown', e => {
-  if(byId('helpModal').classList.contains('show') || byId('imageLightbox').classList.contains('show')) return;
-  if(!state.started || state.submitted) return;
+  // Bỏ qua nếu người dùng đang nhập text
+  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
+
+  const lightbox = byId('imageLightbox');
+
+  // Bấm ESC để đóng modal
+  if (e.key === 'Escape') {
+    guideOverlay.classList.remove('active');
+    if (lightbox) lightbox.classList.remove('show');
+    return;
+  }
+
+  // Phím ? (Shift + /) để bật/tắt bảng Hướng dẫn mới
+  if (e.key === '?') {
+    toggleGuide();
+    return;
+  }
+
+  // Khóa phím tắt làm bài khi đang hiện hướng dẫn/lightbox
+  if (guideOverlay.classList.contains('active') || (lightbox && lightbox.classList.contains('show'))) return;
+  if (!state.started || state.submitted) return;
   
   if(e.key === 'ArrowRight') { byId('btnNext').click(); e.preventDefault(); }
   if(e.key === 'ArrowLeft') { byId('btnPrev').click(); e.preventDefault(); }
@@ -423,7 +487,7 @@ byId('btnReview').addEventListener('click', ()=>{
   if(state.autoShowExp && state.submitted && !checkQuestion(state.current) && (state.quiz.questions[q.qIdx].explanation)) e.classList.add('show');
   else e.classList.remove('show');
 });
-byId('btnNew').addEventListener('click', ()=>{ if(confirm('Thoát bài thi hiện tại và làm đề mới?')) resetAll(); });
+byId('btnNew').addEventListener('click', ()=>{ if(confirm('Thoát bài thi hiện tại và làm đề mới?')) resetAll(true); });
 byId('btnRedoResult').addEventListener('click', ()=> {
   state.submitted=false; state.answers.clear(); state.flagged.clear();
   computeOrder(); renderQuestion(0); renderMatrix(); renderProgressMeta(); applyFilter();
@@ -436,30 +500,32 @@ byId('filterGroup').addEventListener('click', e=>{
   b.classList.add('active'); state.viewFilter=b.dataset.filter; applyFilter();
 });
 
-const helpModal=byId('helpModal');
-byId('btnHelp').addEventListener('click', ()=> helpModal.classList.add('show'));
-byId('helpClose').addEventListener('click', ()=> helpModal.classList.remove('show'));
-
-const lightbox=byId('imageLightbox'); const lbImg=byId('lightboxImg');
-function openLightbox(src) { lbImg.src = src; lightbox.classList.add('show'); }
-byId('closeLightbox').addEventListener('click', ()=> lightbox.classList.remove('show'));
-lightbox.addEventListener('click', e=> { if(e.target===lightbox) lightbox.classList.remove('show'); });
-
-window.addEventListener('keydown', e=>{ 
-  if(e.key==='Escape'){ helpModal.classList.remove('show'); lightbox.classList.remove('show'); } 
-});
+// Xử lý đóng mở Modal Hình Ảnh (Lightbox)
+function openLightbox(src) { 
+    if(!byId('lightboxImg') || !byId('imageLightbox')) return;
+    byId('lightboxImg').src = src; 
+    byId('imageLightbox').classList.add('show'); 
+}
+if(byId('closeLightbox')){
+  byId('closeLightbox').addEventListener('click', ()=> byId('imageLightbox').classList.remove('show'));
+  byId('imageLightbox').addEventListener('click', e=> { if(e.target===byId('imageLightbox')) byId('imageLightbox').classList.remove('show'); });
+}
 
 /* ============ Reset All ============ */
-function resetAll(){
+function resetAll(hard = false){
   clearInterval(state.timer); state.started=false; state.submitted=false;
   state.answers.clear(); state.flagged.clear(); state.orderMap=[]; state.current=0;
   clearProgress();
   byId('loader').classList.remove('hide'); byId('quizPanel').classList.add('hide');
   byId('resultPanel').classList.add('hide'); byId('scorePill').classList.add('hide');
   byId('headerTimer').textContent='00:00'; byId('bigTimer').textContent='00:00'; byId('bar').style.width='0%';
-  setHeaderInfo(state.quiz?`Đã tải: ${state.quiz.meta.title}`:'Chưa tải đề');
+  if(hard) {
+    state.raw=null; state.quiz=null;
+    byId('btnStart').disabled = true; byId('btnReset').disabled = true;
+    setHeaderInfo('Chưa tải đề');
+  }
 }
 
-/* ============ Khởi chạy kho đề và khôi phục ============ */
+/* ============ Khởi chạy lúc load trang ============ */
 setHeaderInfo('Chưa tải đề');
 window.addEventListener('load', checkAndLoadProgress);
