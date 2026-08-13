@@ -83,9 +83,15 @@ aside.side { display: grid; gap: 16px; position: sticky; top: 80px; height: max-
 
 .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; align-items: center; justify-content: center; z-index: 100; backdrop-filter: blur(4px); padding: 16px; }
 .modal-backdrop.show { display: flex; }
-.modal { width: 100%; max-width: 800px; max-height: 85vh; overflow-y: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
-.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 16px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--surface); z-index: 10;}
-.modal-body { padding: 16px; }
+
+/* CSS MỚI CHO BẢNG HƯỚNG DẪN */
+.guide-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 999; display: none; align-items: center; justify-content: center; backdrop-filter: blur(5px); padding: 16px; }
+.guide-overlay.active { display: flex; animation: fadeIn 0.2s; }
+.guide-box { width: 100%; max-width: 750px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+.guide-header { padding: 16px 20px; border-bottom: 1px solid var(--line); background: #161616; }
+.guide-header h2 { margin: 0; font-size: 18px; color: var(--accent); }
+.guide-content { padding: 20px; max-height: 75vh; overflow-y: auto; }
+.prompt-box { background: #000; border: 1px solid #333; padding: 16px; border-radius: 8px; font-family: monospace; font-size: 13px; color: #a3a3a3; white-space: pre-wrap; user-select: all; line-height: 1.5; }
 
 /* In Kết Quả PDF */
 .print-only { display: none; }
