@@ -14,7 +14,7 @@
       </div>
       <div class="pill">⏱ <span class="timer" id="headerTimer">00:00</span></div>
       <div class="pill hide" id="headerInfo">Chưa tải đề</div>
-      <button class="help-icon" id="btnHelp" title="Hướng dẫn" aria-label="Hướng dẫn">❓</button>
+      <button class="help-icon" id="btnHelp" title="Hướng dẫn & AI Prompt" aria-label="Hướng dẫn">❓</button>
     </div>
   </header>
 
@@ -154,33 +154,64 @@
     </section>
   </main>
 
-  <!-- Hướng dẫn sử dụng -->
-  <div id="helpModal" class="modal-backdrop hide" aria-hidden="true">
-    <div class="modal card">
-      <div class="modal-header">
-        <b id="helpTitle">Hướng dẫn & Phím tắt</b>
-        <button class="btn ghost" id="helpClose">✖</button>
+  <!-- Hình ảnh phóng to -->
+  <div id="imageLightbox" class="modal-backdrop hide" aria-hidden="true">
+    <div style="position:relative; display:flex; flex-direction:column; align-items:center;">
+        <button id="closeLightbox" class="btn ghost" style="position:absolute; top:-40px; right:0; background:rgba(0,0,0,0.5); color:#fff;">✖ Đóng</button>
+        <img id="lightboxImg" src="" style="max-width:90vw; max-height:90vh; border-radius:8px; object-fit:contain;" />
+    </div>
+  </div>
+
+  <!-- BẢNG HƯỚNG DẪN MỚI (LÀM LẠI HOÀN TOÀN) -->
+  <div id="guideOverlay" class="guide-overlay" aria-hidden="true">
+    <div class="guide-box">
+      <div class="guide-header space-between">
+        <h2>💡 Hướng dẫn & Lấy Prompt</h2>
+        <button class="btn ghost btn-sm" id="closeGuide" style="border-color: #444;">✖ Đóng</button>
       </div>
-      <div class="modal-body">
+      <div class="guide-content">
         <h3>⌨️ Phím tắt hỗ trợ</h3>
-        <ul>
+        <ul style="color: #ccc; margin-bottom: 20px;">
           <li><b>Mũi tên Trái/Phải (← / →):</b> Chuyển câu hỏi trước/sau.</li>
           <li><b>Phím A, B, C, D (hoặc 1, 2, 3, 4):</b> Chọn đáp án nhanh.</li>
           <li><b>Phím Enter:</b> Nộp bài.</li>
+          <li><b>Phím ? (Shift + /):</b> Bật/tắt nhanh bảng hướng dẫn này.</li>
         </ul>
-        <p class="muted">Hệ thống sẽ tự động lưu tiến trình làm bài. Nếu lỡ F5 tải lại trang, bài làm của bạn vẫn còn nguyên.</p>
+        
+        <hr style="border-color: var(--line); margin: 20px 0;">
+
+        <h3>🤖 Prompt AI để tự tạo đề</h3>
+        <p class="muted">Copy câu lệnh dưới đây dán vào AI (ChatGPT, Gemini,...), rồi dán tài liệu của bạn xuống dưới cùng để AI sinh file JSON chuẩn.</p>
+        
+        <div class="prompt-box" id="promptText">Hãy thiết kế bộ đề trắc nghiệm dựa trên tài liệu tôi cung cấp.
+
+YÊU CẦU:
+1. Bám sát 100% nội dung tài liệu, KHÔNG tự suy diễn kiến thức bên ngoài.
+2. BẮT BUỘC phải có lời giải thích (explanation) chi tiết cho từng câu.
+3. Trả về DUY NHẤT mã JSON hợp lệ theo cấu trúc sau, không kèm văn bản nào khác.
+
+TEMPLATE JSON:
+{
+  "meta": { "title": "[Tên đề]", "time_limit_sec": 1200, "shuffle_questions": true, "shuffle_options": true },
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "single",
+      "question": "Nội dung câu hỏi?",
+      "options": ["A", "B", "C", "D"],
+      "correct": [0],
+      "explanation": "Giải thích chi tiết..."
+    }
+  ]
+}
+
+TÀI LIỆU CỦA TÔI:
+[Dán tài liệu của bạn vào đây]</div>
+        <button class="btn mt10" id="btnCopyPrompt" style="background: var(--ok); color: #000; border: none; font-weight: bold;">📋 Copy Prompt</button>
       </div>
     </div>
   </div>
-
-  <!-- Phóng to ảnh -->
-  <div id="imageLightbox" class="modal-backdrop hide hide-print">
-    <div style="position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-      <button class="btn ghost" id="closeLightbox" style="position: absolute; top: 20px; right: 20px; font-size: 20px; background: rgba(0,0,0,0.5);">✖ Đóng</button>
-      <img id="lightboxImg" src="" style="max-width: 95%; max-height: 95%; object-fit: contain; border-radius: 8px;" />
-    </div>
-  </div>
-
+  
   <script src="app.js"></script>
 </body>
 </html>
