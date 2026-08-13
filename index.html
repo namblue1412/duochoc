@@ -191,11 +191,10 @@ YÊU CẦU:
 3. Trả về DUY NHẤT mã JSON hợp lệ theo cấu trúc sau, không kèm văn bản nào khác.
 4. Nếu câu hỏi phải có 4 lựa chọn (A, B, C, D) thì chỉ có 1 đáp án đúng.
 5. Nếu câu hỏi có nhiều đáp án đúng, hãy đánh dấu tất cả các đáp án đúng trong mảng "correct".
-6. Nếu câu hỏi có hình ảnh, hãy cung cấp URL hình ảnh trong trường "image" (nếu không có thì để trống).
+6. Không sử dụng câu có hình ảnh.
 7. Không thêm bất kỳ ký tự, chú thích, hay văn bản nào khác ngoài JSON.
 8. Tạo [số lượng] câu hỏi trắc nghiệm và [số lượng] câu hỏi nhiều lựa chọn dựa trên tài liệu của tôi với mức độ khó từ dễ đến khó, đảm bảo có cả câu hỏi cơ bản và nâng cao.
-
-
+9. Có 2 loại câu là single hoặc multi
 TEMPLATE JSON:
 {
   "meta": { "title": "[Tên đề]", "time_limit_sec": 1200, "shuffle_questions": true, "shuffle_options": true },
