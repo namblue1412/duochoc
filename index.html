@@ -183,31 +183,64 @@
         <h3>🤖 Prompt AI để tự tạo đề</h3>
         <p class="muted">Copy câu lệnh dưới đây dán vào AI (ChatGPT, Gemini,...), rồi dán tài liệu của bạn xuống dưới cùng để AI sinh file JSON chuẩn.</p>
         
-        <div class="prompt-box" id="promptText">Hãy thiết kế bộ đề trắc nghiệm dựa trên tài liệu tôi cung cấp.
+        <div class="prompt-box" id="promptText">Hãy đóng vai trò là một chuyên gia giáo dục để thiết kế bộ đề trắc nghiệm dựa trên tài liệu tôi cung cấp.
 
-YÊU CẦU:
-1. Bám sát 100% nội dung tài liệu, KHÔNG tự suy diễn kiến thức bên ngoài.
-2. BẮT BUỘC phải có lời giải thích (explanation) chi tiết cho từng câu.
-3. Trả về DUY NHẤT mã JSON hợp lệ theo cấu trúc sau, không kèm văn bản nào khác.
-4. Nếu câu hỏi phải có 4 lựa chọn (A, B, C, D) thì chỉ có 1 đáp án đúng.
-5. Nếu câu hỏi có nhiều đáp án đúng, hãy đánh dấu tất cả các đáp án đúng trong mảng "correct".
-6. Không sử dụng câu có hình ảnh.
-7. Không thêm bất kỳ ký tự, chú thích, hay văn bản nào khác ngoài JSON.
-8. Tạo [số lượng] câu hỏi trắc nghiệm và [số lượng] câu hỏi nhiều lựa chọn dựa trên tài liệu của tôi với mức độ khó từ dễ đến khó, đảm bảo có cả câu hỏi cơ bản và nâng cao.
-9. Có 2 loại câu là single hoặc multi
-TEMPLATE JSON:
+YÊU CẦU BẮT BUỘC (RẤT QUAN TRỌNG):
+
+Nội dung: Bám sát 100% tài liệu, KHÔNG tự suy diễn kiến thức bên ngoài. Mỗi câu bắt buộc phải có trường "explanation" trích dẫn chi tiết từ tài liệu để giải thích vì sao chọn đáp án đó.
+
+Chỉ mục (Zero-based index): Mảng options chứa các lựa chọn. Vị trí các lựa chọn bắt đầu từ 0 (Lựa chọn 1 = 0, Lựa chọn 2 = 1, Lựa chọn 3 = 2, Lựa chọn 4 = 3).
+
+Kiểu dữ liệu: Trường correct BẮT BUỘC phải là một mảng chứa CÁC SỐ NGUYÊN (Integer). TUYỆT ĐỐI KHÔNG sử dụng chuỗi (String). (ĐÚNG: [0, 1], SAI: ["0", "1"]).
+
+Phân loại câu hỏi:
+
+Câu hỏi 1 đáp án: Trường type phải là "single", trường correct chỉ chứa 1 số duy nhất (ví dụ: [2]).
+
+Câu hỏi nhiều đáp án: Trường type phải là "multi", trường correct chứa từ 2 số trở lên (ví dụ: [0, 2, 3]).
+
+Hình ảnh: Nếu không có hình ảnh, hãy BỎ QUA hoàn toàn trường image (không cần ghi vào JSON).
+
+Đầu ra: Trả về DUY NHẤT mã JSON hợp lệ. Chuỗi phải bắt đầu ngay bằng { và kết thúc bằng }. KHÔNG dùng thẻ markdown (như ```json), KHÔNG thêm bất kỳ văn bản chào hỏi, chú thích hay ký tự thừa nào khác.
+
+Tạo [số lượng] câu hỏi trắc nghiệm 1 đáp án và [số lượng] câu hỏi nhiều lựa chọn từ dễ đến khó dựa trên tài liệu bên dưới.
+
+TEMPLATE JSON MẪU (Hãy tuân thủ cấu trúc này):
 {
-  "meta": { "title": "[Tên đề]", "time_limit_sec": 1200, "shuffle_questions": true, "shuffle_options": true },
-  "questions": [
-    {
-      "id": "Q01",
-      "type": "single",
-      "question": "Nội dung câu hỏi?",
-      "options": ["A", "B", "C", "D"],
-      "correct": [0],
-      "explanation": "Giải thích chi tiết..."
-    }
-  ]
+"meta": {
+"title": "[Tên đề của bạn]",
+"time_limit_sec": 1200,
+"shuffle_questions": true,
+"shuffle_options": true
+},
+"questions": [
+{
+"id": "Q01",
+"type": "single",
+"question": "Nội dung câu hỏi chỉ có 1 đáp án đúng (ví dụ: Ai là người phát hiện ra...?)",
+"options": [
+"Đáp án sai 1",
+"Đáp án đúng",
+"Đáp án sai 2",
+"Đáp án sai 3"
+],
+"correct": [1],
+"explanation": "Theo tài liệu, phần X ghi rõ: '...'"
+},
+{
+"id": "Q02",
+"type": "multi",
+"question": "Nội dung câu hỏi có NHIỀU đáp án đúng (ví dụ: Những yếu tố nào sau đây...?)",
+"options": [
+"Yếu tố đúng 1",
+"Yếu tố sai 1",
+"Yếu tố đúng 2",
+"Yếu tố đúng 3"
+],
+"correct": [0, 2, 3],
+"explanation": "Theo tài liệu, phần Y liệt kê các yếu tố bao gồm: 1..., 2..., 3..."
+}
+]
 }
 
 TÀI LIỆU CỦA TÔI:
