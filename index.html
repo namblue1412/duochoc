@@ -14,6 +14,7 @@
       </div>
       <div class="pill">⏱ <span class="timer" id="headerTimer">00:00</span></div>
       <div class="pill hide" id="headerInfo">Chưa tải đề</div>
+      <button class="theme-icon" id="btnThemeToggle" title="Chuyển giao diện Sáng/Tối" aria-label="Đổi giao diện">🌓</button>
       <button class="help-icon" id="btnHelp" title="Hướng dẫn & AI Prompt" aria-label="Hướng dẫn">❓</button>
     </div>
   </header>
@@ -31,14 +32,22 @@
             <textarea id="paste" placeholder='{"meta":{"title":"Dược lý – Đề 01"},"questions":[...]}'></textarea>
             <div class="btn-row">
               <button class="btn" id="btnParse">📥 Nạp từ vùng dán</button>
-              <button class="btn ghost" id="btnTemplate">📦 Tải template JSON</button>
+              <button class="btn ghost" id="btnSaveToBank" title="Lưu đề đang nạp vào kho đề cục bộ của bạn">💾 Lưu đề này vào Kho đề</button>
+              <button class="btn ghost" id="btnTemplate">📦 Template Trắc nghiệm</button>
+              <button class="btn ghost" id="btnEssayTemplate">📝 Template Tự luận</button>
               <button class="btn ghost" id="btnSample">✨ Nạp đề mẫu</button>
             </div>
           </div>
           <div class="mt10">
-            <h3>1b) Chọn đề từ kho đề</h3>
+            <h3>1b) Chọn đề từ kho đề (21 bộ đề)</h3>
+            <div class="grid-2 mt6">
+              <select id="bankCategorySelect">
+                <option value="all">📂 Tất cả môn học</option>
+              </select>
+              <input type="text" id="bankSearchInput" placeholder="🔍 Tìm tên đề..." />
+            </div>
             <div class="btn-row mt6">
-              <select id="bankSelect"><option value="">-- Chọn đề trong kho --</option></select>
+              <select id="bankSelect" style="flex:1;"><option value="">-- Đang nạp danh sách đề... --</option></select>
               <button class="btn" id="btnBankLoad">📚 Nạp từ kho đề</button>
             </div>
             <div class="muted mt6" id="bankStatus"></div>
@@ -47,9 +56,17 @@
 
         <div>
           <h2 class="mt0">2) Thiết lập</h2>
-          <label>Thời gian (phút) — để trống lấy từ file
-            <input type="number" id="minutes" min="1" step="1" placeholder="VD: 15" />
-          </label>
+          <div class="grid-2">
+            <label>Thời gian (phút)
+              <input type="number" id="minutes" min="1" step="1" placeholder="Mặc định theo đề" />
+            </label>
+            <label>Chế độ làm bài
+              <select id="quizMode">
+                <option value="exam">📝 Thi thử (Hiện điểm sau khi nộp)</option>
+                <option value="practice">⚡ Luyện tập (Hiện đúng/sai ngay)</option>
+              </select>
+            </label>
+          </div>
           <div class="grid-2 mt8">
             <label>Trộn câu hỏi
               <select id="shuffleQ">
@@ -90,7 +107,11 @@
           <div class="card pad" id="qCard">
             <div class="space-between mb10">
               <div class="qtitle" id="qTitle">Câu 1</div>
-              <button id="btnFlag" class="btn ghost btn-sm" title="Đánh dấu câu này để xem lại">🚩 Đánh dấu</button>
+              <div style="display:flex; gap:6px; align-items:center;">
+                <button id="btnFontDec" class="btn ghost btn-sm" title="Giảm cỡ chữ">A-</button>
+                <button id="btnFontInc" class="btn ghost btn-sm" title="Tăng cỡ chữ">A+</button>
+                <button id="btnFlag" class="btn ghost btn-sm" title="Đánh dấu câu này để xem lại (Phím F)">🚩 Đánh dấu</button>
+              </div>
             </div>
             <div class="muted" id="qMeta">—</div>
             <div class="qtext mt8" id="qText"></div>
@@ -106,7 +127,7 @@
               <b>Danh sách câu</b>
             </div>
             <div class="matrix" id="qMatrix"></div>
-            <div class="pad" style="padding-top:10px; border-top:1px solid #222;">
+            <div class="pad" style="padding-top:10px; border-top:1px solid var(--line);">
                <div class="chips" id="filterGroup">
                 <button class="chip active" data-filter="all">Tất cả</button>
                 <button class="chip" data-filter="answered">Đã làm</button>
@@ -138,9 +159,10 @@
         <h2 class="mt0">🎉 Hoàn thành bài thi!</h2>
         <h3 id="resultScoreText" style="color: var(--ok)">Điểm: 0/0 (0%)</h3>
         <div class="btn-row mt10">
-          <button class="btn" id="btnPrint" style="background: var(--accent); color: #000;">🖨 Xuất file PDF (In)</button>
+          <button class="btn" id="btnPrint" style="background: var(--accent); color: var(--bg);">🖨 Xuất file PDF (In)</button>
           <button class="btn ghost" id="btnToggleResultView">Lọc: Đang xem câu sai & chưa làm</button>
-          <button class="btn ghost" id="btnRedoResult">↺ Làm lại đề này</button>
+          <button class="btn" id="btnRedoWrong" style="background: rgba(239, 68, 68, 0.2); border-color: var(--bad); color: var(--bad);">⚡ Chỉ làm lại câu sai</button>
+          <button class="btn ghost" id="btnRedoResult">↺ Làm lại toàn bộ</button>
         </div>
       </div>
       <!-- Nơi chứa nội dung sẽ in ra PDF -->
@@ -171,9 +193,10 @@
       </div>
       <div class="guide-content">
         <h3>⌨️ Phím tắt hỗ trợ</h3>
-        <ul style="color: #ccc; margin-bottom: 20px;">
+        <ul style="color: var(--muted); margin-bottom: 20px; line-height: 1.8;">
           <li><b>Mũi tên Trái/Phải (← / →):</b> Chuyển câu hỏi trước/sau.</li>
-          <li><b>Phím A, B, C, D (hoặc 1, 2, 3, 4):</b> Chọn đáp án nhanh.</li>
+          <li><b>Phím A, B, C, D, E (hoặc 1, 2, 3, 4, 5):</b> Chọn đáp án nhanh.</li>
+          <li><b>Phím F:</b> Đặt / Hủy cờ đánh dấu (Flag) câu đang xem.</li>
           <li><b>Phím Enter:</b> Nộp bài.</li>
           <li><b>Phím ? (Shift + /):</b> Bật/tắt nhanh bảng hướng dẫn này.</li>
         </ul>
@@ -183,68 +206,87 @@
         <h3>🤖 Prompt AI để tự tạo đề</h3>
         <p class="muted">Copy câu lệnh dưới đây dán vào AI (ChatGPT, Gemini,...), rồi dán tài liệu của bạn xuống dưới cùng để AI sinh file JSON chuẩn.</p>
         
-        <div class="prompt-box" id="promptText">Hãy đóng vai trò là một chuyên gia giáo dục để thiết kế bộ đề trắc nghiệm dựa trên tài liệu tôi cung cấp.
+        <div class="prompt-box" id="promptText">Hãy đóng vai trò là một chuyên gia giáo dục và khảo thí để thiết kế bộ đề thi dựa trên tài liệu tôi cung cấp.
+
+THÔNG SỐ BỘ ĐỀ THEO YÊU CẦU:
+- Tên môn học / Chủ đề: [Điền tên đề, ví dụ: Dược lý Kháng sinh]
+- Tổng số lượng câu hỏi: [Ví dụ: 30 câu]
+- Phân bổ theo loại câu hỏi:
+  + Trắc nghiệm 1 đáp án (type "single"): [Ví dụ: 20 câu]
+  + Trắc nghiệm nhiều đáp án (type "multi"): [Ví dụ: 5 câu]
+  + Tự luận ngắn / Điền khuyết (type "essay"): [Ví dụ: 5 câu]
+- Tỉ lệ độ khó:
+  + Nhận biết / Dễ (easy): [Ví dụ: 40%]
+  + Thông hiểu / Trung bình (medium): [Ví dụ: 40%]
+  + Vận dụng / Khó (hard): [Ví dụ: 20%]
+- Thời gian làm bài: [Ví dụ: 30 phút = 1800 giây]
 
 YÊU CẦU BẮT BUỘC (RẤT QUAN TRỌNG):
+1. Bám sát 100% tài liệu cung cấp: KHÔNG tự bịa hoặc suy diễn kiến thức ngoài tài liệu.
+2. Giải thích chi tiết (explanation): Mỗi câu bắt buộc phải có trường "explanation" trích dẫn cụ thể ý từ tài liệu để đối chiếu và tự chấm.
+3. Quy định cấu trúc từng loại câu hỏi:
+   - Câu trắc nghiệm 1 đáp án (single): Mảng options chứa các lựa chọn. Trường correct là mảng chứa đúng 1 chỉ mục số nguyên dạng 0-index (ví dụ: [1]).
+   - Câu trắc nghiệm nhiều đáp án (multi): Trường correct chứa các chỉ mục số nguyên dạng 0-index (ví dụ: [0, 2]).
+   - Câu Tự luận / Trả lời ngắn / Điền khuyết (essay):
+     + Không cần mảng options (hoặc để rỗng []).
+     + Trường "sample_answer": Chứa câu trả lời mẫu chuẩn / từ khóa cần điền.
+     + Trường "grading_criteria": [Mảng các ý chính để chấm điểm, ví dụ: "+0.5đ nếu nêu đúng cơ chế...", "+0.5đ nếu nêu đúng liều..."]
+4. Định dạng dữ liệu:
+   - Trường correct chỉ chứa SỐ NGUYÊN (Integer), TUYỆT ĐỐI không dùng chuỗi String ([0], KHÔNG viết ["0"]).
+   - Trường difficulty: ghi rõ "easy" | "medium" | "hard".
+   - Trường tags: mảng các từ khóa chủ đề (ví dụ: ["Kháng sinh", "Cơ chế"]).
+5. Định dạng đầu ra:
+   - Trả về DUY NHẤT mã JSON hợp lệ bắt đầu bằng { và kết thúc bằng }.
+   - KHÔNG dùng markdown ```json, KHÔNG có văn bản chào hỏi hay ghi chú nào khác.
 
-Nội dung: Bám sát 100% tài liệu, KHÔNG tự suy diễn kiến thức bên ngoài. Mỗi câu bắt buộc phải có trường "explanation" trích dẫn chi tiết từ tài liệu để giải thích vì sao chọn đáp án đó.
-
-Chỉ mục (Zero-based index): Mảng options chứa các lựa chọn. Vị trí các lựa chọn bắt đầu từ 0 (Lựa chọn 1 = 0, Lựa chọn 2 = 1, Lựa chọn 3 = 2, Lựa chọn 4 = 3).
-
-Kiểu dữ liệu: Trường correct BẮT BUỘC phải là một mảng chứa CÁC SỐ NGUYÊN (Integer). TUYỆT ĐỐI KHÔNG sử dụng chuỗi (String). (ĐÚNG: [0, 1], SAI: ["0", "1"]).
-
-Phân loại câu hỏi:
-
-Câu hỏi 1 đáp án: Trường type phải là "single", trường correct chỉ chứa 1 số duy nhất (ví dụ: [2]).
-
-Câu hỏi nhiều đáp án: Trường type phải là "multi", trường correct chứa từ 2 số trở lên (ví dụ: [0, 2, 3]).
-
-Hình ảnh: Nếu không có hình ảnh, hãy BỎ QUA hoàn toàn trường image (không cần ghi vào JSON).
-
-Đầu ra: Trả về DUY NHẤT mã JSON hợp lệ. Chuỗi phải bắt đầu ngay bằng { và kết thúc bằng }. KHÔNG dùng thẻ markdown (như ```json), KHÔNG thêm bất kỳ văn bản chào hỏi, chú thích hay ký tự thừa nào khác.
-
-Tạo [số lượng] câu hỏi trắc nghiệm 1 đáp án và [số lượng] câu hỏi nhiều lựa chọn từ dễ đến khó dựa trên tài liệu bên dưới.
-
-TEMPLATE JSON MẪU (Hãy tuân thủ cấu trúc này):
+TEMPLATE JSON CHUẨN:
 {
-"meta": {
-"title": "[Tên đề của bạn]",
-"time_limit_sec": 1200,
-"shuffle_questions": true,
-"shuffle_options": true
-},
-"questions": [
-{
-"id": "Q01",
-"type": "single",
-"question": "Nội dung câu hỏi chỉ có 1 đáp án đúng (ví dụ: Ai là người phát hiện ra...?)",
-"options": [
-"Đáp án sai 1",
-"Đáp án đúng",
-"Đáp án sai 2",
-"Đáp án sai 3"
-],
-"correct": [1],
-"explanation": "Theo tài liệu, phần X ghi rõ: '...'"
-},
-{
-"id": "Q02",
-"type": "multi",
-"question": "Nội dung câu hỏi có NHIỀU đáp án đúng (ví dụ: Những yếu tố nào sau đây...?)",
-"options": [
-"Yếu tố đúng 1",
-"Yếu tố sai 1",
-"Yếu tố đúng 2",
-"Yếu tố đúng 3"
-],
-"correct": [0, 2, 3],
-"explanation": "Theo tài liệu, phần Y liệt kê các yếu tố bao gồm: 1..., 2..., 3..."
-}
-]
+  "meta": {
+    "title": "[Tên đề thi của bạn]",
+    "time_limit_sec": 1800,
+    "shuffle_questions": true,
+    "shuffle_options": true
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "single",
+      "question": "Nội dung câu hỏi 1 lựa chọn đúng?",
+      "options": ["Đáp án A", "Đáp án B đúng", "Đáp án C", "Đáp án D"],
+      "correct": [1],
+      "difficulty": "easy",
+      "tags": ["Khái niệm"],
+      "explanation": "Trích dẫn tài liệu: Theo mục 1..."
+    },
+    {
+      "id": "Q02",
+      "type": "multi",
+      "question": "Những nhận định nào sau đây là ĐÚNG? (Chọn nhiều)",
+      "options": ["Ý đúng 1", "Ý sai", "Ý đúng 2", "Ý sai"],
+      "correct": [0, 2],
+      "difficulty": "medium",
+      "tags": ["Đặc điểm"],
+      "explanation": "Trích dẫn tài liệu: Ý 1 và Ý 3 đúng vì..."
+    },
+    {
+      "id": "Q03",
+      "type": "essay",
+      "question": "Trình bày cơ chế tác dụng và 2 chỉ định chính của thuốc X?",
+      "sample_answer": "- Cơ chế: ức chế men Y dẫn đến...\n- Chỉ định: 1) Điều trị bệnh A; 2) Điều trị bệnh B.",
+      "grading_criteria": [
+        "Nêu đúng cơ chế tác dụng (1.0 điểm)",
+        "Nêu đúng chỉ định 1 (0.5 điểm)",
+        "Nêu đúng chỉ định 2 (0.5 điểm)"
+      ],
+      "difficulty": "hard",
+      "tags": ["Tự luận", "Cơ chế & Chỉ định"],
+      "explanation": "Chi tiết trong tài liệu trang..."
+    }
+  ]
 }
 
 TÀI LIỆU CỦA TÔI:
-[Dán tài liệu của bạn vào đây]</div>
+[Dán tài liệu học tập của bạn vào đây]</div>
         <button class="btn mt10" id="btnCopyPrompt" style="background: var(--ok); color: #000; border: none; font-weight: bold;">📋 Copy Prompt</button>
       </div>
     </div>

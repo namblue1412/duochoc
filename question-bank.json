@@ -1,70 +1,140 @@
 {
   "folder": "kho-de",
+  "categories": [
+    { "id": "all", "name": "Tất cả đề" },
+    { "id": "duocdong", "name": "Dược Động Học" },
+    { "id": "lamsang", "name": "Lâm Sàng Nội / Bệnh Học" },
+    { "id": "duoclieu", "name": "Nhận Thức Dược Liệu" },
+    { "id": "duocly", "name": "Dược Lý" },
+    { "id": "hoaduoc", "name": "Hóa Dược & Hóa Học" },
+    { "id": "khac", "name": "Khác" }
+  ],
   "items": [
     {
-      "id": "toanhinh0",
-      "title": "Ôn Toán Hình 9 - Đề 1 ",
-      "file": "oth1.json"
-    },   
-    {
-      "id": "duocdonghd24",
-      "title": "Dược Động HD24 - Đề 1 ",
+      "id": "dd01",
+      "category": "duocdong",
+      "title": "Dược Động HD24 - Đề 1",
       "file": "dd01.json"
     },
     {
-      "id": "duocdonghd24",
-      "title": "Dược Động HD24 - Đề 2 ",
+      "id": "dd02",
+      "category": "duocdong",
+      "title": "Dược Động HD24 - Đề 2",
       "file": "dd02.json"
     },
     {
-      "id": "duocdonghd24",
-      "title": "Dược Động HD24 - Đề 3 ",
+      "id": "dd03",
+      "category": "duocdong",
+      "title": "Dược Động HD24 - Đề 3",
       "file": "dd03.json"
     },
     {
-      "id": "duocdonghd24",
-      "title": "Dược Động HD24 - Đề 4 ",
+      "id": "dd04",
+      "category": "duocdong",
+      "title": "Dược Động HD24 - Đề 4",
       "file": "dd04.json"
     },
     {
-      "id": "benhhoc",
+      "id": "lsbh01",
+      "category": "lamsang",
       "title": "Lâm Sàng Nội - Đề 1",
       "file": "lsbh01.json"
     },
     {
-      "id": "benhhoc",
+      "id": "lsbh02",
+      "category": "lamsang",
       "title": "Lâm Sàng Nội - Đề 2",
       "file": "lsbh02.json"
     },
     {
-      "id": "benhhoc",
+      "id": "lsbh03",
+      "category": "lamsang",
       "title": "Lâm Sàng Nội - Đề 3",
       "file": "lsbh03.json"
     },
     {
-      "id": "benhhoc",
+      "id": "lsbh04",
+      "category": "lamsang",
       "title": "Lâm Sàng Nội - Đề 4",
       "file": "lsbh04.json"
     },
     {
-      "id": "benhhoc",
+      "id": "lsbh05",
+      "category": "lamsang",
       "title": "Lâm Sàng Nội - Đề 5",
       "file": "lsbh05.json"
     },
     {
-      "id": "benhhoc",
+      "id": "lsbh06",
+      "category": "lamsang",
       "title": "Lâm Sàng Nội - Đề 6",
       "file": "lsbh06.json"
     },
     {
-      "id": "hduoc",
-      "title": "Hoá Dược 1 - Đề 1",
+      "id": "dly2_01",
+      "category": "duocly",
+      "title": "Dược Lý 2 - Kháng Sinh Beta-Lactam",
+      "file": "dly2_01.json"
+    },
+    {
+      "id": "ndl",
+      "category": "duoclieu",
+      "title": "NTDL - Tên Khoa Học & Họ (Hình ảnh)",
+      "file": "ndl.json"
+    },
+    {
+      "id": "bpd",
+      "category": "duoclieu",
+      "title": "NTDL - Bộ Phận Dùng (58 Dược liệu)",
+      "file": "bpd.json"
+    },
+    {
+      "id": "cd",
+      "category": "duoclieu",
+      "title": "NTDL - Công Dụng (58 Dược liệu)",
+      "file": "cd.json"
+    },
+    {
+      "id": "tphh",
+      "category": "duoclieu",
+      "title": "NTDL - Thành Phần Hóa Học (58 Dược liệu)",
+      "file": "tphh.json"
+    },
+    {
+      "id": "hduoc1",
+      "category": "hoaduoc",
+      "title": "Hóa Dược 1 - Đề 1",
       "file": "hduoc1.json"
     },
     {
-      "id": "dly",
-      "title": "Dược lý 2 - Đề 1",
-      "file": "dly2_01.json"
+      "id": "hdc01",
+      "category": "hoaduoc",
+      "title": "Hóa Đại Cương & Hữu Cơ - Đề 1",
+      "file": "hdc01.json"
+    },
+    {
+      "id": "hdc02",
+      "category": "hoaduoc",
+      "title": "Hóa Đại Cương & Hữu Cơ - Đề 2",
+      "file": "hdc02.json"
+    },
+    {
+      "id": "hdc03",
+      "category": "hoaduoc",
+      "title": "Hóa Học Tổng Hợp - Đề 3",
+      "file": "hdc03.json"
+    },
+    {
+      "id": "hdc04",
+      "category": "hoaduoc",
+      "title": "Hóa Học Tổng Hợp - Đề 4",
+      "file": "hdc04.json"
+    },
+    {
+      "id": "oth1",
+      "category": "khac",
+      "title": "Toán Hình 9 - Đề 1",
+      "file": "oth1.json"
     }
   ]
 }
