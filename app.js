@@ -429,7 +429,10 @@ if(byId('btnBankLoad')) {
 function renderStart(json){
   state.raw=json; state.quiz=normalizeQuiz(json);
   setHeaderInfo(`Đã tải: ${state.quiz.meta.title}`);
-  byId('btnStart').disabled=false; byId('btnReset').disabled=false;
+  byId('btnStart').disabled=false; 
+  byId('btnReset').disabled=false;
+  if(byId('btnExportCurrentJson')) byId('btnExportCurrentJson').disabled=false;
+  if(byId('btnShareLink')) byId('btnShareLink').disabled=false;
 }
 byId('btnStart').addEventListener('click', ()=>{ if(!state.quiz) return; resetAll(false); computeOrder(); startQuiz(); });
 byId('btnReset').addEventListener('click', ()=> resetAll(true));
@@ -895,6 +898,163 @@ byId('btnHelp').addEventListener('click', toggleGuide);
 byId('closeGuide').addEventListener('click', () => guideOverlay.classList.remove('active'));
 guideOverlay.addEventListener('click', e => { if(e.target === guideOverlay) guideOverlay.classList.remove('active'); });
 
+// Tạo Prompt AI tùy biến từ form
+function generateCustomPrompt() {
+  const subject = (byId('pmSubject')?.value || 'Dược học').trim();
+  const timeMin = parseInt(byId('pmTime')?.value, 10) || 20;
+  const numSingle = parseInt(byId('pmSingle')?.value, 10) || 0;
+  const numMulti = parseInt(byId('pmMulti')?.value, 10) || 0;
+  const numEssay = parseInt(byId('pmEssay')?.value, 10) || 0;
+  const diffMode = byId('pmDifficulty')?.value || 'balanced';
+  const specialFocus = (byId('pmSpecialFocus')?.value || '').trim();
+  const documentText = (byId('pmDocument')?.value || '').trim();
+
+  const totalQuestions = numSingle + numMulti + numEssay;
+  const timeLimitSec = timeMin * 60;
+
+  let diffText = '40% Dễ (Nhận biết), 40% Trung bình (Thông hiểu), 20% Khó (Vận dụng)';
+  if (diffMode === 'easy') diffText = '60% Dễ (Nhận biết cơ bản), 40% Trung bình';
+  else if (diffMode === 'hard') diffText = '30% Trung bình, 70% Khó (Vận dụng & Phân tích ca lâm sàng)';
+  else if (diffMode === 'custom') diffText = 'Phân bổ trải đều từ cơ bản đến nâng cao';
+
+  let focusInstruction = '';
+  if (specialFocus) {
+    focusInstruction = `\n- Trọng tâm kiến thức cần nhấn mạnh: ${specialFocus}`;
+  }
+
+  const generated = `Hãy đóng vai trò là một chuyên gia giáo dục và khảo thí để thiết kế bộ đề thi dựa trên tài liệu tôi cung cấp.
+
+THÔNG SỐ BỘ ĐỀ THEO YÊU CẦU CỦA TÔI:
+- Tên môn học / Chủ đề: ${subject}
+- Tổng số lượng câu hỏi: ${totalQuestions} câu
+- Phân bổ theo loại câu hỏi:
+  + Trắc nghiệm 1 đáp án đúng (type "single"): ${numSingle} câu
+  + Trắc nghiệm nhiều đáp án đúng (type "multi"): ${numMulti} câu
+  + Tự luận ngắn / Điền khuyết (type "essay"): ${numEssay} câu
+- Tỉ lệ độ khó: ${diffText}
+- Thời gian làm bài: ${timeMin} phút (${timeLimitSec} giây)${focusInstruction}
+
+YÊU CẦU BẮT BUỘC (RẤT QUAN TRỌNG):
+1. Bám sát 100% tài liệu cung cấp: KHÔNG tự bịa hoặc suy diễn kiến thức ngoài tài liệu.
+2. Giải thích chi tiết (explanation): Mỗi câu bắt buộc phải có trường "explanation" trích dẫn cụ thể ý từ tài liệu để người học đối chiếu và ghi nhớ.
+3. Quy định cấu trúc từng loại câu hỏi:
+   - Câu trắc nghiệm 1 đáp án (single): Mảng options chứa các lựa chọn. Trường correct là mảng chứa đúng 1 chỉ mục số nguyên dạng 0-index (ví dụ: [1]).
+   - Câu trắc nghiệm nhiều đáp án (multi): Trường correct chứa các chỉ mục số nguyên dạng 0-index (ví dụ: [0, 2]).
+   - Câu Tự luận / Trả lời ngắn / Điền khuyết (essay):
+     + Không cần mảng options (hoặc để rỗng []).
+     + Trường "sample_answer": Chứa câu trả lời mẫu chuẩn / từ khóa cần điền.
+     + Trường "grading_criteria": [Mảng các ý chính để chấm điểm, ví dụ: "+1.0đ nếu nêu đúng cơ chế...", "+0.5đ nếu nêu đúng liều..."]
+4. Định dạng dữ liệu:
+   - Trường correct chỉ chứa SỐ NGUYÊN (Integer), TUYỆT ĐỐI không dùng chuỗi String ([0], KHÔNG viết ["0"]).
+   - Trường difficulty: ghi rõ "easy" | "medium" | "hard".
+   - Trường tags: mảng các từ khóa chủ đề (ví dụ: ["${subject}", "Khái niệm"]).
+5. Định dạng đầu ra:
+   - Trả về DUY NHẤT mã JSON hợp lệ bắt đầu bằng { và kết thúc bằng }.
+   - KHÔNG dùng markdown \`\`\`json, KHÔNG có văn bản chào hỏi hay ghi chú nào khác.
+
+TEMPLATE JSON CHUẨN:
+{
+  "meta": {
+    "title": "${subject}",
+    "time_limit_sec": ${timeLimitSec},
+    "shuffle_questions": true,
+    "shuffle_options": true
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "single",
+      "question": "Nội dung câu hỏi 1 lựa chọn đúng?",
+      "options": ["Đáp án A", "Đáp án B đúng", "Đáp án C", "Đáp án D"],
+      "correct": [1],
+      "difficulty": "easy",
+      "tags": ["${subject}"],
+      "explanation": "Trích dẫn tài liệu: Giải thích chi tiết vì sao chọn B..."
+    }
+  ]
+}
+
+TÀI LIỆU CỦA TÔI:
+${documentText ? documentText : '[Dán tài liệu học tập của bạn vào đây]'}`;
+
+  byId('promptText').innerText = generated;
+}
+
+if (byId('btnGeneratePrompt')) {
+  byId('btnGeneratePrompt').addEventListener('click', () => {
+    generateCustomPrompt();
+    const btn = byId('btnGeneratePrompt');
+    const old = btn.textContent;
+    btn.textContent = '✅ Đã tạo Prompt xong!';
+    setTimeout(() => btn.textContent = old, 1800);
+  });
+}
+
+if (byId('btnResetPromptForm')) {
+  byId('btnResetPromptForm').addEventListener('click', () => {
+    if (byId('pmSubject')) byId('pmSubject').value = 'Dược lý học';
+    if (byId('pmTime')) byId('pmTime').value = '20';
+    if (byId('pmSingle')) byId('pmSingle').value = '15';
+    if (byId('pmMulti')) byId('pmMulti').value = '5';
+    if (byId('pmEssay')) byId('pmEssay').value = '2';
+    if (byId('pmDifficulty')) byId('pmDifficulty').value = 'balanced';
+    if (byId('pmSpecialFocus')) byId('pmSpecialFocus').value = '';
+    if (byId('pmDocument')) byId('pmDocument').value = '';
+    generateCustomPrompt();
+  });
+}
+
+// Tính năng: Tải đề hiện tại (.JSON) về máy để chia sẻ file cho bạn bè
+if (byId('btnExportCurrentJson')) {
+  byId('btnExportCurrentJson').addEventListener('click', () => {
+    if (!state.quiz || !state.raw) return alert('Chưa có đề nào được nạp!');
+    const rawData = JSON.stringify(state.raw, null, 2);
+    const safeTitle = (state.quiz.meta?.title || 'de_thi').replace(/[^a-zA-Z0-9_\u00C0-\u024F\u1E00-\u1EFF]/g, '_');
+    download(`${safeTitle}.json`, rawData);
+  });
+}
+
+// Tính năng: Tạo link chia sẻ đề thi (Share via URL Hash)
+if (byId('btnShareLink')) {
+  byId('btnShareLink').addEventListener('click', () => {
+    if (!state.quiz || !state.raw) return alert('Chưa có đề nào được nạp!');
+    try {
+      // Mã hóa JSON sang URI-safe Base64
+      const jsonStr = JSON.stringify(state.raw);
+      const encoded = encodeURIComponent(btoa(unescape(encodeURIComponent(jsonStr))));
+      const shareUrl = `${window.location.origin}${window.location.pathname}#quiz=${encoded}`;
+      
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        const btn = byId('btnShareLink');
+        const old = btn.textContent;
+        btn.textContent = '✅ Đã copy Link!';
+        alert('🎉 Đã copy link chia sẻ đề thi vào bộ nhớ tạm!\nBạn chỉ cần gửi link này cho bạn bè, bạn bè bấm vào là đề sẽ tự mở ra làm ngay.');
+        setTimeout(() => btn.textContent = old, 2500);
+      });
+    } catch(e) {
+      alert('Đề có dung lượng lớn, hãy dùng tính năng "📤 Tải đề này về (.JSON)" và gửi file cho bạn bè sẽ ổn định hơn!');
+    }
+  });
+}
+
+// Kiểm tra và nạp đề từ URL Hash nếu có người chia sẻ link
+function checkUrlHashQuiz() {
+  if (!window.location.hash || !window.location.hash.includes('quiz=')) return;
+  try {
+    const hashVal = window.location.hash.split('quiz=')[1];
+    if (hashVal) {
+      const decodedJson = decodeURIComponent(escape(atob(decodeURIComponent(hashVal))));
+      const quizObj = JSON.parse(decodedJson);
+      loadQuizObject(quizObj);
+      setHeaderInfo(`Được chia sẻ: ${quizObj.meta?.title || 'Đề thi'}`);
+      // Xóa hash trên URL để URL sạch đẹp
+      history.replaceState(null, null, window.location.pathname);
+    }
+  } catch(e) {
+    console.warn('Không thể đọc đề từ link chia sẻ:', e);
+  }
+}
+
 // Copy Prompt AI nhanh
 byId('btnCopyPrompt').addEventListener('click', () => {
   const promptText = byId('promptText').innerText;
@@ -903,7 +1063,7 @@ byId('btnCopyPrompt').addEventListener('click', () => {
     btn.textContent = "✅ Đã Copy vào bộ nhớ tạm!";
     btn.style.background = "#fff";
     setTimeout(() => {
-      btn.textContent = "📋 Copy Prompt";
+      btn.textContent = "📋 Copy Prompt này";
       btn.style.background = "var(--ok)";
     }, 2500);
   });
@@ -1034,6 +1194,8 @@ function resetAll(hard = false){
   if(hard) {
     state.raw=null; state.quiz=null;
     byId('btnStart').disabled = true; byId('btnReset').disabled = true;
+    if(byId('btnExportCurrentJson')) byId('btnExportCurrentJson').disabled = true;
+    if(byId('btnShareLink')) byId('btnShareLink').disabled = true;
     setHeaderInfo('Chưa tải đề');
   }
 }
@@ -1043,5 +1205,7 @@ setHeaderInfo('Chưa tải đề');
 initTheme();
 initFontSize();
 initQuestionBank();
+generateCustomPrompt();
+checkUrlHashQuiz();
 window.addEventListener('load', checkAndLoadProgress);
 
