@@ -250,6 +250,85 @@ if(byId('btnSample')) {
   });
 }
 
+// Danh mục mặc định dự phòng nếu fetch question-bank.json bị chặn bởi CORS/file://
+const FALLBACK_BANK_DATA = {
+  folder: "kho-de",
+  categories: [
+    { "id": "all", "name": "Tất cả đề" },
+    { "id": "duocdong", "name": "Dược Động Học" },
+    { "id": "lamsang", "name": "Lâm Sàng Nội / Bệnh Học" },
+    { "id": "duoclieu", "name": "Nhận Thức Dược Liệu" },
+    { "id": "duocly", "name": "Dược Lý" },
+    { "id": "hoaduoc", "name": "Hóa Dược & Hóa Học" },
+    { "id": "khac", "name": "Khác" }
+  ],
+  items: [
+    { "id": "dd01", "category": "duocdong", "title": "Dược Động HD24 - Đề 1", "file": "dd01.json" },
+    { "id": "dd02", "category": "duocdong", "title": "Dược Động HD24 - Đề 2", "file": "dd02.json" },
+    { "id": "dd03", "category": "duocdong", "title": "Dược Động HD24 - Đề 3", "file": "dd03.json" },
+    { "id": "dd04", "category": "duocdong", "title": "Dược Động HD24 - Đề 4", "file": "dd04.json" },
+    { "id": "lsbh01", "category": "lamsang", "title": "Lâm Sàng Nội - Đề 1", "file": "lsbh01.json" },
+    { "id": "lsbh02", "category": "lamsang", "title": "Lâm Sàng Nội - Đề 2", "file": "lsbh02.json" },
+    { "id": "lsbh03", "category": "lamsang", "title": "Lâm Sàng Nội - Đề 3", "file": "lsbh03.json" },
+    { "id": "lsbh04", "category": "lamsang", "title": "Lâm Sàng Nội - Đề 4", "file": "lsbh04.json" },
+    { "id": "lsbh05", "category": "lamsang", "title": "Lâm Sàng Nội - Đề 5", "file": "lsbh05.json" },
+    { "id": "lsbh06", "category": "lamsang", "title": "Lâm Sàng Nội - Đề 6", "file": "lsbh06.json" },
+    { "id": "dly2_01", "category": "duocly", "title": "Dược Lý 2 - Kháng Sinh Beta-Lactam", "file": "dly2_01.json" },
+    { "id": "ndl", "category": "duoclieu", "title": "NTDL - Tên Khoa Học & Họ (Hình ảnh)", "file": "ndl.json" },
+    { "id": "bpd", "category": "duoclieu", "title": "NTDL - Bộ Phận Dùng (58 Dược liệu)", "file": "bpd.json" },
+    { "id": "cd", "category": "duoclieu", "title": "NTDL - Công Dụng (58 Dược liệu)", "file": "cd.json" },
+    { "id": "tphh", "category": "duoclieu", "title": "NTDL - Thành Phần Hóa Học (58 Dược liệu)", "file": "tphh.json" },
+    { "id": "hduoc1", "category": "hoaduoc", "title": "Hóa Dược 1 - Đề 1", "file": "hduoc1.json" },
+    { "id": "hdc01", "category": "hoaduoc", "title": "Hóa Đại Cương & Hữu Cơ - Đề 1", "file": "hdc01.json" },
+    { "id": "hdc02", "category": "hoaduoc", "title": "Hóa Đại Cương & Hữu Cơ - Đề 2", "file": "hdc02.json" },
+    { "id": "hdc03", "category": "hoaduoc", "title": "Hóa Học Tổng Hợp - Đề 3", "file": "hdc03.json" },
+    { "id": "hdc04", "category": "hoaduoc", "title": "Hóa Học Tổng Hợp - Đề 4", "file": "hdc04.json" },
+    { "id": "oth1", "category": "khac", "title": "Toán Hình 9 - Đề 1", "file": "oth1.json" }
+  ]
+};
+
+// Hàm nạp đề từ giá trị option đã chọn (file hoặc custom)
+async function loadBankItem(val) {
+  if(!val) return;
+  const statusDiv = byId('bankStatus');
+
+  // Nếu là đề do người dùng tự lưu (LocalStorage)
+  if(val.startsWith('custom:')) {
+    const customId = val.replace('custom:', '');
+    const customList = getCustomBank();
+    const found = customList.find(c => c.id === customId);
+    if(found && found.data) {
+      loadQuizObject(found.data);
+      if(statusDiv) statusDiv.textContent = `✅ Đã tự động nạp đề: ${found.title}`;
+      return;
+    }
+  }
+
+  // 1. Ưu tiên lấy từ bộ nhúng sẵn EMBEDDED_QUIZ_BANK (chạy mượt 100% mọi môi trường)
+  if(window.EMBEDDED_QUIZ_BANK && window.EMBEDDED_QUIZ_BANK[val]) {
+    const json = window.EMBEDDED_QUIZ_BANK[val];
+    loadQuizObject(json);
+    if(statusDiv) statusDiv.textContent = `✅ Đã nạp thành công: ${json.meta?.title || val}`;
+    return;
+  }
+
+  // 2. Nếu không có trong embedded, thử fetch từ server/folder
+  const folder = (state.bankData && state.bankData.folder) ? state.bankData.folder : 'kho-de';
+  const filePath = `${folder}/${val}`;
+  if(statusDiv) statusDiv.textContent = `⏳ Đang tải ${val}...`;
+
+  try {
+    const res = await fetch(filePath);
+    if(!res.ok) throw new Error(`HTTP error ${res.status}`);
+    const json = await res.json();
+    loadQuizObject(json);
+    if(statusDiv) statusDiv.textContent = `✅ Đã nạp thành công: ${json.meta?.title || val}`;
+  } catch(err) {
+    if(statusDiv) statusDiv.textContent = `❌ Lỗi khi nạp file "${val}": ${err.message}`;
+    alert(`Không thể nạp file "${filePath}". Lỗi: ${err.message}`);
+  }
+}
+
 // Tải danh mục kho đề từ question-bank.json & kho đề tự nạp
 async function initQuestionBank() {
   const bankSelect = byId('bankSelect');
@@ -257,20 +336,20 @@ async function initQuestionBank() {
   const searchInput = byId('bankSearchInput');
   const statusDiv = byId('bankStatus');
 
-  let baseCategories = [];
-  let baseItems = [];
+  state.bankData = FALLBACK_BANK_DATA;
 
   try {
     const res = await fetch('question-bank.json');
     if(res.ok) {
-      state.bankData = await res.json();
-      baseCategories = state.bankData.categories || [];
-      baseItems = state.bankData.items || [];
+      const liveData = await res.json();
+      if(liveData && liveData.items) state.bankData = liveData;
     }
   } catch(e) {
-    console.warn("Không fetch được question-bank.json (file://)", e);
-    state.bankData = { folder: 'kho-de', categories: [], items: [] };
+    // Dùng FALLBACK_BANK_DATA đã gán
   }
+
+  const baseCategories = state.bankData.categories || [];
+  const baseItems = state.bankData.items || [];
 
   // Danh mục đề do người dùng tự thêm
   const customList = getCustomBank();
@@ -295,7 +374,7 @@ async function initQuestionBank() {
     const selectedCat = catSelect ? catSelect.value : 'all';
     const term = (searchInput ? searchInput.value : '').trim().toLowerCase();
     
-    bankSelect.innerHTML = '<option value="">-- Chọn đề thi để nạp --</option>';
+    bankSelect.innerHTML = '<option value="">-- Chọn đề thi (sẽ tự nạp ngay) --</option>';
     
     // Gộp đề có sẵn và đề tự nạp
     const combinedItems = [
@@ -317,48 +396,33 @@ async function initQuestionBank() {
     });
 
     if(statusDiv) {
-      statusDiv.textContent = `Đang có ${filtered.length}/${combinedItems.length} đề thi sẵn sàng (${customList.length} đề tự tạo).`;
+      statusDiv.textContent = `Đang có ${filtered.length}/${combinedItems.length} bộ đề sẵn sàng trong kho.`;
     }
   };
 
   renderBankOptions();
 
+  // TỰ ĐỘNG NẠP ĐỀ NGAY KHI NGƯỜI DÙNG CHỌN
+  bankSelect.onchange = () => {
+    if(bankSelect.value) loadBankItem(bankSelect.value);
+  };
+
   if(catSelect) catSelect.onchange = renderBankOptions;
   if(searchInput) searchInput.oninput = renderBankOptions;
+
+  // Tự động nạp đề đầu tiên nếu chưa có đề nào được nạp
+  if(!state.quiz && baseItems.length > 0) {
+    const firstVal = baseItems[0].file;
+    bankSelect.value = firstVal;
+    loadBankItem(firstVal);
+  }
 }
 
 if(byId('btnBankLoad')) {
-  byId('btnBankLoad').addEventListener('click', async () => {
+  byId('btnBankLoad').addEventListener('click', () => {
     const bankSelect = byId('bankSelect');
-    const val = bankSelect.value;
-    if(!val) return alert('Vui lòng chọn một đề trong danh sách!');
-    const statusDiv = byId('bankStatus');
-
-    if(val.startsWith('custom:')) {
-      const customId = val.replace('custom:', '');
-      const customList = getCustomBank();
-      const found = customList.find(c => c.id === customId);
-      if(found && found.data) {
-        loadQuizObject(found.data);
-        if(statusDiv) statusDiv.textContent = `✅ Đã tải xong đề của bạn: ${found.title}`;
-        return;
-      }
-    }
-
-    const folder = (state.bankData && state.bankData.folder) ? state.bankData.folder : 'kho-de';
-    const filePath = `${folder}/${val}`;
-    if(statusDiv) statusDiv.textContent = `⏳ Đang tải ${val}...`;
-
-    try {
-      const res = await fetch(filePath);
-      if(!res.ok) throw new Error(`HTTP error ${res.status}`);
-      const json = await res.json();
-      loadQuizObject(json);
-      if(statusDiv) statusDiv.textContent = `✅ Đã tải xong: ${json.meta?.title || val}`;
-    } catch(err) {
-      alert(`Không thể nạp file "${filePath}". Lỗi: ${err.message}\n(Lưu ý: Hãy mở qua web server hoặc dùng tính năng Nạp JSON)`);
-      if(statusDiv) statusDiv.textContent = `❌ Lỗi khi nạp file: ${err.message}`;
-    }
+    if(!bankSelect.value) return alert('Vui lòng chọn một đề trong danh sách!');
+    loadBankItem(bankSelect.value);
   });
 }
 
