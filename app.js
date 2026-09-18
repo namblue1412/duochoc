@@ -936,19 +936,28 @@ THÔNG SỐ BỘ ĐỀ THEO YÊU CẦU CỦA TÔI:
 
 YÊU CẦU BẮT BUỘC (RẤT QUAN TRỌNG):
 1. Bám sát 100% tài liệu cung cấp: KHÔNG tự bịa hoặc suy diễn kiến thức ngoài tài liệu.
-2. Giải thích chi tiết (explanation): Mỗi câu bắt buộc phải có trường "explanation" trích dẫn cụ thể ý từ tài liệu để người học đối chiếu và ghi nhớ.
-3. Quy định cấu trúc từng loại câu hỏi:
+2. Thiết kế đáp án chuẩn khảo thí - CHỐNG ĐOÁN MÒ / LỤI TRÚNG (CỰC KỲ QUAN TRỌNG):
+   - ĐỘ DÀI TƯƠNG ĐƯƠNG NHAU: Tất cả các phương án (A, B, C, D) trong cùng một câu phải có độ dài, số lượng từ và mức độ chi tiết tương đương nhau. TUYỆT ĐỐI KHÔNG để đáp án đúng dài vượt trội hoặc được giải thích chi tiết hơn các đáp án gây nhiễu.
+   - ĐỒNG NHẤT CẤU TRÚC NGỮ PHÁP: Các lựa chọn phải có cùng kiểu cấu trúc (cùng là danh từ, cụm danh từ, mệnh đề hoặc động từ).
+   - PHƯƠNG ÁN NHIỄU CHẤT LƯỢNG CAO (Plausible Distractors): Các đáp án sai phải hợp lý, mang tính chuyên môn thực tế, đánh trúng các nhầm lẫn thường gặp của học viên, không tạo phương án ngớ ngẩn hoặc vô lý.
+   - LOẠI BỎ CÁC YẾU TỐ GỢI Ý ĐOÁN MÒ (Flawed Clues):
+     + KHÔNG dùng các lựa chọn dạng: "Tất cả các đáp án trên đều đúng/sai", "Cả A và B đều đúng/sai".
+     + KHÔNG dùng các từ khẳng định tuyệt đối cực đoan trong đáp án sai (như: "luôn luôn", "tuyệt đối", "không bao giờ", "chắc chắn 100%") vì học viên dễ dàng loại trừ để lụi.
+     + KHÔNG dùng phủ định kép hoặc câu hỏi phủ định gây rối vô ích (nếu dùng "KHÔNG ĐÚNG" thì phải in hoa rõ ràng).
+   - PHÂN BỔ ĐÁP ÁN ĐÚNG NGẪU NHIÊN: Chỉ mục đáp án đúng rải đều ngẫu nhiên, không thiên vị một vị trí cố định.
+3. Giải thích chi tiết (explanation): Mỗi câu bắt buộc phải có trường "explanation" trích dẫn cụ thể ý từ tài liệu để người học đối chiếu và ghi nhớ.
+4. Quy định cấu trúc từng loại câu hỏi:
    - Câu trắc nghiệm 1 đáp án (single): Mảng options chứa các lựa chọn. Trường correct là mảng chứa đúng 1 chỉ mục số nguyên dạng 0-index (ví dụ: [1]).
    - Câu trắc nghiệm nhiều đáp án (multi): Trường correct chứa các chỉ mục số nguyên dạng 0-index (ví dụ: [0, 2]).
    - Câu Tự luận / Trả lời ngắn / Điền khuyết (essay):
      + Không cần mảng options (hoặc để rỗng []).
      + Trường "sample_answer": Chứa câu trả lời mẫu chuẩn / từ khóa cần điền.
      + Trường "grading_criteria": [Mảng các ý chính để chấm điểm, ví dụ: "+1.0đ nếu nêu đúng cơ chế...", "+0.5đ nếu nêu đúng liều..."]
-4. Định dạng dữ liệu:
+5. Định dạng dữ liệu:
    - Trường correct chỉ chứa SỐ NGUYÊN (Integer), TUYỆT ĐỐI không dùng chuỗi String ([0], KHÔNG viết ["0"]).
    - Trường difficulty: ghi rõ "easy" | "medium" | "hard".
    - Trường tags: mảng các từ khóa chủ đề (ví dụ: ["${subject}", "Khái niệm"]).
-5. Định dạng đầu ra:
+6. Định dạng đầu ra:
    - Trả về DUY NHẤT mã JSON hợp lệ bắt đầu bằng { và kết thúc bằng }.
    - KHÔNG dùng markdown \`\`\`json, KHÔNG có văn bản chào hỏi hay ghi chú nào khác.
 
