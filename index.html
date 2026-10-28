@@ -28,11 +28,12 @@
             <label class="btn" for="fileInput">📄 Chọn file JSON</label>
             <input id="fileInput" type="file" accept="application/json" />
             <div class="drop" id="drop">Kéo & thả file JSON vào đây</div>
+            <div class="muted mt6">Ảnh trong JSON dùng trường <code>image</code> chứa Data URL Base64. Mở Hướng dẫn để lấy prompt AI có yêu cầu chuyển ảnh.</div>
+            <div class="muted mt6">Bài làm và đề tự nạp chỉ dùng trong phiên hiện tại, không lưu trong trình duyệt. Bạn có thể tải đề thành file JSON để dùng lại.</div>
             <div class="muted mt6">Hoặc dán nội dung JSON:</div>
             <textarea id="paste" placeholder='{"meta":{"title":"Dược lý – Đề 01"},"questions":[...]}'></textarea>
             <div class="btn-row">
               <button class="btn" id="btnParse">📥 Nạp từ vùng dán</button>
-              <button class="btn ghost" id="btnSaveToBank" title="Lưu đề đang nạp vào kho đề cục bộ của bạn">💾 Lưu đề này vào Kho đề</button>
               <button class="btn ghost" id="btnTemplate">📦 Template Trắc nghiệm</button>
               <button class="btn ghost" id="btnEssayTemplate">📝 Template Tự luận</button>
               <button class="btn ghost" id="btnSample">✨ Nạp đề mẫu</button>
@@ -196,13 +197,14 @@
       <div class="guide-content">
         <h3>⌨️ Phím tắt hỗ trợ</h3>
         <ul style="color: var(--muted); margin-bottom: 20px; line-height: 1.8;">
-          <li><b>Mũi tên Trái/Phải (← / →):</b> Chuyển câu hỏi trước/sau.</li>
+          <li><b>Mũi tên Trái/Phải (← / →):</b> Chuyển câu hỏi trước/sau, kể cả sau khi nộp bài.</li>
           <li><b>Phím A, B, C, D, E (hoặc 1, 2, 3, 4, 5):</b> Chọn đáp án nhanh.</li>
           <li><b>Phím F:</b> Đặt / Hủy cờ đánh dấu (Flag) câu đang xem.</li>
           <li><b>Phím Enter:</b> Nộp bài.</li>
           <li><b>Phím ? (Shift + /):</b> Bật/tắt nhanh bảng hướng dẫn này.</li>
         </ul>
         
+        <p class="muted">Để tạo câu hỏi có ảnh: đính kèm tài liệu và ảnh nguồn khi gửi prompt cho AI. Prompt yêu cầu AI chuyển ảnh thành Base64 và nhúng vào JSON; web đọc trực tiếp, không cần tải ảnh riêng.</p>
         <hr style="border-color: var(--line); margin: 20px 0;">
 
         <h3>🤖 Tạo Prompt AI Theo Yêu Cầu Của Bạn</h3>

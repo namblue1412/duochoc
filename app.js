@@ -6,10 +6,7 @@ const shuffle = arr => { const a = arr.slice(); for (let i=a.length-1;i>0;i--){ 
 const fmtTime = s => { const m=Math.floor(s/60), ss=s%60; return `${String(m).padStart(2,'0')}:${String(ss).padStart(2,'0')}`; };
 const download = (fn, txt) => { const blob=new Blob([txt],{type:'application/json'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download=fn; a.click(); setTimeout(()=>URL.revokeObjectURL(url),3000); };
 
-/* ============ State & LocalStorage ============ */
-const SAVE_KEY = 'ump_quiz_autosave';
-const THEME_KEY = 'ump_quiz_theme';
-const FONT_KEY = 'ump_quiz_fontsize';
+/* ============ Session State ============ */
 
 const state = {
   raw:null, quiz:null, orderMap:[], answers:new Map(), flagged: new Set(),
@@ -21,7 +18,7 @@ const state = {
 };
 
 function initTheme() {
-  const savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
+  const savedTheme = 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
   const themeBtn = byId('btnThemeToggle');
   if (themeBtn) themeBtn.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
@@ -31,22 +28,12 @@ function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme') || 'dark';
   const next = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem(THEME_KEY, next);
   const themeBtn = byId('btnThemeToggle');
   if (themeBtn) themeBtn.textContent = next === 'dark' ? '🌙' : '☀️';
 }
 
-function initFontSize() {
-  const savedSize = parseInt(localStorage.getItem(FONT_KEY), 10);
-  if (savedSize && savedSize >= 13 && savedSize <= 22) {
-    state.fontSize = savedSize;
-    applyFontSize();
-  }
-}
-
 function changeFontSize(delta) {
   state.fontSize = Math.min(22, Math.max(13, state.fontSize + delta));
-  localStorage.setItem(FONT_KEY, state.fontSize);
   applyFontSize();
 }
 
@@ -57,41 +44,57 @@ function applyFontSize() {
   if (qOpts) qOpts.style.fontSize = `${state.fontSize}px`;
 }
 
-function saveProgress() {
-  if (!state.started || state.submitted) return;
-  const data = {
-    raw: state.raw, orderMap: state.orderMap,
-    answers: Array.from(state.answers.entries()).map(([k,v]) => [k, Array.from(v)]),
-    flagged: Array.from(state.flagged),
-    secs: state.secs, totalSecs: state.totalSecs, current: state.current,
-    mode: state.mode
-  };
-  try { localStorage.setItem(SAVE_KEY, JSON.stringify(data)); } catch(e){}
-}
-function clearProgress() { try { localStorage.removeItem(SAVE_KEY); } catch(e){} }
-function checkAndLoadProgress() {
-  try {
-    const saved = localStorage.getItem(SAVE_KEY);
-    if(saved) {
-      if(confirm('Phát hiện bài làm chưa hoàn thành trước đó. Bạn có muốn tiếp tục làm không?')) {
-        const data = JSON.parse(saved);
-        state.raw = data.raw;
-        state.quiz = normalizeQuiz(data.raw);
-        state.orderMap = data.orderMap;
-        state.answers = new Map(data.answers.map(([k,v]) => [Number(k), new Set(v)]));
-        state.flagged = new Set(data.flagged || []);
-        state.secs = data.secs;
-        state.totalSecs = data.totalSecs || (state.quiz.meta.time_limit_sec || 600);
-        state.current = data.current || 0;
-        state.mode = data.mode || 'exam';
-        setHeaderInfo(`Đang tiếp tục: ${state.quiz.meta.title} (${state.mode === 'practice' ? 'Luyện tập' : 'Thi thử'})`);
-        resumeQuiz();
-      } else { clearProgress(); }
-    }
-  } catch(e) { console.error("Lỗi khôi phục:", e); clearProgress(); }
+/* ============ Validation / Normalize ============ */
+// Image sources are assigned through DOM properties, never interpolated into HTML.
+function getQuestionImage(q) {
+  if(q.image == null || q.image === '') return null;
+  const image = typeof q.image === 'string' ? {src: q.image} : q.image;
+  if(!image || typeof image !== 'object' || Array.isArray(image)) throw new Error('image phải là đường dẫn hoặc đối tượng ảnh.');
+  if(typeof image.src !== 'string' || !image.src.trim()) throw new Error('Ảnh thiếu src.');
+  const src = image.src.trim();
+  if(/^data:/i.test(src)) {
+    const match = src.match(/^data:image\/(png|jpeg|webp|gif);base64,([a-z0-9+/]+={0,2})$/i);
+    if(!match || match[2].length % 4 !== 0) throw new Error('Ảnh nhúng cần là Base64 PNG, JPEG, WebP hoặc GIF hợp lệ.');
+    try { atob(match[2]); } catch { throw new Error('Dữ liệu Base64 của ảnh không hợp lệ.'); }
+  } else if(!/^https?:\/\//i.test(src) && (/^[a-z][a-z0-9+.-]*:/i.test(src) || src.startsWith('//'))) {
+    throw new Error('Đường dẫn ảnh phải là HTTP(S) hoặc đường dẫn file tương đối.');
+  }
+  return {src, alt: typeof image.alt === 'string' ? image.alt : 'Hình minh họa câu hỏi', caption: typeof image.caption === 'string' ? image.caption : ''};
 }
 
-/* ============ Validation / Normalize ============ */
+function renderQuestionImage(host, q) {
+  host.replaceChildren();
+  const image = getQuestionImage(q);
+  if(!image) return;
+  const figure = document.createElement('figure');
+  figure.className = 'question-image';
+  const img = new Image();
+  img.className = 'zoomable-img';
+  img.alt = image.alt;
+  img.title = 'Bấm để phóng to';
+  img.tabIndex = 0;
+  img.addEventListener('click', () => openLightbox(image.src, image.alt));
+  img.addEventListener('keydown', e => {
+    if(e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault(); e.stopPropagation(); openLightbox(image.src, image.alt);
+    }
+  });
+  img.onerror = () => {
+    const message = document.createElement('div');
+    message.className = 'muted';
+    message.textContent = '⚠️ Không đọc được ảnh minh họa. Hãy kiểm tra dữ liệu ảnh trong JSON.';
+    figure.replaceChildren(message);
+  };
+  img.src = image.src;
+  figure.appendChild(img);
+  if(image.caption) {
+    const caption = document.createElement('figcaption');
+    caption.textContent = image.caption;
+    figure.appendChild(caption);
+  }
+  host.appendChild(figure);
+}
+
 function validateQuiz(json){
   if(!json || typeof json!=='object') throw new Error('File JSON không hợp lệ.');
   if(!Array.isArray(json.questions) || json.questions.length===0) throw new Error('Thiếu danh sách "questions".');
@@ -110,6 +113,8 @@ function validateQuiz(json){
     }
     if(!['single','multi','essay'].includes(q.type)) throw new Error(`Câu ${q.id}: type phải là single|multi|essay.`);
     if(!q.question) throw new Error(`Câu ${q.id}: thiếu "question".`);
+    try { getQuestionImage(q); }
+    catch(e) { throw new Error(`Câu ${q.id}: ${e.message}`); }
 
     if(q.type === 'essay') {
       q.options = Array.isArray(q.options) ? q.options : [];
@@ -157,26 +162,12 @@ const drop=byId('drop');
 ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault(); drop.classList.remove('drag');}));
 drop.addEventListener('drop', async e=>{ e.preventDefault(); drop.classList.remove('drag'); const f=e.dataTransfer.files[0]; if(!f) return; tryParse(await f.text()); });
 byId('btnParse').addEventListener('click', ()=>{ const t=byId('paste').value.trim(); if(!t) return alert('Dán JSON trước.'); tryParse(t); });
-const CUSTOM_BANK_KEY = 'ump_custom_quiz_bank';
-
-function getCustomBank() {
-  try {
-    const raw = localStorage.getItem(CUSTOM_BANK_KEY);
-    return raw ? JSON.parse(raw) : [];
-  } catch(e) { return []; }
-}
-
-function saveCustomBank(list) {
-  try {
-    localStorage.setItem(CUSTOM_BANK_KEY, JSON.stringify(list));
-  } catch(e) { alert('Bộ nhớ duyệt web đã đầy, không thể lưu thêm đề.'); }
-}
-
 byId('btnTemplate').addEventListener('click', ()=> download('de-trac-nghiem-template.json', JSON.stringify({
   meta: { title: "Đề Trắc Nghiệm Mẫu", time_limit_sec: 900, shuffle_questions: true, shuffle_options: true },
   questions: [
     { id: "TN01", type: "single", question: "Nội dung câu hỏi trắc nghiệm 1 đáp án?", options: ["Lựa chọn A", "Lựa chọn B đúng", "Lựa chọn C", "Lựa chọn D"], correct: [1], explanation: "Giải thích chi tiết câu 1..." },
-    { id: "TN02", type: "multi", question: "Nội dung câu hỏi nhiều đáp án đúng? (Chọn nhiều)", options: ["Lựa chọn 1", "Lựa chọn 2", "Lựa chọn 3", "Lựa chọn 4"], correct: [0, 2], explanation: "Giải thích câu 2..." }
+    { id: "TN02", type: "multi", question: "Nội dung câu hỏi nhiều đáp án đúng? (Chọn nhiều)", options: ["Lựa chọn 1", "Lựa chọn 2", "Lựa chọn 3", "Lựa chọn 4"], correct: [0, 2], explanation: "Giải thích câu 2..." },
+    {"id": "IMG01", "type": "single", "question": "Hình màu xanh trong ảnh là hình gì?", "image": {"src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAADICAIAAAAWZq/8AAAEyklEQVR4nO3TMW0FUAwEwY/I+AI2XBIGW6S5PGlGB8CF9/MDPOuzPgD4OwHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBFzu69vmW3/BvybgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPOwXv4B8HFCyAeoAAAAASUVORK5CYII=", "alt": "Hình minh họa để nhận diện hình học"}, "options": ["Hình tròn", "Hình vuông", "Hình tam giác", "Hình thang"], "correct": [1], "explanation": "Hình vuông có bốn cạnh bằng nhau và bốn góc vuông."}
   ]
 }, null, 2)));
 
@@ -213,27 +204,6 @@ if(byId('btnEssayTemplate')) {
       }
     ]
   }, null, 2)));
-}
-
-if(byId('btnSaveToBank')) {
-  byId('btnSaveToBank').addEventListener('click', () => {
-    if(!state.quiz || !state.raw) return alert('Chưa nạp đề nào! Hãy nạp hoặc dán đề JSON trước khi lưu vào kho.');
-    const title = state.quiz.meta?.title || 'Đề tự nạp';
-    const customList = getCustomBank();
-    const id = 'custom_' + Date.now();
-    
-    customList.unshift({
-      id: id,
-      title: title,
-      category: 'tuluan_custom',
-      data: state.raw,
-      createdAt: new Date().toLocaleDateString('vi-VN')
-    });
-    
-    saveCustomBank(customList);
-    alert(`✅ Đã lưu đề "${title}" vào Kho đề của bạn thành công!`);
-    initQuestionBank();
-  });
 }
 
 if(byId('btnSample')) {
@@ -287,22 +257,10 @@ const FALLBACK_BANK_DATA = {
   ]
 };
 
-// Hàm nạp đề từ giá trị option đã chọn (file hoặc custom)
+// Hàm nạp đề từ giá trị option đã chọn (file JSON)
 async function loadBankItem(val) {
   if(!val) return;
   const statusDiv = byId('bankStatus');
-
-  // Nếu là đề do người dùng tự lưu (LocalStorage)
-  if(val.startsWith('custom:')) {
-    const customId = val.replace('custom:', '');
-    const customList = getCustomBank();
-    const found = customList.find(c => c.id === customId);
-    if(found && found.data) {
-      loadQuizObject(found.data);
-      if(statusDiv) statusDiv.textContent = `✅ Đã tự động nạp đề: ${found.title}`;
-      return;
-    }
-  }
 
   // 1. Ưu tiên lấy từ bộ nhúng sẵn EMBEDDED_QUIZ_BANK (chạy mượt 100% mọi môi trường)
   if(window.EMBEDDED_QUIZ_BANK && window.EMBEDDED_QUIZ_BANK[val]) {
@@ -329,7 +287,7 @@ async function loadBankItem(val) {
   }
 }
 
-// Tải danh mục kho đề từ question-bank.json & kho đề tự nạp
+// Tải danh mục kho đề từ question-bank.json
 async function initQuestionBank() {
   const bankSelect = byId('bankSelect');
   const catSelect = byId('bankCategorySelect');
@@ -351,14 +309,7 @@ async function initQuestionBank() {
   const baseCategories = state.bankData.categories || [];
   const baseItems = state.bankData.items || [];
 
-  // Danh mục đề do người dùng tự thêm
-  const customList = getCustomBank();
-  let allCategories = [...baseCategories];
-  if(customList.length > 0) {
-    if(!allCategories.some(c => c.id === 'tuluan_custom')) {
-      allCategories.push({ id: 'tuluan_custom', name: 'Đề của tôi (Tự nạp)' });
-    }
-  }
+  const allCategories = baseCategories;
 
   if(catSelect) {
     catSelect.innerHTML = '';
@@ -377,10 +328,7 @@ async function initQuestionBank() {
     bankSelect.innerHTML = '<option value="">-- Chọn đề thi (sẽ tự nạp ngay) --</option>';
     
     // Gộp đề có sẵn và đề tự nạp
-    const combinedItems = [
-      ...customList.map(c => ({ ...c, isCustom: true })),
-      ...baseItems.map(b => ({ ...b, isCustom: false }))
-    ];
+    const combinedItems = baseItems;
 
     const filtered = combinedItems.filter(item => {
       const matchCat = (selectedCat === 'all' || item.category === selectedCat);
@@ -390,8 +338,8 @@ async function initQuestionBank() {
 
     filtered.forEach(item => {
       const opt = document.createElement('option');
-      opt.value = item.isCustom ? `custom:${item.id}` : item.file;
-      opt.textContent = (item.isCustom ? '⭐ [Của tôi] ' : '') + item.title;
+      opt.value = item.file;
+      opt.textContent = item.title;
       bankSelect.appendChild(opt);
     });
 
@@ -459,15 +407,9 @@ function startQuiz(){
   const minInput=parseInt(byId('minutes').value,10);
   const total=Number.isFinite(minInput)&&minInput>0 ? minInput*60 : (state.quiz.meta.time_limit_sec||600);
   state.totalSecs = total;
-  startTimer(total); state.started=true; saveProgress();
+  startTimer(total); state.started=true;
 }
-function resumeQuiz(){
-  byId('loader').classList.add('hide'); byId('quizPanel').classList.remove('hide'); byId('resultPanel').classList.add('hide');
-  state.submitted=false; state.started=true;
-  renderQuestion(state.current); renderMatrix(); renderProgressMeta(); applyFilter();
-  startTimer(state.secs, true);
-}
-function startTimer(seconds, isResume=false){
+function startTimer(seconds){
   clearInterval(state.timer); state.secs = seconds;
   const tick=()=>{
     byId('headerTimer').textContent=fmtTime(state.secs);
@@ -514,15 +456,7 @@ function renderQuestion(qShownIdx){
     btnFlag.classList.remove('btn-flagged'); btnFlag.textContent = '🚩 Đánh dấu';
   }
 
-  const imgHost=byId('qImage'); imgHost.innerHTML='';
-  if(q.image){ 
-    const img=new Image(); img.src=q.image; img.className='zoomable-img'; 
-    img.style.maxWidth='100%'; img.style.borderRadius='8px';
-    img.title = "Bấm để phóng to";
-    img.onerror = () => { imgHost.innerHTML = `<div class="muted" style="font-size:13px; font-style:italic;">⚠️ Không tìm thấy ảnh minh họa (${q.image})</div>`; };
-    img.addEventListener('click', () => openLightbox(q.image));
-    imgHost.appendChild(img); 
-  }
+  renderQuestionImage(byId('qImage'), q);
 
   const opts=byId('qOpts'); opts.innerHTML='';
   const isPractice = state.mode === 'practice';
@@ -719,14 +653,16 @@ function decorateAfterSubmit(qShownIdx){
 
 /* ============ Interactions ============ */
 function onEssayInput(qShownIdx, text) {
+  if(state.submitted) return;
   state.answers.set(qShownIdx, text);
   renderMatrixRow(qShownIdx);
   renderProgressMeta();
   applyFilter();
-  saveProgress();
+
 }
 
 function onSelect(qShownIdx, optShownIdx, isMulti){
+  if(state.submitted) return;
   const currentVal = state.answers.get(qShownIdx);
   const set = (currentVal instanceof Set) ? currentVal : new Set();
   if(isMulti){ if(set.has(optShownIdx)) set.delete(optShownIdx); else set.add(optShownIdx); }
@@ -734,7 +670,7 @@ function onSelect(qShownIdx, optShownIdx, isMulti){
   state.answers.set(qShownIdx, set);
   renderMatrixRow(qShownIdx); renderProgressMeta(); applyFilter();
   if(qShownIdx===state.current) renderQuestion(qShownIdx);
-  saveProgress();
+
 }
 function mapShownToOrig(qShownIdx, optShownIdx){ 
   if(!state.orderMap[qShownIdx] || !state.orderMap[qShownIdx].optOrder) return optShownIdx;
@@ -753,7 +689,7 @@ function checkQuestion(qShownIdx){
   for(let i=0;i<sel.length;i++) if(sel[i]!==correct[i]) return false;
   return true;
 }
-function setCurrent(i){ state.current=i; renderMatrixRow(i); renderQuestion(i); saveProgress(); }
+function setCurrent(i){ state.current=i; renderMatrixRow(i); renderQuestion(i); }
 function scrollRowIntoView(i){ const row=byId('qMatrix').querySelector(`.mrow[data-q="${i}"]`); if(row) row.scrollIntoView({block:'nearest', behavior:'smooth'}); }
 
 byId('btnFlag').addEventListener('click', () => {
@@ -761,7 +697,7 @@ byId('btnFlag').addEventListener('click', () => {
     else state.flagged.add(state.current);
     renderMatrixRow(state.current);
     renderQuestion(state.current);
-    saveProgress();
+
 });
 
 /* ============ Filter & Submit & PDF ============ */
@@ -792,7 +728,7 @@ function submitQuiz(auto=false){
     }
   }
 
-  state.submitted=true; clearInterval(state.timer); clearProgress(); 
+  state.submitted=true; clearInterval(state.timer);
 
   const total=state.orderMap.length; let correct=0; for(let i=0;i<total;i++) if(checkQuestion(i)) correct++;
   const pct= total? Math.round(correct/total*100):0;
@@ -804,7 +740,7 @@ function submitQuiz(auto=false){
   byId('printTitle').textContent = `Kết quả thi: ${state.quiz.meta.title}`;
 
   for(let i=0;i<state.orderMap.length;i++) renderMatrixRow(i);
-  decorateAfterSubmit(state.current);
+  renderQuestion(state.current);
 
   renderResultList();
   byId('resultPanel').classList.remove('hide');
@@ -823,10 +759,6 @@ function renderResultList() {
     const isEssay = q.type === 'essay';
     const box=document.createElement('div'); box.className='card pad';
     box.innerHTML = `<div style="margin-bottom:6px"><b>Câu ${i+1}.</b> ${q.question} <span class="pill" style="font-size:11px;">${isEssay?'Tự luận':'Trắc nghiệm'}</span></div>`;
-    
-    if(q.image) {
-       box.innerHTML += `<img src="${q.image}" style="max-width:200px; border-radius:8px; margin-bottom:10px; display:block;" />`;
-    }
 
     if(isEssay) {
       const userAns = typeof state.answers.get(i) === 'string' ? state.answers.get(i).trim() : '';
@@ -873,6 +805,9 @@ function renderResultList() {
       const ex=document.createElement('div'); ex.className='exp show'; 
       ex.innerHTML=`💡 <b>Giải thích / Ghi chú:</b> ${q.explanation}`; box.appendChild(ex); 
     }
+    const imageHost = document.createElement('div');
+    renderQuestionImage(imageHost, q);
+    box.insertBefore(imageHost, box.children[1] || null);
     container.appendChild(box);
   });
   
@@ -957,7 +892,14 @@ YÊU CẦU BẮT BUỘC (RẤT QUAN TRỌNG):
    - Trường correct chỉ chứa SỐ NGUYÊN (Integer), TUYỆT ĐỐI không dùng chuỗi String ([0], KHÔNG viết ["0"]).
    - Trường difficulty: ghi rõ "easy" | "medium" | "hard".
    - Trường tags: mảng các từ khóa chủ đề (ví dụ: ["${subject}", "Khái niệm"]).
-6. Định dạng đầu ra:
+6. Hình ảnh phục vụ câu hỏi (khi tài liệu có ảnh hoặc câu hỏi cần ảnh):
+   - Nhúng ảnh trực tiếp vào trường "image" của đúng câu hỏi theo cấu trúc {"src": "data:image/png;base64,<dữ liệu Base64 thật của ảnh>", "alt": "Mô tả ngắn, không tiết lộ đáp án", "caption": "Chú thích trung tính (tùy chọn)"}.
+   - BẮT BUỘC dùng Data URL Base64 đầy đủ với PNG, JPEG, WebP hoặc GIF (ví dụ tiền tố data:image/jpeg;base64,). KHÔNG dùng URL, đường dẫn file, SVG hay chỉ ghi mô tả ảnh thay cho dữ liệu.
+   - Dùng công cụ xử lý ảnh / chạy mã để trích xuất hoặc chuyển đổi chính xác ảnh nguồn thành Base64; có thể cắt phần ảnh liên quan và giảm kích thước nhưng phải giữ rõ chi tiết cần để trả lời câu hỏi. KHÔNG tự đoán, bịa chuỗi Base64, rút gọn bằng dấu ... hoặc để placeholder trong JSON cuối cùng.
+   - Ảnh phải thực sự phục vụ nội dung câu hỏi. Không đưa đáp án, nhãn hoặc chú thích làm lộ đáp án vào ảnh. Không tự vẽ lại ảnh chuyên môn nếu không đủ dữ liệu từ tài liệu.
+   - Câu không cần hình thì bỏ trường image. Nếu không có công cụ chuyển ảnh, hãy yêu cầu tôi cung cấp ảnh đã mã hóa; không tạo câu hỏi phụ thuộc ảnh bị thiếu.
+   - Nếu JSON chứa ảnh quá dài cho một tin nhắn, dùng công cụ xuất thành file .json hoàn chỉnh để tải về, không cắt bớt dữ liệu ảnh.
+7. Định dạng đầu ra:
    - Trả về DUY NHẤT mã JSON hợp lệ bắt đầu bằng { và kết thúc bằng }.
    - KHÔNG dùng markdown \`\`\`json, KHÔNG có văn bản chào hỏi hay ghi chú nào khác.
 
@@ -1080,7 +1022,7 @@ byId('btnCopyPrompt').addEventListener('click', () => {
 
 window.addEventListener('keydown', e => {
   // Bỏ qua nếu người dùng đang nhập text
-  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
+  if (e.target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
 
   const lightbox = byId('imageLightbox');
 
@@ -1099,7 +1041,14 @@ window.addEventListener('keydown', e => {
 
   // Khóa phím tắt làm bài khi đang hiện hướng dẫn/lightbox
   if (guideOverlay.classList.contains('active') || (lightbox && lightbox.classList.contains('show'))) return;
-  if (!state.started || state.submitted) return;
+  if (!state.started || e.ctrlKey || e.metaKey || e.altKey) return;
+
+  if(e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+    byId(e.key === 'ArrowRight' ? 'btnNext' : 'btnPrev').click();
+    e.preventDefault();
+    return;
+  }
+  if (state.submitted) return;
   
   // Phím F: Đánh dấu cờ (Flag)
   if (e.key.toLowerCase() === 'f') {
@@ -1108,8 +1057,6 @@ window.addEventListener('keydown', e => {
     return;
   }
 
-  if(e.key === 'ArrowRight') { byId('btnNext').click(); e.preventDefault(); }
-  if(e.key === 'ArrowLeft') { byId('btnPrev').click(); e.preventDefault(); }
   if(e.key === 'Enter') { submitQuiz(false); e.preventDefault(); }
   
   // Phím chọn đáp án: 1-5 hoặc A-E
@@ -1182,9 +1129,10 @@ byId('filterGroup').addEventListener('click', e=>{
 });
 
 // Xử lý đóng mở Modal Hình Ảnh (Lightbox)
-function openLightbox(src) { 
+function openLightbox(src, alt = 'Hình minh họa câu hỏi') {
     if(!byId('lightboxImg') || !byId('imageLightbox')) return;
     byId('lightboxImg').src = src; 
+    byId('lightboxImg').alt = alt;
     byId('imageLightbox').classList.add('show'); 
 }
 if(byId('closeLightbox')){
@@ -1196,7 +1144,7 @@ if(byId('closeLightbox')){
 function resetAll(hard = false){
   clearInterval(state.timer); state.started=false; state.submitted=false;
   state.answers.clear(); state.flagged.clear(); state.orderMap=[]; state.current=0;
-  clearProgress();
+
   byId('loader').classList.remove('hide'); byId('quizPanel').classList.add('hide');
   byId('resultPanel').classList.add('hide'); byId('scorePill').classList.add('hide');
   byId('headerTimer').textContent='00:00'; byId('bigTimer').textContent='00:00'; byId('bar').style.width='0%';
@@ -1212,9 +1160,7 @@ function resetAll(hard = false){
 /* ============ Khởi chạy lúc load trang ============ */
 setHeaderInfo('Chưa tải đề');
 initTheme();
-initFontSize();
 initQuestionBank();
 generateCustomPrompt();
 checkUrlHashQuiz();
-window.addEventListener('load', checkAndLoadProgress);
 

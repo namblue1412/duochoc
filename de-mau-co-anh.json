@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Đề mẫu có ảnh Base64",
+    "time_limit_sec": 600,
+    "shuffle_questions": false,
+    "shuffle_options": false
+  },
+  "questions": [
+    {
+      "id": "IMG01",
+      "type": "single",
+      "question": "Hình màu xanh trong ảnh là hình gì?",
+      "image": {
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAADICAIAAAAWZq/8AAAEyklEQVR4nO3TMW0FUAwEwY/I+AI2XBIGW6S5PGlGB8CF9/MDPOuzPgD4OwHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBFzu69vmW3/BvybgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBl/nv2gk4CbjMf9dOwEnAZf67dgJOAi7z37UTcBJwmf+unYCTgMv8d+0EnARc5r9rJ+Ak4DL/XTsBJwGX+e/aCTgJuMx/107AScBl/rt2Ak4CLvPftRNwEnCZ/66dgJOAy/x37QScBFzmv2sn4CTgMv9dOwEnAZf579oJOAm4zH/XTsBJwGX+u3YCTgIu89+1E3AScJn/rp2Ak4DL/HftBJwEXOa/ayfgJOAy/107AScBw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPEzA8DABw8MEDA8TMDxMwPAwAcPDBAwPEzA8TMDwMAHDwwQMDxMwPOwXv4B8HFCyAeoAAAAASUVORK5CYII=",
+        "alt": "Hình minh họa để nhận diện hình học"
+      },
+      "options": [
+        "Hình tròn",
+        "Hình vuông",
+        "Hình tam giác",
+        "Hình thang"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Hình vuông có bốn cạnh bằng nhau và bốn góc vuông."
+    },
+    {
+      "id": "TEXT02",
+      "type": "essay",
+      "question": "Nêu một đặc điểm của hình trên.",
+      "sample_answer": "Có bốn cạnh bằng nhau.",
+      "explanation": "Có thể đối chiếu hình ở câu trước."
+    }
+  ]
+}
