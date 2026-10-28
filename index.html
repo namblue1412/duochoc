@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>UMP NHN - Quiz Thi Thử</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261028-2" />
 </head>
 <body>
   <header class="header hide-print">
@@ -15,82 +15,63 @@
       <div class="pill">⏱ <span class="timer" id="headerTimer">00:00</span></div>
       <div class="pill hide" id="headerInfo">Chưa tải đề</div>
       <button class="theme-icon" id="btnThemeToggle" title="Chuyển giao diện Sáng/Tối" aria-label="Đổi giao diện">🌓</button>
-      <button class="help-icon" id="btnHelp" title="Hướng dẫn & AI Prompt" aria-label="Hướng dẫn">❓</button>
+      <button class="help-icon" id="btnHelp" title="Hướng dẫn và lưu ý" aria-label="Hướng dẫn">❓</button>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="card pad hide-print" id="loader">
-      <div class="grid-2">
-        <div>
-          <h2 class="mt0">1) Import đề (JSON)</h2>
-          <div class="uploader">
-            <label class="btn" for="fileInput">📄 Chọn file JSON</label>
-            <input id="fileInput" type="file" accept="application/json" />
-            <div class="drop" id="drop">Kéo & thả file JSON vào đây</div>
-            <div class="muted mt6">Ảnh trong JSON dùng trường <code>image</code> chứa Data URL Base64. Mở Hướng dẫn để lấy prompt AI có yêu cầu chuyển ảnh.</div>
-            <div class="muted mt6">Bài làm và đề tự nạp chỉ dùng trong phiên hiện tại, không lưu trong trình duyệt. Bạn có thể tải đề thành file JSON để dùng lại.</div>
-            <div class="muted mt6">Hoặc dán nội dung JSON:</div>
-            <textarea id="paste" placeholder='{"meta":{"title":"Dược lý – Đề 01"},"questions":[...]}'></textarea>
-            <div class="btn-row">
-              <button class="btn" id="btnParse">📥 Nạp từ vùng dán</button>
-              <button class="btn ghost" id="btnTemplate">📦 Template Trắc nghiệm</button>
-              <button class="btn ghost" id="btnEssayTemplate">📝 Template Tự luận</button>
-              <button class="btn ghost" id="btnSample">✨ Nạp đề mẫu</button>
+    <section class="hide-print" id="loader">
+      <div class="welcome">
+        <span class="eyebrow">GÓC ÔN TẬP 3A / 3B</span>
+        <h2>Sẵn sàng cho bài thi tiếp theo?</h2>
+        <p>Chọn một bộ đề, thiết lập cách học và bắt đầu ôn tập.</p>
+      </div>
+      <div class="start-layout">
+        <div class="start-sources">
+          <section class="card pad bank-card">
+            <div class="step-heading"><span class="step-number">1</span><div><h3>Chọn bộ đề</h3><p class="muted">Tìm môn học bạn muốn ôn tập trong kho đề.</p></div></div>
+            <div class="bank-filters">
+              <label>Môn học<select id="bankCategorySelect"><option value="all">Tất cả môn học</option></select></label>
+              <label>Tìm kiếm<input type="text" id="bankSearchInput" placeholder="Nhập tên bộ đề..." /></label>
             </div>
-          </div>
-          <div class="mt10">
-            <h3>1b) Chọn đề từ kho đề (21 bộ đề)</h3>
-            <div class="grid-2 mt6">
-              <select id="bankCategorySelect">
-                <option value="all">📂 Tất cả môn học</option>
-              </select>
-              <input type="text" id="bankSearchInput" placeholder="🔍 Tìm tên đề..." />
+            <label class="field-label" for="bankSelect">Bộ đề</label>
+            <div class="bank-picker">
+              <select id="bankSelect"><option value="">Đang tải danh sách đề...</option></select>
+              <button class="btn ghost" id="btnBankLoad">Chọn đề</button>
             </div>
-            <div class="btn-row mt6">
-              <select id="bankSelect" style="flex:1;"><option value="">-- Đang nạp danh sách đề... --</option></select>
-              <button class="btn" id="btnBankLoad">📚 Nạp từ kho đề</button>
+            <div class="muted mt10" id="bankStatus" role="status"></div>
+          </section>
+          <details class="card import-card">
+            <summary>Dùng bộ đề của bạn <span>Nhập file hoặc dán nội dung</span></summary>
+            <div class="pad uploader">
+              <div class="import-actions"><label class="btn" for="fileInput">Chọn file JSON</label><input id="fileInput" type="file" accept=".json,application/json" /><div class="drop" id="drop">Hoặc kéo thả file vào đây</div></div>
+              <label for="paste" class="field-label">Dán nội dung bộ đề</label>
+              <textarea id="paste" rows="4" placeholder='{"meta":{"title":"Tên bộ đề"},"questions":[...]}'></textarea>
+              <div class="btn-row"><button class="btn" id="btnParse">Nạp nội dung</button></div>
+              <details class="sample-tools"><summary>Mẫu bộ đề</summary><div class="btn-row">
+                <button class="btn ghost btn-sm" id="btnTemplate">Mẫu trắc nghiệm có ảnh</button>
+                <button class="btn ghost btn-sm" id="btnEssayTemplate">Mẫu tự luận</button>
+                <button class="btn ghost btn-sm" id="btnSample">Dùng thử đề mẫu</button>
+              </div></details>
             </div>
-            <div class="muted mt6" id="bankStatus"></div>
-          </div>
+          </details>
         </div>
-
-        <div>
-          <h2 class="mt0">2) Thiết lập</h2>
-          <div class="grid-2">
-            <label>Thời gian (phút)
-              <input type="number" id="minutes" min="1" step="1" placeholder="Mặc định theo đề" />
-            </label>
-            <label>Chế độ làm bài
-              <select id="quizMode">
-                <option value="exam">📝 Thi thử (Hiện điểm sau khi nộp)</option>
-                <option value="practice">⚡ Luyện tập (Hiện đúng/sai ngay)</option>
-              </select>
-            </label>
+        <section class="card pad setup-card">
+          <div class="step-heading"><span class="step-number">2</span><div><h3>Thiết lập buổi học</h3><p class="muted">Chọn cách học phù hợp với bạn.</p></div></div>
+          <div class="selected-quiz"><span class="eyebrow">BỘ ĐỀ ĐÃ CHỌN</span><h4 id="readyTitle">Chưa chọn bộ đề</h4><p id="readyMeta" class="muted">Chọn một bộ đề để bắt đầu.</p></div>
+          <label>Chế độ<select id="quizMode"><option value="exam">Thi thử · Xem điểm sau khi nộp</option><option value="practice">Luyện tập · Xem đúng/sai ngay</option></select></label>
+          <label>Thời gian (phút)<input type="number" id="minutes" min="1" step="1" placeholder="Theo thời gian của đề" /></label>
+          <div class="grid-2 shuffle-settings">
+            <label>Trộn câu hỏi<select id="shuffleQ"><option value="file">Theo bộ đề</option><option value="yes">Có</option><option value="no">Không</option></select></label>
+            <label>Trộn đáp án<select id="shuffleO"><option value="file">Theo bộ đề</option><option value="yes">Có</option><option value="no">Không</option></select></label>
           </div>
-          <div class="grid-2 mt8">
-            <label>Trộn câu hỏi
-              <select id="shuffleQ">
-                <option value="file">Theo file</option>
-                <option value="yes">Luôn trộn</option>
-                <option value="no">Không trộn</option>
-              </select>
-            </label>
-            <label>Trộn đáp án
-              <select id="shuffleO">
-                <option value="file">Theo file</option>
-                <option value="yes">Luôn trộn</option>
-                <option value="no">Không trộn</option>
-              </select>
-            </label>
-          </div>
-          <div class="btn-row mt10">
-            <button class="btn" id="btnStart" disabled>🚀 Bắt đầu làm bài</button>
-            <button class="btn ghost" id="btnExportCurrentJson" disabled title="Tải file JSON đề này về máy để gửi cho bạn bè">📤 Tải đề này về (.JSON)</button>
-            <button class="btn ghost" id="btnShareLink" disabled title="Tạo link chứa đề thi này gửi cho bạn bè mở là làm được ngay">🔗 Copy Link chia sẻ</button>
-            <button class="btn ghost" id="btnReset" disabled>↺ Đổi đề khác</button>
-          </div>
-        </div>
+          <button class="btn primary start-button" id="btnStart" disabled>Bắt đầu làm bài <span aria-hidden="true">→</span></button>
+          <details class="share-tools"><summary>Chia sẻ và đổi đề</summary><div class="btn-row">
+            <button class="btn ghost btn-sm" id="btnExportCurrentJson" disabled>Tải bộ đề</button>
+            <button class="btn ghost btn-sm" id="btnShareLink" disabled>Sao chép liên kết</button>
+            <button class="btn ghost btn-sm" id="btnReset" disabled>Bỏ chọn đề</button>
+          </div></details>
+        </section>
       </div>
     </section>
 
@@ -180,7 +161,7 @@
   </main>
 
   <!-- Hình ảnh phóng to -->
-  <div id="imageLightbox" class="modal-backdrop hide" aria-hidden="true">
+  <div id="imageLightbox" class="modal-backdrop" aria-hidden="true">
     <div style="position:relative; display:flex; flex-direction:column; align-items:center;">
         <button id="closeLightbox" class="btn ghost" style="position:absolute; top:-40px; right:0; background:rgba(0,0,0,0.5); color:#fff;">✖ Đóng</button>
         <img id="lightboxImg" src="" style="max-width:90vw; max-height:90vh; border-radius:8px; object-fit:contain;" />
@@ -191,10 +172,16 @@
   <div id="guideOverlay" class="guide-overlay" aria-hidden="true">
     <div class="guide-box">
       <div class="guide-header space-between">
-        <h2>💡 Hướng dẫn & Lấy Prompt</h2>
+        <h2>Hướng dẫn và lưu ý</h2>
         <button class="btn ghost btn-sm" id="closeGuide" style="border-color: #444;">✖ Đóng</button>
       </div>
       <div class="guide-content">
+        <h3>Lưu ý khi sử dụng</h3>
+        <ul class="muted">
+          <li>Bài làm và bộ đề tự nạp chỉ được giữ trong phiên hiện tại. Tải lại hoặc đóng trang sẽ mất tiến độ.</li>
+          <li>Bạn có thể tải bộ đề thành file JSON để dùng lại hoặc chia sẻ.</li>
+          <li>Ảnh được nhúng trong bộ đề dưới dạng Base64. Bấm vào ảnh để phóng to.</li>
+        </ul>
         <h3>⌨️ Phím tắt hỗ trợ</h3>
         <ul style="color: var(--muted); margin-bottom: 20px; line-height: 1.8;">
           <li><b>Mũi tên Trái/Phải (← / →):</b> Chuyển câu hỏi trước/sau, kể cả sau khi nộp bài.</li>
@@ -273,6 +260,6 @@
   </div>
   
   <script src="embedded-bank.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=20261028-2"></script>
 </body>
 </html>

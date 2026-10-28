@@ -18,18 +18,26 @@ const state = {
 };
 
 function initTheme() {
-  const savedTheme = 'dark';
+  const savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
-  const themeBtn = byId('btnThemeToggle');
-  if (themeBtn) themeBtn.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+  updateThemeButton(savedTheme);
 }
 
 function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme') || 'dark';
   const next = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
-  const themeBtn = byId('btnThemeToggle');
-  if (themeBtn) themeBtn.textContent = next === 'dark' ? '🌙' : '☀️';
+  updateThemeButton(next);
+}
+
+function updateThemeButton(theme) {
+  const button = byId('btnThemeToggle');
+  if(!button) return;
+  const label = theme === 'dark' ? 'Chuyển sang giao diện sáng' : 'Chuyển sang giao diện tối';
+  button.textContent = theme === 'dark' ? '☀️' : '🌙';
+  button.title = label;
+  button.setAttribute('aria-label', label);
+  button.setAttribute('aria-pressed', String(theme === 'dark'));
 }
 
 function changeFontSize(delta) {
@@ -377,6 +385,8 @@ if(byId('btnBankLoad')) {
 function renderStart(json){
   state.raw=json; state.quiz=normalizeQuiz(json);
   setHeaderInfo(`Đã tải: ${state.quiz.meta.title}`);
+  byId('readyTitle').textContent = state.quiz.meta.title;
+  byId('readyMeta').textContent = `${state.quiz.questions.length} câu hỏi · ${Math.ceil(state.quiz.meta.time_limit_sec / 60)} phút`;
   byId('btnStart').disabled=false; 
   byId('btnReset').disabled=false;
   if(byId('btnExportCurrentJson')) byId('btnExportCurrentJson').disabled=false;
@@ -1154,6 +1164,8 @@ function resetAll(hard = false){
     if(byId('btnExportCurrentJson')) byId('btnExportCurrentJson').disabled = true;
     if(byId('btnShareLink')) byId('btnShareLink').disabled = true;
     setHeaderInfo('Chưa tải đề');
+    byId('readyTitle').textContent = 'Chưa chọn bộ đề';
+    byId('readyMeta').textContent = 'Chọn một bộ đề để bắt đầu.';
   }
 }
 
