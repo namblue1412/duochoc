@@ -1,5 +1,7 @@
 # Kích hoạt liên kết ngắn
 
+Web hiện đã kết nối dự án Supabase `duochoc`. Cấu hình trình duyệt chỉ chứa Project URL và publishable key công khai; không chứa mật khẩu quản trị hoặc secret key.
+
 ## Đang hoạt động không cần cấu hình
 
 Đề có sẵn trong kho dùng link như `https://namblue1412.github.io/duochoc/?bank=dd01`.
