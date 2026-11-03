@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>UMP NHN - Quiz Thi Thử</title>
-  <link rel="stylesheet" href="style.css?v=20261028-2" />
+  <link rel="stylesheet" href="style.css?v=20261103-1" />
 </head>
 <body>
   <header class="header hide-print">
@@ -68,7 +68,7 @@
           <button class="btn primary start-button" id="btnStart" disabled>Bắt đầu làm bài <span aria-hidden="true">→</span></button>
           <details class="share-tools"><summary>Chia sẻ và đổi đề</summary><div class="btn-row">
             <button class="btn ghost btn-sm" id="btnExportCurrentJson" disabled>Tải bộ đề</button>
-            <button class="btn ghost btn-sm" id="btnShareLink" disabled>Sao chép liên kết</button>
+            <button class="btn ghost btn-sm" id="btnShareLink" disabled>Tạo liên kết ngắn</button>
             <button class="btn ghost btn-sm" id="btnReset" disabled>Bỏ chọn đề</button>
           </div></details>
         </section>
@@ -146,6 +146,7 @@
           <button class="btn" id="btnPrint" style="background: var(--accent); color: var(--bg);">🖨 Xuất file PDF (In)</button>
           <button class="btn ghost" id="btnToggleResultView">Lọc: Đang xem câu sai & chưa làm</button>
           <button class="btn" id="btnRedoWrong" style="background: rgba(239, 68, 68, 0.2); border-color: var(--bad); color: var(--bad);">⚡ Chỉ làm lại câu sai</button>
+          <button class="btn ghost" id="btnShareResult">Chia sẻ bộ đề</button>
           <button class="btn ghost" id="btnRedoResult">↺ Làm lại toàn bộ</button>
         </div>
       </div>
@@ -159,6 +160,13 @@
       </div>
     </section>
   </main>
+
+  <dialog id="shareDialog" class="share-dialog">
+    <div class="space-between"><h2>Chia sẻ bộ đề</h2><button class="btn ghost btn-sm" id="btnCloseShare" aria-label="Đóng chia sẻ">Đóng</button></div>
+    <p id="shareStatus" role="status" aria-live="polite"></p>
+    <input id="shareUrl" class="hide" type="text" readonly aria-label="Liên kết chia sẻ" />
+    <div class="btn-row"><button class="btn primary" id="btnCopyShareUrl" disabled>Sao chép liên kết</button></div>
+  </dialog>
 
   <!-- Hình ảnh phóng to -->
   <div id="imageLightbox" class="modal-backdrop" aria-hidden="true">
@@ -180,6 +188,7 @@
         <ul class="muted">
           <li>Bài làm và bộ đề tự nạp chỉ được giữ trong phiên hiện tại. Tải lại hoặc đóng trang sẽ mất tiến độ.</li>
           <li>Bạn có thể tải bộ đề thành file JSON để dùng lại hoặc chia sẻ.</li>
+          <li>Chọn “Tạo liên kết ngắn” để gửi bộ đề. Đề tự nạp được tải lên kho chia sẻ, liên kết hết hạn sau 30 ngày. Điểm và câu trả lời của bạn không được gửi kèm.</li>
           <li>Ảnh được nhúng trong bộ đề dưới dạng Base64. Bấm vào ảnh để phóng to.</li>
         </ul>
         <h3>⌨️ Phím tắt hỗ trợ</h3>
@@ -260,6 +269,8 @@
   </div>
   
   <script src="embedded-bank.js"></script>
-  <script src="app.js?v=20261028-2"></script>
+  <script src="share-config.js?v=20261103-1"></script>
+  <script src="share.js?v=20261103-1"></script>
+  <script src="app.js?v=20261103-1"></script>
 </body>
 </html>

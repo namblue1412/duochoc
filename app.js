@@ -2,6 +2,7 @@
 const $ = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 const byId = id => document.getElementById(id);
+const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const shuffle = arr => { const a = arr.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
 const fmtTime = s => { const m=Math.floor(s/60), ss=s%60; return `${String(m).padStart(2,'0')}:${String(ss).padStart(2,'0')}`; };
 const download = (fn, txt) => { const blob=new Blob([txt],{type:'application/json'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download=fn; a.click(); setTimeout(()=>URL.revokeObjectURL(url),3000); };
@@ -14,7 +15,7 @@ const state = {
   current:0, autoShowExp:true, viewFilter:'all', resultViewAll: false,
   mode: 'exam', // 'exam' hoặc 'practice'
   fontSize: 15,
-  bankData: null
+  bankData: null, bankFile: null, sharedUrl: null
 };
 
 function initTheme() {
@@ -107,7 +108,9 @@ function validateQuiz(json){
   if(!json || typeof json!=='object') throw new Error('File JSON không hợp lệ.');
   if(!Array.isArray(json.questions) || json.questions.length===0) throw new Error('Thiếu danh sách "questions".');
   json.meta = json.meta || {};
+  if(typeof json.meta !== 'object' || Array.isArray(json.meta)) throw new Error('meta không hợp lệ.');
   if(!json.meta.title) json.meta.title = 'Đề không tên';
+  if(typeof json.meta.title !== 'string') throw new Error('Tên bộ đề phải là văn bản.');
   const ids=new Set();
   json.questions.forEach((q,i)=>{
     if(!q || typeof q!=='object') throw new Error(`Câu ${i+1} không hợp lệ.`);
@@ -120,7 +123,7 @@ function validateQuiz(json){
       else q.type = (Array.isArray(q.correct) && q.correct.length>1)?'multi':'single';
     }
     if(!['single','multi','essay'].includes(q.type)) throw new Error(`Câu ${q.id}: type phải là single|multi|essay.`);
-    if(!q.question) throw new Error(`Câu ${q.id}: thiếu "question".`);
+    if(typeof q.question !== 'string' || !q.question.trim()) throw new Error(`Câu ${q.id}: thiếu nội dung "question" hợp lệ.`);
     try { getQuestionImage(q); }
     catch(e) { throw new Error(`Câu ${q.id}: ${e.message}`); }
 
@@ -132,6 +135,8 @@ function validateQuiz(json){
     } else {
       if(!Array.isArray(q.options) || q.options.length<2) throw new Error(`Câu ${q.id}: cần >=2 options.`);
       if(!Array.isArray(q.correct) || q.correct.length===0) throw new Error(`Câu ${q.id}: thiếu mảng "correct".`);
+      if(q.options.some(opt => typeof opt !== 'string')) throw new Error(`Câu ${q.id}: các lựa chọn phải là văn bản.`);
+      if(q.correct.some(idx => !Number.isInteger(idx) || idx < 0 || idx >= q.options.length)) throw new Error(`Câu ${q.id}: chỉ mục đáp án không hợp lệ.`);
     }
 
     if(q.explanation==null) q.explanation='';
@@ -156,8 +161,8 @@ function normalizeQuiz(json){
 /* ============ Import / Loader ============ */
 function setHeaderInfo(t){ byId('headerInfo').textContent=t; byId('headerInfo').classList.remove('hide'); }
 function loadQuizObject(json){
-  try{ validateQuiz(json); renderStart(json); }
-  catch(e){ alert('Lỗi JSON: '+e.message); console.error(e); }
+  try{ validateQuiz(json); renderStart(json); return true; }
+  catch(e){ alert('Lỗi JSON: '+e.message); console.error(e); return false; }
 }
 function tryParse(text){
   try{ loadQuizObject(JSON.parse(text)); }
@@ -273,7 +278,8 @@ async function loadBankItem(val) {
   // 1. Ưu tiên lấy từ bộ nhúng sẵn EMBEDDED_QUIZ_BANK (chạy mượt 100% mọi môi trường)
   if(window.EMBEDDED_QUIZ_BANK && window.EMBEDDED_QUIZ_BANK[val]) {
     const json = window.EMBEDDED_QUIZ_BANK[val];
-    loadQuizObject(json);
+    if(!loadQuizObject(json)) return;
+    state.bankFile = val;
     if(statusDiv) statusDiv.textContent = `✅ Đã nạp thành công: ${json.meta?.title || val}`;
     return;
   }
@@ -287,7 +293,8 @@ async function loadBankItem(val) {
     const res = await fetch(filePath);
     if(!res.ok) throw new Error(`HTTP error ${res.status}`);
     const json = await res.json();
-    loadQuizObject(json);
+    if(!loadQuizObject(json)) return;
+    state.bankFile = val;
     if(statusDiv) statusDiv.textContent = `✅ Đã nạp thành công: ${json.meta?.title || val}`;
   } catch(err) {
     if(statusDiv) statusDiv.textContent = `❌ Lỗi khi nạp file "${val}": ${err.message}`;
@@ -367,7 +374,7 @@ async function initQuestionBank() {
   if(searchInput) searchInput.oninput = renderBankOptions;
 
   // Tự động nạp đề đầu tiên nếu chưa có đề nào được nạp
-  if(!state.quiz && baseItems.length > 0) {
+  if(!state.quiz && !hasSharedQuiz() && baseItems.length > 0) {
     const firstVal = baseItems[0].file;
     bankSelect.value = firstVal;
     loadBankItem(firstVal);
@@ -384,6 +391,7 @@ if(byId('btnBankLoad')) {
 
 function renderStart(json){
   state.raw=json; state.quiz=normalizeQuiz(json);
+  state.bankFile=null; state.sharedUrl=null;
   setHeaderInfo(`Đã tải: ${state.quiz.meta.title}`);
   byId('readyTitle').textContent = state.quiz.meta.title;
   byId('readyMeta').textContent = `${state.quiz.questions.length} câu hỏi · ${Math.ceil(state.quiz.meta.time_limit_sec / 60)} phút`;
@@ -457,7 +465,7 @@ function renderQuestion(qShownIdx){
 
   byId('qTitle').textContent = `Câu ${qShownIdx+1}`;
   byId('qMeta').textContent = `${isEssay ? '📝 Tự luận / Trả lời ngắn' : (isMulti ? 'Chọn nhiều' : 'Chọn một')} • ${state.quiz.questions.length} câu`;
-  byId('qText').innerHTML = q.question;
+  byId('qText').textContent = q.question;
 
   const btnFlag = byId('btnFlag');
   if(state.flagged.has(qShownIdx)) {
@@ -495,11 +503,11 @@ function renderQuestion(qShownIdx){
     
     let sampleContent = `<h4 style="margin:0 0 8px 0; color: var(--ok)">📖 Đáp án mẫu & Hướng dẫn chấm:</h4>`;
     if(q.sample_answer) {
-      sampleContent += `<div style="white-space: pre-wrap; margin-bottom: 10px; line-height: 1.6;">${q.sample_answer}</div>`;
+      sampleContent += `<div style="white-space: pre-wrap; margin-bottom: 10px; line-height: 1.6;">${escapeHTML(q.sample_answer)}</div>`;
     }
     if(Array.isArray(q.grading_criteria) && q.grading_criteria.length > 0) {
       sampleContent += `<div style="margin-top: 8px;"><b>Tiêu chí chấm điểm:</b><ul style="margin: 4px 0 0 18px; padding:0;">`;
-      q.grading_criteria.forEach(c => sampleContent += `<li>${c}</li>`);
+      q.grading_criteria.forEach(c => sampleContent += `<li>${escapeHTML(c)}</li>`);
       sampleContent += `</ul></div>`;
     }
     sampleBox.innerHTML = sampleContent;
@@ -546,12 +554,12 @@ function renderQuestion(qShownIdx){
       }
 
       const badge=document.createElement('span'); badge.className='badge'; badge.textContent=String.fromCharCode(65+shownIdx);
-      const span=document.createElement('div'); span.innerHTML=q.options[origOptIdx];
+      const span=document.createElement('div'); span.textContent=q.options[origOptIdx];
       lab.appendChild(badge); lab.appendChild(span); opts.appendChild(lab);
     });
   }
 
-  const exp=byId('qExp'); exp.innerHTML=q.explanation?`💡 <b>Giải thích:</b> ${q.explanation}`:'';
+  const exp=byId('qExp'); exp.innerHTML=q.explanation?`💡 <b>Giải thích:</b> ${escapeHTML(q.explanation)}`:'';
   exp.classList.remove('show');
 
   if(state.submitted){
@@ -768,14 +776,14 @@ function renderResultList() {
     const q=state.quiz.questions[m.qIdx];
     const isEssay = q.type === 'essay';
     const box=document.createElement('div'); box.className='card pad';
-    box.innerHTML = `<div style="margin-bottom:6px"><b>Câu ${i+1}.</b> ${q.question} <span class="pill" style="font-size:11px;">${isEssay?'Tự luận':'Trắc nghiệm'}</span></div>`;
+    box.innerHTML = `<div style="margin-bottom:6px"><b>Câu ${i+1}.</b> ${escapeHTML(q.question)} <span class="pill" style="font-size:11px;">${isEssay?'Tự luận':'Trắc nghiệm'}</span></div>`;
 
     if(isEssay) {
       const userAns = typeof state.answers.get(i) === 'string' ? state.answers.get(i).trim() : '';
       box.innerHTML += `
         <div style="margin: 8px 0; padding: 10px; background: var(--surface-subtle); border-radius: 8px; border-left: 3px solid ${userAns ? 'var(--ok)' : 'var(--bad)'};">
           <b>Bài làm của bạn:</b>
-          <div style="white-space: pre-wrap; margin-top: 4px; font-style: ${userAns ? 'normal' : 'italic'}; color: ${userAns ? 'var(--text)' : 'var(--muted)'};">${userAns || '(Chưa làm câu này)'}</div>
+          <div style="white-space: pre-wrap; margin-top: 4px; font-style: ${userAns ? 'normal' : 'italic'}; color: ${userAns ? 'var(--text)' : 'var(--muted)'};">${escapeHTML(userAns || '(Chưa làm câu này)')}</div>
         </div>
       `;
 
@@ -783,13 +791,13 @@ function renderResultList() {
         box.innerHTML += `
           <div style="margin: 8px 0; padding: 10px; background: rgba(34, 197, 94, 0.08); border-radius: 8px; border-left: 3px solid var(--ok);">
             <b style="color: var(--ok);">Đáp án mẫu:</b>
-            <div style="white-space: pre-wrap; margin-top: 4px; line-height: 1.5;">${q.sample_answer}</div>
+            <div style="white-space: pre-wrap; margin-top: 4px; line-height: 1.5;">${escapeHTML(q.sample_answer)}</div>
           </div>
         `;
       }
       if(Array.isArray(q.grading_criteria) && q.grading_criteria.length > 0) {
         let critList = `<div style="margin-top: 6px; font-size: 13px;"><b>Tiêu chí chấm điểm:</b><ul style="margin: 2px 0 0 16px; padding:0;">`;
-        q.grading_criteria.forEach(c => critList += `<li>${c}</li>`);
+        q.grading_criteria.forEach(c => critList += `<li>${escapeHTML(c)}</li>`);
         critList += `</ul></div>`;
         box.innerHTML += critList;
       }
@@ -805,7 +813,7 @@ function renderResultList() {
         
         const li=document.createElement('li'); 
         li.style.cssText = color;
-        li.innerHTML = `<span>${tag}</span> ${opt}`; 
+        li.innerHTML = `<span>${tag}</span> ${escapeHTML(opt)}`;
         ul.appendChild(li);
       });
       box.appendChild(ul);
@@ -813,7 +821,7 @@ function renderResultList() {
 
     if(q.explanation){ 
       const ex=document.createElement('div'); ex.className='exp show'; 
-      ex.innerHTML=`💡 <b>Giải thích / Ghi chú:</b> ${q.explanation}`; box.appendChild(ex); 
+      ex.innerHTML=`💡 <b>Giải thích / Ghi chú:</b> ${escapeHTML(q.explanation)}`; box.appendChild(ex);
     }
     const imageHost = document.createElement('div');
     renderQuestionImage(imageHost, q);
@@ -975,44 +983,73 @@ if (byId('btnExportCurrentJson')) {
   });
 }
 
-// Tính năng: Tạo link chia sẻ đề thi (Share via URL Hash)
-if (byId('btnShareLink')) {
-  byId('btnShareLink').addEventListener('click', () => {
-    if (!state.quiz || !state.raw) return alert('Chưa có đề nào được nạp!');
-    try {
-      // Mã hóa JSON sang URI-safe Base64
-      const jsonStr = JSON.stringify(state.raw);
-      const encoded = encodeURIComponent(btoa(unescape(encodeURIComponent(jsonStr))));
-      const shareUrl = `${window.location.origin}${window.location.pathname}#quiz=${encoded}`;
-      
-      navigator.clipboard.writeText(shareUrl).then(() => {
-        const btn = byId('btnShareLink');
-        const old = btn.textContent;
-        btn.textContent = '✅ Đã copy Link!';
-        alert('🎉 Đã copy link chia sẻ đề thi vào bộ nhớ tạm!\nBạn chỉ cần gửi link này cho bạn bè, bạn bè bấm vào là đề sẽ tự mở ra làm ngay.');
-        setTimeout(() => btn.textContent = old, 2500);
-      });
-    } catch(e) {
-      alert('Đề có dung lượng lớn, hãy dùng tính năng "📤 Tải đề này về (.JSON)" và gửi file cho bạn bè sẽ ổn định hơn!');
-    }
-  });
-}
-
-// Kiểm tra và nạp đề từ URL Hash nếu có người chia sẻ link
-function checkUrlHashQuiz() {
-  if (!window.location.hash || !window.location.hash.includes('quiz=')) return;
+// Short links do not contain the quiz or any personal answers.
+let shareBusy = false;
+async function shareCurrentQuiz() {
+  if(!state.raw || shareBusy) return;
+  const dialog = byId('shareDialog');
+  const status = byId('shareStatus');
+  const output = byId('shareUrl');
+  const copy = byId('btnCopyShareUrl');
+  const quiz = state.raw;
+  const bankFile = state.bankFile;
+  output.value = ''; output.classList.add('hide'); copy.disabled = true;
+  status.textContent = 'Đang tạo liên kết…';
+  if(!dialog.open) dialog.showModal();
+  shareBusy = true;
   try {
-    const hashVal = window.location.hash.split('quiz=')[1];
-    if (hashVal) {
-      const decodedJson = decodeURIComponent(escape(atob(decodeURIComponent(hashVal))));
-      const quizObj = JSON.parse(decodedJson);
-      loadQuizObject(quizObj);
-      setHeaderInfo(`Được chia sẻ: ${quizObj.meta?.title || 'Đề thi'}`);
-      // Xóa hash trên URL để URL sạch đẹp
-      history.replaceState(null, null, window.location.pathname);
+    const url = state.sharedUrl || (bankFile
+      ? QuizSharing.link('bank', bankFile.replace(/\.json$/, ''))
+      : await QuizSharing.upload(quiz));
+    if(state.raw === quiz) state.sharedUrl = url;
+    output.value = url; output.classList.remove('hide'); copy.disabled = false;
+    status.textContent = bankFile ? 'Người nhận mở liên kết để làm bài ngay.' : 'Liên kết có hiệu lực 30 ngày. Bất kỳ ai có liên kết đều có thể mở bộ đề.';
+  } catch(error) {
+    status.textContent = error.message;
+  } finally { shareBusy = false; }
+}
+byId('btnShareLink').addEventListener('click', shareCurrentQuiz);
+byId('btnShareResult').addEventListener('click', shareCurrentQuiz);
+byId('btnCloseShare').addEventListener('click', () => byId('shareDialog').close());
+byId('btnCopyShareUrl').addEventListener('click', async () => {
+  const input = byId('shareUrl');
+  try {
+    await navigator.clipboard.writeText(input.value);
+    byId('shareStatus').textContent = 'Đã sao chép liên kết. Bạn có thể gửi cho bạn bè.';
+  } catch {
+    input.focus(); input.select();
+    byId('shareStatus').textContent = 'Hãy sao chép liên kết trong ô bên dưới.';
+  }
+});
+
+function hasSharedQuiz() {
+  const params = new URLSearchParams(location.search);
+  return params.has('de') || params.has('bank') || location.hash.startsWith('#quiz=');
+}
+async function loadSharedQuiz() {
+  if(!hasSharedQuiz()) return;
+  const params = new URLSearchParams(location.search);
+  setHeaderInfo('Đang mở bộ đề được chia sẻ…');
+  byId('readyTitle').textContent = 'Đang tải bộ đề…';
+  try {
+    if(params.has('bank')) {
+      const file = params.get('bank') + '.json';
+      if(!state.bankData.items.some(item => item.file === file)) throw new Error('Không tìm thấy bộ đề được chia sẻ trong kho.');
+      await loadBankItem(file);
+      if(!state.quiz) throw new Error('Không tải được bộ đề. Vui lòng thử lại.');
+    } else {
+      const quiz = params.has('de') ? await QuizSharing.read(params.get('de'))
+        : JSON.parse(decodeURIComponent(escape(atob(decodeURIComponent(location.hash.slice(6))))));
+      validateQuiz(quiz);
+      renderStart(quiz);
     }
-  } catch(e) {
-    console.warn('Không thể đọc đề từ link chia sẻ:', e);
+    setHeaderInfo(`Được chia sẻ: ${state.quiz.meta.title}`);
+    if(params.has('de')) state.sharedUrl = QuizSharing.link('de', params.get('de'));
+  } catch(error) {
+    setHeaderInfo('Không mở được liên kết chia sẻ');
+    byId('readyTitle').textContent = 'Không mở được bộ đề';
+    byId('readyMeta').textContent = error.message;
+    alert(error.message);
   }
 }
 
@@ -1050,6 +1087,7 @@ window.addEventListener('keydown', e => {
   }
 
   // Khóa phím tắt làm bài khi đang hiện hướng dẫn/lightbox
+  if (byId('shareDialog').open) return;
   if (guideOverlay.classList.contains('active') || (lightbox && lightbox.classList.contains('show'))) return;
   if (!state.started || e.ctrlKey || e.metaKey || e.altKey) return;
 
@@ -1159,7 +1197,7 @@ function resetAll(hard = false){
   byId('resultPanel').classList.add('hide'); byId('scorePill').classList.add('hide');
   byId('headerTimer').textContent='00:00'; byId('bigTimer').textContent='00:00'; byId('bar').style.width='0%';
   if(hard) {
-    state.raw=null; state.quiz=null;
+    state.raw=null; state.quiz=null; state.bankFile=null; state.sharedUrl=null;
     byId('btnStart').disabled = true; byId('btnReset').disabled = true;
     if(byId('btnExportCurrentJson')) byId('btnExportCurrentJson').disabled = true;
     if(byId('btnShareLink')) byId('btnShareLink').disabled = true;
@@ -1172,7 +1210,6 @@ function resetAll(hard = false){
 /* ============ Khởi chạy lúc load trang ============ */
 setHeaderInfo('Chưa tải đề');
 initTheme();
-initQuestionBank();
+initQuestionBank().then(loadSharedQuiz);
 generateCustomPrompt();
-checkUrlHashQuiz();
 
